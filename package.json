@@ -6,7 +6,8 @@
     "scripts": {
         "lint": "eslint '*/**/*.ts' --quiet --fix",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "start": "cross-env NODE_ENV=production nodemon -r tsconfig-paths/register src/index.ts"
     },
     "repository": {
         "type": "git",
@@ -19,17 +20,23 @@
     },
     "homepage": "https://github.com/igorwessel/valclient.js#readme",
     "dependencies": {
-        "express": "4.17.1"
+        "axios": "^0.21.4"
     },
     "devDependencies": {
+        "@types/node": "16.7.13",
         "@typescript-eslint/eslint-plugin": "4.31.0",
         "@typescript-eslint/parser": "4.31.0",
+        "cross-env": "7.0.3",
+        "dotenv": "10.0.0",
         "eslint": "7.32.0",
         "eslint-config-prettier": "8.3.0",
         "eslint-plugin-prettier": "4.0.0",
         "husky": "7.0.2",
-        "lint-staged": "^11.1.2",
+        "lint-staged": "11.1.2",
+        "nodemon": "2.0.12",
         "prettier": "2.3.2",
+        "ts-node": "10.2.1",
+        "tsconfig-paths": "3.11.0",
         "typescript": "4.4.2"
     },
     "lint-staged": {
