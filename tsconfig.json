@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "baseUrl": "src",
+        "esModuleInterop": true,
+        "moduleResolution": "Node",
+        "outDir": "build",
+        "paths": {
+            "@utils": ["./utils"],
+            "@utils/*": ["./utils/*"]
+        }
+    },
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+}
