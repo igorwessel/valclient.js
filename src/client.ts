@@ -7,6 +7,8 @@ import { regions, RegionsString, regionShardOverride, shardRegionOverride } from
 import { getConfigurationPath } from "@utils";
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 
+import { EntitlementsTokenLocal } from "@interfaces/responses";
+
 import Auth, { AuthInput } from "auth";
 
 interface LockFileType {
@@ -275,7 +277,7 @@ class Client {
             accessToken,
             subject: puuid,
             token,
-        } = await this._fetch("/entitlements/v1/token", "local", {
+        } = await this._fetch<EntitlementsTokenLocal>("/entitlements/v1/token", "local", {
             auth: { username: "riot", password: this._lockfile.password },
         });
 
