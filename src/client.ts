@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import { promises as fs, readFileSync } from "fs";
 import YAML from "yaml";
 import https from "https";
@@ -69,14 +69,47 @@ class Client {
         this._region = region || this._getRegionValorant();
         this._shard = this._region;
         this._configureAxios();
+        this._buildEndpoints();
 
         if (auth) {
             this._auth = new Auth(auth);
         }
     }
 
+    /**
+     * Return Axios Instance for Valorant API (https://valorant-api.com)
+     * baseUrl for endpoints is https://valorant-api.com/v1
+     */
+    get valorant_api(): AxiosInstance {
+        return this._valorant_api;
+    }
+
+    /**
+     * Actual Region
+     */
     get region(): string {
         return this._region;
+    }
+
+    /**
+     * Activate the client and get authorization
+     */
+    public async activate(): Promise<void> {
+        try {
+            if (!this._auth) {
+                this._getLockfile();
+                this._getHeaders();
+                const { game_name, game_tag } = await this.rnet_fetch_chat_session();
+
+                this._player_name = game_name;
+                this._player_tag = game_tag;
+            } else {
+                const { puuid, headers } = await this._auth.authenticate();
+
+                this._puuid = puuid;
+                this._headers = headers;
+            }
+        } catch (e) {}
     }
 
     /**
@@ -85,10 +118,10 @@ class Client {
      * @param endpointType Default value: "pd"
      * @returns Response
      */
-    private async _fetch(endpoint = "/", endpointType: EndpointType = "pd") {
+    private async _fetch(endpoint = "/", endpointType: EndpointType = "pd", config?: AxiosRequestConfig) {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
-        const { data } = await this._axios.get(endpoint);
+        const { data } = await this._axios.get(endpoint, config);
 
         return data;
     }
@@ -136,6 +169,17 @@ class Client {
     }
 
     /**
+     * TEXT_CHAT_RNet_FetchSession
+     *
+     * Get the current session including player name and PUUID
+     */
+    private async rnet_fetch_chat_session() {
+        const { data } = await this._fetch("/chat/v1/session", "local");
+
+        return data;
+    }
+
+    /**
      * All regions we can use in Client
      * @returns All regions
      */
@@ -164,17 +208,27 @@ class Client {
      */
     private _configureAxios(): void {
         this._axios.interceptors.request.use((config) => {
-            if (config.url.includes("127.0.0.1")) {
-                config.httpsAgent = new https.Agent({
-                    rejectUnauthorized: false,
-                });
-                config.headers = this._local_headers;
-                return config;
-            }
-
             config.headers = this._headers;
             return config;
         });
+
+        this._axios.interceptors.request.use(
+            (config) => {
+                config.httpsAgent = new https.Agent({
+                    rejectUnauthorized: false,
+                });
+
+                config.headers = this._local_headers;
+                config.withCredentials = true;
+                return config;
+            },
+            null,
+            {
+                runWhen(config: AxiosRequestConfig) {
+                    return config.url.includes("127.0.0.1");
+                },
+            },
+        );
     }
 
     /**
@@ -217,13 +271,13 @@ class Client {
      * Get Auth Headers when not have Auth
      */
     private async _getAuthHeaders(): Promise<void> {
-        this._local_headers = {
-            Authorization: `Basic ${Buffer.from(`riot:${this._lockfile.password}`).toString("base64")}`,
-        };
-
         const {
-            data: { accessToken, subject: puuid, token },
-        } = await this._fetch("/entitlements/v1/token", "local");
+            accessToken,
+            subject: puuid,
+            token,
+        } = await this._fetch("/entitlements/v1/token", "local", {
+            auth: { username: "riot", password: this._lockfile.password },
+        });
 
         this._headers = {
             Authorization: `Bearer ${accessToken}`,
@@ -255,9 +309,16 @@ class Client {
      */
     private _getLockfile(): LockFileType {
         try {
-            const lockfile = readFileSync(this._lockfile_path, { encoding: "utf8" });
-
+            const lockfile = readFileSync(this._lockfile_path, { encoding: "utf-8" });
             const [name, PID, port, password, protocol] = lockfile.split(":");
+
+            this._lockfile = {
+                name,
+                PID,
+                port,
+                password,
+                protocol,
+            };
 
             return { name, PID, port, password, protocol };
         } catch (e) {
