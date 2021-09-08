@@ -1,5 +1,6 @@
 import * as nodePath from "path";
 import fs from "fs";
+import { AxiosRequestConfig } from "axios";
 
 function loadEnvBasedEnvironment(path = "./"): string {
     const environment = process.env.NODE_ENV;
@@ -11,4 +12,8 @@ function loadEnvBasedEnvironment(path = "./"): string {
     return nodePath.resolve(rootDir, env);
 }
 
-export { loadEnvBasedEnvironment };
+function getConfigurationPath(file: string): string {
+    return nodePath.resolve(process.env.LOCALAPPDATA, "./Riot Games/Riot Client/Config/", file);
+}
+
+export { loadEnvBasedEnvironment, getConfigurationPath };
