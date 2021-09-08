@@ -38,7 +38,8 @@ class Auth implements AuthInterface {
 
         const resp = await this._axios.post(this._authUrlRiotEndpoint, data);
 
-        const cookie: string = resp.headers["set-cookie"].reduce((string, cookie) => string + cookie + "; ", "");
+        const cookies: string[] = resp.headers["set-cookie"];
+        const cookie = cookies.reduce((string, cookie) => string + cookie + "; ", "");
 
         this._axios.defaults.headers.Cookie = cookie;
     }
