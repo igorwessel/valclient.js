@@ -68,6 +68,7 @@ class Client {
     constructor({ region, auth }: Partial<ClientConfig> = {}) {
         this._region = region || this._getRegionValorant();
         this._shard = this._region;
+        this._configureAxios();
 
         if (auth) {
             this._auth = new Auth(auth);
@@ -159,6 +160,24 @@ class Client {
     }
 
     /**
+     * Configure Axios to add Headers in each request
+     */
+    private _configureAxios(): void {
+        this._axios.interceptors.request.use((config) => {
+            if (config.url.includes("127.0.0.1")) {
+                config.httpsAgent = new https.Agent({
+                    rejectUnauthorized: false,
+                });
+                config.headers = this._local_headers;
+                return config;
+            }
+
+            config.headers = this._headers;
+            return config;
+        });
+    }
+
+    /**
      * Create Bases Endpoints for use in Axios
      */
     private _buildEndpoints(): void {
@@ -172,19 +191,6 @@ class Client {
             shared: `https://shared.${this._shard}.a.pvp.net`,
             local: `https://127.0.0.1:${this._lockfile.port}`,
         };
-
-        this._axios.interceptors.request.use((config) => {
-            if (config.url.includes("127.0.0.1")) {
-                config.httpsAgent = new https.Agent({
-                    rejectUnauthorized: false,
-                });
-                config.headers = this._local_headers;
-                return config;
-            }
-
-            config.headers = this._headers;
-            return config;
-        });
     }
 
     /**
