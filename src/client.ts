@@ -28,6 +28,12 @@ import {
     PendingFriendsResponse,
     PendingFriendRequest,
 } from "@interfaces/localEndpointResponses";
+import {
+    CurrentGameSessionResponse,
+    CurrentPartyDetailsResponse,
+    CurrentPartyIdResponse,
+    ReconnectGameSessionResponse,
+} from "@interfaces/glzEndpointResponses";
 import { ClientConfig, EndpointType, Headers, LocalHeaders, LockFileType } from "@interfaces/client";
 import { Regions } from "@interfaces/resources";
 
@@ -57,6 +63,14 @@ class Client {
     constructor({ region, auth }: Partial<ClientConfig> = {}) {
         this._region = region || this._getRegionValorant();
         this._shard = this._region;
+
+        if (regionShardOverride[this._region.toLowerCase()]) {
+            this._shard = regionShardOverride[this._region.toLowerCase()];
+        }
+        if (shardRegionOverride[this._shard]) {
+            this._region = shardRegionOverride[this._shard];
+        }
+
         this._configureAxios();
         this._buildEndpoints();
 
@@ -151,6 +165,109 @@ class Client {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
         const { data } = await this._axios.delete<T>(endpoint);
+
+        return data;
+    }
+
+    /**
+     *  Party_FetchPlayer
+     *
+     *  Get the Party ID that a given player belongs to
+     */
+    async getCurrentPartyId(): Promise<CurrentPartyIdResponse> {
+        const data = await this._fetch<CurrentPartyIdResponse>(`/parties/v1/players/${this._puuid}`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_RemovePlayer
+     *
+     *  Removes a player from the current party
+     * @param puuid
+     * @returns
+     */
+    async removePlayerParty(puuid?: string): Promise<null> {
+        puuid = puuid || this._puuid;
+
+        const data: null = await this._delete(`/parties/v1/players/${puuid}`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_FetchParty
+     *
+     *  Get details about a given party id
+     */
+    async getCurrentDetailsParty(): Promise<CurrentPartyDetailsResponse> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._fetch<CurrentPartyDetailsResponse>(`/parties/v1/parties/${CurrentPartyID}`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_SetMemberReady
+     *
+     *  Sets whether a party member is ready for queueing or not
+     * @param ready
+     * @returns
+     */
+    async setMemberReadyParty(ready?: boolean): Promise<CurrentPartyDetailsResponse> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._post<CurrentPartyDetailsResponse>(
+            `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/setReady`,
+            "glz",
+            {
+                ready,
+            },
+        );
+
+        return data;
+    }
+
+    /**
+     *  Party_RefreshCompetitiveTier
+     *
+     *  Refreshes the competitive tier for a player
+     */
+    async refreshCompetitiveTier(): Promise<null> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._post<null>(
+            `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshCompetitiveTier`,
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
+     *  Session_Get
+     *
+     *  Get information about the current game session
+     * @returns
+     */
+    async getCurrentGameSession(): Promise<CurrentGameSessionResponse> {
+        const data = await this._fetch<CurrentGameSessionResponse>(`/session/v1/sessions/${this._puuid}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * Session_ReConnect
+     *
+     * Try reconnect current game session
+     * @returns
+     */
+    async reconnectGameSession(): Promise<ReconnectGameSessionResponse> {
+        const data = await this._fetch<ReconnectGameSessionResponse>(
+            `/session/v1/sessions/${this._puuid}/reconnect`,
+            "glz",
+        );
 
         return data;
     }
