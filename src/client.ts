@@ -191,13 +191,17 @@ class Client {
      * Get Headers to make Requests
      */
     private async _getHeaders(): Promise<void> {
+        if (!this._client_version) {
+            await this._getClientVersion();
+        }
+
         if (!this._auth) {
             return this._getAuthHeaders();
         }
 
         const { puuid, headers } = await this._auth.authenticate();
         headers["X-Riot-ClientPlatform"] = this._client_platform;
-        headers["X-Riot-ClientVersion"] = await this._getClientVersion();
+        headers["X-Riot-ClientVersion"] = this._client_version;
 
         this._puuid = puuid;
         this._headers = headers;
@@ -219,7 +223,7 @@ class Client {
             Authorization: `Bearer ${accessToken}`,
             "X-Riot-Entitlements-JWT": token,
             "X-Riot-ClientPlatform": this._client_platform,
-            "X-Riot-ClientVersion": await this._getClientVersion(),
+            "X-Riot-ClientVersion": this._client_version,
         };
 
         this._puuid = puuid;
@@ -234,6 +238,8 @@ class Client {
                 data: { branch, buildVersion, version },
             },
         } = await this._valorant_api.get("/version");
+
+        this._client_version = `${branch}-shipping-${buildVersion}-${version.split(".")[3]}`;
 
         return `${branch}-shipping-${buildVersion}-${version.split(".")[3]}`;
     }
