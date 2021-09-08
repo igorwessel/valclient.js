@@ -47,8 +47,8 @@ class Client {
     private _puuid: string;
     private _player_name: string;
     private _player_tag: string;
-    private _lockfile: LockFileType;
     private _lockfile_path: string = getConfigurationPath("lockfile");
+    private _lockfile: LockFileType;
     private _headers: Partial<Headers>;
     private _local_headers: LocalHeaders;
     private _region: RegionsString;
@@ -57,16 +57,17 @@ class Client {
     private _client_platform =
         "ew0KCSJwbGF0Zm9ybVR5cGUiOiAiUEMiLA0KCSJwbGF0Zm9ybU9TIjogIldpbmRvd3MiLA0KCSJwbGF0Zm9ybU9TVmVyc2lvbiI6ICIxMC4wLjE5MDQyLjEuMjU2LjY0Yml0IiwNCgkicGxhdGZvcm1DaGlwc2V0IjogIlVua25vd24iDQp9";
     private _client_version: string;
-    private _base_endpoint_local: string;
-    private _base_endpoint_pd: string;
-    private _base_endpoint_glz: string;
-    private _base_endpoint_shared: string;
+    private _base_endpoints = {
+        pd: "",
+        glz: "",
+        shared: "",
+        local: "",
+    };
     private _valorant_api: AxiosInstance = axios.create({ baseURL: "https://valorant-api.com/v1" });
 
     constructor({ region, auth }: Partial<ClientConfig> = {}) {
         this._region = region || this._getRegionValorant();
         this._shard = this._region;
-        this._buildEndpoints();
 
         if (auth) {
             this._auth = new Auth(auth);
@@ -77,17 +78,60 @@ class Client {
         return this._region;
     }
 
-    private fetch(endpoint = "/", endpointType: EndpointType = "pd") {
-        switch (endpointType) {
-            case "pd":
-                return;
-            case "glz":
-                return;
-            case "shared":
-                return;
-            case "local":
-                return;
-        }
+    /**
+     * Fetch a request based in Endpoint Type
+     * @param endpoint
+     * @param endpointType Default value: "pd"
+     * @returns Response
+     */
+    private async _fetch(endpoint = "/", endpointType: EndpointType = "pd") {
+        endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
+
+        const { data } = await this._axios.get(endpoint);
+
+        return data;
+    }
+
+    /**
+     * Do Post Request based in Endpoint Type
+     * @param endpoint
+     * @param endpointType Default value "pd"
+     * @param data
+     * @returns
+     */
+    private async _post(endpoint = "/", endpointType: EndpointType = "pd", data = {}) {
+        endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
+
+        const response = await this._axios.post(endpoint, data);
+
+        return response.data;
+    }
+    /**
+     * Do Put Request based in Endpoint Type
+     * @param endpoint
+     * @param endpointType Default value "pd"
+     * @param data
+     * @returns
+     */
+    private async _put(endpoint = "/", endpointType: EndpointType = "pd", data = {}) {
+        endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
+
+        const response = await this._axios.put(endpoint, data);
+
+        return response.data;
+    }
+    /**
+     * Do delete request based in Endpoint Type
+     * @param endpoint
+     * @param endpointType Default value "pd"
+     * @returns
+     */
+    private async _delete(endpoint = "/", endpointType: EndpointType = "pd") {
+        endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
+
+        const { data } = await this._axios.delete(endpoint);
+
+        return data;
     }
 
     /**
@@ -118,16 +162,16 @@ class Client {
      * Create Bases Endpoints for use in Axios
      */
     private _buildEndpoints(): void {
-        this._base_endpoint_pd = `https://pd.${this._shard}.a.pvp.net`;
-
-        this._base_endpoint_glz = `https://glz-${this._region}-1.${this._shard}.a.pvp.net`;
-        this._base_endpoint_shared = `https://shared.${this._shard}.a.pvp.net`;
-
         if (!this._lockfile) {
             this._lockfile = this._getLockfile();
         }
 
-        this._base_endpoint_local = `https://127.0.0.1:${this._lockfile.port}`;
+        this._base_endpoints = {
+            pd: `https://pd.${this._shard}.a.pvp.net`,
+            glz: `https://glz-${this._region}-1.${this._shard}.a.pvp.net`,
+            shared: `https://shared.${this._shard}.a.pvp.net`,
+            local: `https://127.0.0.1:${this._lockfile.port}`,
+        };
 
         this._axios.interceptors.request.use((config) => {
             if (config.url.includes("127.0.0.1")) {
@@ -141,10 +185,11 @@ class Client {
             config.headers = this._headers;
             return config;
         });
-
-        this._getHeaders();
     }
 
+    /**
+     * Get Headers to make Requests
+     */
     private async _getHeaders(): Promise<void> {
         if (!this._auth) {
             return this._getAuthHeaders();
@@ -158,13 +203,17 @@ class Client {
         this._headers = headers;
     }
 
+    /**
+     * Get Auth Headers when not have Auth
+     */
     private async _getAuthHeaders(): Promise<void> {
         this._local_headers = {
             Authorization: `Basic ${Buffer.from(`riot:${this._lockfile.password}`).toString("base64")}`,
         };
+
         const {
             data: { accessToken, subject: puuid, token },
-        } = await this._axios.get(`${this._base_endpoint_local}/entitlements/v1/token`);
+        } = await this._fetch("/entitlements/v1/token", "local");
 
         this._headers = {
             Authorization: `Bearer ${accessToken}`,
