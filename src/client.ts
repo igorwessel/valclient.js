@@ -2,17 +2,34 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import { promises as fs, readFileSync } from "fs";
 import YAML from "yaml";
 import https from "https";
+import Auth from "auth";
 
-import { regions, regionShardOverride, shardRegionOverride } from "@resources";
+/** Utils */
 import { getConfigurationPath } from "@utils";
+
+/** Resources */
+import { regions, regionShardOverride, shardRegionOverride } from "@resources";
+
+/** Errors */
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 
 /** Interfaces */
-import { EntitlementsTokenLocal, FetchPresence, PresencePrivate, RNETFetchChatSession } from "@interfaces/responses";
+import {
+    EntitlementsTokenLocal,
+    PresenceResponse,
+    Presence,
+    PresencePrivate,
+    RNETFetchChatSession,
+    ValorantProcessResponse,
+    CurrentPlayerResponse,
+    FriendsResponse,
+    Friend,
+    ClientSettingsResponse,
+    PendingFriendsResponse,
+    PendingFriendRequest,
+} from "@interfaces/localEndpointResponses";
 import { ClientConfig, EndpointType, Headers, LocalHeaders, LockFileType } from "@interfaces/client";
 import { Regions } from "@interfaces/resources";
-
-import Auth from "auth";
 
 class Client {
     private _axios: AxiosInstance = axios;
@@ -70,7 +87,7 @@ class Client {
         if (!this._auth) {
             this._getLockfile();
             await this._getHeaders();
-            const { game_name, game_tag } = await this.rnetFetchChatSession();
+            const { game_name, game_tag } = await this.getChatSession();
 
             this._player_name = game_name;
             this._player_tag = game_tag;
@@ -143,7 +160,7 @@ class Client {
      *
      * Get the current session including player name and PUUID
      */
-    async rnetFetchChatSession(): Promise<RNETFetchChatSession> {
+    async getChatSession(): Promise<RNETFetchChatSession> {
         const data = await this._fetch<RNETFetchChatSession>("/chat/v1/session", "local");
 
         return data;
@@ -156,10 +173,10 @@ class Client {
      * @param puuid Use puuid passed in parameter or self puuid
      * @returns
      */
-    async fetchPresence(puuid?: string): Promise<PresencePrivate | null> {
+    async getOnlineFriend(puuid?: string): Promise<PresencePrivate | null> {
         puuid = puuid || this._puuid;
 
-        const { presences } = await this._fetch<FetchPresence>("/chat/v4/presences", "local");
+        const { presences } = await this._fetch<PresenceResponse>("/chat/v4/presences", "local");
 
         const player = presences.find((presence) => presence.puuid === puuid);
 
@@ -168,6 +185,97 @@ class Client {
         }
 
         return null;
+    }
+
+    /**
+     * PRESENCE_RNet_GET_ALL
+     *
+     * Get a list of online friends and their activity
+     * private is a base64-encoded JSON string that contains useful information such as party and in-progress game score.
+     * @returns
+     */
+    async getAllFriendsOnline(): Promise<Presence[]> {
+        const { presences } = await this._fetch<PresenceResponse>("/chat/v4/presences", "local");
+
+        return presences;
+    }
+
+    /**
+     * RiotClientSession_FetchSessions
+     *
+     * Gets info about the running Valorant process including start arguments
+     * @returns
+     */
+    async getInfoValorantProcess(): Promise<ValorantProcessResponse | Record<string, never>> {
+        const data = await this._fetch<ValorantProcessResponse>("/product-session/v1/external-sessions", "local");
+
+        return data;
+    }
+
+    /**
+     *  PlayerAlias_RNet_GetActiveAlias
+     *
+     *  Gets current player session authenticated
+     * @returns
+     */
+    async getCurrentPlayer(): Promise<CurrentPlayerResponse> {
+        const data = await this._fetch<CurrentPlayerResponse>("/player-account/aliases/v1/active", "local");
+
+        return data;
+    }
+
+    /**
+     *  RSO_RNet_GetEntitlementsToken
+     *
+     *  Gets both the token and entitlement for API usage
+     *  accessToken is used as the token and token is used as the entitlement.
+     *  PBE access can be checked through here
+     */
+
+    /* TODO: get right endpoint
+    async getTokenAndEntitlement(): Promise<CurrentPlayerResponse> {
+        const data = await this._fetch<CurrentPlayerResponse>("/player-account/aliases/v1/active", "local");
+
+        return data;
+    }
+    */
+
+    /**
+     * CHATFRIENDS_RNet_GET_ALL
+     *
+     * Get a list of friends
+     * @returns
+     */
+    async getAllFriends(): Promise<Friend[]> {
+        const { friends } = await this._fetch<FriendsResponse>("/chat/v4/friends", "local");
+
+        return friends;
+    }
+
+    /**
+     *  RiotKV_RNet_GetSettings
+     *
+     *  Get client settings
+     */
+    async getClientSettings(): Promise<ClientSettingsResponse> {
+        const data = await this._fetch<ClientSettingsResponse>(
+            "/player-preferences/v1/data-json/Ares.PlayerSettings",
+            "local",
+        );
+
+        return data;
+    }
+
+    /**
+     *  FRIENDS_RNet_FetchFriendRequests
+     *
+     *  Get pending friend requests
+     * @returns
+     */
+    async getPendingFriendsRequests(): Promise<PendingFriendRequest[]> {
+        const { requests } = await this._fetch<PendingFriendsResponse>("/chat/v4/friendrequests", "local");
+
+        return requests;
     }
 
     /**
