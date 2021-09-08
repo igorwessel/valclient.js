@@ -176,6 +176,9 @@ class Client {
         this._puuid = puuid;
     }
 
+    /**
+     * Get a client version in Valorant API (https://valorant-api.com)
+     */
     private async _getClientVersion(): Promise<string> {
         const {
             data: {
@@ -186,6 +189,9 @@ class Client {
         return `${branch}-shipping-${buildVersion}-${version.split(".")[3]}`;
     }
 
+    /**
+     * Get a lockfile when valorant is running, if dont find lockfile valorant is not running
+     */
     private _getLockfile(): LockFileType {
         try {
             const lockfile = readFileSync(this._lockfile_path, { encoding: "utf8" });
