@@ -99,7 +99,7 @@ class Client {
     async activate(): Promise<void> {
         if (!this._auth) {
             this._getLockfile();
-            this._getHeaders();
+            await this._getHeaders();
             const { game_name, game_tag } = await this.rnetFetchChatSession();
 
             this._player_name = game_name;
