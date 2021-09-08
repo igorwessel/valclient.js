@@ -1,22 +1,18 @@
 import axios, { AxiosInstance } from "axios";
+import { Headers } from "./client";
 
-interface AuthInput {
-    username?: string;
-    password?: string;
+export interface AuthInput {
+    username: string;
+    password: string;
 }
 
-interface AuthInterface {
+export interface AuthInterface {
     authenticate: () => void;
 }
 
-interface HeadersAuthenticated {
-    Authorization: string;
-    "X-Riot-Entitlements-JWT": string;
-}
-
-interface AuthenticateResponse {
-    user_id: string;
-    headers: Partial<HeadersAuthenticated>;
+export interface AuthenticateResponse {
+    puuid: string;
+    headers: Partial<Headers>;
 }
 
 class Auth implements AuthInterface {
@@ -27,7 +23,7 @@ class Auth implements AuthInterface {
     private _entitlementsAuthRiotEndpoint = "https://entitlements.auth.riotgames.com/api/token/v1";
     private _authUserUrlRiotEndpoint = "https://auth.riotgames.com/userinfo";
 
-    constructor(auth: AuthInput) {
+    constructor(auth: Partial<AuthInput>) {
         this._username = auth.username;
         this._password = auth.password;
     }
@@ -39,9 +35,11 @@ class Auth implements AuthInterface {
             redirect_uri: "https://playvalorant.com/opt_in",
             response_type: "token id_token",
         };
+
         const resp = await this._axios.post(this._authUrlRiotEndpoint, data);
-        const cookies: [string] = resp.headers["set-cookie"];
-        const cookie = cookies.reduce((string, cookie) => string + cookie + "; ", "");
+
+        const cookie: string = resp.headers["set-cookie"].reduce((string, cookie) => string + cookie + "; ", "");
+
         this._axios.defaults.headers.Cookie = cookie;
     }
 
@@ -56,13 +54,13 @@ class Auth implements AuthInterface {
 
         const login = await this._axios.put(this._authUrlRiotEndpoint, authorization, { withCredentials: true });
 
-        const patternAcessToken =
+        const patternAccessToken =
             /access_token=((?:[a-zA-Z]|\d|\.|-|_)*).*id_token=((?:[a-zA-Z]|\d|\.|-|_)*).*expires_in=(\d*)/;
 
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const [_, access_token] = patternAcessToken.exec(login.data.response.parameters.uri);
+        const [_, access_token] = patternAccessToken.exec(login.data.response.parameters.uri);
 
-        const headers = {
+        const headers: Partial<Headers> = {
             Authorization: `Bearer ${access_token}`,
         };
 
@@ -71,12 +69,12 @@ class Auth implements AuthInterface {
         } = await this._axios.post(this._entitlementsAuthRiotEndpoint, {}, { headers });
 
         const {
-            data: { sub: user_id },
+            data: { sub: puuid },
         } = await this._axios.post(this._authUserUrlRiotEndpoint, {}, { headers });
 
         headers["X-Riot-Entitlements-JWT"] = entitlements_token;
 
-        return { user_id, headers };
+        return { puuid, headers };
     }
 }
 
