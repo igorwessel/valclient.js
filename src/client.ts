@@ -118,10 +118,10 @@ class Client {
      * @param endpointType Default value: "pd"
      * @returns Response
      */
-    private async _fetch(endpoint = "/", endpointType: EndpointType = "pd", config?: AxiosRequestConfig) {
+    private async _fetch<T>(endpoint = "/", endpointType: EndpointType = "pd", config?: AxiosRequestConfig) {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
-        const { data } = await this._axios.get(endpoint, config);
+        const { data } = await this._axios.get<T>(endpoint, config);
 
         return data;
     }
@@ -133,10 +133,10 @@ class Client {
      * @param data
      * @returns
      */
-    private async _post(endpoint = "/", endpointType: EndpointType = "pd", data = {}) {
+    private async _post<T>(endpoint = "/", endpointType: EndpointType = "pd", data = {}) {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
-        const response = await this._axios.post(endpoint, data);
+        const response = await this._axios.post<T>(endpoint, data);
 
         return response.data;
     }
@@ -147,10 +147,10 @@ class Client {
      * @param data
      * @returns
      */
-    private async _put(endpoint = "/", endpointType: EndpointType = "pd", data = {}) {
+    private async _put<T>(endpoint = "/", endpointType: EndpointType = "pd", data = {}) {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
-        const response = await this._axios.put(endpoint, data);
+        const response = await this._axios.put<T>(endpoint, data);
 
         return response.data;
     }
@@ -160,10 +160,10 @@ class Client {
      * @param endpointType Default value "pd"
      * @returns
      */
-    private async _delete(endpoint = "/", endpointType: EndpointType = "pd") {
+    private async _delete<T>(endpoint = "/", endpointType: EndpointType = "pd") {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
-        const { data } = await this._axios.delete(endpoint);
+        const { data } = await this._axios.delete<T>(endpoint);
 
         return data;
     }
