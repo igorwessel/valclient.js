@@ -7,7 +7,7 @@ import { regions, RegionsString, regionShardOverride, shardRegionOverride } from
 import { getConfigurationPath } from "@utils";
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 
-import { EntitlementsTokenLocal } from "@interfaces/responses";
+import { EntitlementsTokenLocal, FetchPresence, PresencePrivate, RNETFetchChatSession } from "@interfaces/responses";
 
 import Auth, { AuthInput } from "auth";
 
@@ -96,22 +96,20 @@ class Client {
     /**
      * Activate the client and get authorization
      */
-    public async activate(): Promise<void> {
-        try {
-            if (!this._auth) {
-                this._getLockfile();
-                this._getHeaders();
-                const { game_name, game_tag } = await this.rnet_fetch_chat_session();
+    async activate(): Promise<void> {
+        if (!this._auth) {
+            this._getLockfile();
+            this._getHeaders();
+            const { game_name, game_tag } = await this.rnetFetchChatSession();
 
-                this._player_name = game_name;
-                this._player_tag = game_tag;
-            } else {
-                const { puuid, headers } = await this._auth.authenticate();
+            this._player_name = game_name;
+            this._player_tag = game_tag;
+        } else {
+            const { puuid, headers } = await this._auth.authenticate();
 
-                this._puuid = puuid;
-                this._headers = headers;
-            }
-        } catch (e) {}
+            this._puuid = puuid;
+            this._headers = headers;
+        }
     }
 
     /**
@@ -175,10 +173,31 @@ class Client {
      *
      * Get the current session including player name and PUUID
      */
-    private async rnet_fetch_chat_session() {
-        const { data } = await this._fetch("/chat/v1/session", "local");
+    async rnetFetchChatSession(): Promise<RNETFetchChatSession> {
+        const data = await this._fetch<RNETFetchChatSession>("/chat/v1/session", "local");
 
         return data;
+    }
+
+    /**
+     * PRESENCE_RNet_GET
+     *
+     *  NOTE: Only works on self or active user's friends
+     * @param puuid Use puuid passed in parameter or self puuid
+     * @returns
+     */
+    async fetchPresence(puuid?: string): Promise<PresencePrivate | null> {
+        puuid = puuid || this._puuid;
+
+        const { presences } = await this._fetch<FetchPresence>("/chat/v4/presences", "local");
+
+        const player = presences.find((presence) => presence.puuid === puuid);
+
+        if (player) {
+            return player.private;
+        }
+
+        return null;
     }
 
     /**
@@ -219,8 +238,10 @@ class Client {
                 config.httpsAgent = new https.Agent({
                     rejectUnauthorized: false,
                 });
-
-                config.headers = this._local_headers;
+                config.auth = {
+                    username: "riot",
+                    password: this._lockfile.password,
+                };
                 config.withCredentials = true;
                 return config;
             },
@@ -260,7 +281,6 @@ class Client {
         if (!this._auth) {
             return this._getAuthHeaders();
         }
-
         const { puuid, headers } = await this._auth.authenticate();
         headers["X-Riot-ClientPlatform"] = this._client_platform;
         headers["X-Riot-ClientVersion"] = this._client_version;
@@ -277,9 +297,7 @@ class Client {
             accessToken,
             subject: puuid,
             token,
-        } = await this._fetch<EntitlementsTokenLocal>("/entitlements/v1/token", "local", {
-            auth: { username: "riot", password: this._lockfile.password },
-        });
+        } = await this._fetch<EntitlementsTokenLocal>("/entitlements/v1/token", "local");
 
         this._headers = {
             Authorization: `Bearer ${accessToken}`,
