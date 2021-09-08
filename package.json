@@ -7,7 +7,7 @@
         "lint": "eslint '*/**/*.ts' --quiet --fix",
         "test": "echo \"Error: no test specified\" && exit 1",
         "prepare": "husky install",
-        "start": "cross-env NODE_ENV=production nodemon -r tsconfig-paths/register src/index.ts"
+        "start": "cross-env NODE_ENV=development nodemon -r tsconfig-paths/register src/index.ts"
     },
     "repository": {
         "type": "git",
