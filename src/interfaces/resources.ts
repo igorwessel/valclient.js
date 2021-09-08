@@ -18,4 +18,5 @@ export type Queues =
     | "spikerush"
     | "unrated"
     | "onefa"
+    | "newmap"
     | "null";
