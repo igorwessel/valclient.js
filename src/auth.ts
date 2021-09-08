@@ -1,19 +1,7 @@
 import axios, { AxiosInstance } from "axios";
-import { Headers } from "./client";
 
-export interface AuthInput {
-    username: string;
-    password: string;
-}
-
-export interface AuthInterface {
-    authenticate: () => void;
-}
-
-export interface AuthenticateResponse {
-    puuid: string;
-    headers: Partial<Headers>;
-}
+import { AuthenticateResponse, AuthInput, AuthInterface } from "@interfaces/auth";
+import { Headers } from "@interfaces/client";
 
 class Auth implements AuthInterface {
     private _username: string;

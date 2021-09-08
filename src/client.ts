@@ -3,46 +3,16 @@ import { promises as fs, readFileSync } from "fs";
 import YAML from "yaml";
 import https from "https";
 
-import { regions, RegionsString, regionShardOverride, shardRegionOverride } from "@resources";
+import { regions, regionShardOverride, shardRegionOverride } from "@resources";
 import { getConfigurationPath } from "@utils";
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 
+/** Interfaces */
 import { EntitlementsTokenLocal, FetchPresence, PresencePrivate, RNETFetchChatSession } from "@interfaces/responses";
+import { ClientConfig, EndpointType, Headers, LocalHeaders, LockFileType } from "@interfaces/client";
+import { Regions } from "@interfaces/resources";
 
-import Auth, { AuthInput } from "auth";
-
-interface LockFileType {
-    name: string;
-    PID: string;
-    port: string;
-    password: string;
-    protocol: string;
-}
-
-interface ClientConfig {
-    region: RegionsString;
-    auth: AuthInput;
-}
-
-interface LocalHeaders {
-    Authorization: string;
-}
-
-export interface Headers {
-    Authorization: string;
-    "X-Riot-Entitlements-JWT": string;
-    "X-Riot-ClientPlatform": string;
-    "X-Riot-ClientVersion": string;
-}
-
-enum EndpointTypes {
-    pd,
-    glz,
-    shared,
-    local,
-}
-
-type EndpointType = keyof typeof EndpointTypes;
+import Auth from "auth";
 
 class Client {
     private _axios: AxiosInstance = axios;
@@ -53,8 +23,8 @@ class Client {
     private _lockfile: LockFileType;
     private _headers: Partial<Headers>;
     private _local_headers: LocalHeaders;
-    private _region: RegionsString;
-    private _shard: RegionsString;
+    private _region: Regions;
+    private _shard: Regions;
     private _auth: Auth | null = null;
     private _client_platform =
         "ew0KCSJwbGF0Zm9ybVR5cGUiOiAiUEMiLA0KCSJwbGF0Zm9ybU9TIjogIldpbmRvd3MiLA0KCSJwbGF0Zm9ybU9TVmVyc2lvbiI6ICIxMC4wLjE5MDQyLjEuMjU2LjY0Yml0IiwNCgkicGxhdGZvcm1DaGlwc2V0IjogIlVua25vd24iDQp9";
@@ -204,7 +174,7 @@ class Client {
      * All regions we can use in Client
      * @returns All regions
      */
-    static getRegions(): RegionsString[] {
+    static getRegions(): Regions[] {
         return regions;
     }
 
@@ -212,14 +182,14 @@ class Client {
      * Get Region in RiotClient Settings
      * @returns Region
      */
-    private _getRegionValorant(): RegionsString {
+    private _getRegionValorant(): Regions {
         const yamlPath = getConfigurationPath("RiotClientSettings.yaml");
         const yamlData = readFileSync(yamlPath, { encoding: "utf8" });
         const {
             install: {
                 globals: { region },
             },
-        }: { install: { globals: { region: RegionsString } } } = YAML.parse(yamlData);
+        }: { install: { globals: { region: Regions } } } = YAML.parse(yamlData);
 
         return region;
     }
