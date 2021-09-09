@@ -1,4 +1,5 @@
-import { Queues } from "@interfaces/resources";
+import { Queues, CustomGameMapsName, Maps, GameModes, CustomGameModes } from "@interfaces/resources";
+import { BooleanString } from "@interfaces/helpers";
 
 export interface CurrentGameSessionResponse {
     subject: string;
@@ -51,12 +52,12 @@ export interface CurrentPartyIdResponse {
     };
 }
 
-export interface CurrentPartyDetailsMemberPing {
+export interface PartyDetailsMemberPing {
     Ping: number;
     GamePodID: string;
 }
 
-export interface CurrentPartyDetailsMember {
+export interface PartyDetailsMember {
     Subject: string;
     CompetitiveTier: number;
     PlayerIdentity: {
@@ -78,18 +79,18 @@ export interface CurrentPartyDetailsMember {
     IsOwner: boolean;
     QueueEligibleRemainingGames: number;
     QueueEligibleRemainingWins: number;
-    Pings: CurrentPartyDetailsMemberPing[];
+    Pings: PartyDetailsMemberPing[];
     IsReady: boolean;
     IsModerator: boolean;
     UseBroadcastHUD: boolean;
     PlatformType: string;
 }
 
-export interface CurrentPartyDetailsMembership {
+export interface PartyDetailsMembership {
     Subject: string;
 }
 
-export interface CurrentPartyDetailsInvite {
+export interface PartyDetailsInvite {
     ID: string;
     PartyID: string;
     Subject: string;
@@ -98,48 +99,56 @@ export interface CurrentPartyDetailsInvite {
     ExpiresIn: number;
 }
 
-export interface CurrentPartyDetailsCustomGameRules {
-    AllowGameModifiers: string;
-    PlayOutAllRounds: string;
-    SkipMatchHistory: string;
-    TournamentMode: string;
+export interface PartyDetailsCustomGameRules {
+    AllowGameModifiers: BooleanString;
+    PlayOutAllRounds: BooleanString;
+    SkipMatchHistory: BooleanString;
+    TournamentMode: BooleanString;
 }
 
-export interface CurrentPartyDetailsResponse {
+export interface CustomGameSettings {
+    Map: `/Game/Maps/${CustomGameMapsName}`;
+    Mode: `/Game/GameModes/${CustomGameModes}`;
+    UseBots: boolean;
+    GamePod: string;
+    GameRules: PartyDetailsCustomGameRules | null;
+}
+
+export interface CustomGameSettingsInput {
+    Map: Maps;
+    Mode: GameModes;
+    GameRules?: PartyDetailsCustomGameRules;
+}
+
+export interface PartyDetails {
     ID: string;
     MUCName: string;
     VoiceRoomID: string;
     Version: number;
     ClientVersion: string;
-    Members: CurrentPartyDetailsMember[];
+    Members: PartyDetailsMember[];
     State: string;
     PreviousState: string;
     StateTransitionReason: string;
     Accessibility: string;
     CustomGameData: {
-        Settings: {
-            Map: string;
-            Mode: string;
-            UseBots: boolean;
-            GamePod: string;
-            GameRules: CurrentPartyDetailsCustomGameRules | null;
-        };
+        Settings: CustomGameSettings;
         Membership: {
-            teamOne: CurrentPartyDetailsMembership[] | null;
-            teamTwo: CurrentPartyDetailsMembership[] | null;
-            teamSpectate: CurrentPartyDetailsMembership[] | null;
-            teamOneCoaches: CurrentPartyDetailsMembership[] | null;
-            teamTwoCoaches: CurrentPartyDetailsMembership[] | null;
+            teamOne: PartyDetailsMembership[] | null;
+            teamTwo: PartyDetailsMembership[] | null;
+            teamSpectate: PartyDetailsMembership[] | null;
+            teamOneCoaches: PartyDetailsMembership[] | null;
+            teamTwoCoaches: PartyDetailsMembership[] | null;
         };
         MaxPartySize: number;
         AutobalanceEnabled: boolean;
         AutobalanceMinPlayers: number;
     };
     MatchmakingData: { QueueID: Queues; PreferredGamePods: [] };
-    Invites: CurrentPartyDetailsInvite[] | null;
+    Invites: PartyDetailsInvite[] | null;
     Requests: Record<string, unknown>[]; //TODO: get example request for this type
     QueueEntryTime: string;
-    ErrorNotification: { ErrorType: string; ErroredPlayers: CurrentPartyDetailsMembership[] | null };
+    ErrorNotification: { ErrorType: string; ErroredPlayers: PartyDetailsMembership[] | null };
     RestrictedSeconds: number;
     EligibleQueues: Queues[];
     PlatformType: string;

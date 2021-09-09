@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from "axios";
 import { promises as fs, readFileSync } from "fs";
 import YAML from "yaml";
 import https from "https";
@@ -8,7 +8,7 @@ import Auth from "auth";
 import { getConfigurationPath } from "@utils";
 
 /** Resources */
-import { regions, regionShardOverride, shardRegionOverride } from "@resources";
+import { customGameModes, customValorantMaps, regions, regionShardOverride, shardRegionOverride } from "@resources";
 
 /** Errors */
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
@@ -30,12 +30,15 @@ import {
 } from "@interfaces/localEndpointResponses";
 import {
     CurrentGameSessionResponse,
-    CurrentPartyDetailsResponse,
     CurrentPartyIdResponse,
+    CustomGameSettings,
+    CustomGameSettingsInput,
+    PartyDetails,
     ReconnectGameSessionResponse,
 } from "@interfaces/glzEndpointResponses";
 import { ClientConfig, EndpointType, Headers, LocalHeaders, LockFileType } from "@interfaces/client";
-import { Regions } from "@interfaces/resources";
+import { Queues, Regions } from "@interfaces/resources";
+import { State } from "@interfaces/helpers";
 
 class Client {
     private _axios: AxiosInstance = axios;
@@ -98,18 +101,25 @@ class Client {
      * Activate the client and get authorization
      */
     async activate(): Promise<void> {
-        if (!this._auth) {
-            this._getLockfile();
-            await this._getHeaders();
-            const { game_name, game_tag } = await this.getChatSession();
+        try {
+            if (!this._auth) {
+                this._getLockfile();
+                await this._getHeaders();
+                const { game_name, game_tag } = await this.getChatSession();
 
-            this._player_name = game_name;
-            this._player_tag = game_tag;
-        } else {
-            const { puuid, headers } = await this._auth.authenticate();
+                this._player_name = game_name;
+                this._player_tag = game_tag;
+            } else {
+                const { puuid, headers } = await this._auth.authenticate();
 
-            this._puuid = puuid;
-            this._headers = headers;
+                this._puuid = puuid;
+                this._headers = headers;
+            }
+        } catch (e) {
+            console.group("ACTIVATE");
+            console.log(e);
+            console.log(e.data);
+            console.groupEnd();
         }
     }
 
@@ -200,10 +210,10 @@ class Client {
      *
      *  Get details about a given party id
      */
-    async getCurrentDetailsParty(): Promise<CurrentPartyDetailsResponse> {
+    async getCurrentDetailsParty(): Promise<PartyDetails> {
         const { CurrentPartyID } = await this.getCurrentPartyId();
 
-        const data = await this._fetch<CurrentPartyDetailsResponse>(`/parties/v1/parties/${CurrentPartyID}`, "glz");
+        const data = await this._fetch<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}`, "glz");
 
         return data;
     }
@@ -215,10 +225,10 @@ class Client {
      * @param ready
      * @returns
      */
-    async setMemberReadyParty(ready?: boolean): Promise<CurrentPartyDetailsResponse> {
+    async setMemberReadyParty(ready?: boolean): Promise<PartyDetails> {
         const { CurrentPartyID } = await this.getCurrentPartyId();
 
-        const data = await this._post<CurrentPartyDetailsResponse>(
+        const data = await this._post<PartyDetails>(
             `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/setReady`,
             "glz",
             {
@@ -234,15 +244,143 @@ class Client {
      *
      *  Refreshes the competitive tier for a player
      */
-    async refreshCompetitiveTier(): Promise<null> {
+    async refreshCompetitiveTier(): Promise<boolean> {
         const { CurrentPartyID } = await this.getCurrentPartyId();
 
-        const data = await this._post<null>(
-            `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshCompetitiveTier`,
+        await this._post(`/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshCompetitiveTier`, "glz");
+
+        return true;
+    }
+
+    /**
+     *  Party_RefreshPlayerIdentity
+     *
+     *  Refreshes the identity for a player
+     */
+    async refreshPlayerIdentity(): Promise<PartyDetails> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._post<PartyDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshPlayerIdentity`,
             "glz",
         );
 
         return data;
+    }
+
+    /**
+     *  Party_RefreshPings
+     *
+     *  Refreshes the pings for a player
+     */
+    async refreshPlayerPings(): Promise<PartyDetails> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._post<PartyDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshPings`,
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
+     *  Party_ChangeQueue
+     *
+     *  Sets the matchmaking queue for the party
+     * @param queueID
+     * @returns
+     */
+    async changePartyQueue(queueID: Queues): Promise<PartyDetails> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/queue`, "glz", {
+            queueID,
+        });
+
+        return data;
+    }
+
+    /**
+     *  Party_StartCustomGame
+     *
+     *  Starts a custom game
+     */
+    async startPartyCustomGame(): Promise<PartyDetails> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/startcustomgame`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_EnterMatchmakingQueue
+     *
+     *  Enters the matchmaking queue
+     */
+    async enterMatchmakingQueue(): Promise<PartyDetails> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/join`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_LeaveMatchmakingQueue
+     *
+     *  Leaves the matchmaking queue
+     */
+    async leaveMatchmakingQueue(): Promise<PartyDetails> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/leave`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_SetAccessibility
+     *
+     *  Changes the group state to be open or closed
+     */
+    async changeGroupState(open?: State): Promise<PartyDetails> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/accessibility`, "glz", {
+            accessibility: open,
+        });
+
+        return data;
+    }
+
+    /**
+     *  Party_SetCustomGameSettings
+     *
+     *  Changes the settings for a custom game
+     * @param settings
+     */
+    async setGroupCustomGameSettings(settings: CustomGameSettingsInput): Promise<void> {
+        const { CurrentPartyID } = await this.getCurrentPartyId();
+
+        const settingsPowerful: Partial<CustomGameSettings> = {
+            Map: `/Game/Maps/${customValorantMaps[settings.Map]}`,
+            Mode: `/Game/GameModes/${customGameModes[settings.Mode]}`,
+            ...(settings.GameRules && { GameRules: settings.GameRules }),
+        };
+
+        const data = await this._post(
+            `/parties/v1/parties/${CurrentPartyID}/customgamesettings`,
+            "glz",
+            settingsPowerful,
+        );
+        // default /Game/GameModes/Bomb/BombGameMode.BombGameMode_C
+        // deathmatch /Game/GameModes/Deathmatch/DeathmatchGameMode.DeathmatchGameMode_C
+        // oneforall /Game/GameModes/OneForAll/OneForAll_GameMode.OneForAll_GameMode_C
+        // quickbomb /Game/GameModes/QuickBomb/QuickBombGameMode.QuickBombGameMode_C
+
+        console.log(data);
     }
 
     /**
@@ -402,7 +540,6 @@ class Client {
     static getRegions(): Regions[] {
         return regions;
     }
-
     /**
      * Get Region in RiotClient Settings
      * @returns Region
@@ -476,6 +613,7 @@ class Client {
         if (!this._auth) {
             return this._getAuthHeaders();
         }
+
         const { puuid, headers } = await this._auth.authenticate();
         headers["X-Riot-ClientPlatform"] = this._client_platform;
         headers["X-Riot-ClientVersion"] = this._client_version;
@@ -488,20 +626,22 @@ class Client {
      * Get Auth Headers when not have Auth
      */
     private async _getAuthHeaders(): Promise<void> {
-        const {
-            accessToken,
-            subject: puuid,
-            token,
-        } = await this._fetch<EntitlementsTokenLocal>("/entitlements/v1/token", "local");
+        try {
+            const {
+                accessToken,
+                subject: puuid,
+                token,
+            } = await this._fetch<EntitlementsTokenLocal>("/entitlements/v1/token", "local");
 
-        this._headers = {
-            Authorization: `Bearer ${accessToken}`,
-            "X-Riot-Entitlements-JWT": token,
-            "X-Riot-ClientPlatform": this._client_platform,
-            "X-Riot-ClientVersion": this._client_version,
-        };
+            this._headers = {
+                Authorization: `Bearer ${accessToken}`,
+                "X-Riot-Entitlements-JWT": token,
+                "X-Riot-ClientPlatform": this._client_platform,
+                "X-Riot-ClientVersion": this._client_version,
+            };
 
-        this._puuid = puuid;
+            this._puuid = puuid;
+        } catch (e) {}
     }
 
     /**

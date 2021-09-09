@@ -17,3 +17,7 @@ export type Locale =
     | "vi-VN"
     | "zh-CN"
     | "zh-TW";
+
+export type State = "OPEN" | "CLOSED";
+
+export type BooleanString = "true" | "false";
