@@ -207,3 +207,8 @@ export interface CurrentAvailableGameModeResponse {
     Queues: CurrentAvailableGameModeQueue[];
     GamePodPingServiceInfo: CurrentAvailableGameModePing;
 }
+
+export interface MUCTokenResponse {
+    Token: string;
+    Room: string;
+}

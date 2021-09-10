@@ -35,6 +35,7 @@ import {
     CustomGameSettings,
     CustomGameSettingsInput,
     GroupDetails,
+    MUCTokenResponse,
     ReconnectGameSessionResponse,
 } from "@interfaces/glzEndpointResponses";
 import { ClientConfig, EndpointType, Headers, LocalHeaders, LockFileType } from "@interfaces/client";
@@ -482,6 +483,18 @@ class Client {
         return data;
     }
 
+    /**
+     * Party_FetchMUCToken
+     *
+     * Get a token for party chat
+     */
+    async getGroupMUCToken(): Promise<MUCTokenResponse> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._fetch<MUCTokenResponse>(`/parties/v1/parties/${CurrentPartyID}/muctoken`, "glz");
+
+        return data;
+    }
     /**
      *  Session_Get
      *
