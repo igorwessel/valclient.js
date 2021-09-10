@@ -30,10 +30,10 @@ import {
 } from "@interfaces/localEndpointResponses";
 import {
     CurrentGameSessionResponse,
-    CurrentPartyIdResponse,
+    CurrentGroupIdResponse,
     CustomGameSettings,
     CustomGameSettingsInput,
-    PartyDetails,
+    GroupDetails,
     ReconnectGameSessionResponse,
 } from "@interfaces/glzEndpointResponses";
 import { ClientConfig, EndpointType, Headers, LocalHeaders, LockFileType } from "@interfaces/client";
@@ -184,8 +184,8 @@ class Client {
      *
      *  Get the Party ID that a given player belongs to
      */
-    async getCurrentPartyId(): Promise<CurrentPartyIdResponse> {
-        const data = await this._fetch<CurrentPartyIdResponse>(`/parties/v1/players/${this._puuid}`, "glz");
+    async getCurrentGroupId(): Promise<CurrentGroupIdResponse> {
+        const data = await this._fetch<CurrentGroupIdResponse>(`/parties/v1/players/${this._puuid}`, "glz");
 
         return data;
     }
@@ -210,10 +210,10 @@ class Client {
      *
      *  Get details about a given party id
      */
-    async getCurrentDetailsParty(): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    async getCurrentDetailsGroup(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
-        const data = await this._fetch<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}`, "glz");
+        const data = await this._fetch<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}`, "glz");
 
         return data;
     }
@@ -225,10 +225,10 @@ class Client {
      * @param ready
      * @returns
      */
-    async setMemberReadyParty(ready?: boolean): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    async setMemberReadyGroup(ready?: boolean): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
-        const data = await this._post<PartyDetails>(
+        const data = await this._post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/setReady`,
             "glz",
             {
@@ -245,7 +245,7 @@ class Client {
      *  Refreshes the competitive tier for a player
      */
     async refreshCompetitiveTier(): Promise<boolean> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
         await this._post(`/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshCompetitiveTier`, "glz");
 
@@ -257,10 +257,10 @@ class Client {
      *
      *  Refreshes the identity for a player
      */
-    async refreshPlayerIdentity(): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    async refreshPlayerIdentity(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
-        const data = await this._post<PartyDetails>(
+        const data = await this._post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshPlayerIdentity`,
             "glz",
         );
@@ -273,10 +273,10 @@ class Client {
      *
      *  Refreshes the pings for a player
      */
-    async refreshPlayerPings(): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    async refreshPlayerPings(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
-        const data = await this._post<PartyDetails>(
+        const data = await this._post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshPings`,
             "glz",
         );
@@ -291,10 +291,10 @@ class Client {
      * @param queueID
      * @returns
      */
-    async changePartyQueue(queueID: Queues): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    async changeGroupQueue(queueID: Queues): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
-        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/queue`, "glz", {
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/queue`, "glz", {
             queueID,
         });
 
@@ -306,10 +306,10 @@ class Client {
      *
      *  Starts a custom game
      */
-    async startPartyCustomGame(): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    async startGroupCustomGame(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
-        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/startcustomgame`, "glz");
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/startcustomgame`, "glz");
 
         return data;
     }
@@ -319,10 +319,10 @@ class Client {
      *
      *  Enters the matchmaking queue
      */
-    async enterMatchmakingQueue(): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    async enterMatchmakingQueue(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
-        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/join`, "glz");
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/join`, "glz");
 
         return data;
     }
@@ -332,10 +332,10 @@ class Client {
      *
      *  Leaves the matchmaking queue
      */
-    async leaveMatchmakingQueue(): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    async leaveMatchmakingQueue(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
-        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/leave`, "glz");
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/leave`, "glz");
 
         return data;
     }
@@ -345,10 +345,10 @@ class Client {
      *
      *  Changes the group state to be open or closed
      */
-    async changeGroupState(open?: State): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    async changeGroupState(open?: State): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
-        const data = await this._post<PartyDetails>(`/parties/v1/parties/${CurrentPartyID}/accessibility`, "glz", {
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/accessibility`, "glz", {
             accessibility: open,
         });
 
@@ -366,8 +366,8 @@ class Client {
         Mode,
         GamePod,
         GameRules,
-    }: CustomGameSettingsInput): Promise<PartyDetails> {
-        const { CurrentPartyID } = await this.getCurrentPartyId();
+    }: CustomGameSettingsInput): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
 
         const body: Partial<CustomGameSettings> = {
             Map: `/Game/Maps/${customMappedMaps[Map]}`,
@@ -376,7 +376,7 @@ class Client {
             GameRules: GameRules || null,
         };
 
-        const data = await this._post<PartyDetails>(
+        const data = await this._post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/customgamesettings`,
             "glz",
             body,

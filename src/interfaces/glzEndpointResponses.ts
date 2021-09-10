@@ -29,7 +29,7 @@ export interface ReconnectGameSessionResponse {
     reconnect: boolean;
 }
 
-export interface CurrentPartyRequest {
+export interface CurrentGroupRequest {
     ID: string;
     PartyID: string;
     RequestedBySubject: string;
@@ -38,12 +38,12 @@ export interface CurrentPartyRequest {
     ExpiresIn: number;
 }
 
-export interface CurrentPartyIdResponse {
+export interface CurrentGroupIdResponse {
     Subject: string;
     Version: number;
     CurrentPartyID: string;
     Invites: null;
-    Requests: CurrentPartyRequest[];
+    Requests: CurrentGroupRequest[];
     PlatformInfo: {
         platformType: string;
         platformOS: string;
@@ -52,12 +52,12 @@ export interface CurrentPartyIdResponse {
     };
 }
 
-export interface PartyDetailsMemberPing {
+export interface GroupMemberPing {
     Ping: number;
     GamePodID: string;
 }
 
-export interface PartyDetailsMember {
+export interface GroupMember {
     Subject: string;
     CompetitiveTier: number;
     PlayerIdentity: {
@@ -79,18 +79,18 @@ export interface PartyDetailsMember {
     IsOwner: boolean;
     QueueEligibleRemainingGames: number;
     QueueEligibleRemainingWins: number;
-    Pings: PartyDetailsMemberPing[];
+    Pings: GroupMemberPing[];
     IsReady: boolean;
     IsModerator: boolean;
     UseBroadcastHUD: boolean;
     PlatformType: string;
 }
 
-export interface PartyDetailsMembership {
+export interface GroupMembership {
     Subject: string;
 }
 
-export interface PartyDetailsInvite {
+export interface GroupInvite {
     ID: string;
     PartyID: string;
     Subject: string;
@@ -99,7 +99,7 @@ export interface PartyDetailsInvite {
     ExpiresIn: number;
 }
 
-export interface PartyDetailsCustomGameRules {
+export interface GroupCustomGameRules {
     AllowGameModifiers: BooleanString;
     PlayOutAllRounds: BooleanString;
     SkipMatchHistory: BooleanString;
@@ -111,23 +111,23 @@ export interface CustomGameSettings {
     Mode: `/Game/GameModes/${CustomGameModes}`;
     UseBots: boolean;
     GamePod: RiotServers;
-    GameRules: PartyDetailsCustomGameRules | null;
+    GameRules: GroupCustomGameRules | null;
 }
 
 export interface CustomGameSettingsInput {
     Map: Maps;
     Mode: GameModes;
     GamePod?: RiotServers;
-    GameRules?: PartyDetailsCustomGameRules | null;
+    GameRules?: GroupCustomGameRules | null;
 }
 
-export interface PartyDetails {
+export interface GroupDetails {
     ID: string;
     MUCName: string;
     VoiceRoomID: string;
     Version: number;
     ClientVersion: string;
-    Members: PartyDetailsMember[];
+    Members: GroupMember[];
     State: string;
     PreviousState: string;
     StateTransitionReason: string;
@@ -135,21 +135,21 @@ export interface PartyDetails {
     CustomGameData: {
         Settings: CustomGameSettings;
         Membership: {
-            teamOne: PartyDetailsMembership[] | null;
-            teamTwo: PartyDetailsMembership[] | null;
-            teamSpectate: PartyDetailsMembership[] | null;
-            teamOneCoaches: PartyDetailsMembership[] | null;
-            teamTwoCoaches: PartyDetailsMembership[] | null;
+            teamOne: GroupMembership[] | null;
+            teamTwo: GroupMembership[] | null;
+            teamSpectate: GroupMembership[] | null;
+            teamOneCoaches: GroupMembership[] | null;
+            teamTwoCoaches: GroupMembership[] | null;
         };
         MaxPartySize: number;
         AutobalanceEnabled: boolean;
         AutobalanceMinPlayers: number;
     };
     MatchmakingData: { QueueID: Queues; PreferredGamePods: [] };
-    Invites: PartyDetailsInvite[] | null;
+    Invites: GroupInvite[] | null;
     Requests: Record<string, unknown>[]; //TODO: get example request for this type
     QueueEntryTime: string;
-    ErrorNotification: { ErrorType: string; ErroredPlayers: PartyDetailsMembership[] | null };
+    ErrorNotification: { ErrorType: string; ErroredPlayers: GroupMembership[] | null };
     RestrictedSeconds: number;
     EligibleQueues: Queues[];
     PlatformType: string;
