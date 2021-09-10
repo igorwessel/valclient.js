@@ -29,6 +29,9 @@ import {
     PendingFriendRequest,
 } from "@interfaces/localEndpointResponses";
 import {
+    CoreGameDetailsResponse,
+    CoreGameLoadoutResponse,
+    CoreGameResponse,
     CurrentAvailableGameModeResponse,
     CurrentGameSessionResponse,
     CurrentGroupIdResponse,
@@ -511,6 +514,115 @@ class Client {
             `/parties/v1/parties/${CurrentPartyID}/voicetoken`,
             "glz",
         );
+
+        return data;
+    }
+
+    /**
+     * CoreGame_FetchPlayer
+     *
+     * Get the game ID for an ongoing game the player is in
+     */
+    async currentMatchGetPlayer(): Promise<CoreGameResponse> {
+        try {
+            const data = await this._fetch<CoreGameResponse>(`/core-game/v1/players/${this._puuid}`, "glz");
+
+            return data;
+        } catch (e) {
+            const error = e.response.data;
+
+            if (error.httpStatus === 404) {
+                return {
+                    ...error,
+                    errorCode: "NOT_IN_CORE_GAME",
+                    message: "You are not in a core-game (playing a match)",
+                };
+            }
+        }
+    }
+
+    /**
+     * CoreGame_FetchMatch
+     *
+     * Get information about an ongoing game
+     */
+    async currentMatchDetails(match_id?: string): Promise<CoreGameDetailsResponse> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<CoreGameDetailsResponse>(`/core-game/v1/matches/${match_id}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * CoreGame_FetchMatchLoadouts
+     *
+     * Get player skins and sprays for an ongoing game
+     * @param match_id
+     * @returns
+     */
+    async currentMatchLoadout(match_id?: string): Promise<CoreGameLoadoutResponse> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<CoreGameLoadoutResponse>(`/core-game/v1/matches/${match_id}/loadouts`, "glz");
+
+        return data;
+    }
+
+    /**
+     * CoreGame_FetchTeamChatMUCToken
+     *
+     * Get a token for team chat
+     * @param match_id
+     */
+    async currentMatchTeamChatMUCToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(
+            `/core-game/v1/matches/${match_id}/teamchatmuctoken`,
+            "glz",
+        ); //TODO: not sure about this return type, i will change later when in unrated match to test return type
+
+        return data;
+    }
+
+    /**
+     * CoreGame_FetchAllChatMUCToken
+     *
+     * Get a token for all chat
+     * @param match_id
+     */
+    async currentMatchAllChatMUCToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(
+            `/core-game/v1/matches/{match_id}/allchatmuctoken`,
+            "glz",
+        ); //TODO: not sure about this return type, i will change later when in unrated match to test return type
+
+        return data;
+    }
+
+    /**
+     * CoreGame_DisassociatePlayer
+     *
+     * Leave an in-progress game
+     * @param match_id
+     */
+    async currentMatchDisconnect(match_id?: string): Promise<null> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._post<null>(`/core-game/v1/players/${this._puuid}/disassociate/${match_id}`, "glz");
 
         return data;
     }
