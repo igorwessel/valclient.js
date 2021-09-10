@@ -208,7 +208,7 @@ export interface CurrentAvailableGameModeResponse {
     GamePodPingServiceInfo: CurrentAvailableGameModePing;
 }
 
-export interface MUCTokenResponse {
+export interface GLZEndpointTokenResponse {
     Token: string;
     Room: string;
 }
