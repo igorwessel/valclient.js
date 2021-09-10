@@ -106,25 +106,18 @@ class Client {
      * Activate the client and get authorization
      */
     async activate(): Promise<void> {
-        try {
-            if (!this._auth) {
-                this._getLockfile();
-                await this._getHeaders();
-                const { game_name, game_tag } = await this.getChatSession();
+        if (!this._auth) {
+            this._getLockfile();
+            await this._getHeaders();
+            const { game_name, game_tag } = await this.getChatSession();
 
-                this._player_name = game_name;
-                this._player_tag = game_tag;
-            } else {
-                const { puuid, headers } = await this._auth.authenticate();
+            this._player_name = game_name;
+            this._player_tag = game_tag;
+        } else {
+            const { puuid, headers } = await this._auth.authenticate();
 
-                this._puuid = puuid;
-                this._headers = headers;
-            }
-        } catch (e) {
-            console.group("ACTIVATE");
-            console.log(e);
-            console.log(e.data);
-            console.groupEnd();
+            this._puuid = puuid;
+            this._headers = headers;
         }
     }
 
