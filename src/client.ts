@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import { promises as fs, readFileSync } from "fs";
 import YAML from "yaml";
 import https from "https";
@@ -8,7 +8,7 @@ import Auth from "auth";
 import { getConfigurationPath } from "@utils";
 
 /** Resources */
-import { customGameModes, customValorantMaps, regions, regionShardOverride, shardRegionOverride } from "@resources";
+import { customGameModeMapped, customMappedMaps, regions, regionShardOverride, shardRegionOverride } from "@resources";
 
 /** Errors */
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
@@ -361,26 +361,28 @@ class Client {
      *  Changes the settings for a custom game
      * @param settings
      */
-    async setGroupCustomGameSettings(settings: CustomGameSettingsInput): Promise<void> {
+    async setGroupCustomGameSettings({
+        Map,
+        Mode,
+        GamePod,
+        GameRules,
+    }: CustomGameSettingsInput): Promise<PartyDetails> {
         const { CurrentPartyID } = await this.getCurrentPartyId();
 
-        const settingsPowerful: Partial<CustomGameSettings> = {
-            Map: `/Game/Maps/${customValorantMaps[settings.Map]}`,
-            Mode: `/Game/GameModes/${customGameModes[settings.Mode]}`,
-            ...(settings.GameRules && { GameRules: settings.GameRules }),
+        const body: Partial<CustomGameSettings> = {
+            Map: `/Game/Maps/${customMappedMaps[Map]}`,
+            Mode: `/Game/GameModes/${customGameModeMapped[Mode]}`,
+            GamePod: GamePod || "aresriot.aws-rclusterprod-sae1-1.br-gp-saopaulo-1",
+            GameRules: GameRules || null,
         };
 
-        const data = await this._post(
+        const data = await this._post<PartyDetails>(
             `/parties/v1/parties/${CurrentPartyID}/customgamesettings`,
             "glz",
-            settingsPowerful,
+            body,
         );
-        // default /Game/GameModes/Bomb/BombGameMode.BombGameMode_C
-        // deathmatch /Game/GameModes/Deathmatch/DeathmatchGameMode.DeathmatchGameMode_C
-        // oneforall /Game/GameModes/OneForAll/OneForAll_GameMode.OneForAll_GameMode_C
-        // quickbomb /Game/GameModes/QuickBomb/QuickBombGameMode.QuickBombGameMode_C
 
-        console.log(data);
+        return data;
     }
 
     /**

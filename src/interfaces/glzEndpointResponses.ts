@@ -1,4 +1,4 @@
-import { Queues, CustomGameMapsName, Maps, GameModes, CustomGameModes } from "@interfaces/resources";
+import { Queues, CustomGameMapsName, Maps, GameModes, CustomGameModes, RiotServers } from "@interfaces/resources";
 import { BooleanString } from "@interfaces/helpers";
 
 export interface CurrentGameSessionResponse {
@@ -110,14 +110,15 @@ export interface CustomGameSettings {
     Map: `/Game/Maps/${CustomGameMapsName}`;
     Mode: `/Game/GameModes/${CustomGameModes}`;
     UseBots: boolean;
-    GamePod: string;
+    GamePod: RiotServers;
     GameRules: PartyDetailsCustomGameRules | null;
 }
 
 export interface CustomGameSettingsInput {
     Map: Maps;
     Mode: GameModes;
-    GameRules?: PartyDetailsCustomGameRules;
+    GamePod?: RiotServers;
+    GameRules?: PartyDetailsCustomGameRules | null;
 }
 
 export interface PartyDetails {

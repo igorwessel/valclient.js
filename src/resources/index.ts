@@ -1,6 +1,8 @@
 import {
-    CustomGameModeMapped,
-    CustomMappedMaps,
+    CustomGameMapsName,
+    CustomGameModes,
+    GameModes,
+    Maps,
     Queues,
     Regions,
     RegionShardOverride,
@@ -18,7 +20,7 @@ export const queues: Array<Queues> = [
     "null",
 ];
 
-export const customValorantMaps: CustomMappedMaps = {
+export const customMappedMaps: Record<Maps, CustomGameMapsName> = {
     Breeze: "Foxtrot/Foxtrot",
     Icebox: "Port/Port",
     Heaven: "Triad/Triad",
@@ -28,10 +30,10 @@ export const customValorantMaps: CustomMappedMaps = {
     Split: "Duality/Duality",
 };
 
-export const customGameModes: CustomGameModeMapped = {
+export const customGameModeMapped: Record<GameModes, CustomGameModes> = {
     Bomb: "Bomb/BombGameMode.BombGameMode_C",
     Deathmatch: "Deathmatch/DeathmatchGameMode.DeathmatchGameMode_C",
-    OneForAll: "OneForAll/OneForAllGameMode.OneForAllGameMode_C",
+    OneForAll: "OneForAll/OneForAll_GameMode.OneForAll_GameMode_C",
     QuickBomb: "QuickBomb/QuickBombGameMode.QuickBombGameMode_C",
 };
 

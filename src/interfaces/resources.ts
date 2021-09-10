@@ -21,29 +21,14 @@ export type CustomGameMapsName =
 export type CustomGameModes =
     | "Bomb/BombGameMode.BombGameMode_C"
     | "Deathmatch/DeathmatchGameMode.DeathmatchGameMode_C"
-    | "OneForAll/OneForAllGameMode.OneForAllGameMode_C"
+    | "OneForAll/OneForAll_GameMode.OneForAll_GameMode_C"
     | "QuickBomb/QuickBombGameMode.QuickBombGameMode_C";
 
 export type Maps = "Breeze" | "Icebox" | "Heaven" | "Ascent" | "Bind" | "Fracture" | "Split";
 
 export type GameModes = "Bomb" | "Deathmatch" | "OneForAll" | "QuickBomb";
 
-export type CustomMappedMaps = {
-    Breeze: "Foxtrot/Foxtrot";
-    Icebox: "Port/Port";
-    Heaven: "Triad/Triad";
-    Ascent: "Ascent/Ascent";
-    Bind: "Bonsai/Bonsai";
-    Fracture: "Canyon/Canyon";
-    Split: "Duality/Duality";
-};
-
-export type CustomGameModeMapped = {
-    Bomb: "Bomb/BombGameMode.BombGameMode_C";
-    Deathmatch: "Deathmatch/DeathmatchGameMode.DeathmatchGameMode_C";
-    OneForAll: "OneForAll/OneForAllGameMode.OneForAllGameMode_C";
-    QuickBomb: "QuickBomb/QuickBombGameMode.QuickBombGameMode_C";
-};
+export type RiotServers = "aresriot.aws-rclusterprod-sae1-1.br-gp-saopaulo-1"; //TODO: need to include more servers
 
 export type Queues =
     | "competitive"
