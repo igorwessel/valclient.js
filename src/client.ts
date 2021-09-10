@@ -8,7 +8,14 @@ import Auth from "auth";
 import { getConfigurationPath } from "@utils";
 
 /** Resources */
-import { regions, regionShardOverride, shardRegionOverride } from "@resources";
+import {
+    agentsMappedById,
+    customGameModeMapped,
+    customMappedMaps,
+    regions,
+    regionShardOverride,
+    shardRegionOverride,
+} from "@resources";
 
 /** Errors */
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
@@ -18,7 +25,7 @@ import {
     EntitlementsTokenLocal,
     PresenceResponse,
     Presence,
-    PresencePrivate,
+    FriendPrivate,
     RNETFetchChatSession,
     ValorantProcessResponse,
     CurrentPlayerResponse,
@@ -28,8 +35,24 @@ import {
     PendingFriendsResponse,
     PendingFriendRequest,
 } from "@interfaces/localEndpointResponses";
+import {
+    CoreGameDetailsResponse,
+    CoreGameLoadoutResponse,
+    CoreGameResponse,
+    CurrentAvailableGameModeResponse,
+    CurrentGameSessionResponse,
+    CurrentGroupIdResponse,
+    CustomGameSettings,
+    CustomGameSettingsInput,
+    GLZEndpointTokenResponse,
+    GroupDetails,
+    PreGameDetailsResponse,
+    PreGameLoadout,
+    ReconnectGameSessionResponse,
+} from "@interfaces/glzEndpointResponses";
 import { ClientConfig, EndpointType, Headers, LocalHeaders, LockFileType } from "@interfaces/client";
-import { Regions } from "@interfaces/resources";
+import { Agents, Queues, Regions } from "@interfaces/resources";
+import { State } from "@interfaces/helpers";
 
 class Client {
     private _axios: AxiosInstance = axios;
@@ -57,6 +80,14 @@ class Client {
     constructor({ region, auth }: Partial<ClientConfig> = {}) {
         this._region = region || this._getRegionValorant();
         this._shard = this._region;
+
+        if (regionShardOverride[this._region.toLowerCase()]) {
+            this._shard = regionShardOverride[this._region.toLowerCase()];
+        }
+        if (shardRegionOverride[this._shard]) {
+            this._region = shardRegionOverride[this._shard];
+        }
+
         this._configureAxios();
         this._buildEndpoints();
 
@@ -156,6 +187,601 @@ class Client {
     }
 
     /**
+     *  Party_FetchPlayer
+     *
+     *  Get the Party ID that a given player belongs to
+     */
+    async getCurrentGroupId(): Promise<CurrentGroupIdResponse> {
+        const data = await this._fetch<CurrentGroupIdResponse>(`/parties/v1/players/${this._puuid}`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_RemovePlayer
+     *
+     *  Removes a player from the current party
+     * @param puuid
+     * @returns
+     */
+    async removePlayerParty(puuid?: string): Promise<boolean> {
+        puuid = puuid || this._puuid;
+
+        await this._delete(`/parties/v1/players/${puuid}`, "glz");
+
+        return true;
+    }
+
+    /**
+     *  Party_FetchParty
+     *
+     *  Get details about a given party id
+     */
+    async getCurrentDetailsGroup(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._fetch<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_SetMemberReady
+     *
+     *  Sets whether a party member is ready for queueing or not
+     * @param ready
+     * @returns
+     */
+    async setMemberReadyGroup(ready?: boolean): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/setReady`,
+            "glz",
+            {
+                ready,
+            },
+        );
+
+        return data;
+    }
+
+    /**
+     *  Party_RefreshCompetitiveTier
+     *
+     *  Refreshes the competitive tier for a player
+     */
+    async refreshCompetitiveTier(): Promise<boolean> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        await this._post(`/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshCompetitiveTier`, "glz");
+
+        return true;
+    }
+
+    /**
+     *  Party_RefreshPlayerIdentity
+     *
+     *  Refreshes the identity for a player
+     */
+    async refreshPlayerIdentity(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshPlayerIdentity`,
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
+     *  Party_RefreshPings
+     *
+     *  Refreshes the pings for a player
+     */
+    async refreshPlayerPings(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshPings`,
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
+     *  Party_ChangeQueue
+     *
+     *  Sets the matchmaking queue for the party
+     * @param queueID
+     * @returns
+     */
+    async changeGroupQueue(queueID: Queues): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/queue`, "glz", {
+            queueID,
+        });
+
+        return data;
+    }
+
+    /**
+     *  Party_StartCustomGame
+     *
+     *  Starts a custom game
+     */
+    async startGroupCustomGame(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/startcustomgame`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_EnterMatchmakingQueue
+     *
+     *  Enters the matchmaking queue
+     */
+    async enterMatchmakingQueue(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/join`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_LeaveMatchmakingQueue
+     *
+     *  Leaves the matchmaking queue
+     */
+    async leaveMatchmakingQueue(): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/leave`, "glz");
+
+        return data;
+    }
+
+    /**
+     *  Party_SetAccessibility
+     *
+     *  Changes the group state to be open or closed
+     */
+    async changeGroupState(open?: State): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/accessibility`, "glz", {
+            accessibility: open,
+        });
+
+        return data;
+    }
+
+    /**
+     *  Party_SetCustomGameSettings
+     *
+     *  Changes the settings for a custom game
+     * @param settings
+     */
+    async setGroupCustomGameSettings({
+        Map,
+        Mode,
+        GamePod,
+        GameRules,
+    }: CustomGameSettingsInput): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const body: Partial<CustomGameSettings> = {
+            Map: `/Game/Maps/${customMappedMaps[Map]}`,
+            Mode: `/Game/GameModes/${customGameModeMapped[Mode]}`,
+            GamePod: GamePod || "aresriot.aws-rclusterprod-sae1-1.br-gp-saopaulo-1",
+            GameRules: GameRules || null,
+        };
+
+        const data = await this._post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/customgamesettings`,
+            "glz",
+            body,
+        );
+
+        return data;
+    }
+
+    /**
+     *
+     *  Party_InviteToPartyByDisplayName
+     *
+     *  Invites a player to the party with their display name
+     *  omit the "#" in tag
+     * @param name
+     * @param tag
+     */
+    async inviteGroupByDisplayName(name: string, tag: string): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/invites/name/${name}/tag/${tag}`,
+            "glz",
+            {
+                name,
+                tag,
+            },
+        );
+
+        return data;
+    }
+
+    /**
+     *  Party_RequestToJoinParty
+     *
+     *  Requests to join a party
+     * @param party_id
+     * @param puuid
+     */
+    async requestJoinToGroup(party_id: string, puuid: string): Promise<GroupDetails> {
+        const body: { Subjects: string[] } = {
+            Subjects: [puuid],
+        };
+
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${party_id}/request`, "glz", body);
+
+        return data;
+    }
+
+    /**
+     * Party_DeclineRequest
+     *
+     * Declines a party request
+     * @param request_id The ID of the party request. Can be found from the Requests array on the getCurrentDetailsGroup.
+     */
+    async declineRequestGroup(request_id: string): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/request/${request_id}/decline`,
+            "glz",
+        ); //TODO: not sure about this return for data, need to test when have requests group to accept
+
+        return data;
+    }
+
+    /**
+     * Party_PlayerJoin
+     *
+     * Join a group
+     * @param party_id
+     */
+    async joinGroup(party_id: string): Promise<GroupDetails> {
+        const data = await this._post<GroupDetails>(`/parties/v1/players/${this._puuid}/joinparty/${party_id}`, "glz"); //TODO: not sure about this return for data, need to test when have requests group to accept
+
+        return data;
+    }
+
+    /**
+     * Party_PlayerLeave
+     *
+     * Leave a party
+     * @param party_id
+     */
+    async leaveGroup(party_id: string): Promise<GroupDetails> {
+        const data = await this._post<GroupDetails>(`/parties/v1/players/${this._puuid}/leaveparty/${party_id}`, "glz"); //TODO: not sure about this return for data, need to test when have requests group to accept
+
+        return data;
+    }
+
+    /**
+     * Party_FetchCustomGameConfigs
+     *
+     * Get information about the available gamemodes
+     */
+    async getCurrentAvailableGameModes(): Promise<CurrentAvailableGameModeResponse> {
+        const data = await this._fetch<CurrentAvailableGameModeResponse>(
+            "/parties/v1/parties/customgameconfigs",
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
+     * Party_FetchMUCToken
+     *
+     * Get a token for party chat
+     */
+    async getGroupMUCToken(): Promise<GLZEndpointTokenResponse> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(
+            `/parties/v1/parties/${CurrentPartyID}/muctoken`,
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
+     * Party_FetchVoiceToken
+     *
+     * Get a token for party voice
+     */
+    async getGroupVoiceToken(): Promise<GLZEndpointTokenResponse> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(
+            `/parties/v1/parties/${CurrentPartyID}/voicetoken`,
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
+     * CoreGame_FetchPlayer
+     *
+     * Get the game ID for an ongoing game the player is in
+     */
+    async currentMatchGetPlayer(): Promise<CoreGameResponse> {
+        const data = await this._fetch<CoreGameResponse>(`/core-game/v1/players/${this._puuid}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * CoreGame_FetchMatch
+     *
+     * Get information about an ongoing game
+     */
+    async currentMatchDetails(match_id?: string): Promise<CoreGameDetailsResponse> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<CoreGameDetailsResponse>(`/core-game/v1/matches/${match_id}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * CoreGame_FetchMatchLoadouts
+     *
+     * Get player skins and sprays for an ongoing game
+     * @param match_id
+     * @returns
+     */
+    async currentMatchLoadout(match_id?: string): Promise<CoreGameLoadoutResponse> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<CoreGameLoadoutResponse>(`/core-game/v1/matches/${match_id}/loadouts`, "glz");
+
+        return data;
+    }
+
+    /**
+     * CoreGame_FetchTeamChatMUCToken
+     *
+     * Get a token for team chat
+     * @param match_id
+     */
+    async currentMatchTeamChatMUCToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(
+            `/core-game/v1/matches/${match_id}/teamchatmuctoken`,
+            "glz",
+        ); //TODO: not sure about this return type, i will change later when in unrated match to test return type
+
+        return data;
+    }
+
+    /**
+     * CoreGame_FetchAllChatMUCToken
+     *
+     * Get a token for all chat
+     * @param match_id
+     */
+    async currentMatchAllChatMUCToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(
+            `/core-game/v1/matches/{match_id}/allchatmuctoken`,
+            "glz",
+        ); //TODO: not sure about this return type, i will change later when in unrated match to test return type
+
+        return data;
+    }
+
+    /**
+     * CoreGame_DisassociatePlayer
+     *
+     * Leave an in-progress game
+     * @param match_id
+     */
+    async currentMatchDisconnect(match_id?: string): Promise<boolean> {
+        const { MatchID } = await this.currentMatchGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        await this._post(`/core-game/v1/players/${this._puuid}/disassociate/${match_id}`, "glz");
+
+        return true;
+    }
+
+    /**
+     * Pregame_GetPlayer
+     *
+     * Get the ID of a game in the pre-game stage
+     */
+    async preGameGetPlayer(): Promise<CoreGameResponse> {
+        const data = await this._fetch<CoreGameResponse>(`/pregame/v1/players/${this._puuid}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * Pregame_GetMatch
+     *
+     * Get info for a game in the pre-game stage
+     * @param match_id
+     * @returns
+     */
+    async preGameMatchDetails(match_id?: string): Promise<PreGameDetailsResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<PreGameDetailsResponse>(`/pregame/v1/matches/${match_id}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * Pregame_GetMatchLoadouts
+     *
+     * Get player skins and sprays for a game in the pre-game stage
+     * @param match_id
+     */
+    async preGameLoadout(match_id?: string): Promise<PreGameLoadout> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<PreGameLoadout>(`/pregame/v1/matches/${match_id}/loadouts`, "glz");
+
+        return data;
+    }
+
+    /**
+     * Pregame_FetchChatToken
+     *
+     * Get a chat token
+     * @param match_id
+     */
+    async preGameTeamChatMUCToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/chattoken`, "glz");
+        //TODO: not sure about this return type, i will change later when in unrated match to test return type
+
+        return data;
+    }
+
+    /**
+     * Pregame_FetchChatToken
+     *
+     * Get a chat token
+     * @param match_id
+     */
+    async preGameVoiceChatToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/voicetoken`, "glz");
+        //TODO: not sure about this return type, i will change later when in unrated match to test return type
+
+        return data;
+    }
+
+    /**
+     * Pregame_SelectCharacter
+     *
+     * Select an agent
+     * don't use this for instalocking :)
+     * @param agent_id
+     * @param match_id
+     */
+    async preGameSelectCharacter(agent_id: Agents, match_id?: string): Promise<PreGameDetailsResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const agentId = agentsMappedById[agent_id];
+
+        const data = await this._post<PreGameDetailsResponse>(
+            `/pregame/v1/matches/${match_id}/select/${agentId}`,
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
+     * Pregame_SelectCharacter
+     *
+     * Lock an agent
+     * don't use this for instalocking :)
+     * @param agent_id
+     * @param match_id
+     */
+    async preGameLockCharacter(agent_id: Agents, match_id?: string): Promise<PreGameDetailsResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const agentId = agentsMappedById[agent_id];
+
+        const data = await this._post<PreGameDetailsResponse>(`/pregame/v1/matches/${match_id}/lock/${agentId}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * Pregame_QuitMatch
+     *
+     * Quit a match in the pre-game stage
+     * @param match_id
+     */
+    async preGameQuitMatch(match_id?: string): Promise<boolean> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        await this._post(`/pregame/v1/matches/${match_id}/quit`, "glz");
+
+        return true;
+    }
+
+    /**
+     *  Session_Get
+     *
+     *  Get information about the current game session
+     * @returns
+     */
+    async getCurrentGameSession(): Promise<CurrentGameSessionResponse> {
+        const data = await this._fetch<CurrentGameSessionResponse>(`/session/v1/sessions/${this._puuid}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * Session_ReConnect
+     *
+     * Try reconnect current game session
+     * @returns
+     */
+    async reconnectGameSession(): Promise<ReconnectGameSessionResponse> {
+        const data = await this._fetch<ReconnectGameSessionResponse>(
+            `/session/v1/sessions/${this._puuid}/reconnect`,
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
      * TEXT_CHAT_RNet_FetchSession
      *
      * Get the current session including player name and PUUID
@@ -173,7 +799,7 @@ class Client {
      * @param puuid Use puuid passed in parameter or self puuid
      * @returns
      */
-    async getOnlineFriend(puuid?: string): Promise<PresencePrivate | null> {
+    async getOnlineFriend(puuid?: string): Promise<FriendPrivate | null> {
         puuid = puuid || this._puuid;
 
         const { presences } = await this._fetch<PresenceResponse>("/chat/v4/presences", "local");
@@ -181,7 +807,9 @@ class Client {
         const player = presences.find((presence) => presence.puuid === puuid);
 
         if (player) {
-            return player.private;
+            const playerPrivate = JSON.parse(Buffer.from(player.private, "base64").toString("utf-8"));
+
+            return playerPrivate;
         }
 
         return null;
@@ -192,6 +820,9 @@ class Client {
      *
      * Get a list of online friends and their activity
      * private is a base64-encoded JSON string that contains useful information such as party and in-progress game score.
+     * If decode base64-encoded JSON, we have type FriendPrivate for JSON Object
+     *
+     * @type {FriendPrivate}
      * @returns
      */
     async getAllFriendsOnline(): Promise<Presence[]> {
@@ -285,7 +916,6 @@ class Client {
     static getRegions(): Regions[] {
         return regions;
     }
-
     /**
      * Get Region in RiotClient Settings
      * @returns Region
@@ -359,6 +989,7 @@ class Client {
         if (!this._auth) {
             return this._getAuthHeaders();
         }
+
         const { puuid, headers } = await this._auth.authenticate();
         headers["X-Riot-ClientPlatform"] = this._client_platform;
         headers["X-Riot-ClientVersion"] = this._client_version;
@@ -371,20 +1002,22 @@ class Client {
      * Get Auth Headers when not have Auth
      */
     private async _getAuthHeaders(): Promise<void> {
-        const {
-            accessToken,
-            subject: puuid,
-            token,
-        } = await this._fetch<EntitlementsTokenLocal>("/entitlements/v1/token", "local");
+        try {
+            const {
+                accessToken,
+                subject: puuid,
+                token,
+            } = await this._fetch<EntitlementsTokenLocal>("/entitlements/v1/token", "local");
 
-        this._headers = {
-            Authorization: `Bearer ${accessToken}`,
-            "X-Riot-Entitlements-JWT": token,
-            "X-Riot-ClientPlatform": this._client_platform,
-            "X-Riot-ClientVersion": this._client_version,
-        };
+            this._headers = {
+                Authorization: `Bearer ${accessToken}`,
+                "X-Riot-Entitlements-JWT": token,
+                "X-Riot-ClientPlatform": this._client_platform,
+                "X-Riot-ClientVersion": this._client_version,
+            };
 
-        this._puuid = puuid;
+            this._puuid = puuid;
+        } catch (e) {}
     }
 
     /**

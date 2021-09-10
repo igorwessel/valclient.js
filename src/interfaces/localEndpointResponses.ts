@@ -1,5 +1,6 @@
-import { Locale } from "@interfaces/helpers";
+import { Base64, Locale } from "@interfaces/helpers";
 import { CrossHairProfileData } from "@interfaces/crosshair";
+import { Queues } from "@interfaces/resources";
 
 export interface EntitlementsTokenLocal {
     accessToken: string;
@@ -34,7 +35,7 @@ export interface Presence {
     patchline: null;
     pid: string | null;
     platform: null;
-    private: PresencePrivate;
+    private: Base64;
     privateJwt: null;
     product: string | null;
     puuid: string | null;
@@ -71,6 +72,41 @@ export interface PresencePrivate {
     skinVariant: string | null;
     skinname: string | null;
     timeStamp: string | null;
+}
+
+export interface FriendPrivate {
+    isValid: boolean;
+    sessionLoopState: string;
+    partyOwnerSessionLoopState: string;
+    customGameName: string;
+    customGameTeam: string;
+    partyOwnerMatchMap: string;
+    partyOwnerMatchCurrentTeam: string;
+    partyOwnerMatchScoreAllyTeam: number;
+    partyOwnerMatchScoreEnemyTeam: number;
+    partyOwnerProvisioningFlow: string;
+    provisioningFlow: string;
+    matchMap: string;
+    partyId: string;
+    isPartyOwner: boolean;
+    partyState: string;
+    partyAccessibility: string;
+    maxPartySize: number;
+    queueId: Queues;
+    partyLFM: boolean;
+    partyClientVersion: string;
+    partySize: number;
+    tournamentId: string;
+    rosterId: string;
+    partyVersion: number;
+    queueEntryTime: string;
+    playerCardId: string;
+    playerTitleId: string;
+    preferredLevelBorderId: string;
+    accountLevel: number;
+    competitiveTier: number;
+    leaderboardPosition: number;
+    isIdle: boolean;
 }
 
 export interface PresencePrivateParty {
