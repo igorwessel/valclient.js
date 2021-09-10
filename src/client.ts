@@ -29,6 +29,7 @@ import {
     PendingFriendRequest,
 } from "@interfaces/localEndpointResponses";
 import {
+    CurrentAvailableGameModeResponse,
     CurrentGameSessionResponse,
     CurrentGroupIdResponse,
     CustomGameSettings,
@@ -463,6 +464,20 @@ class Client {
      */
     async leaveGroup(party_id: string): Promise<GroupDetails> {
         const data = await this._post<GroupDetails>(`/parties/v1/players/${this._puuid}/leaveparty/${party_id}`, "glz"); //TODO: not sure about this return for data, need to test when have requests group to accept
+
+        return data;
+    }
+
+    /**
+     * Party_FetchCustomGameConfigs
+     *
+     * Get information about the available gamemodes
+     */
+    async getCurrentAvailableGameModes(): Promise<CurrentAvailableGameModeResponse> {
+        const data = await this._fetch<CurrentAvailableGameModeResponse>(
+            "/parties/v1/parties/customgameconfigs",
+            "glz",
+        );
 
         return data;
     }

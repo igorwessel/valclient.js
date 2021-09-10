@@ -157,3 +157,53 @@ export interface GroupDetails {
     CheatData: { GamePodOverride: string; ForcePostGameProcessing: boolean };
     XPBonuses: Record<string, unknown>[]; //TODO: get example request for this type;
 }
+
+export interface CurrentAvailableGameModeQueue {
+    QueueID: Queues;
+    Enabled: boolean;
+    TeamSize: number;
+    NumTeams: number;
+    MaxPartySize: number;
+    MinPartySize: number;
+    MaxPartySizeHighSkill: number;
+    HighSkillTier: number;
+    Mode: string;
+    IsRanked: boolean;
+    IsTournament: boolean;
+    Priority: number;
+    PartyMaxCompetitiveTierRange: number;
+    PartyMaxCompetitiveTierRangePlacementBuffer: number;
+    FullPartyMaxCompetitiveTierRange: number;
+    PartySkillDisparityCompetitiveTiersCeilings: Record<string, number>[];
+    MinimumGamesRequired: number;
+    QueuesForMinimumGamesEligibility: string[];
+    MinimumWinsRequired: number;
+    QueuesForMinimumWinsEligibility: unknown[];
+    GameRules: {
+        AllowDropOut?: BooleanString;
+        AssignRandomAgents?: BooleanString;
+        SkipPregame?: BooleanString;
+        IsOvertimeWinByTwo?: BooleanString;
+        AllowLenientSurrender?: BooleanString;
+    };
+    SupportedPlatformTypes: unknown[];
+    DisabledContent: unknown[];
+    queueFieldA: unknown[];
+    NextScheduleChangeSeconds: number;
+    TimeUntilNextScheduleChangeSeconds: number;
+}
+
+export interface CurrentAvailableGameModePing {
+    [key: string]: {
+        SecurityHash: number;
+        ObfuscatedIP: number;
+        PingProxyAddress: string;
+    };
+}
+export interface CurrentAvailableGameModeResponse {
+    Enabled: boolean;
+    EnabledMaps: Maps[];
+    EnabledModes: string[];
+    Queues: CurrentAvailableGameModeQueue[];
+    GamePodPingServiceInfo: CurrentAvailableGameModePing;
+}
