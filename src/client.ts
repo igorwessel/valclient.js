@@ -8,7 +8,14 @@ import Auth from "auth";
 import { getConfigurationPath } from "@utils";
 
 /** Resources */
-import { customGameModeMapped, customMappedMaps, regions, regionShardOverride, shardRegionOverride } from "@resources";
+import {
+    agentsMappedById,
+    customGameModeMapped,
+    customMappedMaps,
+    regions,
+    regionShardOverride,
+    shardRegionOverride,
+} from "@resources";
 
 /** Errors */
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
@@ -39,10 +46,12 @@ import {
     CustomGameSettingsInput,
     GLZEndpointTokenResponse,
     GroupDetails,
+    PreGameDetailsResponse,
+    PreGameLoadout,
     ReconnectGameSessionResponse,
 } from "@interfaces/glzEndpointResponses";
 import { ClientConfig, EndpointType, Headers, LocalHeaders, LockFileType } from "@interfaces/client";
-import { Queues, Regions } from "@interfaces/resources";
+import { Agents, Queues, Regions } from "@interfaces/resources";
 import { State } from "@interfaces/helpers";
 
 class Client {
@@ -195,12 +204,12 @@ class Client {
      * @param puuid
      * @returns
      */
-    async removePlayerParty(puuid?: string): Promise<null> {
+    async removePlayerParty(puuid?: string): Promise<boolean> {
         puuid = puuid || this._puuid;
 
-        const data: null = await this._delete(`/parties/v1/players/${puuid}`, "glz");
+        await this._delete(`/parties/v1/players/${puuid}`, "glz");
 
-        return data;
+        return true;
     }
 
     /**
@@ -517,21 +526,9 @@ class Client {
      * Get the game ID for an ongoing game the player is in
      */
     async currentMatchGetPlayer(): Promise<CoreGameResponse> {
-        try {
-            const data = await this._fetch<CoreGameResponse>(`/core-game/v1/players/${this._puuid}`, "glz");
+        const data = await this._fetch<CoreGameResponse>(`/core-game/v1/players/${this._puuid}`, "glz");
 
-            return data;
-        } catch (e) {
-            const error = e.response.data;
-
-            if (error.httpStatus === 404) {
-                return {
-                    ...error,
-                    errorCode: "NOT_IN_CORE_GAME",
-                    message: "You are not in a core-game (playing a match)",
-                };
-            }
-        }
+        return data;
     }
 
     /**
@@ -610,15 +607,153 @@ class Client {
      * Leave an in-progress game
      * @param match_id
      */
-    async currentMatchDisconnect(match_id?: string): Promise<null> {
+    async currentMatchDisconnect(match_id?: string): Promise<boolean> {
         const { MatchID } = await this.currentMatchGetPlayer();
 
         match_id = match_id || MatchID;
 
-        const data = await this._post<null>(`/core-game/v1/players/${this._puuid}/disassociate/${match_id}`, "glz");
+        await this._post(`/core-game/v1/players/${this._puuid}/disassociate/${match_id}`, "glz");
+
+        return true;
+    }
+
+    /**
+     * Pregame_GetPlayer
+     *
+     * Get the ID of a game in the pre-game stage
+     */
+    async preGameGetPlayer(): Promise<CoreGameResponse> {
+        const data = await this._fetch<CoreGameResponse>(`/pregame/v1/players/${this._puuid}`, "glz");
 
         return data;
     }
+
+    /**
+     * Pregame_GetMatch
+     *
+     * Get info for a game in the pre-game stage
+     * @param match_id
+     * @returns
+     */
+    async preGameMatchDetails(match_id?: string): Promise<PreGameDetailsResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<PreGameDetailsResponse>(`/pregame/v1/matches/${match_id}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * Pregame_GetMatchLoadouts
+     *
+     * Get player skins and sprays for a game in the pre-game stage
+     * @param match_id
+     */
+    async preGameLoadout(match_id?: string): Promise<PreGameLoadout> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<PreGameLoadout>(`/pregame/v1/matches/${match_id}/loadouts`, "glz");
+
+        return data;
+    }
+
+    /**
+     * Pregame_FetchChatToken
+     *
+     * Get a chat token
+     * @param match_id
+     */
+    async preGameTeamChatMUCToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/chattoken`, "glz");
+        //TODO: not sure about this return type, i will change later when in unrated match to test return type
+
+        return data;
+    }
+
+    /**
+     * Pregame_FetchChatToken
+     *
+     * Get a chat token
+     * @param match_id
+     */
+    async preGameVoiceChatToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/voicetoken`, "glz");
+        //TODO: not sure about this return type, i will change later when in unrated match to test return type
+
+        return data;
+    }
+
+    /**
+     * Pregame_SelectCharacter
+     *
+     * Select an agent
+     * don't use this for instalocking :)
+     * @param agent_id
+     * @param match_id
+     */
+    async preGameSelectCharacter(agent_id: Agents, match_id?: string): Promise<PreGameDetailsResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const agentId = agentsMappedById[agent_id];
+
+        const data = await this._post<PreGameDetailsResponse>(
+            `/pregame/v1/matches/${match_id}/select/${agentId}`,
+            "glz",
+        );
+
+        return data;
+    }
+
+    /**
+     * Pregame_SelectCharacter
+     *
+     * Lock an agent
+     * don't use this for instalocking :)
+     * @param agent_id
+     * @param match_id
+     */
+    async preGameLockCharacter(agent_id: Agents, match_id?: string): Promise<PreGameDetailsResponse> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        const agentId = agentsMappedById[agent_id];
+
+        const data = await this._post<PreGameDetailsResponse>(`/pregame/v1/matches/${match_id}/lock/${agentId}`, "glz");
+
+        return data;
+    }
+
+    /**
+     * Pregame_QuitMatch
+     *
+     * Quit a match in the pre-game stage
+     * @param match_id
+     */
+    async preGameQuitMatch(match_id?: string): Promise<boolean> {
+        const { MatchID } = await this.preGameGetPlayer();
+
+        match_id = match_id || MatchID;
+
+        await this._post(`/pregame/v1/matches/${match_id}/quit`, "glz");
+
+        return true;
+    }
+
     /**
      *  Session_Get
      *

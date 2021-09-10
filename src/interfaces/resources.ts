@@ -28,6 +28,48 @@ export type Maps = "Breeze" | "Icebox" | "Heaven" | "Ascent" | "Bind" | "Fractur
 
 export type GameModes = "Bomb" | "Deathmatch" | "OneForAll" | "QuickBomb";
 
+export type Agents =
+    | "Breach"
+    | "Raze"
+    | "KAY/O"
+    | "Skye"
+    | "Cypher"
+    | "Sova"
+    | "Killjoy"
+    | "Viper"
+    | "Phoenix"
+    | "Astra"
+    | "Brimstone"
+    | "Yoru"
+    | "Sage"
+    | "Reyna"
+    | "Omen"
+    | "Jett";
+
+export type AgentMappedByDisplayName = {
+    [K in Agents]: string;
+};
+
+export type Locale =
+    | "ar-AE"
+    | "de-DE"
+    | "en-US"
+    | "es-ES"
+    | "es-MX"
+    | "fr-FR"
+    | "id-ID"
+    | "it-IT"
+    | "ja-JP"
+    | "ko-KR"
+    | "pl-PL"
+    | "pt-BR"
+    | "ru-RU"
+    | "th-TH"
+    | "tr-TR"
+    | "vi-VN"
+    | "zh-CN"
+    | "zh-TW";
+
 export type RiotServers = "aresriot.aws-rclusterprod-sae1-1.br-gp-saopaulo-1"; //TODO: need to include more servers
 
 export type Queues =
