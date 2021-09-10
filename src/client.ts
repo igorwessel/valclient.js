@@ -386,6 +386,30 @@ class Client {
     }
 
     /**
+     *
+     *  Party_InviteToPartyByDisplayName
+     *
+     *  Invites a player to the party with their display name
+     *  omit the "#" in tag
+     * @param name
+     * @param tag
+     */
+    async inviteGroupByDisplayName(name: string, tag: string): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/invites/name/${name}/tag/${tag}`,
+            "glz",
+            {
+                name,
+                tag,
+            },
+        );
+
+        return data;
+    }
+
+    /**
      *  Session_Get
      *
      *  Get information about the current game session
