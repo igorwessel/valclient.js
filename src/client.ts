@@ -18,7 +18,7 @@ import {
     EntitlementsTokenLocal,
     PresenceResponse,
     Presence,
-    PresencePrivate,
+    FriendPrivate,
     RNETFetchChatSession,
     ValorantProcessResponse,
     CurrentPlayerResponse,
@@ -410,6 +410,39 @@ class Client {
     }
 
     /**
+     *  Party_RequestToJoinParty
+     *
+     *  Requests to join a party
+     * @param party_id
+     * @param puuid
+     */
+    async requestJoinToGroup(party_id: string, puuid: string): Promise<GroupDetails> {
+        const body: { Subjects: string[] } = {
+            Subjects: [puuid],
+        };
+
+        const data = await this._post<GroupDetails>(`/parties/v1/parties/${party_id}/request`, "glz", body);
+
+        return data;
+    }
+
+    /**
+     * Party_DeclineRequest
+     *
+     * Declines a party request
+     * @param request_id The ID of the party request. Can be found from the Requests array on the getCurrentDetailsGroup.
+     */
+    async declineRequestGroup(request_id: string): Promise<GroupDetails> {
+        const { CurrentPartyID } = await this.getCurrentGroupId();
+
+        const data = await this._post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/request/${request_id}/decline`,
+            "glz",
+        ); //TODO: not sure about this return for data, need to test when have requests group to accept
+
+        return data;
+    }
+    /**
      *  Session_Get
      *
      *  Get information about the current game session
@@ -454,7 +487,7 @@ class Client {
      * @param puuid Use puuid passed in parameter or self puuid
      * @returns
      */
-    async getOnlineFriend(puuid?: string): Promise<PresencePrivate | null> {
+    async getOnlineFriend(puuid?: string): Promise<FriendPrivate | null> {
         puuid = puuid || this._puuid;
 
         const { presences } = await this._fetch<PresenceResponse>("/chat/v4/presences", "local");
@@ -462,7 +495,9 @@ class Client {
         const player = presences.find((presence) => presence.puuid === puuid);
 
         if (player) {
-            return player.private;
+            const playerPrivate = JSON.parse(Buffer.from(player.private, "base64").toString("utf-8"));
+
+            return playerPrivate;
         }
 
         return null;
@@ -473,6 +508,9 @@ class Client {
      *
      * Get a list of online friends and their activity
      * private is a base64-encoded JSON string that contains useful information such as party and in-progress game score.
+     * If decode base64-encoded JSON, we have type FriendPrivate for JSON Object
+     *
+     * @type {FriendPrivate}
      * @returns
      */
     async getAllFriendsOnline(): Promise<Presence[]> {
