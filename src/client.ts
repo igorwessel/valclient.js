@@ -442,6 +442,31 @@ class Client {
 
         return data;
     }
+
+    /**
+     * Party_PlayerJoin
+     *
+     * Join a group
+     * @param party_id
+     */
+    async joinGroup(party_id: string): Promise<GroupDetails> {
+        const data = await this._post<GroupDetails>(`/parties/v1/players/${this._puuid}/joinparty/${party_id}`, "glz"); //TODO: not sure about this return for data, need to test when have requests group to accept
+
+        return data;
+    }
+
+    /**
+     * Party_PlayerLeave
+     *
+     * Leave a party
+     * @param party_id
+     */
+    async leaveGroup(party_id: string): Promise<GroupDetails> {
+        const data = await this._post<GroupDetails>(`/parties/v1/players/${this._puuid}/leaveparty/${party_id}`, "glz"); //TODO: not sure about this return for data, need to test when have requests group to accept
+
+        return data;
+    }
+
     /**
      *  Session_Get
      *
