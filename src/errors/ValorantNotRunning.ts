@@ -7,6 +7,8 @@ class ValorantNotRunning extends Error {
 
         Error.stackTraceLimit = 2;
         Error.captureStackTrace(this, this.constructor);
+
+        Object.setPrototypeOf(this, ValorantNotRunning.prototype);
     }
 }
 

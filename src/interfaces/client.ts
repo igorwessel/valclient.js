@@ -14,6 +14,13 @@ export interface ClientConfig {
     auth: AuthInput;
 }
 
+export interface BaseEndpoints {
+    pd: string | null;
+    glz: string | null;
+    shared: string | null;
+    local: string | null;
+}
+
 export interface LocalHeaders {
     Authorization: string;
 }

@@ -12,6 +12,7 @@
             "@resources/*": ["./resources/*"],
             "@errors/*": ["./errors/*"],
             "@interfaces/*": ["./interfaces/*"],
+            "@app/*": ["./*"]
         }
     },
     "emitDecoratorMetadata": true,
