@@ -16,6 +16,16 @@ class Auth implements AuthInterface {
         this._password = auth.password;
     }
 
+    /**
+     * Get current autheticate person
+     */
+    get auth(): AuthInput {
+        return {
+            username: this._username,
+            password: this._password,
+        };
+    }
+
     private async _createSession() {
         const data = {
             client_id: "play-valorant-web-prod",
