@@ -7,6 +7,7 @@ import { PvpInternalConfig } from "@interfaces/sharedEndpointResponses";
 interface ValorantInterface {
     process(): Promise<ValorantProcessResponse | Record<string, never>>;
     clientSettings(): Promise<ClientSettingsResponse>;
+    internalConfig(): Promise<PvpInternalConfig>;
 }
 
 class Valorant implements ValorantInterface {
