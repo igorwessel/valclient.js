@@ -26,6 +26,7 @@ import { LiveGame } from "@app/liveGame";
 import { PreGame } from "@app/preGame";
 import { Session } from "@app/session";
 import { Pvp } from "@app/pvp";
+import { Store } from "@app/store";
 
 class Client {
     private _axios: AxiosStatic = axios;
@@ -57,6 +58,7 @@ class Client {
     public pre_game: PreGame | null = null;
     public session: Session | null = null;
     public pvp: Pvp | null = null;
+    public store: Store | null = null;
 
     /**
      * Start client
@@ -99,6 +101,7 @@ class Client {
         this.pre_game = new PreGame(this._fetch, this._post, this._puuid);
         this.session = new Session(this._fetch, this._puuid);
         this.pvp = new Pvp(this._fetch, this._put, this._puuid, this._region);
+        this.store = new Store(this._fetch, this._puuid);
     }
 
     /**
