@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosStatic } from "axios";
-import { promises as fs, readFileSync } from "fs";
+import { readFileSync } from "fs";
 import YAML from "yaml";
 import https from "https";
 import Auth from "./auth";
@@ -16,8 +16,6 @@ import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 /** Interfaces */
 import { EntitlementsTokenLocal } from "@interfaces/localEndpointResponses";
 
-import { CurrentGameSessionResponse, ReconnectGameSessionResponse } from "@interfaces/glzEndpointResponses";
-
 import { BaseEndpoints, ClientConfig, EndpointType, Headers, LockFileType } from "@interfaces/client";
 import { Regions } from "@interfaces/resources";
 
@@ -27,6 +25,7 @@ import { Group } from "@app/group";
 import { LiveGame } from "@app/liveGame";
 import { PreGame } from "@app/preGame";
 import { Session } from "@app/session";
+import { Pvp } from "@app/pvp";
 
 class Client {
     private _axios: AxiosStatic = axios;
@@ -57,6 +56,7 @@ class Client {
     public live_game: LiveGame | null = null;
     public pre_game: PreGame | null = null;
     public session: Session | null = null;
+    public pvp: Pvp | null = null;
 
     /**
      * Start client
@@ -86,7 +86,6 @@ class Client {
             await this._getHeaders();
 
             this.player = new Player(this._fetch, this._puuid);
-            this.valorant = new Valorant(this._fetch);
         } else {
             const { puuid, headers } = await this._auth.authenticate();
 
@@ -94,10 +93,12 @@ class Client {
             this._headers = headers;
         }
 
+        this.valorant = new Valorant(this._fetch, this._region);
         this.group = new Group(this._fetch, this._post, this._delete, this._puuid);
         this.live_game = new LiveGame(this._fetch, this._post, this._puuid);
         this.pre_game = new PreGame(this._fetch, this._post, this._puuid);
         this.session = new Session(this._fetch, this._puuid);
+        this.pvp = new Pvp(this._fetch, this._put, this._puuid, this._region);
     }
 
     /**
