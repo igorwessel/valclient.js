@@ -87,7 +87,7 @@ class Client {
             await this._getHeaders();
 
             this.player = new Player(this._fetch, this._puuid);
-            this.valorant = new Valorant(this._fetch);
+            this.valorant = new Valorant(this._fetch, this._put);
         } else {
             const { puuid, headers } = await this._auth.authenticate();
 

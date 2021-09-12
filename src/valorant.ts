@@ -1,4 +1,5 @@
-import { Fetch } from "@interfaces/http";
+import { CrossHair, CrossHairProfile, CrossHairProfileData } from "@interfaces/crosshair";
+import { Fetch, Put } from "@interfaces/http";
 
 import { ClientSettingsResponse, ValorantProcessResponse } from "@interfaces/valorant";
 
@@ -9,9 +10,11 @@ interface ValorantInterface {
 
 class Valorant implements ValorantInterface {
     private readonly _fetch: Fetch;
+    private readonly _put: Put;
 
-    constructor(fetch: Fetch) {
+    constructor(fetch: Fetch, put: Put) {
         this._fetch = fetch;
+        this._put = put;
     }
 
     /**
@@ -38,6 +41,39 @@ class Valorant implements ValorantInterface {
         );
 
         return data;
+    }
+
+    async crossHair(): Promise<Record<string, CrossHair>> {
+        const {
+            data: { stringSettings },
+        } = await this.clientSettings();
+
+        const crossHairProfileData = stringSettings.find(
+            (setting) => setting.settingEnum === "EAresStringSettingName::SavedCrosshairProfileData",
+        );
+
+        const crossHairSettings: CrossHairProfileData = JSON.parse(crossHairProfileData.value);
+
+        const crossHairProfiles: Record<string, CrossHair> = crossHairSettings.profiles.reduce(
+            (obj, crossHairProfile) => {
+                const primary = crossHairProfile.primary;
+
+                const innerLines = primary.innerLines;
+                const outerLines = primary.outerLines;
+
+                return {
+                    ...obj,
+                    [crossHairProfile.profileName]: {
+                        innerLines,
+                        outerLines,
+                        ...primary,
+                    },
+                };
+            },
+            {},
+        );
+
+        return crossHairProfiles;
     }
 }
 

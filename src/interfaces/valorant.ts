@@ -58,13 +58,13 @@ export type SettingsEnumBool =
     | "EAresBoolSettingName::HasEverAppliedRoamingSettings";
 
 export interface SettingsNumber {
-    settingsEnum: string;
+    settingEnum: string;
     value: number;
 }
 
 export interface SettingsString {
-    settingsEnum: SettingsEnumString;
-    value: string | CrossHairProfileData;
+    settingEnum: SettingsEnumString;
+    value: string;
 }
 
 export interface ClientSettingsResponse {
