@@ -15,7 +15,6 @@ import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 
 /** Interfaces */
 import { EntitlementsTokenLocal } from "@interfaces/localEndpointResponses";
-
 import { BaseEndpoints, ClientConfig, EndpointType, Headers, LockFileType } from "@interfaces/client";
 import { Regions } from "@interfaces/resources";
 
@@ -27,12 +26,11 @@ import { PreGame } from "@app/preGame";
 import { Session } from "@app/session";
 import { Pvp } from "@app/pvp";
 import { Store } from "@app/store";
+import { Contracts } from "@app/contracts";
 
 class Client {
     private _axios: AxiosStatic = axios;
     private _puuid: string;
-    private _player_name: string;
-    private _player_tag: string;
     private _lockfile_path: string = getConfigurationPath("lockfile");
     private _lockfile: LockFileType;
     private _headers: Partial<Headers>;
@@ -59,6 +57,7 @@ class Client {
     public session: Session | null = null;
     public pvp: Pvp | null = null;
     public store: Store | null = null;
+    public contracts: Contracts | null = null;
 
     /**
      * Start client
@@ -102,6 +101,7 @@ class Client {
         this.session = new Session(this._fetch, this._puuid);
         this.pvp = new Pvp(this._fetch, this._put, this._puuid, this._region);
         this.store = new Store(this._fetch, this._puuid);
+        this.contracts = new Contracts(this._fetch, this._post, this._puuid);
     }
 
     /**
