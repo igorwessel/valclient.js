@@ -2,14 +2,6 @@
 
 
 
-    def store_fetch_order(self, order_id:str) -> dict:
-        '''
-        Store_GetOrder
-        {order id}: The ID of the order. Can be obtained when creating an order.
-        '''
-        data = self.fetch(f"/store/v1/order/{order_id}",endpoint_type="pd")
-        return data 
-
     def store_fetch_entitlements(self, item_type:str="e7c63390-eda7-46e0-bb7a-a6abdacd2433") -> dict:
         '''
         Store_GetEntitlements
@@ -72,7 +64,6 @@ class Store {
      *  Store_GetWallet
      *
      * Get amount of Valorant points and Radianite the player has
-     * Valorant points have the id 85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741 and Radianite points have the id e59aa87c-4cbf-517a-5983-6e81511be9b7
      */
     async wallet(): Promise<Record<WalletCurrencies, number>> {
         const { Balances } = await this._fetch<WalletResponse>(`/store/v1/wallet/${this._puuid}`, "pd");
@@ -85,6 +76,19 @@ class Store {
         );
 
         return walletMapped;
+    }
+
+    /**
+     * Store_GetOrder
+     *
+     * The ID of the order. Can be obtained when creating an order.
+     * @param order_id
+     * @returns
+     */
+    async order(order_id: string): Promise<unknown> {
+        const data = await this._fetch<unknown>(`/store/v1/order/${order_id}`, "pd");
+        //TODO: i don't find endpoint to create a order, i will desactivate this method
+        return data;
     }
 }
 
