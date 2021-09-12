@@ -6,6 +6,7 @@ import {
     PvpAccountXp,
     PvpCompetitiveUpdates,
     PvpContents,
+    PvpInternalConfig,
     PvpItemProgressDefinitions,
     PvpItemProgressDefinitionsResponse,
     PvpLeaderboard,
@@ -205,6 +206,17 @@ class Pvp {
         const data = await this.mmr();
 
         return data.LatestCompetitiveUpdate.SeasonID;
+    }
+
+    /**
+     * Config_FetchConfig
+     *
+     * Get various internal game configuration settings set by Riot
+     */
+    async internalConfig(): Promise<PvpInternalConfig> {
+        const data = await this._fetch<PvpInternalConfig>(`/v1/config/${this._region}`, "shared");
+
+        return data;
     }
 }
 
