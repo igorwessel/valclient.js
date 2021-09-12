@@ -22,3 +22,31 @@ export interface OffersResponse {
     Offers: Offer[];
     UpgradeCurrencyOffers: UpgradeCurrencyOffers[];
 }
+
+export interface BundleItem {
+    Item: {
+        ItemTypeID: string;
+        ItemID: string;
+        Amount: number;
+    };
+    BasePrice: number;
+    CurrencyID: string;
+    DiscountPercent: number;
+    DiscountedPrice: number;
+    IsPromoItem: boolean;
+}
+export interface CurrentOffersResponse {
+    FeaturedBundle: {
+        Bundle: {
+            ID: string;
+            DataAssetID: string;
+            CurrencyID: string;
+            Items: BundleItem[];
+        };
+        BundleRemainingDurationInSeconds: number;
+    };
+    SkinsPanelLayout: {
+        SingleItemOffers: string[];
+        SingleItemOffersRemainingDurationInSeconds: number;
+    };
+}

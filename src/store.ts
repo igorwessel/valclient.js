@@ -1,12 +1,6 @@
 /*
 
-    def store_fetch_storefront(self) -> dict:
-        '''
-        Store_GetStorefrontV2
-        Get the currently available items in the store
-        '''
-        data = self.fetch(f"/store/v2/storefront/{self.puuid}",endpoint_type="pd")
-        return data 
+
 
     def store_fetch_wallet(self) -> dict:
         '''
@@ -46,7 +40,7 @@
 */
 
 import { Fetch } from "@interfaces/http";
-import { OffersResponse } from "@interfaces/store";
+import { CurrentOffersResponse, OffersResponse } from "@interfaces/store";
 import { saveFileJson } from "@utils";
 
 class Store {
@@ -66,6 +60,18 @@ class Store {
      */
     async offers(): Promise<OffersResponse> {
         const data = await this._fetch<OffersResponse>("/store/v1/offers/", "pd");
+
+        return data;
+    }
+
+    /**
+     *  Store_GetStorefrontV2
+     *
+     *  Get the currently available items in the store
+     *  @returns
+     */
+    async currentOffers(): Promise<CurrentOffersResponse> {
+        const data = await this._fetch<CurrentOffersResponse>(`/store/v2/storefront/${this._puuid}`, "pd");
 
         return data;
     }
