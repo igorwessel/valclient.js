@@ -1,0 +1,211 @@
+import { Fetch, Put } from "@interfaces/http";
+
+import { Regions } from "@interfaces/resources";
+
+import {
+    PvpAccountXp,
+    PvpCompetitiveUpdates,
+    PvpContents,
+    PvpItemProgressDefinitions,
+    PvpItemProgressDefinitionsResponse,
+    PvpLeaderboard,
+    PvpLeaderboardParams,
+    PvpLoadout,
+    PvpLoadoutParams,
+    PvpMatchDetails,
+    PvpMatchHistory,
+    PvpMatchHistoryInput,
+    PvpMMR,
+    PvpPlayerRestrictions,
+} from "@interfaces/sharedEndpointResponses";
+
+class Pvp {
+    private readonly _fetch: Fetch;
+    private readonly _put: Put;
+    private readonly _puuid: string;
+    private readonly _region: Regions;
+
+    constructor(fetch: Fetch, put: Put, puuid: string, region: Regions) {
+        this._fetch = fetch;
+        this._put = put;
+        this._puuid = puuid;
+        this._region = region;
+    }
+
+    /**
+     * Content_FetchContent
+     *
+     * Get names and ids for game content such as agents, maps, guns, etc.
+     */
+    async contents(): Promise<PvpContents> {
+        const data = await this._fetch<PvpContents>("/content-service/v2/content", "shared");
+
+        return data;
+    }
+
+    /**
+     * AccountXP_GetPlayer
+     *
+     * Get the account level, XP, and XP history for the active player
+     */
+    async accountXp(): Promise<PvpAccountXp> {
+        const data = await this._fetch<PvpAccountXp>(`/account-xp/v1/players/${this._puuid}`, "pd");
+
+        return data;
+    }
+
+    /**
+     * Player_Loadout_Current
+     *
+     * Get the player's current loadout
+     */
+    async loadout(): Promise<PvpLoadout> {
+        const data = await this._fetch<PvpLoadout>(`/personalization/v2/players/${this._puuid}/playerloadout`, "pd");
+
+        return data;
+    }
+
+    /**
+     * Player_Loadout_Update
+     *
+     * Loadout changes take effect when starting a new game
+     * @param loadout
+     */
+    async changeLoadout(loadout: PvpLoadoutParams): Promise<PvpLoadout> {
+        const data = await this._put<PvpLoadout>(
+            `/personalization/v2/players/${this._puuid}/playerloadout`,
+            "pd",
+            loadout,
+        );
+
+        return data;
+    }
+
+    /**
+     * MMR_FetchPlayer
+     *
+     * Get the match making rating for a player
+     */
+    async mmr(puuid?: string): Promise<PvpMMR> {
+        puuid = puuid || this._puuid;
+
+        const data = await this._fetch<PvpMMR>(`/mmr/v1/players/${puuid}`, "pd");
+
+        return data;
+    }
+
+    /**
+     *  MatchHistory_FetchMatchHistory
+     *
+     *  Get recent matches for a player
+     *  There are 3 optional query parameters: start_index, end_index, and queue_id.
+     * @param params
+     */
+    async matchHistory(params?: PvpMatchHistoryInput): Promise<PvpMatchHistory> {
+        const puuid = params?.puuid || this._puuid;
+        const start = params?.start || 0;
+        const end = params?.end || 15;
+        const queue_id = params?.queue_id || "null";
+
+        const data = await this._fetch<PvpMatchHistory>(
+            `/match-history/v1/history/${puuid}?startIndex=${start}&endIndex=${end}${
+                queue_id !== "null" ? "&" + "queue=" + queue_id : ""
+            }`,
+            "pd",
+        );
+
+        return data;
+    }
+
+    /**
+     * Get the full info for a previous match
+     *
+     * Includes everything that the in-game match details screen shows including damage and kill positions, same as the official API w/ a production key
+     * @param match_id
+     */
+    async matchDetails(match_id: string): Promise<PvpMatchDetails> {
+        const data = await this._fetch<PvpMatchDetails>(`/match-details/v1/matches/${match_id}`, "pd");
+
+        return data;
+    }
+
+    /**
+     *   Get recent games and how they changed ranking
+     *
+     *  There are 3 optional query parameters: start_index, end_index, and queue_id. queue can be one of null, competitive, custom, deathmatch, ggteam, newmap, onefa, snowball, spikerush, or unrated.
+     * @param params
+     */
+    async competitiveUpdates(params?: PvpMatchHistoryInput): Promise<PvpCompetitiveUpdates> {
+        const puuid = params?.puuid || this._puuid;
+        const start = params?.start || 0;
+        const end = params?.end || 15;
+        const queue_id = params?.queue_id || "null";
+
+        const data = await this._fetch<PvpCompetitiveUpdates>(
+            `/mmr/v1/players/${puuid}/competitiveupdates?startIndex=${start}&endIndex=${end}${
+                queue_id !== "null" ? "&" + "queue=" + queue_id : ""
+            }`,
+            "pd",
+        );
+
+        return data;
+    }
+
+    /**
+     * MMR_FetchLeaderboard
+     *
+     * Get the competitive leaderboard for a given season
+     * The query parameter query can be added to search for a username.
+     * @param params
+     */
+    async leadersboards(params?: PvpLeaderboardParams): Promise<PvpLeaderboard> {
+        const region = params?.region || this._region;
+        const season = params?.season_id || (await this._getLiveSeason());
+        const start = params?.start || 0;
+        const size = params?.size || 25;
+
+        const data = await this._fetch<PvpLeaderboard>(
+            `/mmr/v1/leaderboards/affinity/${region}/queue/competitive/season/${season}?startIndex=${start}&size=${size}`,
+            "pd",
+        );
+
+        return data;
+    }
+
+    /**
+     * Restrictions_FetchPlayerRestrictionsV2
+     *
+     * Checks for any gameplay penalties on the account
+     */
+    async playerRestrictions(): Promise<PvpPlayerRestrictions> {
+        const data = await this._fetch<PvpPlayerRestrictions>("/restrictions/v2/penalties", "pd");
+
+        return data;
+    }
+
+    /**
+     * ItemProgressionDefinitionsV2_Fetch
+     *
+     * Get details for item upgrades
+     */
+    async itemProgressDefinitions(): Promise<PvpItemProgressDefinitions[]> {
+        const { Definitions } = await this._fetch<PvpItemProgressDefinitionsResponse>(
+            "/contract-definitions/v3/item-upgrades",
+            "pd",
+        );
+
+        return Definitions;
+    }
+
+    /**
+     * Get a current live season
+     * @returns
+     */
+    private async _getLiveSeason(): Promise<string> {
+        const data = await this.mmr();
+
+        return data.LatestCompetitiveUpdate.SeasonID;
+    }
+}
+
+export { Pvp };
