@@ -2,15 +2,6 @@
 
 
 
-    def store_fetch_wallet(self) -> dict:
-        '''
-        Store_GetWallet
-        Get amount of Valorant points and Radianite the player has
-        Valorant points have the id 85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741 and Radianite points have the id e59aa87c-4cbf-517a-5983-6e81511be9b7        
-        '''
-        data = self.fetch(f"/store/v1/wallet/{self.puuid}",endpoint_type="pd")
-        return data 
-
     def store_fetch_order(self, order_id:str) -> dict:
         '''
         Store_GetOrder
@@ -40,7 +31,8 @@
 */
 
 import { Fetch } from "@interfaces/http";
-import { CurrentOffersResponse, OffersResponse } from "@interfaces/store";
+import { CurrentOffersResponse, OffersResponse, WalletResponse } from "@interfaces/store";
+import { WalletCurrencies, walletMappedByID } from "@resources";
 import { saveFileJson } from "@utils";
 
 class Store {
@@ -74,6 +66,25 @@ class Store {
         const data = await this._fetch<CurrentOffersResponse>(`/store/v2/storefront/${this._puuid}`, "pd");
 
         return data;
+    }
+
+    /**
+     *  Store_GetWallet
+     *
+     * Get amount of Valorant points and Radianite the player has
+     * Valorant points have the id 85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741 and Radianite points have the id e59aa87c-4cbf-517a-5983-6e81511be9b7
+     */
+    async wallet(): Promise<Record<WalletCurrencies, number>> {
+        const { Balances } = await this._fetch<WalletResponse>(`/store/v1/wallet/${this._puuid}`, "pd");
+
+        const balanceIds = Object.keys(Balances);
+
+        const walletMapped = balanceIds.reduce(
+            (initialValue, balanceId) => ({ ...initialValue, [walletMappedByID[balanceId]]: Balances[balanceId] }),
+            {} as Record<WalletCurrencies, number>,
+        );
+
+        return walletMapped;
     }
 }
 

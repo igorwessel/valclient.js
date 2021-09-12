@@ -80,6 +80,14 @@ export const agentsMappedById: Record<Agents, string> = {
     Jett: "add6443a-41bd-e414-f6ad-e58d267f4e95",
 };
 
+export type WalletCurrencies = "valorant_points" | "radianite_points" | "unknown";
+
+export const walletMappedByID: Record<string, WalletCurrencies> = {
+    "85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741": "valorant_points",
+    "e59aa87c-4cbf-517a-5983-6e81511be9b7": "radianite_points",
+    "f08d4ae3-939c-4576-ab26-09ce1f23bb37": "unknown",
+};
+
 export const regions: Array<Regions> = ["na", "eu", "latam", "br", "ap", "kr", "pbe"];
 
 export const regionShardOverride: RegionShardOverride = {
