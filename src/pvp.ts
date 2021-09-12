@@ -18,7 +18,7 @@ import {
     PvpMatchHistoryInput,
     PvpMMR,
     PvpPlayerRestrictions,
-} from "@interfaces/sharedEndpointResponses";
+} from "@interfaces/pvp";
 
 class Pvp {
     private readonly _fetch: Fetch;

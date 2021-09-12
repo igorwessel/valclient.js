@@ -1,6 +1,6 @@
 import { Fetch } from "@interfaces/http";
 
-import { ClientSettingsResponse, ValorantProcessResponse } from "@interfaces/localEndpointResponses";
+import { ClientSettingsResponse, ValorantProcessResponse } from "@interfaces/valorant";
 
 interface ValorantInterface {
     process(): Promise<ValorantProcessResponse | Record<string, never>>;

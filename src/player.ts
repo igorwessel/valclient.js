@@ -9,7 +9,7 @@ import {
     Presence,
     PresenceResponse,
     RNETFetchChatSession,
-} from "@interfaces/localEndpointResponses";
+} from "@interfaces/player";
 
 interface PlayerInterface {
     current: () => Promise<CurrentPlayerResponse>;

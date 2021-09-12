@@ -1,6 +1,6 @@
 import { ContractsAll } from "@interfaces/contracts";
 import { Fetch, Post } from "@interfaces/http";
-import { PvpItemProgressDefinitions, PvpItemProgressDefinitionsResponse } from "@interfaces/sharedEndpointResponses";
+import { PvpItemProgressDefinitions, PvpItemProgressDefinitionsResponse } from "@interfaces/pvp";
 
 class Contracts {
     private readonly _fetch: Fetch;

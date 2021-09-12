@@ -14,7 +14,7 @@ import { regions, regionShardOverride, shardRegionOverride } from "@resources";
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 
 /** Interfaces */
-import { EntitlementsTokenLocal } from "@interfaces/localEndpointResponses";
+import { EntitlementsTokenLocal } from "@interfaces/player";
 import { BaseEndpoints, ClientConfig, EndpointType, Headers, LockFileType } from "@interfaces/client";
 import { Regions } from "@interfaces/resources";
 
@@ -87,6 +87,7 @@ class Client {
             await this._getHeaders();
 
             this.player = new Player(this._fetch, this._puuid);
+            this.valorant = new Valorant(this._fetch);
         } else {
             const { puuid, headers } = await this._auth.authenticate();
 
@@ -94,7 +95,6 @@ class Client {
             this._headers = headers;
         }
 
-        this.valorant = new Valorant(this._fetch, this._region);
         this.group = new Group(this._fetch, this._post, this._delete, this._puuid);
         this.live_game = new LiveGame(this._fetch, this._post, this._puuid);
         this.pre_game = new PreGame(this._fetch, this._post, this._puuid);
