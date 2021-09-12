@@ -58,3 +58,12 @@ export interface WalletResponse {
         "f08d4ae3-939c-4576-ab26-09ce1f23bb37": string;
     };
 }
+
+export interface YourItemsEntitlements {
+    TypeID: string;
+    ItemID: string;
+}
+export interface YourItems {
+    ItemTypeID: string;
+    Entitlements: YourItemsEntitlements[];
+}
