@@ -34,7 +34,7 @@ class Client {
     private _lockfile_path: string = getConfigurationPath("lockfile");
     private _lockfile: LockFileType;
     private _headers: Partial<Headers>;
-    private _region: Regions;
+    private _region: Regions | null = null;
     private _shard: Regions;
     private _auth: Auth | null = null;
     private _client_platform =
@@ -113,6 +113,14 @@ class Client {
     }
 
     /**
+     * All regions we can use in Client
+     * @returns All regions
+     */
+    get allRegions(): Regions[] {
+        return regions;
+    }
+
+    /**
      * Current authenticate person
      */
     get auth(): { username: string; password: string } | null {
@@ -185,13 +193,6 @@ class Client {
         return data;
     };
 
-    /**
-     * All regions we can use in Client
-     * @returns All regions
-     */
-    static getRegions(): Regions[] {
-        return regions;
-    }
     /**
      * Get Region in RiotClient Settings
      * @returns Region
