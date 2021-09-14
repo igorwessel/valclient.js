@@ -60,11 +60,11 @@ class Store {
      * @param order_id
      * @returns
      */
-    async order(order_id: string): Promise<unknown> {
-        const data = await this._fetch<unknown>(`/store/v1/order/${order_id}`, "pd");
-        //TODO: i don't find endpoint to create a order, i will desactivate this method
-        return data;
-    }
+    // async order(order_id: string): Promise<unknown> {
+    //     const data = await this._fetch<unknown>(`/store/v1/order/${order_id}`, "pd");
+    //     //TODO: i don't find endpoint to create a order, i will desactivate this method
+    //     return data;
+    // }
 
     /**
      *  Store_GetEntitlements
