@@ -1,4 +1,4 @@
-import { GLZEndpointTokenResponse, PreGameDetailsResponse, PreGameLoadout } from "@interfaces/glzEndpointResponses";
+import { PreGameDetailsResponse, PreGameLoadout } from "@interfaces/preGame";
 
 import { CoreGameResponse } from "@interfaces/liveGame";
 
@@ -69,16 +69,16 @@ class PreGame {
      * Get a chat token
      * @param match_id
      */
-    async teamChatMUCToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
-        const { MatchID } = await this.current();
+    // async teamChatMUCToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+    //     const { MatchID } = await this.current();
 
-        match_id = match_id || MatchID;
+    //     match_id = match_id || MatchID;
 
-        const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/chattoken`, "glz");
-        //TODO: not sure about this return type, i will change later when in unrated match to test return type
+    //     const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/chattoken`, "glz");
+    //     //TODO: not sure about this return type, i will change later when in unrated match to test return type
 
-        return data;
-    }
+    //     return data;
+    // }
 
     /**
      * Pregame_FetchChatToken
@@ -86,16 +86,16 @@ class PreGame {
      * Get a chat token
      * @param match_id
      */
-    async voiceChatToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
-        const { MatchID } = await this.current();
+    // async voiceChatToken(match_id?: string): Promise<GLZEndpointTokenResponse> {
+    //     const { MatchID } = await this.current();
 
-        match_id = match_id || MatchID;
+    //     match_id = match_id || MatchID;
 
-        const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/voicetoken`, "glz");
-        //TODO: not sure about this return type, i will change later when in unrated match to test return type
+    //     const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/voicetoken`, "glz");
+    //     //TODO: not sure about this return type, i will change later when in unrated match to test return type
 
-        return data;
-    }
+    //     return data;
+    // }
 
     /**
      * Pregame_SelectCharacter
