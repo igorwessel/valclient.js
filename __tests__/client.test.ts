@@ -16,6 +16,8 @@ import { Session } from "@app/session";
 import { Pvp } from "@app/pvp";
 import { Store } from "@app/store";
 import { Contracts } from "@app/contracts";
+import { Player } from "@app/player";
+import { Valorant } from "@app/valorant";
 
 jest.mock("fs");
 jest.mock("axios");
@@ -54,6 +56,8 @@ const mockedUserInfo = {
         sub: "id_of_user",
     },
 };
+
+const mockedLockFile = "name:pid:port:password:protocol";
 
 const mockedFS = mocked(fs, true);
 const mockedAxios = mocked(axios, true);
@@ -117,18 +121,25 @@ describe("Client", () => {
         });
     });
 
-    describe("Iniciate client without auth", () => {
+    describe("Try to iniciate client", () => {
         const realPlatform = Object.getOwnPropertyDescriptor(process, "platform");
 
         beforeAll(() => {
             valClient = new ValClient();
+
+            mockedAxios.get.mockResolvedValueOnce(mockedClientVersion);
+
+            mockedFS.readFileSync.mockImplementationOnce(() => {
+                throw { code: "ENOENT", syscall: "open" };
+            });
         });
 
         afterEach(() => {
             Object.defineProperty(process, "platform", realPlatform);
+        });
 
+        afterAll(() => {
             mockedAxios.get.mockClear();
-            mockedFS.readFileSync.mockClear();
             mockedFS.readFileSync.mockReset();
         });
 
@@ -142,45 +153,46 @@ describe("Client", () => {
         });
 
         test("valorant is not running (launcher is logged), throw a ValorantNotRunning", async () => {
-            mockedAxios.get.mockResolvedValueOnce(mockedClientVersion);
-
-            mockedFS.readFileSync.mockImplementationOnce(() => {
-                throw { code: "ENOENT", syscall: "open" };
-            });
-
             expect(valClient.init({ region: "br" })).rejects.toThrowError(ValorantNotRunning);
+        });
+    });
+
+    describe("Iniciate client without auth", () => {
+        beforeAll(async () => {
+            valClient = new ValClient();
+            mockedAxios.get.mockResolvedValueOnce(mockedClientVersion).mockResolvedValueOnce(mockedLocalRequestToken);
+
+            mockedFS.readFileSync.mockReturnValueOnce(mockedLockFile);
+
+            await valClient.init({ region: "br" });
+        });
+
+        afterAll(() => {
+            mockedAxios.get.mockClear();
+            mockedFS.readFileSync.mockClear();
+            mockedFS.readFileSync.mockReset();
         });
 
         test("valorant is running, get authorization to made request", async () => {
-            mockedFS.readFileSync.mockReturnValueOnce("name:pid:port:password:protocol");
-
-            /**
-             * First request to client version
-             * Second request to get local token
-             */
-            mockedAxios.get.mockResolvedValueOnce(mockedClientVersion).mockResolvedValueOnce(mockedLocalRequestToken);
-
-            await valClient.init({ region: "br" });
-
             expect(mockedAxios.get).toHaveBeenCalledTimes(2);
+
             expect(mockedAxios.get).toHaveBeenNthCalledWith(1, "/version");
             expect(mockedAxios.get).toHaveBeenNthCalledWith(2, "https://127.0.0.1:port/entitlements/v1/token");
         });
 
-        test("client now need to have player and valorant instances, only works in local endpoint", async () => {
-            mockedFS.readFileSync.mockReturnValueOnce("name:pid:port:password:protocol");
+        test("client authenticated with local, need to have player and valorant instances, only works in local endpoint", async () => {
+            expect(valClient.player).toBeInstanceOf(Player);
+            expect(valClient.valorant).toBeInstanceOf(Valorant);
+        });
 
-            /**
-             * First request to client version
-             * Second request to get local token
-             */
-            mockedAxios.get.mockResolvedValueOnce(mockedClientVersion).mockResolvedValueOnce(mockedLocalRequestToken);
-
-            await valClient.init({ region: "br" });
-
-            expect(mockedAxios.get).toHaveBeenCalledTimes(2);
-            expect(valClient.player).not.toBe(null);
-            expect(valClient.valorant).not.toBe(null);
+        test("client authenticated with local, must to have the other instances", async () => {
+            expect(valClient.group).toBeInstanceOf(Group);
+            expect(valClient.live_game).toBeInstanceOf(LiveGame);
+            expect(valClient.pre_game).toBeInstanceOf(PreGame);
+            expect(valClient.session).toBeInstanceOf(Session);
+            expect(valClient.pvp).toBeInstanceOf(Pvp);
+            expect(valClient.store).toBeInstanceOf(Store);
+            expect(valClient.contracts).toBeInstanceOf(Contracts);
         });
     });
 
