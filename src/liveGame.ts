@@ -1,6 +1,6 @@
 import { Fetch, Post } from "@interfaces/http";
 
-import { CoreGameDetailsResponse, CoreGameLoadoutResponse, CoreGameResponse } from "@interfaces/glzEndpointResponses";
+import { CoreGameDetailsResponse, CoreGameLoadoutResponse, CoreGameResponse } from "@interfaces/liveGame";
 
 interface LiveGameInterface {
     current(): Promise<CoreGameResponse>;

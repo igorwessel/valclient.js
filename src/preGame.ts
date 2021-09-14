@@ -1,9 +1,6 @@
-import {
-    CoreGameResponse,
-    GLZEndpointTokenResponse,
-    PreGameDetailsResponse,
-    PreGameLoadout,
-} from "@interfaces/glzEndpointResponses";
+import { GLZEndpointTokenResponse, PreGameDetailsResponse, PreGameLoadout } from "@interfaces/glzEndpointResponses";
+
+import { CoreGameResponse } from "@interfaces/liveGame";
 
 import { Fetch, Post } from "@interfaces/http";
 
