@@ -48,7 +48,7 @@ class Client {
         local: null,
     };
     private _local_username_auth = "riot";
-    private _valorant_api: AxiosInstance = axios.create({ baseURL: "https://valorant-api.com/v1" });
+    private _valorant_api: AxiosInstance;
 
     public player: Player | null = null;
     public valorant: Valorant | null = null;
@@ -59,6 +59,10 @@ class Client {
     public pvp: Pvp | null = null;
     public store: Store | null = null;
     public contracts: Contracts | null = null;
+
+    constructor() {
+        this._valorant_api = axios.create({ baseURL: "https://valorant-api.com/v1" });
+    }
 
     /**
      * Start client

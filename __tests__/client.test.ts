@@ -7,7 +7,7 @@ import { mocked } from "ts-jest/utils";
 import { SystemNotSupported } from "@errors/SystemNotSupported";
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 
-import { regions, regionShardOverride, shardRegionOverride } from "@resources";
+import { regions } from "@resources";
 
 import { Group } from "@app/group";
 import { LiveGame } from "@app/liveGame";
@@ -67,6 +67,8 @@ let valClient: ValClient;
 describe("Client", () => {
     describe("Without iniciate client", () => {
         beforeAll(() => {
+            mockedAxios.create.mockReturnThis();
+
             valClient = new ValClient();
         });
 
@@ -81,8 +83,6 @@ describe("Client", () => {
         });
 
         test("we can get a instance for valorant api", async () => {
-            mockedAxios.create.mockReturnThis();
-
             expect(mockedAxios.create).toHaveBeenCalledWith({ baseURL: "https://valorant-api.com/v1" });
         });
 
