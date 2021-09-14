@@ -12,6 +12,7 @@ import { regions, regionShardOverride, shardRegionOverride } from "@resources";
 
 /** Errors */
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
+import { SystemNotSupported } from "@errors/SystemNotSupported";
 
 /** Interfaces */
 import { EntitlementsTokenLocal } from "@interfaces/player";
@@ -31,7 +32,7 @@ import { Contracts } from "@app/contracts";
 class Client {
     private _axios: AxiosStatic = axios;
     private _puuid: string;
-    private _lockfile_path: string = getConfigurationPath("lockfile");
+    private _lockfile_path: string | null = null;
     private _lockfile: LockFileType;
     private _headers: Partial<Headers>;
     private _region: Regions | null = null;
@@ -62,9 +63,10 @@ class Client {
     /**
      * Start client
      */
-    async init({ region, auth }: Partial<ClientConfig> = {}): Promise<void> {
-        this._region = region || this._getRegionValorant();
+    public async init({ region, auth }: ClientConfig): Promise<void> {
+        this._region = region;
         this._shard = this._region;
+        this._valorant_api = axios.create({ baseURL: "https://valorant-api.com/v1" });
 
         if (regionShardOverride[this._region.toLowerCase()]) {
             this._shard = regionShardOverride[this._region.toLowerCase()];
@@ -75,6 +77,8 @@ class Client {
 
         if (auth) {
             this._auth = new Auth(auth);
+        } else if (process.platform !== "win32") {
+            throw new SystemNotSupported();
         }
 
         await this._getClientVersion();
@@ -194,22 +198,6 @@ class Client {
     };
 
     /**
-     * Get Region in RiotClient Settings
-     * @returns Region
-     */
-    private _getRegionValorant(): Regions {
-        const yamlPath = getConfigurationPath("RiotClientSettings.yaml");
-        const yamlData = readFileSync(yamlPath, { encoding: "utf8" });
-        const {
-            install: {
-                globals: { region },
-            },
-        }: { install: { globals: { region: Regions } } } = YAML.parse(yamlData);
-
-        return region;
-    }
-
-    /**
      * Configure Axios to add Headers in each request
      */
     private _configureAxios(): void {
@@ -316,9 +304,9 @@ class Client {
     /**
      * Get a lockfile when valorant is running, if dont find lockfile valorant is not running
      */
-    private _getLockfile(): LockFileType {
+    private _getLockfile(): void {
         try {
-            const lockfile = readFileSync(this._lockfile_path, { encoding: "utf-8" });
+            const lockfile = readFileSync(getConfigurationPath("lockfile"), { encoding: "utf-8" });
             const [name, PID, port, password, protocol] = lockfile.split(":");
 
             this._lockfile = {
@@ -328,10 +316,10 @@ class Client {
                 password,
                 protocol,
             };
-
-            return { name, PID, port, password, protocol };
         } catch (e) {
-            throw new ValorantNotRunning();
+            if (e.code === "ENOENT" && e.syscall === "open") {
+                throw new ValorantNotRunning();
+            }
         }
     }
 }

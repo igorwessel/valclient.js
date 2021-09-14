@@ -10,4 +10,19 @@ async function saveFileJson(name: string, data: Record<string, unknown>): Promis
     await fs.writeFile(`${root}/${name}`, JSON.stringify(data, null, 2));
 }
 
-export { getConfigurationPath, saveFileJson };
+function parseQueryString<T>(querystring: string): Record<string, string> | T {
+    if (querystring.startsWith("#")) {
+        querystring = querystring.replace("#", "");
+    }
+
+    return querystring.split("&").reduce((obj, string) => {
+        const [key, value] = string.split("=");
+
+        return {
+            ...obj,
+            [key]: value,
+        };
+    }, {});
+}
+
+export { getConfigurationPath, saveFileJson, parseQueryString };
