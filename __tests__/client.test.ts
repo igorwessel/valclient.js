@@ -9,6 +9,14 @@ import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 
 import { regions, regionShardOverride, shardRegionOverride } from "@resources";
 
+import { Group } from "@app/group";
+import { LiveGame } from "@app/liveGame";
+import { PreGame } from "@app/preGame";
+import { Session } from "@app/session";
+import { Pvp } from "@app/pvp";
+import { Store } from "@app/store";
+import { Contracts } from "@app/contracts";
+
 jest.mock("fs");
 jest.mock("axios");
 jest.mock("axios-cookiejar-support");
@@ -109,7 +117,7 @@ describe("Client", () => {
         });
     });
 
-    xdescribe("Iniciate client without auth", () => {
+    describe("Iniciate client without auth", () => {
         const realPlatform = Object.getOwnPropertyDescriptor(process, "platform");
 
         beforeAll(() => {
@@ -177,11 +185,9 @@ describe("Client", () => {
     });
 
     describe("Iniciate client with auth", () => {
-        beforeAll(() => {
+        beforeAll(async () => {
             valClient = new ValClient();
-        });
 
-        test("we can authenticate", async () => {
             mockedAxios.get.mockResolvedValueOnce(mockedClientVersion);
 
             mockedAxios.post
@@ -192,7 +198,15 @@ describe("Client", () => {
             mockedAxios.put.mockResolvedValueOnce(mockedPutAccessToken);
 
             await valClient.init({ region: "br", auth: { username: "teste", password: "teste" } });
+        });
 
+        afterAll(() => {
+            mockedAxios.get.mockClear();
+            mockedAxios.post.mockClear();
+            mockedAxios.put.mockClear();
+        });
+
+        test("we can authenticate", async () => {
             expect(mockedAxios.get).toHaveBeenCalledWith("/version");
 
             expect(mockedAxios.post).toHaveBeenNthCalledWith(
@@ -230,8 +244,23 @@ describe("Client", () => {
                 },
                 expect.anything(),
             );
+        });
 
+        test("after authenticated, we can get current user", () => {
             expect(valClient.auth).toMatchObject({ username: "teste", password: "teste" });
+        });
+
+        test("after authenticated, endpoints must be available", () => {
+            expect(valClient.player).toEqual(null);
+            expect(valClient.valorant).toEqual(null);
+
+            expect(valClient.group).toBeInstanceOf(Group);
+            expect(valClient.live_game).toBeInstanceOf(LiveGame);
+            expect(valClient.pre_game).toBeInstanceOf(PreGame);
+            expect(valClient.session).toBeInstanceOf(Session);
+            expect(valClient.pvp).toBeInstanceOf(Pvp);
+            expect(valClient.store).toBeInstanceOf(Store);
+            expect(valClient.contracts).toBeInstanceOf(Contracts);
         });
     });
 });
