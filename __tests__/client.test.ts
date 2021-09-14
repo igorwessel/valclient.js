@@ -7,7 +7,7 @@ import { mocked } from "ts-jest/utils";
 import { SystemNotSupported } from "@errors/SystemNotSupported";
 import { ValorantNotRunning } from "@errors/ValorantNotRunning";
 
-import { regions } from "@resources";
+import { regions, regionShardOverride, shardRegionOverride } from "@resources";
 
 import { Group } from "@app/group";
 import { LiveGame } from "@app/liveGame";
@@ -154,6 +154,31 @@ describe("Client", () => {
 
         test("valorant is not running (launcher is logged), throw a ValorantNotRunning", async () => {
             expect(valClient.init({ region: "br" })).rejects.toThrowError(ValorantNotRunning);
+        });
+    });
+
+    describe("Iniciate a client with diferents regions", () => {
+        beforeEach(async () => {
+            valClient = new ValClient();
+            mockedAxios.get.mockResolvedValueOnce(mockedClientVersion).mockResolvedValueOnce(mockedLocalRequestToken);
+
+            mockedFS.readFileSync.mockReturnValueOnce(mockedLockFile);
+        });
+
+        afterEach(() => {
+            mockedAxios.get.mockClear();
+        });
+
+        test("add correct shard based in region passed in init", async () => {
+            await valClient.init({ region: "br" });
+
+            expect(valClient.shard).toBe(regionShardOverride[valClient.region]);
+        });
+
+        test("replace the region if no endpoint for it", async () => {
+            await valClient.init({ region: "pbe" });
+
+            expect(valClient.region).toBe(shardRegionOverride[valClient.shard]);
         });
     });
 

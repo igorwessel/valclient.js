@@ -146,6 +146,13 @@ class Client {
     }
 
     /**
+     * Actual shard
+     */
+    get shard(): string {
+        return this._shard;
+    }
+
+    /**
      * Fetch a request based in Endpoint Type
      * @param endpoint
      * @param endpointType Default value: "pd"
