@@ -1,12 +1,15 @@
+import { PrivateInformationJSON64 } from "@errors/PrivateInformationJSON64";
+
 import { Fetch } from "@interfaces/http";
+
 import {
     CurrentPlayerResponse,
     Friend,
-    FriendPrivate,
     FriendsResponse,
     PendingFriendRequest,
     PendingFriendsResponse,
     Presence,
+    PresencePrivate,
     PresenceResponse,
     RNETFetchChatSession,
 } from "@interfaces/player";
@@ -15,7 +18,7 @@ interface PlayerInterface {
     current: () => Promise<CurrentPlayerResponse>;
     allFriends(): Promise<Friend[]>;
     session(): Promise<RNETFetchChatSession>;
-    onlineFriend(puuid?: string): Promise<FriendPrivate | null>;
+    onlineFriend(puuid?: string): Promise<PresencePrivate | null>;
     allFriendsOnline(): Promise<Presence[]>;
     pendingFriendsRequests(): Promise<PendingFriendRequest[]>;
 }
@@ -71,20 +74,24 @@ class Player implements PlayerInterface {
      * @param puuid Use puuid passed in parameter or self puuid
      * @returns
      */
-    async onlineFriend(puuid?: string): Promise<FriendPrivate | null> {
-        const { presences } = await this._fetch<PresenceResponse>("/chat/v4/presences", "local");
+    async onlineFriend(puuid?: string): Promise<PresencePrivate | null> {
+        try {
+            const { presences } = await this._fetch<PresenceResponse>("/chat/v4/presences", "local");
 
-        puuid = puuid || this._puuid;
+            puuid = puuid || this._puuid;
 
-        const player = presences.find((presence) => presence.puuid === puuid);
+            const player = presences.find((presence) => presence.puuid === puuid);
 
-        if (player) {
-            const playerPrivate = JSON.parse(Buffer.from(player.private, "base64").toString("utf-8"));
+            if (player) {
+                const playerPrivate = JSON.parse(Buffer.from(player.private, "base64").toString("utf-8"));
 
-            return playerPrivate;
+                return playerPrivate;
+            }
+
+            return null;
+        } catch (e) {
+            throw new PrivateInformationJSON64();
         }
-
-        return null;
     }
 
     /**
