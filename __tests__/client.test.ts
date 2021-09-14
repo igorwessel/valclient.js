@@ -171,6 +171,10 @@ describe("Client", () => {
             mockedAxios.get.mockClear();
         });
 
+        afterAll(() => {
+            mockedFS.readFileSync.mockReset();
+        });
+
         test("add correct shard based in region passed in init", async () => {
             await valClient.init({ region: "br" });
 

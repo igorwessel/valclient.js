@@ -92,15 +92,12 @@ class Client {
         if (!this._auth) {
             this._getLockfile();
             this._buildLocalEndpoint();
-            await this._getHeaders();
+            await this._getLocalHeaders();
 
             this.player = new Player(this._fetch, this._puuid);
             this.valorant = new Valorant(this._fetch, this._put);
         } else {
-            const { puuid, headers } = await this._auth.authenticate();
-
-            this._puuid = puuid;
-            this._headers = headers;
+            await this._getAuthHeaders();
         }
 
         this.group = new Group(this._fetch, this._post, this._delete, this._puuid);
@@ -259,11 +256,7 @@ class Client {
     /**
      * Get Headers to make Requests
      */
-    private async _getHeaders(): Promise<Partial<Headers>> {
-        if (!this._auth) {
-            return this._getAuthHeaders();
-        }
-
+    private async _getAuthHeaders(): Promise<void> {
         const { puuid, headers } = await this._auth.authenticate();
         headers["X-Riot-ClientPlatform"] = this._client_platform;
         headers["X-Riot-ClientVersion"] = this._client_version;
@@ -275,7 +268,7 @@ class Client {
     /**
      * Get Auth Headers when not have Auth
      */
-    private async _getAuthHeaders(): Promise<Partial<Headers>> {
+    private async _getLocalHeaders(): Promise<void> {
         const {
             accessToken,
             subject: puuid,
@@ -290,13 +283,6 @@ class Client {
         };
 
         this._puuid = puuid;
-
-        return {
-            Authorization: `Bearer ${accessToken}`,
-            "X-Riot-Entitlements-JWT": token,
-            "X-Riot-ClientPlatform": this._client_platform,
-            "X-Riot-ClientVersion": this._client_version,
-        };
     }
 
     /**
