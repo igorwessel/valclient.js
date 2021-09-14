@@ -84,6 +84,8 @@ describe("Client", () => {
 
         test("we can get a instance for valorant api", async () => {
             expect(mockedAxios.create).toHaveBeenCalledWith({ baseURL: "https://valorant-api.com/v1" });
+
+            expect(valClient.valorant_api).not.toBe(undefined);
         });
 
         test("auth must be null", () => {
