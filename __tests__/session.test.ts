@@ -1,11 +1,11 @@
 import { Session } from "@app/session";
 
-import { fetch } from "../jest_helpers";
-
 import { CurrentGameSessionResponse, ReconnectGameSessionResponse } from "@interfaces/session";
 import { Fetch } from "@interfaces/http";
 
 jest.mock("axios");
+
+const fetch = jest.fn();
 
 const currentUserId = "current_user";
 

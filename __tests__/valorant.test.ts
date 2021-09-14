@@ -1,10 +1,12 @@
 import { Valorant } from "@app/valorant";
 import { ClientSettingsResponse, ValorantProcessResponse } from "@interfaces/valorant";
 
-import { fetch, put } from "../jest_helpers";
 import { Fetch, Put } from "@interfaces/http";
 
 jest.mock("axios");
+
+const fetch = jest.fn();
+const put = jest.fn();
 
 const mockedValorantProcessResponse: ValorantProcessResponse = {
     process_generate_when_open_valorant: {

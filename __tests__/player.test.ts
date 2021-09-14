@@ -1,6 +1,5 @@
 import { Player } from "@app/player";
 
-import { fetch } from "../jest_helpers";
 import { Fetch } from "@interfaces/http";
 import {
     CurrentPlayerResponse,
@@ -14,6 +13,8 @@ import { Base64 } from "@interfaces/helpers";
 import { PrivateInformationJSON64 } from "@errors/PrivateInformationJSON64";
 
 jest.mock("axios");
+
+const fetch = jest.fn();
 
 const currentUserId = "current_user";
 const anotherUserId = "another_user";
