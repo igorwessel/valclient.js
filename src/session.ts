@@ -1,4 +1,4 @@
-import { CurrentGameSessionResponse, ReconnectGameSessionResponse } from "@interfaces/glzEndpointResponses";
+import { CurrentGameSessionResponse, ReconnectGameSessionResponse } from "@interfaces/session";
 import { Fetch } from "@interfaces/http";
 
 class Session {
