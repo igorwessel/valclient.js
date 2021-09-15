@@ -184,7 +184,7 @@ export interface PvpMatchHistoryInput {
     puuid?: string;
     start?: number;
     end?: number;
-    queue_id: Queues;
+    queue_id?: Queues;
 }
 
 export interface PvpMatchHistory {
