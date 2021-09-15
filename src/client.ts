@@ -1,6 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosStatic } from "axios";
 import { readFileSync } from "fs";
-import YAML from "yaml";
 import https from "https";
 import Auth from "./auth";
 
@@ -319,7 +318,9 @@ class Client {
      */
     private _getLockfile(): void {
         try {
-            const lockfile = readFileSync(getConfigurationPath("lockfile"), { encoding: "utf-8" });
+            const lockfilePath = getConfigurationPath("lockfile");
+
+            const lockfile = readFileSync(lockfilePath, { encoding: "utf-8" });
             const [name, PID, port, password, protocol] = lockfile.split(":");
 
             this._lockfile = {

@@ -1,8 +1,7 @@
 import path from "path";
-import { promises as fs } from "fs";
 
 function getConfigurationPath(file: string): string {
-    return path.resolve(process.env.LOCALAPPDATA, "./Riot Games/Riot Client/Config/", file);
+    return path.resolve(process.env.LOCALAPPDATA || "", "./Riot Games/Riot Client/Config/", file);
 }
 
 function parseQueryString<T>(querystring: string): Record<string, string> | T {

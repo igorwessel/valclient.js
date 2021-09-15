@@ -195,23 +195,35 @@ describe("Client", () => {
         });
 
         test("valorant is not running (launcher is logged), throw a ValorantNotRunning", async () => {
+            Object.defineProperty(process, "platform", {
+                ...Object.getOwnPropertyDescriptor(process, "property"),
+                value: "win32",
+            });
+
             expect(valClient.init({ region: "br" })).rejects.toThrowError(ValorantNotRunning);
         });
     });
 
     describe("Iniciate a client with diferents regions", () => {
+        const realPlatform = Object.getOwnPropertyDescriptor(process, "platform");
+
         beforeEach(async () => {
+            Object.defineProperty(process, "platform", {
+                ...Object.getOwnPropertyDescriptor(process, "property"),
+                value: "win32",
+            });
+
             valClient = new ValClient();
+
             mockedAxios.get.mockResolvedValueOnce(mockedClientVersion).mockResolvedValueOnce(mockedLocalRequestToken);
 
             mockedFS.readFileSync.mockReturnValueOnce(mockedLockFile);
         });
 
         afterEach(() => {
-            mockedAxios.get.mockClear();
-        });
+            Object.defineProperty(process, "platform", realPlatform);
 
-        afterAll(() => {
+            mockedAxios.get.mockReset();
             mockedFS.readFileSync.mockReset();
         });
 
@@ -229,7 +241,14 @@ describe("Client", () => {
     });
 
     describe("Iniciate client without auth", () => {
+        const realPlatform = Object.getOwnPropertyDescriptor(process, "platform");
+
         beforeAll(async () => {
+            Object.defineProperty(process, "platform", {
+                ...Object.getOwnPropertyDescriptor(process, "property"),
+                value: "win32",
+            });
+
             valClient = new ValClient();
             mockedAxios.get.mockResolvedValueOnce(mockedClientVersion).mockResolvedValueOnce(mockedLocalRequestToken);
 
@@ -239,6 +258,8 @@ describe("Client", () => {
         });
 
         afterAll(() => {
+            Object.defineProperty(process, "platform", realPlatform);
+
             mockedAxios.get.mockClear();
             mockedFS.readFileSync.mockClear();
             mockedFS.readFileSync.mockReset();
