@@ -1,4 +1,4 @@
-import ValClient from "@app/client";
+import ValClient, { addAuthHeaders, addLocalHeaders } from "@app/client";
 
 import fs from "fs";
 import axios from "axios";
@@ -120,6 +120,43 @@ describe("Client", () => {
             expect(pvp).toEqual(null);
             expect(store).toEqual(null);
             expect(contracts).toEqual(null);
+        });
+    });
+
+    describe("Headers config in interceptor", () => {
+        test("add autheticated headers", () => {
+            const interceptor = addAuthHeaders({
+                Authorization: "Bearer token",
+                "X-Riot-ClientPlatform": "client-platform",
+                "X-Riot-ClientVersion": mockedClientVersion.data.data.version,
+                "X-Riot-Entitlements-JWT": "entitlement-token",
+            });
+
+            const config = interceptor({});
+
+            expect(config.headers.Authorization).toBe("Bearer token");
+            expect(config.headers["X-Riot-ClientPlatform"]).toBe("client-platform");
+            expect(config.headers["X-Riot-ClientVersion"]).toBe(mockedClientVersion.data.data.version);
+            expect(config.headers["X-Riot-Entitlements-JWT"]).toBe("entitlement-token");
+        });
+
+        test("add local headers", () => {
+            const interceptor = addLocalHeaders("test", "test");
+
+            const config = interceptor({ url: "https://127.0.0.1:port" });
+
+            expect(config.auth.username).toBe("test");
+            expect(config.auth.password).toBe("test");
+        });
+
+        test("if endpoint url is not local, return original config", () => {
+            const interceptor = addLocalHeaders("test", "test");
+
+            const config = interceptor({ url: "http://someone-endpoint.com" });
+
+            expect(config.auth.username).not.toBe("test");
+            expect(config.auth.password).not.toBe("test");
+            expect(config.url).toBe("http://someone-endpoint.com");
         });
     });
 

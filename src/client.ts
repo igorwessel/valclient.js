@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosStatic } from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosStatic } from "axios";
 import { readFileSync } from "fs";
 import YAML from "yaml";
 import https from "https";
@@ -28,6 +28,34 @@ import { Session } from "@app/session";
 import { Pvp } from "@app/pvp";
 import { Store } from "@app/store";
 import { Contracts } from "@app/contracts";
+
+export const addAuthHeaders =
+    (headers: Partial<Headers>) =>
+    (config: AxiosRequestConfig): AxiosRequestConfig => {
+        config.headers = headers;
+        return config;
+    };
+
+export const addLocalHeaders =
+    (username: string, password: string) =>
+    (config: AxiosRequestConfig): AxiosRequestConfig => {
+        if (config.url.includes("127.0.0.1")) {
+            config.httpsAgent = new https.Agent({
+                rejectUnauthorized: false,
+            });
+
+            config.auth = {
+                username,
+                password,
+            };
+
+            config.withCredentials = true;
+
+            return config;
+        }
+
+        return config;
+    };
 
 class Client {
     private _axios: AxiosStatic = axios;
@@ -87,7 +115,6 @@ class Client {
 
         await this._getClientVersion();
         this._buildEndpoints();
-        this._configureAxios();
 
         if (!this._auth) {
             this._getLockfile();
@@ -107,6 +134,8 @@ class Client {
         this.pvp = new Pvp(this._fetch, this._put, this._puuid, this._region);
         this.store = new Store(this._fetch, this._puuid);
         this.contracts = new Contracts(this._fetch, this._post, this._puuid);
+
+        this._configureAxios();
     }
 
     /**
@@ -209,29 +238,12 @@ class Client {
      * Configure Axios to add Headers in each request
      */
     private _configureAxios(): void {
-        this._axios.interceptors.request.use((config) => {
-            config.headers = this._headers;
-            return config;
-        });
+        const authInterceptor = addAuthHeaders(this._headers);
+        const localInterceptor = addLocalHeaders(this._local_username_auth, this._lockfile?.password);
 
-        this._axios.interceptors.request.use((config) => {
-            if (config.url.includes("127.0.0.1")) {
-                config.httpsAgent = new https.Agent({
-                    rejectUnauthorized: false,
-                });
+        this._axios.interceptors.request.use(authInterceptor);
 
-                config.auth = {
-                    username: this._local_username_auth,
-                    password: this._lockfile.password,
-                };
-
-                config.withCredentials = true;
-
-                return config;
-            }
-
-            return config;
-        }, null);
+        this._axios.interceptors.request.use(localInterceptor);
     }
 
     /**
