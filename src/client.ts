@@ -178,13 +178,17 @@ class Client {
         return this._shard;
     }
 
+    get endpoints(): BaseEndpoints {
+        return this._base_endpoints;
+    }
+
     /**
      * Fetch a request based in Endpoint Type
      * @param endpoint
      * @param endpointType Default value: "pd"
      * @returns Response
      */
-    private _fetch = async <T>(endpoint = "/", endpointType: EndpointType = "pd"): Promise<T> => {
+    private _fetch = async <T>(endpoint: string, endpointType: EndpointType): Promise<T> => {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
         const { data } = await this._axios.get<T>(endpoint);
@@ -199,7 +203,7 @@ class Client {
      * @param data
      * @returns
      */
-    private _post = async <T>(endpoint = "/", endpointType: EndpointType = "pd", data = {}) => {
+    private _post = async <T>(endpoint: string, endpointType: EndpointType, data = {}) => {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
         const response = await this._axios.post<T>(endpoint, data);
@@ -213,7 +217,7 @@ class Client {
      * @param data
      * @returns
      */
-    private _put = async <T>(endpoint = "/", endpointType: EndpointType = "pd", data = {}) => {
+    private _put = async <T>(endpoint: string, endpointType: EndpointType, data = {}) => {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
         const response = await this._axios.put<T>(endpoint, data);
@@ -226,7 +230,7 @@ class Client {
      * @param endpointType Default value "pd"
      * @returns
      */
-    private _delete = async <T>(endpoint = "/", endpointType: EndpointType = "pd") => {
+    private _delete = async <T>(endpoint: string, endpointType: EndpointType) => {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
         const { data } = await this._axios.delete<T>(endpoint);

@@ -88,6 +88,10 @@ describe("Client", () => {
             expect(valClient.valorant_api).not.toBe(undefined);
         });
 
+        test("we can get endpoints of client uses", () => {
+            expect(valClient.endpoints).toEqual({ pd: null, glz: null, shared: null, local: null });
+        });
+
         test("auth must be null", () => {
             const auth = valClient.auth;
 
@@ -154,8 +158,7 @@ describe("Client", () => {
 
             const config = interceptor({ url: "http://someone-endpoint.com" });
 
-            expect(config.auth.username).not.toBe("test");
-            expect(config.auth.password).not.toBe("test");
+            expect(config.auth).toBeUndefined();
             expect(config.url).toBe("http://someone-endpoint.com");
         });
     });
