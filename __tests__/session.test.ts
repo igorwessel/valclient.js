@@ -39,32 +39,30 @@ const mockedReconnect: ReconnectGameSessionResponse = {
 
 const session = new Session(fetch as Fetch, currentUserId);
 
-describe("[GLZ] - Session", () => {
-    afterEach(() => {
-        fetch.mockClear();
-    });
+afterEach(() => {
+    fetch.mockClear();
+});
 
-    test("should return all friends", async () => {
-        fetch.mockResolvedValueOnce(mockedCurrentSession);
+test("should return all friends", async () => {
+    fetch.mockResolvedValueOnce(mockedCurrentSession);
 
-        const data = await session.current();
+    const data = await session.current();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith(`/session/v1/sessions/${currentUserId}`, "glz");
+    expect(fetch).toHaveBeenCalledWith(`/session/v1/sessions/${currentUserId}`, "glz");
 
-        expect(data).toEqual(mockedCurrentSession);
-    });
+    expect(data).toEqual(mockedCurrentSession);
+});
 
-    test("should reconnect a game session", async () => {
-        fetch.mockResolvedValueOnce(mockedReconnect);
+test("should reconnect a game session", async () => {
+    fetch.mockResolvedValueOnce(mockedReconnect);
 
-        const data = await session.reconnect();
+    const data = await session.reconnect();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith(`/session/v1/sessions/${currentUserId}/reconnect`, "glz");
+    expect(fetch).toHaveBeenCalledWith(`/session/v1/sessions/${currentUserId}/reconnect`, "glz");
 
-        expect(data).toEqual(mockedReconnect);
-    });
+    expect(data).toEqual(mockedReconnect);
 });

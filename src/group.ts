@@ -5,9 +5,8 @@ import {
     CurrentGroupIdResponse,
     CustomGameSettings,
     CustomGameSettingsInput,
-    GLZEndpointTokenResponse,
     GroupDetails,
-} from "@interfaces/glzEndpointResponses";
+} from "@interfaces/group";
 import { State } from "@interfaces/helpers";
 import { Queues } from "@interfaces/resources";
 
@@ -328,32 +327,32 @@ class Group {
      *
      * Get a token for party chat
      */
-    async getGroupMUCToken(): Promise<GLZEndpointTokenResponse> {
-        const { CurrentPartyID } = await this.current();
+    // async getGroupMUCToken(): Promise<GLZEndpointTokenResponse> {
+    //     const { CurrentPartyID } = await this.current();
 
-        const data = await this._fetch<GLZEndpointTokenResponse>(
-            `/parties/v1/parties/${CurrentPartyID}/muctoken`,
-            "glz",
-        );
+    //     const data = await this._fetch<GLZEndpointTokenResponse>(
+    //         `/parties/v1/parties/${CurrentPartyID}/muctoken`,
+    //         "glz",
+    //     );
 
-        return data;
-    }
+    //     return data;
+    // }
 
     /**
      * Party_FetchVoiceToken
      *
      * Get a token for party voice
      */
-    async getGroupVoiceToken(): Promise<GLZEndpointTokenResponse> {
-        const { CurrentPartyID } = await this.current();
+    // async getGroupVoiceToken(): Promise<GLZEndpointTokenResponse> {
+    //     const { CurrentPartyID } = await this.current();
 
-        const data = await this._fetch<GLZEndpointTokenResponse>(
-            `/parties/v1/parties/${CurrentPartyID}/voicetoken`,
-            "glz",
-        );
+    //     const data = await this._fetch<GLZEndpointTokenResponse>(
+    //         `/parties/v1/parties/${CurrentPartyID}/voicetoken`,
+    //         "glz",
+    //     );
 
-        return data;
-    }
+    //     return data;
+    // }
 }
 
 export { Group };

@@ -108,67 +108,65 @@ const mockedLoadout: CoreGameLoadoutResponse = {
 
 const liveGame = new LiveGame(fetch as Fetch, post as Post, currentUserId);
 
-describe("[GLZ] - LiveGame", () => {
-    beforeEach(() => {
-        fetch.mockResolvedValueOnce(mockedLiveGame);
-    });
+beforeEach(() => {
+    fetch.mockResolvedValueOnce(mockedLiveGame);
+});
 
-    afterEach(() => {
-        fetch.mockReset();
-        post.mockReset();
-    });
+afterEach(() => {
+    fetch.mockReset();
+    post.mockReset();
+});
 
-    test("should return current ongoing game", async () => {
-        const data = await liveGame.current();
+test("should return current ongoing game", async () => {
+    const data = await liveGame.current();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
+    expect(fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
 
-        expect(data).toEqual(mockedLiveGame);
-    });
+    expect(data).toEqual(mockedLiveGame);
+});
 
-    test("should return details from current ongoing game", async () => {
-        fetch.mockResolvedValueOnce(mockedDetailsLiveGame);
+test("should return details from current ongoing game", async () => {
+    fetch.mockResolvedValueOnce(mockedDetailsLiveGame);
 
-        const data = await liveGame.details();
+    const data = await liveGame.details();
 
-        expect(fetch).toHaveBeenCalledTimes(2);
+    expect(fetch).toHaveBeenCalledTimes(2);
 
-        expect(fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
+    expect(fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
 
-        expect(fetch).toHaveBeenNthCalledWith(2, `/core-game/v1/matches/${matchId}`, "glz");
+    expect(fetch).toHaveBeenNthCalledWith(2, `/core-game/v1/matches/${matchId}`, "glz");
 
-        expect(data).toBe(mockedDetailsLiveGame);
-    });
+    expect(data).toBe(mockedDetailsLiveGame);
+});
 
-    test("should disconnect from current ongoing game", async () => {
-        fetch.mockResolvedValueOnce(mockedDetailsLiveGame);
+test("should disconnect from current ongoing game", async () => {
+    fetch.mockResolvedValueOnce(mockedDetailsLiveGame);
 
-        const data = await liveGame.disconnect();
+    const data = await liveGame.disconnect();
 
-        expect(fetch).toBeCalledTimes(1);
+    expect(fetch).toBeCalledTimes(1);
 
-        expect(fetch).toBeCalledWith(endpointToGetCurrentMatch, "glz");
+    expect(fetch).toBeCalledWith(endpointToGetCurrentMatch, "glz");
 
-        expect(post).toBeCalledTimes(1);
+    expect(post).toBeCalledTimes(1);
 
-        expect(post).toBeCalledWith(`/core-game/v1/players/${currentUserId}/disassociate/${matchId}`, "glz");
+    expect(post).toBeCalledWith(`/core-game/v1/players/${currentUserId}/disassociate/${matchId}`, "glz");
 
-        expect(data).toBe(true);
-    });
+    expect(data).toBe(true);
+});
 
-    test("should return loadout all player from current ongoing game", async () => {
-        fetch.mockResolvedValueOnce(mockedLoadout);
+test("should return loadout all player from current ongoing game", async () => {
+    fetch.mockResolvedValueOnce(mockedLoadout);
 
-        const data = await liveGame.loadout();
+    const data = await liveGame.loadout();
 
-        expect(fetch).toBeCalledTimes(2);
+    expect(fetch).toBeCalledTimes(2);
 
-        expect(fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
+    expect(fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
 
-        expect(fetch).toHaveBeenNthCalledWith(2, `/core-game/v1/matches/${matchId}/loadouts`, "glz");
+    expect(fetch).toHaveBeenNthCalledWith(2, `/core-game/v1/matches/${matchId}/loadouts`, "glz");
 
-        expect(data).toEqual(mockedLoadout);
-    });
+    expect(data).toEqual(mockedLoadout);
 });

@@ -126,6 +126,8 @@ class Client {
             await this._getAuthHeaders();
         }
 
+        this._configureAxios();
+
         this.group = new Group(this._fetch, this._post, this._delete, this._puuid);
         this.live_game = new LiveGame(this._fetch, this._post, this._puuid);
         this.pre_game = new PreGame(this._fetch, this._post, this._puuid);
@@ -133,8 +135,6 @@ class Client {
         this.pvp = new Pvp(this._fetch, this._put, this._puuid, this._region);
         this.store = new Store(this._fetch, this._puuid);
         this.contracts = new Contracts(this._fetch, this._post, this._puuid);
-
-        this._configureAxios();
     }
 
     /**
@@ -187,10 +187,14 @@ class Client {
      * @param endpointType Default value: "pd"
      * @returns Response
      */
-    private _fetch = async <T>(endpoint: string, endpointType: EndpointType): Promise<T> => {
+    private _fetch = async <T>(
+        endpoint: string,
+        endpointType: EndpointType,
+        config?: AxiosRequestConfig,
+    ): Promise<T> => {
         endpoint = `${this._base_endpoints[endpointType]}${endpoint}`;
 
-        const { data } = await this._axios.get<T>(endpoint);
+        const { data } = await this._axios.get<T>(endpoint, config);
 
         return data;
     };
@@ -288,7 +292,12 @@ class Client {
             accessToken,
             subject: puuid,
             token,
-        } = await this._fetch<EntitlementsTokenLocal>("/entitlements/v1/token", "local");
+        } = await this._fetch<EntitlementsTokenLocal>("/entitlements/v1/token", "local", {
+            auth: { username: this._local_username_auth, password: this._lockfile.password },
+            httpsAgent: new https.Agent({
+                rejectUnauthorized: false,
+            }),
+        });
 
         this._headers = {
             Authorization: `Bearer ${accessToken}`,

@@ -91,59 +91,57 @@ const mockedYourItems: YourItems = {
 
 const store = new Store(fetch as Fetch, currentUserId);
 
-describe("[PD] - Store", () => {
-    afterEach(() => {
-        fetch.mockClear();
-    });
+afterEach(() => {
+    fetch.mockClear();
+});
 
-    test("should return all offers from a store", async () => {
-        fetch.mockResolvedValueOnce(mockedOffersResponse);
+test("should return all offers from a store", async () => {
+    fetch.mockResolvedValueOnce(mockedOffersResponse);
 
-        const data = await store.offers();
+    const data = await store.offers();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/store/v1/offers/", "pd");
+    expect(fetch).toHaveBeenCalledWith("/store/v1/offers/", "pd");
 
-        expect(data).toEqual(mockedOffersResponse);
-    });
+    expect(data).toEqual(mockedOffersResponse);
+});
 
-    test("should return current offers from authenticated user", async () => {
-        fetch.mockResolvedValueOnce(mockedCurrentOffers);
+test("should return current offers from authenticated user", async () => {
+    fetch.mockResolvedValueOnce(mockedCurrentOffers);
 
-        const data = await store.currentOffers();
+    const data = await store.currentOffers();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/store/v2/storefront/current_user", "pd");
+    expect(fetch).toHaveBeenCalledWith("/store/v2/storefront/current_user", "pd");
 
-        expect(data).toEqual(mockedCurrentOffers);
-    });
+    expect(data).toEqual(mockedCurrentOffers);
+});
 
-    test("should return current wallet, amount vp, radianite points and unknown currency", async () => {
-        fetch.mockResolvedValueOnce(mockedWalletResponse);
+test("should return current wallet, amount vp, radianite points and unknown currency", async () => {
+    fetch.mockResolvedValueOnce(mockedWalletResponse);
 
-        const data = await store.wallet();
+    const data = await store.wallet();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith(`/store/v1/wallet/${currentUserId}`, "pd");
+    expect(fetch).toHaveBeenCalledWith(`/store/v1/wallet/${currentUserId}`, "pd");
 
-        expect(data).toEqual(mockedWalletMapped);
-    });
+    expect(data).toEqual(mockedWalletMapped);
+});
 
-    test("should return owned items", async () => {
-        fetch.mockResolvedValueOnce(mockedYourItems);
+test("should return owned items", async () => {
+    fetch.mockResolvedValueOnce(mockedYourItems);
 
-        const data = await store.yourItems("agent");
+    const data = await store.yourItems("agent");
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith(
-            `/store/v1/entitlements/${currentUserId}/01bb38e1-da47-4e6a-9b3d-945fe4655707`,
-            "pd",
-        );
+    expect(fetch).toHaveBeenCalledWith(
+        `/store/v1/entitlements/${currentUserId}/01bb38e1-da47-4e6a-9b3d-945fe4655707`,
+        "pd",
+    );
 
-        expect(data).toEqual(mockedYourItems);
-    });
+    expect(data).toEqual(mockedYourItems);
 });

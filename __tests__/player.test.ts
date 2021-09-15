@@ -217,110 +217,108 @@ const mockPendingFriendRequests: PendingFriendsResponse = {
 
 const player = new Player(fetch as Fetch, currentUserId);
 
-describe("[Local] - Player", () => {
-    afterEach(() => {
-        fetch.mockClear();
-    });
+afterEach(() => {
+    fetch.mockClear();
+});
 
-    test("should return all friends", async () => {
-        fetch.mockResolvedValueOnce(mockedFriends);
+test("should return all friends", async () => {
+    fetch.mockResolvedValueOnce(mockedFriends);
 
-        const data = await player.allFriends();
+    const data = await player.allFriends();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/chat/v4/friends", "local");
+    expect(fetch).toHaveBeenCalledWith("/chat/v4/friends", "local");
 
-        expect(data).toEqual(mockedFriends.friends);
-    });
+    expect(data).toEqual(mockedFriends.friends);
+});
 
-    test("should return all online friends", async () => {
-        fetch.mockResolvedValueOnce(mockedFriendsOnline);
+test("should return all online friends", async () => {
+    fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
-        const data = await player.allFriendsOnline();
+    const data = await player.allFriendsOnline();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
+    expect(fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
 
-        expect(data).toEqual(mockedFriendsOnline.presences);
-    });
+    expect(data).toEqual(mockedFriendsOnline.presences);
+});
 
-    test("should return friend", async () => {
-        fetch.mockResolvedValueOnce(mockCurrentPlayer);
+test("should return friend", async () => {
+    fetch.mockResolvedValueOnce(mockCurrentPlayer);
 
-        const data = await player.current();
+    const data = await player.current();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/player-account/aliases/v1/active", "local");
+    expect(fetch).toHaveBeenCalledWith("/player-account/aliases/v1/active", "local");
 
-        expect(data).toEqual(mockCurrentPlayer);
-    });
+    expect(data).toEqual(mockCurrentPlayer);
+});
 
-    test("if pass puuid to onlineFriend and information don't is base64 encoded JSON string, throw a error", async () => {
-        fetch.mockResolvedValueOnce(mockedFriendsOnline);
+test("if pass puuid to onlineFriend and information don't is base64 encoded JSON string, throw a error", async () => {
+    fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
-        expect(player.onlineFriend(`${anotherUserId}_with_invalid_private`)).rejects.toThrow(PrivateInformationJSON64);
-    });
+    expect(player.onlineFriend(`${anotherUserId}_with_invalid_private`)).rejects.toThrow(PrivateInformationJSON64);
+});
 
-    test("if pass puuid to onlineFriend and this friend is not online", async () => {
-        fetch.mockResolvedValueOnce(mockedFriendsOnline);
+test("if pass puuid to onlineFriend and this friend is not online", async () => {
+    fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
-        const data = await player.onlineFriend("is_not_online");
+    const data = await player.onlineFriend("is_not_online");
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
+    expect(fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
 
-        expect(data).toBe(null);
-    });
+    expect(data).toBe(null);
+});
 
-    test("if dont pass puuid to onlineFriend should return information from current user", async () => {
-        fetch.mockResolvedValueOnce(mockedFriendsOnline);
+test("if dont pass puuid to onlineFriend should return information from current user", async () => {
+    fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
-        const data = await player.onlineFriend();
+    const data = await player.onlineFriend();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
+    expect(fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
 
-        expect(data).toEqual(mockCurrentUserPrivate);
-    });
+    expect(data).toEqual(mockCurrentUserPrivate);
+});
 
-    test("if pass puuid to onlineFriend should return information from this user", async () => {
-        fetch.mockResolvedValueOnce(mockedFriendsOnline);
+test("if pass puuid to onlineFriend should return information from this user", async () => {
+    fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
-        const data = await player.onlineFriend(anotherUserId);
+    const data = await player.onlineFriend(anotherUserId);
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
+    expect(fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
 
-        expect(data).toEqual(mockAnotherUserPrivate);
-    });
+    expect(data).toEqual(mockAnotherUserPrivate);
+});
 
-    test("should return current session", async () => {
-        fetch.mockResolvedValueOnce(mockSession);
+test("should return current session", async () => {
+    fetch.mockResolvedValueOnce(mockSession);
 
-        const data = await player.session();
+    const data = await player.session();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/chat/v1/session", "local");
+    expect(fetch).toHaveBeenCalledWith("/chat/v1/session", "local");
 
-        expect(data).toEqual(mockSession);
-    });
+    expect(data).toEqual(mockSession);
+});
 
-    test("should return all pending friend requests", async () => {
-        fetch.mockResolvedValueOnce(mockPendingFriendRequests);
+test("should return all pending friend requests", async () => {
+    fetch.mockResolvedValueOnce(mockPendingFriendRequests);
 
-        const data = await player.pendingFriendsRequests();
+    const data = await player.pendingFriendsRequests();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/chat/v4/friendrequests", "local");
+    expect(fetch).toHaveBeenCalledWith("/chat/v4/friendrequests", "local");
 
-        expect(data).toEqual(mockPendingFriendRequests.requests);
-    });
+    expect(data).toEqual(mockPendingFriendRequests.requests);
 });

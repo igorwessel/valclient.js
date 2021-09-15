@@ -140,50 +140,45 @@ const currentUserId = "current_user";
 
 const contracts = new Contracts(fetch as Fetch, post as Post, currentUserId);
 
-describe("[PD] - Contracts", () => {
-    afterEach(() => {
-        fetch.mockClear();
-        post.mockClear();
-    });
+afterEach(() => {
+    fetch.mockClear();
+    post.mockClear();
+});
 
-    test("should return all contracts with completion status, including match history", async () => {
-        fetch.mockResolvedValueOnce(mockedContractsAll);
+test("should return all contracts with completion status, including match history", async () => {
+    fetch.mockResolvedValueOnce(mockedContractsAll);
 
-        const data = await contracts.all();
+    const data = await contracts.all();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith(`/contracts/v1/contracts/${currentUserId}`, "pd");
+    expect(fetch).toHaveBeenCalledWith(`/contracts/v1/contracts/${currentUserId}`, "pd");
 
-        expect(data).toEqual(mockedContractsAll);
-    });
+    expect(data).toEqual(mockedContractsAll);
+});
 
-    test("should return item upgrades", async () => {
-        fetch.mockResolvedValueOnce({ Definitions: mockedPvpItemProgress });
+test("should return item upgrades", async () => {
+    fetch.mockResolvedValueOnce({ Definitions: mockedPvpItemProgress });
 
-        const data = await contracts.itemUpgrades();
+    const data = await contracts.itemUpgrades();
 
-        expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
 
-        expect(fetch).toHaveBeenCalledWith("/contract-definitions/v3/item-upgrades", "pd");
+    expect(fetch).toHaveBeenCalledWith("/contract-definitions/v3/item-upgrades", "pd");
 
-        expect(data).toEqual(mockedPvpItemProgress);
-    });
+    expect(data).toEqual(mockedPvpItemProgress);
+});
 
-    test("should activate a contract", async () => {
-        post.mockResolvedValueOnce(mockedContractsAll);
+test("should activate a contract", async () => {
+    post.mockResolvedValueOnce(mockedContractsAll);
 
-        const contractDefinition = "s";
+    const contractDefinition = "s";
 
-        const data = await contracts.activate(contractDefinition);
+    const data = await contracts.activate(contractDefinition);
 
-        expect(post).toHaveBeenCalledTimes(1);
+    expect(post).toHaveBeenCalledTimes(1);
 
-        expect(post).toHaveBeenCalledWith(
-            `/contracts/v1/contracts/${currentUserId}/special/${contractDefinition}`,
-            "pd",
-        );
+    expect(post).toHaveBeenCalledWith(`/contracts/v1/contracts/${currentUserId}/special/${contractDefinition}`, "pd");
 
-        expect(data).toEqual(mockedContractsAll);
-    });
+    expect(data).toEqual(mockedContractsAll);
 });
