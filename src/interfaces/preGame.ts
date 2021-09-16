@@ -1,5 +1,15 @@
-import { CoreGameItem, CoreGameSpraySelection } from "@interfaces/liveGame";
+import { CoreGameItem, CoreGameResponse, CoreGameSpraySelection } from "@interfaces/liveGame";
+import { GLZEndpointTokenResponse } from "@interfaces/group";
+import { Agents } from "@interfaces/resources";
 
+export interface IPreGame {
+    current(): Promise<CoreGameResponse>;
+    details(match_id?: string): Promise<PreGameDetailsResponse>;
+    loadout(match_id?: string): Promise<PreGameLoadout>;
+    selectCharacter(agent_id: Agents, match_id?: string): Promise<PreGameDetailsResponse>;
+    lockCharacter(agent_id: Agents, match_id?: string): Promise<PreGameDetailsResponse>;
+    quitMatch(match_id?: string): Promise<boolean>;
+}
 export interface PreGameTeam {
     TeamID: string;
     Players: PreGamePlayer[];

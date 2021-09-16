@@ -1,6 +1,20 @@
 import { Queues, Regions } from "@interfaces/resources";
 import { BooleanString } from "./helpers";
 
+export interface IPvp {
+    contents(): Promise<PvpContents>;
+    accountXp(): Promise<PvpAccountXp>;
+    loadout(): Promise<PvpLoadout>;
+    changeLoadout(loadout: PvpLoadoutParams): Promise<PvpLoadout>;
+    mmr(puuid?: string): Promise<PvpMMR>;
+    matchHistory(params?: PvpMatchHistoryInput): Promise<PvpMatchHistory>;
+    matchDetails(match_id: string): Promise<PvpMatchDetails>;
+    competitiveUpdates(params?: PvpMatchHistoryInput): Promise<PvpCompetitiveUpdates>;
+    leadersboards(params?: PvpLeaderboardParams): Promise<PvpLeaderboard>;
+    playerRestrictions(): Promise<PvpPlayerRestrictions>;
+    itemProgressDefinitions(): Promise<PvpItemProgressDefinitions[]>;
+    internalConfig(): Promise<PvpInternalConfig>;
+}
 export interface PvpContentItem {
     Name: string;
     ID: string;

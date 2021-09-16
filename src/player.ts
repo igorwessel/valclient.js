@@ -1,11 +1,10 @@
 import { PrivateInformationJSON64 } from "@errors/PrivateInformationJSON64";
 
-import { Fetch } from "@interfaces/http";
-
 import {
     CurrentPlayerResponse,
     Friend,
     FriendsResponse,
+    IPlayer,
     PendingFriendRequest,
     PendingFriendsResponse,
     Presence,
@@ -14,21 +13,14 @@ import {
     RNETFetchChatSession,
 } from "@interfaces/player";
 
-interface PlayerInterface {
-    current: () => Promise<CurrentPlayerResponse>;
-    allFriends(): Promise<Friend[]>;
-    session(): Promise<RNETFetchChatSession>;
-    onlineFriend(puuid?: string): Promise<PresencePrivate | null>;
-    allFriendsOnline(): Promise<Presence[]>;
-    pendingFriendsRequests(): Promise<PendingFriendRequest[]>;
-}
+import { IHttp } from "@interfaces/http";
 
-class Player implements PlayerInterface {
+class Player implements IPlayer {
     private readonly _puuid: string;
-    private readonly _fetch: Fetch;
+    private readonly _http: IHttp;
 
-    constructor(fetch: Fetch, puuid: string) {
-        this._fetch = fetch;
+    constructor(httpService: IHttp, puuid: string) {
+        this._http = httpService;
         this._puuid = puuid;
     }
 
@@ -39,7 +31,7 @@ class Player implements PlayerInterface {
      * @returns
      */
     async current(): Promise<CurrentPlayerResponse> {
-        const data = await this._fetch<CurrentPlayerResponse>("/player-account/aliases/v1/active", "local");
+        const data = await this._http.fetch<CurrentPlayerResponse>("/player-account/aliases/v1/active", "local");
 
         return data;
     }
@@ -51,7 +43,7 @@ class Player implements PlayerInterface {
      * @returns
      */
     async allFriends(): Promise<Friend[]> {
-        const { friends } = await this._fetch<FriendsResponse>("/chat/v4/friends", "local");
+        const { friends } = await this._http.fetch<FriendsResponse>("/chat/v4/friends", "local");
 
         return friends;
     }
@@ -62,7 +54,7 @@ class Player implements PlayerInterface {
      * Get the current session including player name and PUUID
      */
     async session(): Promise<RNETFetchChatSession> {
-        const data = await this._fetch<RNETFetchChatSession>("/chat/v1/session", "local");
+        const data = await this._http.fetch<RNETFetchChatSession>("/chat/v1/session", "local");
 
         return data;
     }
@@ -76,7 +68,7 @@ class Player implements PlayerInterface {
      */
     async onlineFriend(puuid?: string): Promise<PresencePrivate | null> {
         try {
-            const { presences } = await this._fetch<PresenceResponse>("/chat/v4/presences", "local");
+            const { presences } = await this._http.fetch<PresenceResponse>("/chat/v4/presences", "local");
 
             puuid = puuid || this._puuid;
 
@@ -105,7 +97,7 @@ class Player implements PlayerInterface {
      * @returns
      */
     async allFriendsOnline(): Promise<Presence[]> {
-        const { presences } = await this._fetch<PresenceResponse>("/chat/v4/presences", "local");
+        const { presences } = await this._http.fetch<PresenceResponse>("/chat/v4/presences", "local");
 
         return presences;
     }
@@ -117,7 +109,7 @@ class Player implements PlayerInterface {
      * @returns
      */
     async pendingFriendsRequests(): Promise<PendingFriendRequest[]> {
-        const { requests } = await this._fetch<PendingFriendsResponse>("/chat/v4/friendrequests", "local");
+        const { requests } = await this._http.fetch<PendingFriendsResponse>("/chat/v4/friendrequests", "local");
 
         return requests;
     }

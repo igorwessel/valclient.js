@@ -1,15 +1,13 @@
-import { ContractsAll } from "@interfaces/contracts";
-import { Fetch, Post } from "@interfaces/http";
+import { ContractsAll, IContracts } from "@interfaces/contracts";
+import { IHttp } from "@interfaces/http";
 import { PvpItemProgressDefinitions, PvpItemProgressDefinitionsResponse } from "@interfaces/pvp";
 
-class Contracts {
-    private readonly _fetch: Fetch;
-    private readonly _post: Post;
+class Contracts implements IContracts {
+    private readonly _http: IHttp;
     private readonly _puuid: string;
 
-    constructor(fetch: Fetch, post: Post, puuid: string) {
-        this._fetch = fetch;
-        this._post = post;
+    constructor(http: IHttp, puuid: string) {
+        this._http = http;
         this._puuid = puuid;
     }
 
@@ -20,7 +18,7 @@ class Contracts {
      *  @returns
      */
     async all(): Promise<ContractsAll> {
-        const data = await this._fetch<ContractsAll>(`/contracts/v1/contracts/${this._puuid}`, "pd");
+        const data = await this._http.fetch<ContractsAll>(`/contracts/v1/contracts/${this._puuid}`, "pd");
 
         return data;
     }
@@ -33,7 +31,7 @@ class Contracts {
      * @returns
      */
     async activate(contract_id: string): Promise<ContractsAll> {
-        const data = await this._post<ContractsAll>(
+        const data = await this._http.post<ContractsAll>(
             `/contracts/v1/contracts/${this._puuid}/special/${contract_id}`,
             "pd",
         );
@@ -47,7 +45,7 @@ class Contracts {
      * Get names and descriptions for contracts
      */
     // async definitions(): Promise<void> {
-    //     const data = await this._fetch<Record<string, unknown>>("/contracts-definitions/v2/definitions", "pd");
+    //     const data = await this._http.fetch<Record<string, unknown>>("/contracts-definitions/v2/definitions", "pd");
 
     //
     // }
@@ -58,7 +56,7 @@ class Contracts {
      * Get the battlepass contracts
      */
     // async battlePass(): Promise<void> {
-    //     const data = await this._fetch<Record<string, unknown>>("/contract-definitions/v2/definitions/story", "pd");
+    //     const data = await this._http.fetch<Record<string, unknown>>("/contract-definitions/v2/definitions/story", "pd");
 
     // }
 
@@ -66,7 +64,7 @@ class Contracts {
      * Get item upgrades
      */
     async itemUpgrades(): Promise<PvpItemProgressDefinitions[]> {
-        const { Definitions } = await this._fetch<PvpItemProgressDefinitionsResponse>(
+        const { Definitions } = await this._http.fetch<PvpItemProgressDefinitionsResponse>(
             "/contract-definitions/v3/item-upgrades",
             "pd",
         );

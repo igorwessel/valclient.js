@@ -1,3 +1,9 @@
+export interface ILiveGame {
+    current(): Promise<CoreGameResponse>;
+    details(): Promise<CoreGameDetailsResponse>;
+    loadout(): Promise<CoreGameLoadoutResponse>;
+    disconnect(): Promise<boolean>;
+}
 export interface CoreGameResponse {
     Subject: string;
     MatchID: string;

@@ -1,6 +1,15 @@
 import { Base64 } from "@interfaces/helpers";
 import { Queues } from "@interfaces/resources";
 
+export interface IPlayer {
+    current: () => Promise<CurrentPlayerResponse>;
+    allFriends(): Promise<Friend[]>;
+    session(): Promise<RNETFetchChatSession>;
+    onlineFriend(puuid?: string): Promise<PresencePrivate | null>;
+    allFriendsOnline(): Promise<Presence[]>;
+    pendingFriendsRequests(): Promise<PendingFriendRequest[]>;
+}
+
 export interface EntitlementsTokenLocal {
     accessToken: string;
     entitlements: string[];

@@ -6,7 +6,8 @@ export interface AuthInput {
 }
 
 export interface AuthInterface {
-    authenticate: () => void;
+    authenticate: () => Promise<AuthenticateResponse>;
+    auth: AuthInput;
 }
 
 export interface AuthenticateResponse {

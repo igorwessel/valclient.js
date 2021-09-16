@@ -1,3 +1,11 @@
+import { ItemsType, WalletCurrencies } from "@resources";
+
+export interface IStore {
+    offers(): Promise<OffersResponse>;
+    currentOffers(): Promise<CurrentOffersResponse>;
+    wallet(): Promise<Record<WalletCurrencies, number>>;
+    yourItems(item_type: ItemsType): Promise<YourItems>;
+}
 export interface UpgradeCurrencyOffers {
     OfferID: string;
     StorefrontItemID: string;

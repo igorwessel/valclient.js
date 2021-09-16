@@ -1,3 +1,8 @@
+export interface ISession {
+    current(): Promise<CurrentGameSessionResponse>;
+    reconnect(): Promise<ReconnectGameSessionResponse>;
+}
+
 export interface CurrentGameSessionResponse {
     subject: string;
     cxnState: string;

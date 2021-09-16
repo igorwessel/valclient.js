@@ -1,13 +1,31 @@
 import { AxiosRequestConfig, AxiosStatic } from "axios";
-import { BaseEndpoints, EndpointType } from "@interfaces/client";
 
-class HttpService {
-    private readonly _baseEndpoint: BaseEndpoints;
+import { BaseEndpoints, EndpointType } from "@interfaces/client";
+import { IHttp } from "@interfaces/http";
+
+class HttpService implements IHttp {
+    private _baseEndpoints: BaseEndpoints = {
+        pd: null,
+        glz: null,
+        shared: null,
+        local: null,
+    };
+
     private readonly _axios: AxiosStatic;
 
-    constructor(baseEndpoints: BaseEndpoints, axios?: AxiosStatic) {
-        this._baseEndpoint = baseEndpoints;
+    constructor(axios?: AxiosStatic) {
         this._axios = axios;
+    }
+
+    get endpoints(): BaseEndpoints {
+        return this._baseEndpoints;
+    }
+
+    set baseEndpoint(baseEndpoint: Partial<BaseEndpoints>) {
+        this._baseEndpoints = {
+            ...this._baseEndpoints,
+            ...baseEndpoint,
+        };
     }
 
     async fetch<T>(endpoint: string, endpointType: EndpointType, config?: AxiosRequestConfig): Promise<T> {
@@ -45,7 +63,7 @@ class HttpService {
     }
 
     private _getCorrectEndpoint(endpoint: string, endpointType: EndpointType) {
-        return this._baseEndpoint[endpointType] + endpoint;
+        return this._baseEndpoints[endpointType] + endpoint;
     }
 }
 

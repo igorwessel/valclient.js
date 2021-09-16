@@ -1,6 +1,27 @@
 import { Queues, CustomGameMapsName, Maps, GameModes, CustomGameModes, RiotServers } from "@interfaces/resources";
-import { BooleanString } from "@interfaces/helpers";
+import { BooleanString, State } from "@interfaces/helpers";
 
+export interface IGroup {
+    current(): Promise<CurrentGroupIdResponse>;
+    removePlayer(puuid?: string): Promise<boolean>;
+    currentDetails(): Promise<GroupDetails>;
+    setMemberReady(ready?: boolean): Promise<GroupDetails>;
+    refreshCompetitiveTier(): Promise<boolean>;
+    refreshPlayerIdentity(): Promise<GroupDetails>;
+    refreshPlayerPings(): Promise<GroupDetails>;
+    changeQueue(queueID: Queues): Promise<GroupDetails>;
+    startCustomGame(): Promise<GroupDetails>;
+    enterMatchmakingQueue(): Promise<GroupDetails>;
+    leaveMatchmakingQueue(): Promise<GroupDetails>;
+    changeState(open?: State): Promise<GroupDetails>;
+    setCustomGameSettings({ Map, Mode, GamePod, GameRules }: CustomGameSettingsInput): Promise<GroupDetails>;
+    inviteByDisplayName(name: string, tag: string): Promise<GroupDetails>;
+    requestJoinToGroup(party_id: string, puuid: string): Promise<GroupDetails>;
+    declineRequestGroup(request_id: string): Promise<GroupDetails>;
+    joinGroup(party_id: string): Promise<GroupDetails>;
+    leaveGroup(party_id: string): Promise<GroupDetails>;
+    currentAvailableGameModes(): Promise<CurrentAvailableGameModeResponse>;
+}
 export interface CurrentGroupRequest {
     ID: string;
     PartyID: string;

@@ -1,21 +1,19 @@
-import { PreGameDetailsResponse, PreGameLoadout } from "@interfaces/preGame";
+import { IPreGame, PreGameDetailsResponse, PreGameLoadout } from "@interfaces/preGame";
 
 import { CoreGameResponse } from "@interfaces/liveGame";
 
-import { Fetch, Post } from "@interfaces/http";
+import { IHttp } from "@interfaces/http";
 
 import { Agents } from "@interfaces/resources";
 
 import { agentsMappedById } from "@resources";
 
-class PreGame {
-    private readonly _fetch: Fetch;
-    private readonly _post: Post;
+class PreGame implements IPreGame {
+    private readonly _http: IHttp;
     private readonly _puuid: string;
 
-    constructor(fetch: Fetch, post: Post, puuid: string) {
-        this._fetch = fetch;
-        this._post = post;
+    constructor(http: IHttp, puuid: string) {
+        this._http = http;
         this._puuid = puuid;
     }
 
@@ -25,7 +23,7 @@ class PreGame {
      * Get the ID of a game in the pre-game stage
      */
     async current(): Promise<CoreGameResponse> {
-        const data = await this._fetch<CoreGameResponse>(`/pregame/v1/players/${this._puuid}`, "glz");
+        const data = await this._http.fetch<CoreGameResponse>(`/pregame/v1/players/${this._puuid}`, "glz");
 
         return data;
     }
@@ -42,7 +40,7 @@ class PreGame {
 
         match_id = match_id || MatchID;
 
-        const data = await this._fetch<PreGameDetailsResponse>(`/pregame/v1/matches/${match_id}`, "glz");
+        const data = await this._http.fetch<PreGameDetailsResponse>(`/pregame/v1/matches/${match_id}`, "glz");
 
         return data;
     }
@@ -58,7 +56,7 @@ class PreGame {
 
         match_id = match_id || MatchID;
 
-        const data = await this._fetch<PreGameLoadout>(`/pregame/v1/matches/${match_id}/loadouts`, "glz");
+        const data = await this._http.fetch<PreGameLoadout>(`/pregame/v1/matches/${match_id}/loadouts`, "glz");
 
         return data;
     }
@@ -74,7 +72,7 @@ class PreGame {
 
     //     match_id = match_id || MatchID;
 
-    //     const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/chattoken`, "glz");
+    //     const data = await this._http.fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/chattoken`, "glz");
     //     //TODO: not sure about this return type, i will change later when in unrated match to test return type
 
     //     return data;
@@ -91,7 +89,7 @@ class PreGame {
 
     //     match_id = match_id || MatchID;
 
-    //     const data = await this._fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/voicetoken`, "glz");
+    //     const data = await this._http.fetch<GLZEndpointTokenResponse>(`/pregame/v1/matches/${match_id}/voicetoken`, "glz");
     //     //TODO: not sure about this return type, i will change later when in unrated match to test return type
 
     //     return data;
@@ -112,7 +110,7 @@ class PreGame {
 
         const agentId = agentsMappedById[agent_id];
 
-        const data = await this._post<PreGameDetailsResponse>(
+        const data = await this._http.post<PreGameDetailsResponse>(
             `/pregame/v1/matches/${match_id}/select/${agentId}`,
             "glz",
         );
@@ -135,7 +133,10 @@ class PreGame {
 
         const agentId = agentsMappedById[agent_id];
 
-        const data = await this._post<PreGameDetailsResponse>(`/pregame/v1/matches/${match_id}/lock/${agentId}`, "glz");
+        const data = await this._http.post<PreGameDetailsResponse>(
+            `/pregame/v1/matches/${match_id}/lock/${agentId}`,
+            "glz",
+        );
 
         return data;
     }
@@ -151,7 +152,7 @@ class PreGame {
 
         match_id = match_id || MatchID;
 
-        await this._post(`/pregame/v1/matches/${match_id}/quit`, "glz");
+        await this._http.post(`/pregame/v1/matches/${match_id}/quit`, "glz");
 
         return true;
     }
