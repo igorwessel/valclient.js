@@ -13,7 +13,7 @@ import { regions, regionShardOverride, shardRegionOverride } from "@resources";
 
 /** Errors */
 import { ValorantNotRunning } from "@errors/valorantNotRunning";
-import { SystemNotSupported } from "@errors/SystemNotSupported";
+import { SystemNotSupported } from "@errors/systemNotSupported";
 
 /** Interfaces */
 import { EntitlementsTokenLocal, IPlayer } from "@interfaces/player";

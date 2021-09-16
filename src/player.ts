@@ -1,4 +1,4 @@
-import { PrivateInformationJSON64 } from "@errors/PrivateInformationJSON64";
+import { PrivateInformationJSON64 } from "@errors/privateInformationJSON64";
 
 import {
     CurrentPlayerResponse,

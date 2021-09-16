@@ -9,7 +9,7 @@ import {
     PendingFriendsResponse,
 } from "@interfaces/player";
 import { Base64 } from "@interfaces/helpers";
-import { PrivateInformationJSON64 } from "@errors/PrivateInformationJSON64";
+import { PrivateInformationJSON64 } from "@errors/privateInformationJSON64";
 
 const httpService = {
     fetch: jest.fn(),
