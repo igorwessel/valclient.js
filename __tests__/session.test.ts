@@ -1,11 +1,13 @@
 import { Session } from "@app/session";
 
 import { CurrentGameSessionResponse, ReconnectGameSessionResponse } from "@interfaces/session";
-import { Fetch } from "@interfaces/http";
 
-jest.mock("axios");
-
-const fetch = jest.fn();
+const httpService = {
+    fetch: jest.fn(),
+    post: jest.fn(),
+    put: jest.fn(),
+    del: jest.fn(),
+};
 
 const currentUserId = "current_user";
 
@@ -37,32 +39,32 @@ const mockedReconnect: ReconnectGameSessionResponse = {
     reconnect: true,
 };
 
-const session = new Session(fetch as Fetch, currentUserId);
+const session = new Session(httpService, currentUserId);
 
 afterEach(() => {
-    fetch.mockClear();
+    httpService.fetch.mockClear();
 });
 
 test("should return all friends", async () => {
-    fetch.mockResolvedValueOnce(mockedCurrentSession);
+    httpService.fetch.mockResolvedValueOnce(mockedCurrentSession);
 
     const data = await session.current();
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(httpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(fetch).toHaveBeenCalledWith(`/session/v1/sessions/${currentUserId}`, "glz");
+    expect(httpService.fetch).toHaveBeenCalledWith(`/session/v1/sessions/${currentUserId}`, "glz");
 
     expect(data).toEqual(mockedCurrentSession);
 });
 
 test("should reconnect a game session", async () => {
-    fetch.mockResolvedValueOnce(mockedReconnect);
+    httpService.fetch.mockResolvedValueOnce(mockedReconnect);
 
     const data = await session.reconnect();
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(httpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(fetch).toHaveBeenCalledWith(`/session/v1/sessions/${currentUserId}/reconnect`, "glz");
+    expect(httpService.fetch).toHaveBeenCalledWith(`/session/v1/sessions/${currentUserId}/reconnect`, "glz");
 
     expect(data).toEqual(mockedReconnect);
 });

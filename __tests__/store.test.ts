@@ -1,12 +1,14 @@
 import { Store } from "@app/store";
 
 import { OffersResponse, CurrentOffersResponse, WalletResponse, YourItems } from "@interfaces/store";
-import { Fetch } from "@interfaces/http";
 import { WalletCurrencies } from "@resources";
 
-jest.mock("axios");
-
-const fetch = jest.fn();
+const httpService = {
+    fetch: jest.fn(),
+    post: jest.fn(),
+    put: jest.fn(),
+    del: jest.fn(),
+};
 
 const currentUserId = "current_user";
 
@@ -89,56 +91,56 @@ const mockedYourItems: YourItems = {
     ItemTypeID: "test",
 };
 
-const store = new Store(fetch as Fetch, currentUserId);
+const store = new Store(httpService, currentUserId);
 
 afterEach(() => {
-    fetch.mockClear();
+    httpService.fetch.mockClear();
 });
 
 test("should return all offers from a store", async () => {
-    fetch.mockResolvedValueOnce(mockedOffersResponse);
+    httpService.fetch.mockResolvedValueOnce(mockedOffersResponse);
 
     const data = await store.offers();
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(httpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(fetch).toHaveBeenCalledWith("/store/v1/offers/", "pd");
+    expect(httpService.fetch).toHaveBeenCalledWith("/store/v1/offers/", "pd");
 
     expect(data).toEqual(mockedOffersResponse);
 });
 
 test("should return current offers from authenticated user", async () => {
-    fetch.mockResolvedValueOnce(mockedCurrentOffers);
+    httpService.fetch.mockResolvedValueOnce(mockedCurrentOffers);
 
     const data = await store.currentOffers();
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(httpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(fetch).toHaveBeenCalledWith("/store/v2/storefront/current_user", "pd");
+    expect(httpService.fetch).toHaveBeenCalledWith("/store/v2/storefront/current_user", "pd");
 
     expect(data).toEqual(mockedCurrentOffers);
 });
 
 test("should return current wallet, amount vp, radianite points and unknown currency", async () => {
-    fetch.mockResolvedValueOnce(mockedWalletResponse);
+    httpService.fetch.mockResolvedValueOnce(mockedWalletResponse);
 
     const data = await store.wallet();
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(httpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(fetch).toHaveBeenCalledWith(`/store/v1/wallet/${currentUserId}`, "pd");
+    expect(httpService.fetch).toHaveBeenCalledWith(`/store/v1/wallet/${currentUserId}`, "pd");
 
     expect(data).toEqual(mockedWalletMapped);
 });
 
 test("should return owned items", async () => {
-    fetch.mockResolvedValueOnce(mockedYourItems);
+    httpService.fetch.mockResolvedValueOnce(mockedYourItems);
 
     const data = await store.yourItems("agent");
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(httpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(fetch).toHaveBeenCalledWith(
+    expect(httpService.fetch).toHaveBeenCalledWith(
         `/store/v1/entitlements/${currentUserId}/01bb38e1-da47-4e6a-9b3d-945fe4655707`,
         "pd",
     );

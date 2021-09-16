@@ -17,7 +17,7 @@ const endpointType: EndpointType = "pd";
 
 const returnData = { data: undefined };
 
-const httpService = new HttpService(base_endpoints, axios);
+const httpService = new HttpService(axios);
 
 jest.mock("axios");
 

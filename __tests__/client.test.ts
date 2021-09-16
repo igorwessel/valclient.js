@@ -5,7 +5,7 @@ import axios from "axios";
 
 import { mocked } from "ts-jest/utils";
 import { SystemNotSupported } from "@errors/SystemNotSupported";
-import { ValorantNotRunning } from "@errors/ValorantNotRunning";
+import { ValorantNotRunning } from "@errors/valorantNotRunning";
 
 import { regions, regionShardOverride, shardRegionOverride } from "@resources";
 
