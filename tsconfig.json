@@ -18,7 +18,12 @@
             "@errors/*": ["./errors/*"],
             "@interfaces/*": ["./interfaces/*"],
             "@app/*": ["./*"]
-        }
+        },
+        "plugins": [
+            {
+                "transform": "@zerollup/ts-transform-paths"
+            }
+        ]
     },
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
