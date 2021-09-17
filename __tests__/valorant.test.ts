@@ -1,12 +1,10 @@
 import { Valorant } from "@app/valorant";
-import { ClientSettingsResponse, ValorantProcessResponse } from "@interfaces/valorant";
 
-const httpService = {
-    fetch: jest.fn(),
-    post: jest.fn(),
-    put: jest.fn(),
-    del: jest.fn(),
-};
+import { mock } from "jest-mock-extended";
+import { ClientSettingsResponse, ValorantProcessResponse } from "@interfaces/valorant";
+import { IHttp } from "@interfaces/http";
+
+const mockedHttpService = mock<IHttp>();
 
 const mockedValorantProcessResponse: ValorantProcessResponse = {
     process_generate_when_open_valorant: {
@@ -195,44 +193,50 @@ const mockedCrossHairProfiles = {
     },
 };
 
-const valorant = new Valorant(httpService);
+const valorant = new Valorant(mockedHttpService);
 
 afterEach(() => {
-    httpService.fetch.mockClear();
+    mockedHttpService.fetch.mockClear();
 });
 
 test("should return info about valorant process running", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedValorantProcessResponse);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedValorantProcessResponse);
 
     const data = await valorant.process();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/product-session/v1/external-sessions", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/product-session/v1/external-sessions", "local");
 
     expect(data).toEqual(mockedValorantProcessResponse);
 });
 
 test("should return client settings", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedClientSettings);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedClientSettings);
 
     const data = await valorant.clientSettings();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/player-preferences/v1/data-json/Ares.PlayerSettings", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
+        "/player-preferences/v1/data-json/Ares.PlayerSettings",
+        "local",
+    );
 
     expect(data).toEqual(mockedClientSettings);
 });
 
 test("should return crosshair profiles", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedClientSettings);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedClientSettings);
 
     const data = await valorant.crossHair();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/player-preferences/v1/data-json/Ares.PlayerSettings", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
+        "/player-preferences/v1/data-json/Ares.PlayerSettings",
+        "local",
+    );
 
     expect(data).toEqual(mockedCrossHairProfiles);
 });

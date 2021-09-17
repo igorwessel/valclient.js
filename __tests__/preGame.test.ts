@@ -1,4 +1,6 @@
 import { PreGame } from "@app/preGame";
+import { mock } from "jest-mock-extended";
+import { IHttp } from "@interfaces/http";
 
 import { CoreGameResponse } from "@interfaces/liveGame";
 import { PreGameDetailsResponse, PreGameLoadout } from "@interfaces/preGame";
@@ -6,12 +8,7 @@ import { PreGameDetailsResponse, PreGameLoadout } from "@interfaces/preGame";
 import { agentsMappedById } from "@resources";
 import { Agents } from "@interfaces/resources";
 
-const httpService = {
-    fetch: jest.fn(),
-    post: jest.fn(),
-    put: jest.fn(),
-    del: jest.fn(),
-};
+const mockedHttpService = mock<IHttp>();
 
 const currentUserId = "current_user";
 const matchId = "pregame_test";
@@ -160,105 +157,105 @@ const mockedLoadout: PreGameLoadout = {
     ],
 };
 
-const preGame = new PreGame(httpService, currentUserId);
+const preGame = new PreGame(mockedHttpService, currentUserId);
 
 beforeEach(() => {
-    httpService.fetch.mockResolvedValueOnce(mockedPreGame);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPreGame);
 });
 
 afterEach(() => {
-    httpService.fetch.mockReset();
-    httpService.post.mockReset();
+    mockedHttpService.fetch.mockReset();
+    mockedHttpService.post.mockReset();
 });
 
 test("should return current pregame game (selecting character)", async () => {
     const data = await preGame.current();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
 
     expect(data).toEqual(mockedPreGame);
 });
 
 test("should return details from current pregame (selecting character)", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedDetailsPreGame);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedDetailsPreGame);
 
     const data = await preGame.details();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(2);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(2);
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(2, `/pregame/v1/matches/${matchId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(2, `/pregame/v1/matches/${matchId}`, "glz");
 
     expect(data).toBe(mockedDetailsPreGame);
 });
 
 test("should disconnect from current pregame (selecting character)", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedDetailsPreGame);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedDetailsPreGame);
 
     const data = await preGame.quitMatch();
 
-    expect(httpService.fetch).toBeCalledTimes(1);
+    expect(mockedHttpService.fetch).toBeCalledTimes(1);
 
-    expect(httpService.fetch).toBeCalledWith(endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toBeCalledWith(endpointToGetCurrentMatch, "glz");
 
-    expect(httpService.post).toBeCalledTimes(1);
+    expect(mockedHttpService.post).toBeCalledTimes(1);
 
-    expect(httpService.post).toBeCalledWith(`/pregame/v1/matches/${matchId}/quit`, "glz");
+    expect(mockedHttpService.post).toBeCalledWith(`/pregame/v1/matches/${matchId}/quit`, "glz");
 
     expect(data).toBe(true);
 });
 
 test("should return loadout all player from current ongoing game", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedLoadout);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedLoadout);
 
     const data = await preGame.loadout();
 
-    expect(httpService.fetch).toBeCalledTimes(2);
+    expect(mockedHttpService.fetch).toBeCalledTimes(2);
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(2, `/pregame/v1/matches/${matchId}/loadouts`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(2, `/pregame/v1/matches/${matchId}/loadouts`, "glz");
 
     expect(data).toEqual(mockedLoadout);
 });
 
 test("should select a character in pregame (selecting character), without pass match_id", async () => {
-    httpService.post.mockResolvedValueOnce(mockedDetailsPreGame);
+    mockedHttpService.post.mockResolvedValueOnce(mockedDetailsPreGame);
 
     const agent: Agents = "Astra";
     const idAgent = agentsMappedById[agent];
 
     const data = await preGame.selectCharacter(agent);
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/pregame/v1/matches/${matchId}/select/${idAgent}`, "glz");
+    expect(mockedHttpService.post).toHaveBeenCalledWith(`/pregame/v1/matches/${matchId}/select/${idAgent}`, "glz");
 
     expect(data).toEqual(mockedDetailsPreGame);
 });
 
 test("should lock a character in pregame (selecting character), without pass match_id", async () => {
-    httpService.post.mockResolvedValueOnce(mockedDetailsPreGame);
+    mockedHttpService.post.mockResolvedValueOnce(mockedDetailsPreGame);
 
     const agent: Agents = "Astra";
     const idAgent = agentsMappedById[agent];
 
     const data = await preGame.lockCharacter(agent);
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/pregame/v1/matches/${matchId}/lock/${idAgent}`, "glz");
+    expect(mockedHttpService.post).toHaveBeenCalledWith(`/pregame/v1/matches/${matchId}/lock/${idAgent}`, "glz");
 
     expect(data).toEqual(mockedDetailsPreGame);
 });

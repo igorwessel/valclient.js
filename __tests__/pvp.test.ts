@@ -1,4 +1,5 @@
 import { Pvp } from "@app/pvp";
+import { mock } from "jest-mock-extended";
 
 import {
     PvpAccountXp,
@@ -14,13 +15,9 @@ import {
     PvpCompetitiveUpdates,
 } from "@interfaces/pvp";
 import { Queues, Regions } from "@interfaces/resources";
+import { IHttp } from "@interfaces/http";
 
-const httpService = {
-    fetch: jest.fn(),
-    post: jest.fn(),
-    put: jest.fn(),
-    del: jest.fn(),
-};
+const mockedHttpService = mock<IHttp>();
 
 const currentUserId = "current_user";
 const region = "br";
@@ -1191,63 +1188,66 @@ const mockedPvpCompetitiveUpdates: PvpCompetitiveUpdates = {
     Version: 1,
 };
 
-const pvp = new Pvp(httpService, currentUserId, region);
+const pvp = new Pvp(mockedHttpService, currentUserId, region);
 
 afterEach(() => {
-    httpService.fetch.mockReset();
-    httpService.put.mockReset();
+    mockedHttpService.fetch.mockReset();
+    mockedHttpService.put.mockReset();
 });
 
 test("should return mmr info about current user authenticated", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMmr);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMmr);
 
     const data = await pvp.mmr();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/mmr/v1/players/${currentUserId}`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/mmr/v1/players/${currentUserId}`, "pd");
 
     expect(data).toEqual(mockedPvpMmr);
 });
 
 test("should return all game contents such as maps, agents, etc...", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedContents);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedContents);
 
     const data = await pvp.contents();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/content-service/v2/content`, "shared");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/content-service/v2/content`, "shared");
 
     expect(data).toEqual(mockedContents);
 });
 
 test("should return account xp, level and xp history about current user authenticated", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedAccountXP);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedAccountXP);
 
     const data = await pvp.accountXp();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/account-xp/v1/players/${currentUserId}`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/account-xp/v1/players/${currentUserId}`, "pd");
 
     expect(data).toEqual(mockedAccountXP);
 });
 
 test("should return loadout from current user authenticated ", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedLoadout);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedLoadout);
 
     const data = await pvp.loadout();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/personalization/v2/players/${currentUserId}/playerloadout`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
+        `/personalization/v2/players/${currentUserId}/playerloadout`,
+        "pd",
+    );
 
     expect(data).toEqual(mockedLoadout);
 });
 
 test("should update a loadout from current user authenticated", async () => {
-    httpService.put.mockResolvedValueOnce(mockedLoadout);
+    mockedHttpService.put.mockResolvedValueOnce(mockedLoadout);
 
     const body = {
         Guns: mockedLoadout.Guns,
@@ -1258,9 +1258,9 @@ test("should update a loadout from current user authenticated", async () => {
 
     const data = await pvp.changeLoadout(body);
 
-    expect(httpService.put).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.put).toHaveBeenCalledTimes(1);
 
-    expect(httpService.put).toHaveBeenCalledWith(
+    expect(mockedHttpService.put).toHaveBeenCalledWith(
         `/personalization/v2/players/${currentUserId}/playerloadout`,
         "pd",
         body,
@@ -1270,51 +1270,51 @@ test("should update a loadout from current user authenticated", async () => {
 });
 
 test("should return internal config setting by riot from current user authenticated", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedInternalConfig);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedInternalConfig);
 
     const data = await pvp.internalConfig();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/v1/config/br", "shared");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/v1/config/br", "shared");
 
     expect(data).toEqual(mockedInternalConfig);
 });
 
 test("should return pvp item upgrades (gun, knifes, etc...) from current user authenticated", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedPvpItemProgress);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpItemProgress);
 
     const data = await pvp.itemProgressDefinitions();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/contract-definitions/v3/item-upgrades", "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/contract-definitions/v3/item-upgrades", "pd");
 
     expect(data).toEqual(mockedPvpItemProgress.Definitions);
 });
 
 test("should return any penalties from current user authenticated", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedPlayerRestrictions);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPlayerRestrictions);
 
     const data = await pvp.playerRestrictions();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/restrictions/v2/penalties", "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/restrictions/v2/penalties", "pd");
 
     expect(data).toEqual(mockedPlayerRestrictions);
 });
 
 test("should return leaderboard with default parameters when don't not pass anything", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMmr).mockResolvedValueOnce(mockedLeaderboardDefault);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMmr).mockResolvedValueOnce(mockedLeaderboardDefault);
 
     const data = await pvp.leadersboards();
 
-    expect(httpService.fetch).toBeCalledTimes(2);
+    expect(mockedHttpService.fetch).toBeCalledTimes(2);
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(1, `/mmr/v1/players/${currentUserId}`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(1, `/mmr/v1/players/${currentUserId}`, "pd");
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(
         2,
         `/mmr/v1/leaderboards/affinity/${region}/queue/competitive/season/${currentSeasonID}?${defaultParams}`,
         "pd",
@@ -1346,15 +1346,15 @@ test("should return leaderboard with 26 players when pass size 26", async () => 
         ],
     };
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMmr).mockResolvedValueOnce(mockedLeaderboardSize26);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMmr).mockResolvedValueOnce(mockedLeaderboardSize26);
 
     const data = await pvp.leadersboards({ size: 26 });
 
-    expect(httpService.fetch).toBeCalledTimes(2);
+    expect(mockedHttpService.fetch).toBeCalledTimes(2);
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(1, `/mmr/v1/players/${currentUserId}`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(1, `/mmr/v1/players/${currentUserId}`, "pd");
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(
         2,
         `/mmr/v1/leaderboards/affinity/${region}/queue/competitive/season/${currentSeasonID}?startIndex=0&size=26`,
         "pd",
@@ -1371,13 +1371,13 @@ test("should return leaderboard with another season when pass season_id", async 
         SeasonID: anotherSeasonID,
     };
 
-    httpService.fetch.mockResolvedValueOnce(mockedLeaderboardSeasonID);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedLeaderboardSeasonID);
 
     const data = await pvp.leadersboards({ season_id: anotherSeasonID });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/mmr/v1/leaderboards/affinity/${region}/queue/competitive/season/${anotherSeasonID}?startIndex=0&size=25`,
         "pd",
     );
@@ -1395,15 +1395,15 @@ test("should return leaderboard with another startIndex when pass start", async 
         startIndex,
     };
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMmr).mockResolvedValueOnce(mockedLeaderboardStart);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMmr).mockResolvedValueOnce(mockedLeaderboardStart);
 
     const data = await pvp.leadersboards({ start: startIndex });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(2);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(2);
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(1, `/mmr/v1/players/${currentUserId}`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(1, `/mmr/v1/players/${currentUserId}`, "pd");
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(
         2,
         `/mmr/v1/leaderboards/affinity/${region}/queue/competitive/season/${currentSeasonID}?startIndex=${startIndex}&size=25`,
         "pd",
@@ -1417,15 +1417,15 @@ test("should return leaderboard with another startIndex when pass start", async 
 test("should return leaderboard from another region when pass region", async () => {
     const region: Regions = "na";
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMmr).mockResolvedValueOnce(mockedLeaderboardDefault);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMmr).mockResolvedValueOnce(mockedLeaderboardDefault);
 
     const data = await pvp.leadersboards({ region });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(2);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(2);
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(1, `/mmr/v1/players/${currentUserId}`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(1, `/mmr/v1/players/${currentUserId}`, "pd");
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(
         2,
         `/mmr/v1/leaderboards/affinity/${region}/queue/competitive/season/${currentSeasonID}?${defaultParams}`,
         "pd",
@@ -1435,25 +1435,25 @@ test("should return leaderboard from another region when pass region", async () 
 });
 
 test("should return match details", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMatchDetails);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMatchDetails);
 
     const data = await pvp.matchDetails(matchDetailsID);
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/match-details/v1/matches/${matchDetailsID}`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/match-details/v1/matches/${matchDetailsID}`, "pd");
 
     expect(data).toEqual(mockedPvpMatchDetails);
 });
 
 test("should return match history from current player when not pass", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistory);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistory);
 
     const data = await pvp.matchHistory();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/match-history/v1/history/${currentUserId}?startIndex=0&endIndex=15`,
         "pd",
     );
@@ -1469,15 +1469,15 @@ test("should return match history of another player when pass puuid id", async (
         Subject: another_user,
     };
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistoryAnoter);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistoryAnoter);
 
     const data = await pvp.matchHistory({
         puuid: another_user,
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/match-history/v1/history/${another_user}?startIndex=0&endIndex=15`,
         "pd",
     );
@@ -1486,15 +1486,15 @@ test("should return match history of another player when pass puuid id", async (
 });
 
 test("should return match history from another queue when pass", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistory);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistory);
 
     const data = await pvp.matchHistory({
         queue_id: "deathmatch",
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/match-history/v1/history/${currentUserId}?startIndex=0&endIndex=15&queue=deathmatch`,
         "pd",
     );
@@ -1510,15 +1510,15 @@ test("should return match history which starts with index passed in start param"
         BeginIndex: startIndex,
     };
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistoryStart);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistoryStart);
 
     const data = await pvp.matchHistory({
         start: startIndex,
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/match-history/v1/history/${currentUserId}?startIndex=${startIndex}&endIndex=15`,
         "pd",
     );
@@ -1539,15 +1539,15 @@ test("should return match history which end with index passed in end param", asy
         }),
     };
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistoryEndIndex);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpMatchHistoryEndIndex);
 
     const data = await pvp.matchHistory({
         end: endIndex,
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/match-history/v1/history/${currentUserId}?startIndex=0&endIndex=${endIndex}`,
         "pd",
     );
@@ -1558,13 +1558,13 @@ test("should return match history which end with index passed in end param", asy
 });
 
 test("should return competitives updates from current player", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdates);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdates);
 
     const data = await pvp.competitiveUpdates();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/mmr/v1/players/${currentUserId}/competitiveupdates?startIndex=0&endIndex=15`,
         "pd",
     );
@@ -1580,15 +1580,15 @@ test("should return competitives updates from another player", async () => {
         Subject: anotherUserId,
     };
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdatesAnother);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdatesAnother);
 
     const data = await pvp.competitiveUpdates({
         puuid: anotherUserId,
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/mmr/v1/players/${anotherUserId}/competitiveupdates?startIndex=0&endIndex=15`,
         "pd",
     );
@@ -1599,15 +1599,15 @@ test("should return competitives updates from another player", async () => {
 test("should return competitives updates which starts with index passed in start param", async () => {
     const startIndex = 10;
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdates);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdates);
 
     const data = await pvp.competitiveUpdates({
         start: startIndex,
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/mmr/v1/players/${currentUserId}/competitiveupdates?startIndex=${startIndex}&endIndex=15`,
         "pd",
     );
@@ -1636,15 +1636,15 @@ test("should return competitives updates which end with index passed in start pa
         }),
     };
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdatesEnd);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdatesEnd);
 
     const data = await pvp.competitiveUpdates({
         end: endIndex,
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/mmr/v1/players/${currentUserId}/competitiveupdates?startIndex=0&endIndex=${endIndex}`,
         "pd",
     );
@@ -1655,15 +1655,15 @@ test("should return competitives updates which end with index passed in start pa
 test("should return competitives updates from another queue when pas", async () => {
     const queue: Queues = "deathmatch";
 
-    httpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdates);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedPvpCompetitiveUpdates);
 
     const data = await pvp.competitiveUpdates({
         queue_id: queue,
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/mmr/v1/players/${currentUserId}/competitiveupdates?startIndex=0&endIndex=15&queue=${queue}`,
         "pd",
     );

@@ -1,4 +1,5 @@
 import { Player } from "@app/player";
+import { mock } from "jest-mock-extended";
 
 import {
     CurrentPlayerResponse,
@@ -9,14 +10,11 @@ import {
     PendingFriendsResponse,
 } from "@interfaces/player";
 import { Base64 } from "@interfaces/helpers";
+import { IHttp } from "@interfaces/http";
+
 import { PrivateInformationJSON64 } from "@errors/privateInformationJSON64";
 
-const httpService = {
-    fetch: jest.fn(),
-    post: jest.fn(),
-    put: jest.fn(),
-    del: jest.fn(),
-};
+const mockedHttpService = mock<IHttp>();
 
 const currentUserId = "current_user";
 const anotherUserId = "another_user";
@@ -217,110 +215,110 @@ const mockPendingFriendRequests: PendingFriendsResponse = {
     ],
 };
 
-const player = new Player(httpService, currentUserId);
+const player = new Player(mockedHttpService, currentUserId);
 
 afterEach(() => {
-    httpService.fetch.mockClear();
+    mockedHttpService.fetch.mockClear();
 });
 
 test("should return all friends", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedFriends);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedFriends);
 
     const data = await player.allFriends();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/chat/v4/friends", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/chat/v4/friends", "local");
 
     expect(data).toEqual(mockedFriends.friends);
 });
 
 test("should return all online friends", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
     const data = await player.allFriendsOnline();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
 
     expect(data).toEqual(mockedFriendsOnline.presences);
 });
 
 test("should return friend", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockCurrentPlayer);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockCurrentPlayer);
 
     const data = await player.current();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/player-account/aliases/v1/active", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/player-account/aliases/v1/active", "local");
 
     expect(data).toEqual(mockCurrentPlayer);
 });
 
 test("if pass puuid to onlineFriend and information don't is base64 encoded JSON string, throw a error", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
     expect(player.onlineFriend(`${anotherUserId}_with_invalid_private`)).rejects.toThrow(PrivateInformationJSON64);
 });
 
 test("if pass puuid to onlineFriend and this friend is not online", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
     const data = await player.onlineFriend("is_not_online");
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
 
     expect(data).toBe(null);
 });
 
 test("if dont pass puuid to onlineFriend should return information from current user", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
     const data = await player.onlineFriend();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
 
     expect(data).toEqual(mockCurrentUserPrivate);
 });
 
 test("if pass puuid to onlineFriend should return information from this user", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedFriendsOnline);
 
     const data = await player.onlineFriend(anotherUserId);
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/chat/v4/presences", "local");
 
     expect(data).toEqual(mockAnotherUserPrivate);
 });
 
 test("should return current session", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockSession);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockSession);
 
     const data = await player.session();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/chat/v1/session", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/chat/v1/session", "local");
 
     expect(data).toEqual(mockSession);
 });
 
 test("should return all pending friend requests", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockPendingFriendRequests);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockPendingFriendRequests);
 
     const data = await player.pendingFriendsRequests();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/chat/v4/friendrequests", "local");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/chat/v4/friendrequests", "local");
 
     expect(data).toEqual(mockPendingFriendRequests.requests);
 });

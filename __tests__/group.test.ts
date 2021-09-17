@@ -1,20 +1,17 @@
 import { Group } from "@app/group";
+import { mock } from "jest-mock-extended";
 import { CurrentAvailableGameModeResponse, CurrentGroupIdResponse, GroupDetails } from "@interfaces/group";
 
 import { Queues } from "@interfaces/resources";
+import { IHttp } from "@interfaces/http";
 
-const httpService = {
-    fetch: jest.fn(),
-    post: jest.fn(),
-    put: jest.fn(),
-    del: jest.fn(),
-};
+const mockedHttpService = mock<IHttp>();
 
 const currentUserId = "current_user";
 const currentGroupID = "test";
 const anotherUserId = "another_user";
 
-const group = new Group(httpService, currentUserId);
+const group = new Group(mockedHttpService, currentUserId);
 
 const mockedCurrentGroupUser: CurrentGroupIdResponse = {
     CurrentPartyID: currentGroupID,
@@ -137,77 +134,77 @@ const mockedCurrentAvailableGameModes: CurrentAvailableGameModeResponse = {
 };
 
 beforeEach(() => {
-    httpService.fetch.mockResolvedValueOnce(mockedCurrentGroupUser);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedCurrentGroupUser);
 });
 
 afterEach(() => {
-    httpService.fetch.mockClear();
-    httpService.post.mockClear();
-    httpService.del.mockClear();
+    mockedHttpService.fetch.mockClear();
+    mockedHttpService.post.mockClear();
+    mockedHttpService.del.mockClear();
 });
 
 test("should return current group from user authenticated", async () => {
     const data = await group.current();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
     expect(data).toEqual(mockedCurrentGroupUser);
 });
 
 test("should return details current group from user authenticated", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const data = await group.currentDetails();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(2);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(2);
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(1, `/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(1, `/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(2, `/parties/v1/parties/${currentGroupID}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(2, `/parties/v1/parties/${currentGroupID}`, "glz");
 
     expect(data).toEqual(mockedCurrentGroupDetails);
 });
 
 test("should remove a player current group from user authenticated", async () => {
-    httpService.del.mockResolvedValueOnce(true);
+    mockedHttpService.del.mockResolvedValueOnce(true);
 
     const playerRemoved = "test";
 
     const data = await group.removePlayer(playerRemoved);
 
-    expect(httpService.del).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.del).toHaveBeenCalledTimes(1);
 
-    expect(httpService.del).toHaveBeenCalledWith(`/parties/v1/players/${playerRemoved}`, "glz");
+    expect(mockedHttpService.del).toHaveBeenCalledWith(`/parties/v1/players/${playerRemoved}`, "glz");
 
     expect(data).toBeTruthy();
 });
 
 test("should remove user authenticated from current group", async () => {
-    httpService.del.mockResolvedValueOnce(true);
+    mockedHttpService.del.mockResolvedValueOnce(true);
 
     const data = await group.removePlayer();
 
-    expect(httpService.del).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.del).toHaveBeenCalledTimes(1);
 
-    expect(httpService.del).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.del).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
     expect(data).toBeTruthy();
 });
 
 test("should sets whether a party member is ready for queueing", async () => {
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const data = await group.setMemberReady(true);
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledWith(
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
         `/parties/v1/parties/${currentGroupID}/members/${currentUserId}/setReady`,
         "glz",
         { ready: true },
@@ -217,17 +214,17 @@ test("should sets whether a party member is ready for queueing", async () => {
 });
 
 test("should refresh competitive tier from user authenticated", async () => {
-    httpService.post.mockResolvedValueOnce(true);
+    mockedHttpService.post.mockResolvedValueOnce(true);
 
     const data = await group.refreshCompetitiveTier();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
         `/parties/v1/parties/${currentGroupID}/members/${currentUserId}/refreshCompetitiveTier`,
         "glz",
     );
@@ -236,17 +233,17 @@ test("should refresh competitive tier from user authenticated", async () => {
 });
 
 test("should refresh player identity from user authenticated", async () => {
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const data = await group.refreshPlayerIdentity();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
         `/parties/v1/parties/${currentGroupID}/members/${currentUserId}/refreshPlayerIdentity`,
         "glz",
     );
@@ -255,17 +252,17 @@ test("should refresh player identity from user authenticated", async () => {
 });
 
 test("should refresh pings from user authenticated", async () => {
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const data = await group.refreshPlayerPings();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
         `/parties/v1/parties/${currentGroupID}/members/${currentUserId}/refreshPings`,
         "glz",
     );
@@ -284,17 +281,17 @@ test("should change queue in current group from user authenticated", async () =>
         },
     };
 
-    httpService.post.mockResolvedValueOnce(groupChanged);
+    mockedHttpService.post.mockResolvedValueOnce(groupChanged);
 
     const data = await group.changeQueue("deathmatch");
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/queue`, "glz", {
+    expect(mockedHttpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/queue`, "glz", {
         queueID: queue,
     });
 
@@ -302,49 +299,55 @@ test("should change queue in current group from user authenticated", async () =>
 });
 
 test("should start a custom game from user authenticated", async () => {
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const data = await group.startCustomGame();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/startcustomgame`, "glz");
+    expect(mockedHttpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/startcustomgame`, "glz");
 
     expect(data).toEqual(mockedCurrentGroupDetails);
 });
 
 test("should enter in matchmaking queue from user authenticated", async () => {
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const data = await group.enterMatchmakingQueue();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/matchmaking/join`, "glz");
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
+        `/parties/v1/parties/${currentGroupID}/matchmaking/join`,
+        "glz",
+    );
 
     expect(data).toEqual(mockedCurrentGroupDetails);
 });
 
 test("should leave in matchmaking queue from user authenticated", async () => {
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const data = await group.leaveMatchmakingQueue();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/matchmaking/leave`, "glz");
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
+        `/parties/v1/parties/${currentGroupID}/matchmaking/leave`,
+        "glz",
+    );
 
     expect(data).toEqual(mockedCurrentGroupDetails);
 });
@@ -355,17 +358,17 @@ test("should change to close acessibility state current group from user authenti
         Accessibility: "CLOSED",
     };
 
-    httpService.post.mockResolvedValueOnce(groupState);
+    mockedHttpService.post.mockResolvedValueOnce(groupState);
 
     const data = await group.changeState("CLOSED");
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/accessibility`, "glz", {
+    expect(mockedHttpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/accessibility`, "glz", {
         accessibility: "CLOSED",
     });
 
@@ -378,17 +381,17 @@ test("should change to open acessibility state current group from user authentic
         Accessibility: "OPEN",
     };
 
-    httpService.post.mockResolvedValueOnce(groupState);
+    mockedHttpService.post.mockResolvedValueOnce(groupState);
 
     const data = await group.changeState("OPEN");
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/accessibility`, "glz", {
+    expect(mockedHttpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/accessibility`, "glz", {
         accessibility: "OPEN",
     });
 
@@ -415,7 +418,7 @@ test("should set custom game settings from user autenticated", async () => {
         },
     };
 
-    httpService.post.mockResolvedValueOnce(customGame);
+    mockedHttpService.post.mockResolvedValueOnce(customGame);
 
     const data = await group.setCustomGameSettings({
         Map: "Ascent",
@@ -429,23 +432,27 @@ test("should set custom game settings from user autenticated", async () => {
         },
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/customgamesettings`, "glz", {
-        Map: "/Game/Maps/Ascent/Ascent",
-        Mode: "/Game/GameModes/Bomb/BombGameMode.BombGameMode_C",
-        GamePod: "aresriot.aws-rclusterprod-sae1-1.br-gp-saopaulo-1",
-        GameRules: {
-            AllowGameModifiers: "true",
-            PlayOutAllRounds: "true",
-            SkipMatchHistory: "true",
-            TournamentMode: "true",
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
+        `/parties/v1/parties/${currentGroupID}/customgamesettings`,
+        "glz",
+        {
+            Map: "/Game/Maps/Ascent/Ascent",
+            Mode: "/Game/GameModes/Bomb/BombGameMode.BombGameMode_C",
+            GamePod: "aresriot.aws-rclusterprod-sae1-1.br-gp-saopaulo-1",
+            GameRules: {
+                AllowGameModifiers: "true",
+                PlayOutAllRounds: "true",
+                SkipMatchHistory: "true",
+                TournamentMode: "true",
+            },
         },
-    });
+    );
 
     expect(data).toEqual(customGame);
 });
@@ -465,25 +472,29 @@ test("should set custom game settings without rule and gamepod from user autenti
         },
     };
 
-    httpService.post.mockResolvedValueOnce(customGame);
+    mockedHttpService.post.mockResolvedValueOnce(customGame);
 
     const data = await group.setCustomGameSettings({
         Map: "Ascent",
         Mode: "Bomb",
     });
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/customgamesettings`, "glz", {
-        Map: "/Game/Maps/Ascent/Ascent",
-        Mode: "/Game/GameModes/Bomb/BombGameMode.BombGameMode_C",
-        GamePod: "aresriot.aws-rclusterprod-sae1-1.br-gp-saopaulo-1",
-        GameRules: null,
-    });
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
+        `/parties/v1/parties/${currentGroupID}/customgamesettings`,
+        "glz",
+        {
+            Map: "/Game/Maps/Ascent/Ascent",
+            Mode: "/Game/GameModes/Bomb/BombGameMode.BombGameMode_C",
+            GamePod: "aresriot.aws-rclusterprod-sae1-1.br-gp-saopaulo-1",
+            GameRules: null,
+        },
+    );
 
     expect(data).toEqual(customGame);
 });
@@ -503,20 +514,20 @@ test("should invite someone by display name", async () => {
         ],
     };
 
-    httpService.post.mockResolvedValueOnce(groupInvite);
+    mockedHttpService.post.mockResolvedValueOnce(groupInvite);
 
     const name = "iws";
     const tag = "777";
 
     const data = await group.inviteByDisplayName(name, tag);
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/players/${currentUserId}`, "glz");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
         `/parties/v1/parties/${currentGroupID}/invites/name/${name}/tag/${tag}`,
         "glz",
         {
@@ -531,13 +542,13 @@ test("should invite someone by display name", async () => {
 test("should request to join a some group", async () => {
     //TODO: need to discover return type
 
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const data = await group.requestJoinToGroup("test", anotherUserId);
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/request`, "glz", {
+    expect(mockedHttpService.post).toHaveBeenCalledWith(`/parties/v1/parties/${currentGroupID}/request`, "glz", {
         Subjects: [anotherUserId],
     });
 
@@ -547,13 +558,13 @@ test("should request to join a some group", async () => {
 test("should decline a request to join a some group", async () => {
     //TODO: need to discover return type
 
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const data = await group.declineRequestGroup("party_id");
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
         `/parties/v1/parties/${currentGroupID}/request/party_id/decline`,
         "glz",
     );
@@ -564,15 +575,15 @@ test("should decline a request to join a some group", async () => {
 test("should join a group", async () => {
     //TODO: need to discover return type
 
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const anotherIdGroup = "another_id";
 
     const data = await group.joinGroup(anotherIdGroup);
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
         `/parties/v1/players/${currentUserId}/joinparty/${anotherIdGroup}`,
         "glz",
     );
@@ -583,15 +594,15 @@ test("should join a group", async () => {
 test("should leave a group", async () => {
     //TODO: need to discover return type
 
-    httpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
+    mockedHttpService.post.mockResolvedValueOnce(mockedCurrentGroupDetails);
 
     const anotherIdGroup = "another_id";
 
     const data = await group.leaveGroup(anotherIdGroup);
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
         `/parties/v1/players/${currentUserId}/leaveparty/${anotherIdGroup}`,
         "glz",
     );
@@ -600,14 +611,14 @@ test("should leave a group", async () => {
 });
 
 test("should return all available game modes", async () => {
-    httpService.fetch.mockReset();
-    httpService.fetch.mockResolvedValueOnce(mockedCurrentAvailableGameModes);
+    mockedHttpService.fetch.mockReset();
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedCurrentAvailableGameModes);
 
     const data = await group.currentAvailableGameModes();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/parties/v1/parties/customgameconfigs`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/parties/v1/parties/customgameconfigs`, "glz");
 
     expect(data).toEqual(mockedCurrentAvailableGameModes);
 });

@@ -1,14 +1,12 @@
 import { Store } from "@app/store";
+import { mock } from "jest-mock-extended";
 
+import { IHttp } from "@interfaces/http";
 import { OffersResponse, CurrentOffersResponse, WalletResponse, YourItems } from "@interfaces/store";
+
 import { WalletCurrencies } from "@resources";
 
-const httpService = {
-    fetch: jest.fn(),
-    post: jest.fn(),
-    put: jest.fn(),
-    del: jest.fn(),
-};
+const mockedHttpService = mock<IHttp>();
 
 const currentUserId = "current_user";
 
@@ -91,56 +89,56 @@ const mockedYourItems: YourItems = {
     ItemTypeID: "test",
 };
 
-const store = new Store(httpService, currentUserId);
+const store = new Store(mockedHttpService, currentUserId);
 
 afterEach(() => {
-    httpService.fetch.mockClear();
+    mockedHttpService.fetch.mockClear();
 });
 
 test("should return all offers from a store", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedOffersResponse);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedOffersResponse);
 
     const data = await store.offers();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/store/v1/offers/", "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/store/v1/offers/", "pd");
 
     expect(data).toEqual(mockedOffersResponse);
 });
 
 test("should return current offers from authenticated user", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedCurrentOffers);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedCurrentOffers);
 
     const data = await store.currentOffers();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/store/v2/storefront/current_user", "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/store/v2/storefront/current_user", "pd");
 
     expect(data).toEqual(mockedCurrentOffers);
 });
 
 test("should return current wallet, amount vp, radianite points and unknown currency", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedWalletResponse);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedWalletResponse);
 
     const data = await store.wallet();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/store/v1/wallet/${currentUserId}`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/store/v1/wallet/${currentUserId}`, "pd");
 
     expect(data).toEqual(mockedWalletMapped);
 });
 
 test("should return owned items", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedYourItems);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedYourItems);
 
     const data = await store.yourItems("agent");
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
         `/store/v1/entitlements/${currentUserId}/01bb38e1-da47-4e6a-9b3d-945fe4655707`,
         "pd",
     );

@@ -1,16 +1,11 @@
 import { Contracts } from "@app/contracts";
+import { mock } from "jest-mock-extended";
 
 import { ContractsAll } from "@interfaces/contracts";
+import { IHttp } from "@interfaces/http";
 import { PvpItemProgressDefinitions } from "@interfaces/pvp";
 
-jest.mock("axios");
-
-const httpService = {
-    fetch: jest.fn(),
-    post: jest.fn(),
-    put: jest.fn(),
-    del: jest.fn(),
-};
+const mockedHttpService = mock<IHttp>();
 
 const mockedContractsAll: ContractsAll = {
     Version: 0,
@@ -141,47 +136,47 @@ const mockedPvpItemProgress: PvpItemProgressDefinitions = {
 
 const currentUserId = "current_user";
 
-const contracts = new Contracts(httpService, currentUserId);
+const contracts = new Contracts(mockedHttpService, currentUserId);
 
 afterEach(() => {
-    httpService.fetch.mockClear();
-    httpService.post.mockClear();
+    mockedHttpService.fetch.mockClear();
+    mockedHttpService.post.mockClear();
 });
 
 test("should return all contracts with completion status, including match history", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedContractsAll);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedContractsAll);
 
     const data = await contracts.all();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(`/contracts/v1/contracts/${currentUserId}`, "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/contracts/v1/contracts/${currentUserId}`, "pd");
 
     expect(data).toEqual(mockedContractsAll);
 });
 
 test("should return item upgrades", async () => {
-    httpService.fetch.mockResolvedValueOnce({ Definitions: mockedPvpItemProgress });
+    mockedHttpService.fetch.mockResolvedValueOnce({ Definitions: mockedPvpItemProgress });
 
     const data = await contracts.itemUpgrades();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith("/contract-definitions/v3/item-upgrades", "pd");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith("/contract-definitions/v3/item-upgrades", "pd");
 
     expect(data).toEqual(mockedPvpItemProgress);
 });
 
 test("should activate a contract", async () => {
-    httpService.post.mockResolvedValueOnce(mockedContractsAll);
+    mockedHttpService.post.mockResolvedValueOnce(mockedContractsAll);
 
     const contractDefinition = "s";
 
     const data = await contracts.activate(contractDefinition);
 
-    expect(httpService.post).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.post).toHaveBeenCalledTimes(1);
 
-    expect(httpService.post).toHaveBeenCalledWith(
+    expect(mockedHttpService.post).toHaveBeenCalledWith(
         `/contracts/v1/contracts/${currentUserId}/special/${contractDefinition}`,
         "pd",
     );

@@ -1,12 +1,10 @@
 import { LiveGame } from "@app/liveGame";
-import { CoreGameDetailsResponse, CoreGameLoadoutResponse, CoreGameResponse } from "@interfaces/liveGame";
+import { mock } from "jest-mock-extended";
 
-const httpService = {
-    fetch: jest.fn(),
-    post: jest.fn(),
-    put: jest.fn(),
-    del: jest.fn(),
-};
+import { CoreGameDetailsResponse, CoreGameLoadoutResponse, CoreGameResponse } from "@interfaces/liveGame";
+import { IHttp } from "@interfaces/http";
+
+const mockedHttpService = mock<IHttp>();
 
 const currentUserId = "current_user";
 const matchId = "test";
@@ -106,67 +104,70 @@ const mockedLoadout: CoreGameLoadoutResponse = {
     ],
 };
 
-const liveGame = new LiveGame(httpService, currentUserId);
+const liveGame = new LiveGame(mockedHttpService, currentUserId);
 
 beforeEach(() => {
-    httpService.fetch.mockResolvedValueOnce(mockedLiveGame);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedLiveGame);
 });
 
 afterEach(() => {
-    httpService.fetch.mockReset();
-    httpService.post.mockReset();
+    mockedHttpService.fetch.mockReset();
+    mockedHttpService.post.mockReset();
 });
 
 test("should return current ongoing game", async () => {
     const data = await liveGame.current();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(httpService.fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(endpointToGetCurrentMatch, "glz");
 
     expect(data).toEqual(mockedLiveGame);
 });
 
 test("should return details from current ongoing game", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedDetailsLiveGame);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedDetailsLiveGame);
 
     const data = await liveGame.details();
 
-    expect(httpService.fetch).toHaveBeenCalledTimes(2);
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(2);
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(2, `/core-game/v1/matches/${matchId}`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(2, `/core-game/v1/matches/${matchId}`, "glz");
 
     expect(data).toBe(mockedDetailsLiveGame);
 });
 
 test("should disconnect from current ongoing game", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedDetailsLiveGame);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedDetailsLiveGame);
 
     const data = await liveGame.disconnect();
 
-    expect(httpService.fetch).toBeCalledTimes(1);
+    expect(mockedHttpService.fetch).toBeCalledTimes(1);
 
-    expect(httpService.fetch).toBeCalledWith(endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toBeCalledWith(endpointToGetCurrentMatch, "glz");
 
-    expect(httpService.post).toBeCalledTimes(1);
+    expect(mockedHttpService.post).toBeCalledTimes(1);
 
-    expect(httpService.post).toBeCalledWith(`/core-game/v1/players/${currentUserId}/disassociate/${matchId}`, "glz");
+    expect(mockedHttpService.post).toBeCalledWith(
+        `/core-game/v1/players/${currentUserId}/disassociate/${matchId}`,
+        "glz",
+    );
 
     expect(data).toBe(true);
 });
 
 test("should return loadout all player from current ongoing game", async () => {
-    httpService.fetch.mockResolvedValueOnce(mockedLoadout);
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedLoadout);
 
     const data = await liveGame.loadout();
 
-    expect(httpService.fetch).toBeCalledTimes(2);
+    expect(mockedHttpService.fetch).toBeCalledTimes(2);
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(1, endpointToGetCurrentMatch, "glz");
 
-    expect(httpService.fetch).toHaveBeenNthCalledWith(2, `/core-game/v1/matches/${matchId}/loadouts`, "glz");
+    expect(mockedHttpService.fetch).toHaveBeenNthCalledWith(2, `/core-game/v1/matches/${matchId}/loadouts`, "glz");
 
     expect(data).toEqual(mockedLoadout);
 });
