@@ -289,9 +289,7 @@ class Client {
                 protocol,
             };
         } catch (e) {
-            if (e.code === "ENOENT" && e.syscall === "open") {
-                throw new ValorantNotRunning();
-            }
+            throw new ValorantNotRunning();
         }
     }
 }
