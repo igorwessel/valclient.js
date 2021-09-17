@@ -17,7 +17,7 @@ import { SystemNotSupported } from "@errors/systemNotSupported";
 
 /** Interfaces */
 import { EntitlementsTokenLocal, IPlayer } from "@interfaces/player";
-import { BaseEndpoints, ClientConfig, Headers, LockFileType } from "@interfaces/client";
+import { BaseEndpoints, ClientConfig, Headers, IValClient, LockFileType } from "@interfaces/client";
 import { Regions } from "@interfaces/resources";
 import { AuthInterface } from "@interfaces/auth";
 
@@ -68,7 +68,7 @@ export const addLocalHeaders =
         return config;
     };
 
-class Client {
+class ValClient implements IValClient {
     private _axios: AxiosStatic = axios;
     private _puuid: string;
     private _lockfile: LockFileType;
@@ -294,4 +294,4 @@ class Client {
     }
 }
 
-export default Client;
+export { ValClient };

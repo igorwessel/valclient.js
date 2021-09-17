@@ -1,5 +1,39 @@
+import { AxiosInstance } from "axios";
+
 import { Regions } from "@interfaces/resources";
 import { AuthInput } from "@interfaces/auth";
+
+import { IContracts } from "@interfaces/contracts";
+import { IPvp } from "@interfaces/pvp";
+import { IValorant } from "@interfaces/valorant";
+import { IGroup } from "@interfaces/group";
+import { IPlayer } from "@interfaces/player";
+import { ILiveGame } from "@interfaces/liveGame";
+import { IPreGame } from "@interfaces/preGame";
+import { ISession } from "@interfaces/session";
+import { IStore } from "@interfaces/store";
+
+import { HttpService } from "@app/http";
+
+export interface IValClient {
+    _http_service: HttpService;
+    valorant_api: AxiosInstance;
+    allRegions: Regions[];
+    auth: { username: string; password: string } | null;
+    region: string;
+    shard: string;
+    endpoints: BaseEndpoints;
+    init(config: ClientConfig): Promise<void>;
+    player: IPlayer | null;
+    valorant: IValorant | null;
+    group: IGroup | null;
+    live_game: ILiveGame | null;
+    pre_game: IPreGame | null;
+    session: ISession | null;
+    pvp: IPvp | null;
+    store: IStore | null;
+    contracts: IContracts | null;
+}
 
 export interface LockFileType {
     name: string;
