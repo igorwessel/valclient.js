@@ -1,12 +1,12 @@
-import { CurrentGameSessionResponse, ReconnectGameSessionResponse } from "@interfaces/glzEndpointResponses";
-import { Fetch } from "@interfaces/http";
+import { CurrentGameSessionResponse, ISession, ReconnectGameSessionResponse } from "@interfaces/session";
+import { IHttp } from "@interfaces/http";
 
-class Session {
-    private readonly _fetch: Fetch;
+class Session implements ISession {
+    private readonly _http: IHttp;
     private readonly _puuid: string;
 
-    constructor(fetch: Fetch, puuid: string) {
-        this._fetch = fetch;
+    constructor(http: IHttp, puuid: string) {
+        this._http = http;
         this._puuid = puuid;
     }
     /**
@@ -16,7 +16,7 @@ class Session {
      * @returns
      */
     async current(): Promise<CurrentGameSessionResponse> {
-        const data = await this._fetch<CurrentGameSessionResponse>(`/session/v1/sessions/${this._puuid}`, "glz");
+        const data = await this._http.fetch<CurrentGameSessionResponse>(`/session/v1/sessions/${this._puuid}`, "glz");
 
         return data;
     }
@@ -28,7 +28,7 @@ class Session {
      * @returns
      */
     async reconnect(): Promise<ReconnectGameSessionResponse> {
-        const data = await this._fetch<ReconnectGameSessionResponse>(
+        const data = await this._http.fetch<ReconnectGameSessionResponse>(
             `/session/v1/sessions/${this._puuid}/reconnect`,
             "glz",
         );

@@ -21,11 +21,14 @@
     "homepage": "https://github.com/igorwessel/valclient.js#readme",
     "dependencies": {
         "axios": "0.21.4",
+        "axios-cookiejar-support": "1.0.1",
+        "tough-cookie": "4.0.0",
         "yaml": "1.10.2"
     },
     "devDependencies": {
         "@types/jest": "27.0.1",
         "@types/node": "16.7.13",
+        "@types/tough-cookie": "4.0.1",
         "@typescript-eslint/eslint-plugin": "4.31.0",
         "@typescript-eslint/parser": "4.31.0",
         "cross-env": "7.0.3",

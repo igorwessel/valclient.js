@@ -41,3 +41,7 @@ node_modules/
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Ignore test-related files
+/coverage.data
+/coverage/

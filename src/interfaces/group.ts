@@ -1,34 +1,27 @@
 import { Queues, CustomGameMapsName, Maps, GameModes, CustomGameModes, RiotServers } from "@interfaces/resources";
-import { BooleanString } from "@interfaces/helpers";
+import { BooleanString, State } from "@interfaces/helpers";
 
-export interface CurrentGameSessionResponse {
-    subject: string;
-    cxnState: string;
-    clientID: string;
-    clientVersion: string;
-    loopState: string;
-    loopStateMetadata: string;
-    version: number;
-    lastHeartbeatTime: string;
-    expiredTime: string;
-    heartbeatIntervalMillis: number;
-    playtimeNotification: string;
-    playtimeMinutes: number;
-    isRestricted: boolean;
-    userinfoValidTime: string;
-    restrictionType: string;
-    clientPlatformInfo: {
-        platformType: string;
-        platformOS: string;
-        platformOSVersion: string;
-        platformChipset: string;
-    };
+export interface IGroup {
+    current(): Promise<CurrentGroupIdResponse>;
+    removePlayer(puuid?: string): Promise<boolean>;
+    currentDetails(): Promise<GroupDetails>;
+    setMemberReady(ready?: boolean): Promise<GroupDetails>;
+    refreshCompetitiveTier(): Promise<boolean>;
+    refreshPlayerIdentity(): Promise<GroupDetails>;
+    refreshPlayerPings(): Promise<GroupDetails>;
+    changeQueue(queueID: Queues): Promise<GroupDetails>;
+    startCustomGame(): Promise<GroupDetails>;
+    enterMatchmakingQueue(): Promise<GroupDetails>;
+    leaveMatchmakingQueue(): Promise<GroupDetails>;
+    changeState(open?: State): Promise<GroupDetails>;
+    setCustomGameSettings({ Map, Mode, GamePod, GameRules }: CustomGameSettingsInput): Promise<GroupDetails>;
+    inviteByDisplayName(name: string, tag: string): Promise<GroupDetails>;
+    requestJoinToGroup(party_id: string, puuid: string): Promise<GroupDetails>;
+    declineRequestGroup(request_id: string): Promise<GroupDetails>;
+    joinGroup(party_id: string): Promise<GroupDetails>;
+    leaveGroup(party_id: string): Promise<GroupDetails>;
+    currentAvailableGameModes(): Promise<CurrentAvailableGameModeResponse>;
 }
-
-export interface ReconnectGameSessionResponse {
-    reconnect: boolean;
-}
-
 export interface CurrentGroupRequest {
     ID: string;
     PartyID: string;
@@ -211,157 +204,4 @@ export interface CurrentAvailableGameModeResponse {
 export interface GLZEndpointTokenResponse {
     Token: string;
     Room: string;
-}
-
-export interface CoreGameResponse {
-    Subject: string;
-    MatchID: string;
-    Version: number;
-}
-
-export interface CoreGameConnectionDetails {
-    GameServerHost: string;
-    GameServerPort: number;
-    GameServerObfuscatedIP: number;
-    GameClientHash: number;
-    PlayerKey: string;
-    TempMap: string;
-    TempTeam: string;
-}
-
-export interface CoreGamePlayer {
-    Subject: string;
-    TeamID: string;
-    CharacterID: string;
-    PlayerIdentity: {
-        Subject: string;
-        PlayerCardID: string;
-        PlayerTitleID: string;
-        AccountLevel: number;
-        PreferredLevelBorderID: string;
-        Incognito: boolean;
-        HideAccountLevel: boolean;
-    };
-    SeasonalBadgeInfo: {
-        SeasonID: string;
-        NumberOfWins: number;
-        WinsByTier: Record<string, number> | null;
-        Rank: number;
-        LeaderboardRank: number;
-    };
-    IsCoach: boolean;
-}
-export interface CoreGameDetailsResponse {
-    MatchID: string;
-    Version: number;
-    State: string;
-    MapID: string;
-    ModeID: string;
-    ProvisioningFlow: string;
-    GamePodID: string;
-    AllMUCName: string;
-    TeamMUCName: string;
-    TeamVoiceID: string;
-    IsReconnectable: boolean;
-    ConnectionDetails: CoreGameConnectionDetails;
-    PostGameDetails: unknown | null;
-    Players: CoreGamePlayer[];
-    MatchmakingData: unknown | null;
-}
-
-export interface CoreGameSpraySelection {
-    SocketID: string;
-    SprayID: string;
-    LevelID: string;
-}
-
-export interface CoreGameItem {
-    [key: string]: {
-        ID: string;
-        TypeID: string;
-        Sockets: CoreGameItemSocket;
-    };
-}
-
-export interface CoreGameItemSocket {
-    [key: string]: {
-        ID: string;
-        Item: {
-            ID: string;
-            TypeID: string;
-        };
-    };
-}
-export interface CoreGameLoadout {
-    CharacterID: string;
-    Loadout: {
-        Sprays: {
-            SpraySelections: CoreGameSpraySelection[];
-        };
-        Items: CoreGameItem[];
-    };
-}
-
-export interface CoreGameLoadoutResponse {
-    Loadouts: CoreGameLoadout[];
-}
-
-export interface PreGameTeam {
-    TeamID: string;
-    Players: PreGamePlayer[];
-}
-
-export interface PreGamePlayer {
-    Subject: string;
-    CharacterID: string;
-    CharacterSelectionState: string;
-    PregamePlayerState: string;
-    CompetitiveTier: number;
-    PlayerIdentity: {
-        Subject: string;
-        PlayerCardID: string;
-        PlayerTitleID: string;
-        AccountLevel: number;
-        PreferredLevelBorderID: string;
-        Incognito: boolean;
-        HideAccountLevel: boolean;
-    };
-    SeasonalBadgeInfo: {
-        SeasonID: string;
-        NumberOfWins: number;
-        WinsByTier: Record<string, number> | null;
-        Rank: number;
-        LeaderboardRank: number;
-    };
-}
-
-export interface PreGameDetailsResponse {
-    ID: string;
-    Version: number;
-    Teams: PreGameTeam[];
-    AllyTeam: PreGameTeam;
-    EnemyTeam: PreGameTeam | null;
-    ObserverSubjects: string[];
-    MatchCoaches: unknown;
-    EnemyTeamSize: number;
-    EnemyTeamLockCount: number;
-    PregameState: string;
-    LastUpdated: string;
-    MapID: string;
-    GamePodID: string;
-    Mode: string;
-    VoiceSessionID: string;
-    MUCName: string;
-    QueueID: string;
-    ProvisioningFlowID: string;
-    IsRanked: boolean;
-    PhaseTimeRemainingNS: number;
-    altModesFlagADA: boolean;
-}
-
-export interface PreGameLoadout {
-    Sprays: {
-        SpraySelections: CoreGameSpraySelection[];
-    };
-    Items: CoreGameItem[];
 }

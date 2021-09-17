@@ -11,7 +11,7 @@ export interface LockFileType {
 
 export interface ClientConfig {
     region: Regions;
-    auth: AuthInput;
+    auth?: AuthInput;
 }
 
 export interface BaseEndpoints {

@@ -1,20 +1,13 @@
-import { CrossHair, CrossHairProfile, CrossHairProfileData } from "@interfaces/crosshair";
-import { Fetch, Put } from "@interfaces/http";
+import { CrossHair, CrossHairProfileData } from "@interfaces/crosshair";
+import { IHttp } from "@interfaces/http";
 
-import { ClientSettingsResponse, ValorantProcessResponse } from "@interfaces/valorant";
+import { ClientSettingsResponse, IValorant, ValorantProcessResponse } from "@interfaces/valorant";
 
-interface ValorantInterface {
-    process(): Promise<ValorantProcessResponse | Record<string, never>>;
-    clientSettings(): Promise<ClientSettingsResponse>;
-}
+class Valorant implements IValorant {
+    private readonly _http: IHttp;
 
-class Valorant implements ValorantInterface {
-    private readonly _fetch: Fetch;
-    private readonly _put: Put;
-
-    constructor(fetch: Fetch, put: Put) {
-        this._fetch = fetch;
-        this._put = put;
+    constructor(http: IHttp) {
+        this._http = http;
     }
 
     /**
@@ -24,7 +17,7 @@ class Valorant implements ValorantInterface {
      * @returns
      */
     async process(): Promise<ValorantProcessResponse | Record<string, never>> {
-        const data = await this._fetch<ValorantProcessResponse>("/product-session/v1/external-sessions", "local");
+        const data = await this._http.fetch<ValorantProcessResponse>("/product-session/v1/external-sessions", "local");
 
         return data;
     }
@@ -35,7 +28,7 @@ class Valorant implements ValorantInterface {
      *  Get client settings
      */
     async clientSettings(): Promise<ClientSettingsResponse> {
-        const data = await this._fetch<ClientSettingsResponse>(
+        const data = await this._http.fetch<ClientSettingsResponse>(
             "/player-preferences/v1/data-json/Ares.PlayerSettings",
             "local",
         );

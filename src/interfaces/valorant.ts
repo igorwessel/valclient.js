@@ -1,5 +1,11 @@
-import { CrossHairProfileData } from "@interfaces/crosshair";
+import { CrossHair } from "@interfaces/crosshair";
 import { Locale } from "@interfaces/resources";
+
+export interface IValorant {
+    process(): Promise<ValorantProcessResponse | Record<string, never>>;
+    clientSettings(): Promise<ClientSettingsResponse>;
+    crossHair(): Promise<Record<string, CrossHair>>;
+}
 
 export interface ActionMap {
     alt: boolean;

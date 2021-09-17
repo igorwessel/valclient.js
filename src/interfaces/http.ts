@@ -1,17 +1,8 @@
-import { EndpointType } from "./client";
+import { EndpointType } from "@interfaces/client";
 
-export interface Fetch {
-    <T>(endPoint: string, endpointType: EndpointType): Promise<T>;
-}
-
-export interface Delete {
-    <T>(endPoint: string, endpointType: EndpointType): Promise<T>;
-}
-
-export interface Post {
-    <T>(endPoint: string, endpointType: EndpointType, data?: Record<string, unknown>): Promise<T>;
-}
-
-export interface Put {
-    <T>(endPoint: string, endpointType: EndpointType, data?: Record<string, unknown>): Promise<T>;
+export interface IHttp {
+    fetch<T>(endPoint: string, endpointType: EndpointType): Promise<T>;
+    post<T>(endPoint: string, endpointType: EndpointType, data?: unknown): Promise<T>;
+    put<T>(endPoint: string, endpointType: EndpointType, data?: unknown): Promise<T>;
+    del<T>(endPoint: string, endpointType: EndpointType): Promise<T>;
 }

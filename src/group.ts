@@ -1,28 +1,24 @@
-import { Delete, Fetch, Post } from "@interfaces/http";
+import { IHttp } from "@interfaces/http";
 
 import {
     CurrentAvailableGameModeResponse,
     CurrentGroupIdResponse,
     CustomGameSettings,
     CustomGameSettingsInput,
-    GLZEndpointTokenResponse,
     GroupDetails,
-} from "@interfaces/glzEndpointResponses";
+    IGroup,
+} from "@interfaces/group";
 import { State } from "@interfaces/helpers";
 import { Queues } from "@interfaces/resources";
 
 import { customGameModeMapped, customMappedMaps } from "@resources";
 
-class Group {
-    private readonly _fetch: Fetch;
-    private readonly _post: Post;
-    private readonly _delete: Delete;
+class Group implements IGroup {
+    private readonly _http: IHttp;
     private readonly _puuid: string;
 
-    constructor(fetch: Fetch, post: Post, deleteFunction: Delete, puuid: string) {
-        this._fetch = fetch;
-        this._post = post;
-        this._delete = deleteFunction;
+    constructor(http: IHttp, puuid: string) {
+        this._http = http;
         this._puuid = puuid;
     }
 
@@ -32,7 +28,7 @@ class Group {
      *  Get the Group ID that a given player belongs to
      */
     async current(): Promise<CurrentGroupIdResponse> {
-        const data = await this._fetch<CurrentGroupIdResponse>(`/parties/v1/players/${this._puuid}`, "glz");
+        const data = await this._http.fetch<CurrentGroupIdResponse>(`/parties/v1/players/${this._puuid}`, "glz");
 
         return data;
     }
@@ -47,7 +43,7 @@ class Group {
     async removePlayer(puuid?: string): Promise<boolean> {
         puuid = puuid || this._puuid;
 
-        await this._delete(`/parties/v1/players/${puuid}`, "glz");
+        await this._http.del(`/parties/v1/players/${puuid}`, "glz");
 
         return true;
     }
@@ -60,7 +56,7 @@ class Group {
     async currentDetails(): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._fetch<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}`, "glz");
+        const data = await this._http.fetch<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}`, "glz");
 
         return data;
     }
@@ -75,7 +71,7 @@ class Group {
     async setMemberReady(ready?: boolean): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(
+        const data = await this._http.post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/setReady`,
             "glz",
             {
@@ -94,7 +90,10 @@ class Group {
     async refreshCompetitiveTier(): Promise<boolean> {
         const { CurrentPartyID } = await this.current();
 
-        await this._post(`/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshCompetitiveTier`, "glz");
+        await this._http.post(
+            `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshCompetitiveTier`,
+            "glz",
+        );
 
         return true;
     }
@@ -107,7 +106,7 @@ class Group {
     async refreshPlayerIdentity(): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(
+        const data = await this._http.post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshPlayerIdentity`,
             "glz",
         );
@@ -123,7 +122,7 @@ class Group {
     async refreshPlayerPings(): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(
+        const data = await this._http.post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/members/${this._puuid}/refreshPings`,
             "glz",
         );
@@ -141,7 +140,7 @@ class Group {
     async changeQueue(queueID: Queues): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/queue`, "glz", {
+        const data = await this._http.post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/queue`, "glz", {
             queueID,
         });
 
@@ -156,7 +155,10 @@ class Group {
     async startCustomGame(): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/startcustomgame`, "glz");
+        const data = await this._http.post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/startcustomgame`,
+            "glz",
+        );
 
         return data;
     }
@@ -169,7 +171,10 @@ class Group {
     async enterMatchmakingQueue(): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/join`, "glz");
+        const data = await this._http.post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/matchmaking/join`,
+            "glz",
+        );
 
         return data;
     }
@@ -182,7 +187,10 @@ class Group {
     async leaveMatchmakingQueue(): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/matchmaking/leave`, "glz");
+        const data = await this._http.post<GroupDetails>(
+            `/parties/v1/parties/${CurrentPartyID}/matchmaking/leave`,
+            "glz",
+        );
 
         return data;
     }
@@ -195,7 +203,7 @@ class Group {
     async changeState(open?: State): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/accessibility`, "glz", {
+        const data = await this._http.post<GroupDetails>(`/parties/v1/parties/${CurrentPartyID}/accessibility`, "glz", {
             accessibility: open,
         });
 
@@ -218,7 +226,7 @@ class Group {
             GameRules: GameRules || null,
         };
 
-        const data = await this._post<GroupDetails>(
+        const data = await this._http.post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/customgamesettings`,
             "glz",
             body,
@@ -239,7 +247,7 @@ class Group {
     async inviteByDisplayName(name: string, tag: string): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(
+        const data = await this._http.post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/invites/name/${name}/tag/${tag}`,
             "glz",
             {
@@ -263,7 +271,7 @@ class Group {
             Subjects: [puuid],
         };
 
-        const data = await this._post<GroupDetails>(`/parties/v1/parties/${party_id}/request`, "glz", body);
+        const data = await this._http.post<GroupDetails>(`/parties/v1/parties/${party_id}/request`, "glz", body);
 
         return data;
     }
@@ -277,7 +285,7 @@ class Group {
     async declineRequestGroup(request_id: string): Promise<GroupDetails> {
         const { CurrentPartyID } = await this.current();
 
-        const data = await this._post<GroupDetails>(
+        const data = await this._http.post<GroupDetails>(
             `/parties/v1/parties/${CurrentPartyID}/request/${request_id}/decline`,
             "glz",
         ); //TODO: not sure about this return for data, need to test when have requests group to accept
@@ -292,7 +300,10 @@ class Group {
      * @param party_id
      */
     async joinGroup(party_id: string): Promise<GroupDetails> {
-        const data = await this._post<GroupDetails>(`/parties/v1/players/${this._puuid}/joinparty/${party_id}`, "glz"); //TODO: not sure about this return for data, need to test when have requests group to accept
+        const data = await this._http.post<GroupDetails>(
+            `/parties/v1/players/${this._puuid}/joinparty/${party_id}`,
+            "glz",
+        ); //TODO: not sure about this return for data, need to test when have requests group to accept
 
         return data;
     }
@@ -304,7 +315,10 @@ class Group {
      * @param party_id
      */
     async leaveGroup(party_id: string): Promise<GroupDetails> {
-        const data = await this._post<GroupDetails>(`/parties/v1/players/${this._puuid}/leaveparty/${party_id}`, "glz"); //TODO: not sure about this return for data, need to test when have requests group to accept
+        const data = await this._http.post<GroupDetails>(
+            `/parties/v1/players/${this._puuid}/leaveparty/${party_id}`,
+            "glz",
+        ); //TODO: not sure about this return for data, need to test when have requests group to accept
 
         return data;
     }
@@ -315,7 +329,7 @@ class Group {
      * Get information about the available gamemodes
      */
     async currentAvailableGameModes(): Promise<CurrentAvailableGameModeResponse> {
-        const data = await this._fetch<CurrentAvailableGameModeResponse>(
+        const data = await this._http.fetch<CurrentAvailableGameModeResponse>(
             "/parties/v1/parties/customgameconfigs",
             "glz",
         );
@@ -328,32 +342,32 @@ class Group {
      *
      * Get a token for party chat
      */
-    async getGroupMUCToken(): Promise<GLZEndpointTokenResponse> {
-        const { CurrentPartyID } = await this.current();
+    // async getGroupMUCToken(): Promise<GLZEndpointTokenResponse> {
+    //     const { CurrentPartyID } = await this.current();
 
-        const data = await this._fetch<GLZEndpointTokenResponse>(
-            `/parties/v1/parties/${CurrentPartyID}/muctoken`,
-            "glz",
-        );
+    //     const data = await this._http.fetch<GLZEndpointTokenResponse>(
+    //         `/parties/v1/parties/${CurrentPartyID}/muctoken`,
+    //         "glz",
+    //     );
 
-        return data;
-    }
+    //     return data;
+    // }
 
     /**
      * Party_FetchVoiceToken
      *
      * Get a token for party voice
      */
-    async getGroupVoiceToken(): Promise<GLZEndpointTokenResponse> {
-        const { CurrentPartyID } = await this.current();
+    // async getGroupVoiceToken(): Promise<GLZEndpointTokenResponse> {
+    //     const { CurrentPartyID } = await this.current();
 
-        const data = await this._fetch<GLZEndpointTokenResponse>(
-            `/parties/v1/parties/${CurrentPartyID}/voicetoken`,
-            "glz",
-        );
+    //     const data = await this._http.fetch<GLZEndpointTokenResponse>(
+    //         `/parties/v1/parties/${CurrentPartyID}/voicetoken`,
+    //         "glz",
+    //     );
 
-        return data;
-    }
+    //     return data;
+    // }
 }
 
 export { Group };

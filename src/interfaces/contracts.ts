@@ -1,3 +1,11 @@
+import { PvpItemProgressDefinitions } from "@interfaces/pvp";
+
+export interface IContracts {
+    all(): Promise<ContractsAll>;
+    activate(contract_id: string): Promise<ContractsAll>;
+    itemUpgrades(): Promise<PvpItemProgressDefinitions[]>;
+}
+
 export interface Contract {
     ContractDefinitionID: string;
     ContractProgression: {
