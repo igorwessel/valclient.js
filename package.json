@@ -37,6 +37,7 @@
         "eslint-plugin-prettier": "4.0.0",
         "husky": "7.0.2",
         "jest": "27.1.1",
+        "jest-mock-extended": "2.0.2-beta2",
         "lint-staged": "11.1.2",
         "nodemon": "2.0.12",
         "prettier": "2.3.2",
