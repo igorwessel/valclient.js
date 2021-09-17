@@ -13,12 +13,12 @@ describe("Configuration Path", () => {
 
     test("should return correct local for lockfile", () => {
         mockedGetConfigurationPath.mockReturnValue(
-            "C:\\Users\\igor_\\AppData\\Local\\Riot Games\\Riot Client\\Config\\lockfile",
+            "C:\\Users\\username\\AppData\\Local\\Riot Games\\Riot Client\\Config\\lockfile",
         );
 
         const filepath = getConfigurationPath("lockfile");
 
-        expect(filepath).toEqual("C:\\Users\\igor_\\AppData\\Local\\Riot Games\\Riot Client\\Config\\lockfile");
+        expect(filepath).toEqual("C:\\Users\\username\\AppData\\Local\\Riot Games\\Riot Client\\Config\\lockfile");
     });
 });
 
