@@ -4,7 +4,9 @@
         "baseUrl": "src",
         "esModuleInterop": true,
         "moduleResolution": "Node",
-        "outDir": "build",
+        "rootDir": "src",
+        "outDir": "dist",
+        "declaration": true,
         "paths": {
             "@utils": ["./utils"],
             "@utils/*": ["./utils/*"],
@@ -16,5 +18,7 @@
         }
     },
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "include": ["src/**/*.ts"],
+    "exclude": ["__tests__/**/*.test.ts"]
 }
