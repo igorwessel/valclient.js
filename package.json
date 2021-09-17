@@ -2,7 +2,18 @@
     "name": "valclient.js",
     "version": "1.0.0",
     "description": "Valorant Client API Wrapper in NodeJS",
-    "main": "index.js",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "keywords": [
+        "typescript",
+        "valorant",
+        "valorant-api",
+        "api",
+        "wrapper",
+        "nodejs",
+        "riot",
+        "npm"
+    ],
     "scripts": {
         "lint": "eslint '*/**/*.ts' --quiet --fix",
         "test": "jest",
