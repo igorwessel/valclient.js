@@ -58,6 +58,8 @@ const mockedUserInfo = {
 };
 
 const mockedLockFile = "name:pid:port:password:protocol";
+const realPlatform = Object.getOwnPropertyDescriptor(process, "platform");
+const env = Object.getOwnPropertyDescriptor(process, "env");
 
 const mockedFS = mocked(fs, true);
 const mockedAxios = mocked(axios, true);
@@ -204,23 +206,27 @@ describe("Try to iniciate client", () => {
 });
 
 describe("Iniciate a client with diferents regions", () => {
-    const realPlatform = Object.getOwnPropertyDescriptor(process, "platform");
-
     beforeEach(async () => {
         Object.defineProperty(process, "platform", {
             ...Object.getOwnPropertyDescriptor(process, "property"),
             value: "win32",
         });
+        Object.defineProperty(process, "env", {
+            ...Object.getOwnPropertyDescriptor(process, "env"),
+            value: {
+                LOCALAPPDATA: "local",
+            },
+        });
 
         valClient = new ValClient();
 
+        mockedFS.readFileSync.mockReturnValue(mockedLockFile);
         mockedAxios.get.mockResolvedValueOnce(mockedClientVersion).mockResolvedValueOnce(mockedLocalRequestToken);
-
-        mockedFS.readFileSync.mockReturnValueOnce(mockedLockFile);
     });
 
     afterEach(() => {
         Object.defineProperty(process, "platform", realPlatform);
+        Object.defineProperty(process, "env", env);
 
         mockedAxios.get.mockReset();
         mockedFS.readFileSync.mockReset();
@@ -240,27 +246,32 @@ describe("Iniciate a client with diferents regions", () => {
 });
 
 describe("Iniciate client without auth", () => {
-    const realPlatform = Object.getOwnPropertyDescriptor(process, "platform");
-
     beforeAll(async () => {
         Object.defineProperty(process, "platform", {
             ...Object.getOwnPropertyDescriptor(process, "property"),
             value: "win32",
         });
 
+        Object.defineProperty(process, "env", {
+            ...Object.getOwnPropertyDescriptor(process, "env"),
+            value: {
+                LOCALAPPDATA: "local",
+            },
+        });
+
         valClient = new ValClient();
         mockedAxios.get.mockResolvedValueOnce(mockedClientVersion).mockResolvedValueOnce(mockedLocalRequestToken);
 
-        mockedFS.readFileSync.mockReturnValueOnce(mockedLockFile);
+        mockedFS.readFileSync.mockReturnValue(mockedLockFile);
 
         await valClient.init({ region: "br" });
     });
 
     afterAll(() => {
         Object.defineProperty(process, "platform", realPlatform);
+        Object.defineProperty(process, "env", env);
 
         mockedAxios.get.mockClear();
-        mockedFS.readFileSync.mockClear();
         mockedFS.readFileSync.mockReset();
     });
 
