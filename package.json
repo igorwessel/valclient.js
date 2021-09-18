@@ -1,9 +1,12 @@
 {
     "name": "valclient.js",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Valorant Client API Wrapper in NodeJS",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "files": [
+        "dist"
+    ],
     "keywords": [
         "typescript",
         "valorant",
@@ -19,7 +22,8 @@
         "test": "jest",
         "prepare": "husky install",
         "start": "cross-env NODE_ENV=development nodemon --watch src -r tsconfig-paths/register src/index.ts",
-        "build": "ttsc -P ./tsconfig.json"
+        "build": "ttsc -P ./tsconfig.json && ttsc -P ./tsconfig-cjs.json",
+        "prepublishOnly": "yarn build"
     },
     "repository": {
         "type": "git",
