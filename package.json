@@ -4,6 +4,8 @@
     "description": "Valorant Client API Wrapper in NodeJS",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "typings": "dist/index",
+    "files": ["dist"],
     "keywords": [
         "typescript",
         "valorant",
