@@ -1,6 +1,6 @@
 {
     "name": "valclient.js",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Valorant Client API Wrapper in NodeJS",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
