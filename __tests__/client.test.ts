@@ -1,4 +1,4 @@
-import ValClient, { addAuthHeaders, addLocalHeaders } from "@app/client";
+import { addAuthHeaders, addLocalHeaders, ValClient } from "@app/client";
 
 import fs from "fs";
 import axios from "axios";
