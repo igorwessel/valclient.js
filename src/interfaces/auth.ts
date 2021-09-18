@@ -5,7 +5,7 @@ export interface AuthInput {
     password: string;
 }
 
-export interface AuthInterface {
+export interface IAuth {
     authenticate: () => Promise<AuthenticateResponse>;
     auth: AuthInput;
 }
@@ -13,6 +13,20 @@ export interface AuthInterface {
 export interface AuthenticateResponse {
     puuid: string;
     headers: Partial<Headers>;
+}
+
+export interface AuthenticationFailedResponse {
+    type: string;
+    error: string;
+    country: string;
+}
+
+export interface AuthenticationSucceedResponse {
+    response: {
+        parameters: {
+            uri: string;
+        };
+    };
 }
 
 export interface AuthenticateRiotResponseParsed {

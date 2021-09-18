@@ -6,6 +6,7 @@ import axios from "axios";
 import { mocked } from "ts-jest/utils";
 import { SystemNotSupported } from "@errors/systemNotSupported";
 import { ValorantNotRunning } from "@errors/valorantNotRunning";
+import { AuthenticationFailed } from "@errors/authenticationFailed";
 
 import { regions, regionShardOverride, shardRegionOverride } from "@resources";
 
@@ -303,9 +304,40 @@ describe("Iniciate client without auth", () => {
 });
 
 describe("Iniciate client with auth", () => {
-    beforeAll(async () => {
+    beforeEach(() => {
         valClient = new ValClient();
+    });
 
+    afterEach(() => {
+        mockedAxios.get.mockReset();
+        mockedAxios.post.mockReset();
+        mockedAxios.put.mockReset();
+    });
+
+    test("pass wrong username/wrong password", async () => {
+        mockedAxios.get.mockResolvedValueOnce(mockedClientVersion);
+
+        mockedAxios.post
+            .mockResolvedValueOnce(mockedRequestToken)
+            .mockResolvedValueOnce(mockedEntitlementsToken)
+            .mockResolvedValueOnce(mockedUserInfo);
+
+        mockedAxios.put.mockResolvedValueOnce({
+            data: {
+                type: "error",
+                error: "auth_failed",
+                country: "bra",
+            },
+        });
+
+        try {
+            await valClient.init({ region: "br", auth: { username: "teste", password: "teste" } });
+        } catch (e) {
+            expect(e.constructor).toBe(AuthenticationFailed);
+        }
+    });
+
+    test("we can authenticate", async () => {
         mockedAxios.get.mockResolvedValueOnce(mockedClientVersion);
 
         mockedAxios.post
@@ -316,15 +348,7 @@ describe("Iniciate client with auth", () => {
         mockedAxios.put.mockResolvedValueOnce(mockedPutAccessToken);
 
         await valClient.init({ region: "br", auth: { username: "teste", password: "teste" } });
-    });
 
-    afterAll(() => {
-        mockedAxios.get.mockClear();
-        mockedAxios.post.mockClear();
-        mockedAxios.put.mockClear();
-    });
-
-    test("we can authenticate", async () => {
         expect(mockedAxios.get).toHaveBeenCalledWith("/version");
 
         expect(mockedAxios.post).toHaveBeenNthCalledWith(
@@ -364,11 +388,33 @@ describe("Iniciate client with auth", () => {
         );
     });
 
-    test("after authenticated, we can get current user", () => {
+    test("after authenticated, we can get current user", async () => {
+        mockedAxios.get.mockResolvedValueOnce(mockedClientVersion);
+
+        mockedAxios.post
+            .mockResolvedValueOnce(mockedRequestToken)
+            .mockResolvedValueOnce(mockedEntitlementsToken)
+            .mockResolvedValueOnce(mockedUserInfo);
+
+        mockedAxios.put.mockResolvedValueOnce(mockedPutAccessToken);
+
+        await valClient.init({ region: "br", auth: { username: "teste", password: "teste" } });
+
         expect(valClient.auth).toMatchObject({ username: "teste", password: "teste" });
     });
 
-    test("after authenticated, endpoints must be available", () => {
+    test("after authenticated, endpoints must be available", async () => {
+        mockedAxios.get.mockResolvedValueOnce(mockedClientVersion);
+
+        mockedAxios.post
+            .mockResolvedValueOnce(mockedRequestToken)
+            .mockResolvedValueOnce(mockedEntitlementsToken)
+            .mockResolvedValueOnce(mockedUserInfo);
+
+        mockedAxios.put.mockResolvedValueOnce(mockedPutAccessToken);
+
+        await valClient.init({ region: "br", auth: { username: "teste", password: "teste" } });
+
         expect(valClient.player).toEqual(null);
         expect(valClient.valorant).toEqual(null);
 
