@@ -2,10 +2,11 @@
     "compilerOptions": {
         "target": "ES6",
         "baseUrl": "src",
+        "module": "ES2020",
         "esModuleInterop": true,
         "moduleResolution": "Node",
         "rootDir": "src",
-        "outDir": "dist",
+        "outDir": "dist/esm",
         "declaration": true,
         "declarationMap": true,
         "sourceMap": true,
