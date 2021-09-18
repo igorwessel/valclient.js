@@ -57,7 +57,7 @@ class Auth implements IAuth {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private _isAuthenticationFailed(obj: any): obj is AuthenticationFailedResponse {
-        return obj?.error !== undefined;
+        return obj.error !== undefined;
     }
 
     async authenticate(): Promise<AuthenticateResponse> {
