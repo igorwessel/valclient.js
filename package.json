@@ -66,10 +66,5 @@
             "eslint --fix"
         ],
         "*.js": "eslint --cache --fix"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npx lint-staged && yarn test --coverage && istanbul-badges-readme && git add 'README.md'"
-        }
     }
 }
