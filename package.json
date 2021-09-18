@@ -49,6 +49,7 @@
         "eslint-config-prettier": "8.3.0",
         "eslint-plugin-prettier": "4.0.0",
         "husky": "7.0.2",
+        "istanbul-badges-readme": "1.4.0",
         "jest": "27.1.1",
         "jest-mock-extended": "2.0.2-beta2",
         "lint-staged": "11.1.2",
@@ -65,5 +66,10 @@
             "eslint --fix"
         ],
         "*.js": "eslint --cache --fix"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npx lint-staged && yarn test --coverage && istanbul-badges-readme && git add 'README.md'"
+        }
     }
 }
