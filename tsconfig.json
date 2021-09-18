@@ -26,6 +26,11 @@
             }
         ]
     },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "include": ["src/**/*.ts"],
