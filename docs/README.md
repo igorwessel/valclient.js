@@ -1,5 +1,25 @@
 # Docs
 
+- Group
+    - [Current](https://github.com/igorwessel/tree/master/docs/Group/current.md)
+    - [Current Available Game Modes](https://github.com/igorwessel/tree/master/docs/Group/currentAvailableGameModes.md)
+    - [Current Details](https://github.com/igorwessel/tree/master/docs/Group/currentDetails.md)
+    - [Change Queue](https://github.com/igorwessel/tree/master/docs/Group/changeQueue.md)
+    - [Change State](https://github.com/igorwessel/tree/master/docs/Group/changeState.md)
+    - [Request Join to Group](https://github.com/igorwessel/tree/master/docs/Group/requestJoinToGroup.md)
+    - [Decline Request Group](https://github.com/igorwessel/tree/master/docs/Group/declineRequestGroup.md)
+    - [Enter Matchmaking Queue](https://github.com/igorwessel/tree/master/docs/Group/enterMatchmakingQueue.md)
+    - [Leave Matchmaking Queue](https://github.com/igorwessel/tree/master/docs/Group/leaveMatchmakingQueue.md)
+    - [Invite by Display Name](https://github.com/igorwessel/tree/master/docs/Group/inviteByDisplayName.md)
+    - [Join Group](https://github.com/igorwessel/tree/master/docs/Group/joinGroup.md)
+    - [Leave Group](https://github.com/igorwessel/tree/master/docs/Group/leaveGroup.md)
+    - [Remove Player](https://github.com/igorwessel/tree/master/docs/Group/removePlayer.md)
+    - [Set Member Ready](https://github.com/igorwessel/tree/master/docs/Group/setMemberReady.md)
+    - [Set Custom Game Settings](https://github.com/igorwessel/tree/master/docs/Group/setCustomGameSettings.md)
+    - [Start Custom Game](https://github.com/igorwessel/tree/master/docs/Group/startCustomGame.md)
+    - [Refresh Competitive Tier](https://github.com/igorwessel/tree/master/docs/Group/refreshCompetitiveTier.md)
+    - [Refresh Player Identity](https://github.com/igorwessel/tree/master/docs/Group/refreshPlayerIdentity.md)
+    - [Refresh Player Pings](https://github.com/igorwessel/tree/master/docs/Group/refreshPlayerPings.md)
 - Pvp
     - [Account XP](https://github.com/igorwessel/tree/master/docs/Pvp/accountXp.md)
     - [Change Loadout](https://github.com/igorwessel/tree/master/docs/Pvp/changeLoadout.md)
