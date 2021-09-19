@@ -13,6 +13,13 @@
     - [Match History](https://github.com/igorwessel/tree/master/docs/Pvp/matchHistory.md)
     - [MMR](https://github.com/igorwessel/tree/master/docs/Pvp/mmr.md)
     - [Player Restrictions](https://github.com/igorwessel/tree/master/docs/Pvp/playerRestrictions.md)
+- PreGame
+    - [Current Pre-Game](https://github.com/igorwessel/tree/master/docs/PreGame/current.md)
+    - [Details](https://github.com/igorwessel/tree/master/docs/PreGame/details.md)
+    - [Loadout](https://github.com/igorwessel/tree/master/docs/PreGame/loadout.md)
+    - [Lock Character](https://github.com/igorwessel/tree/master/docs/PreGame/lockCharacter.md)
+    - [Select Character](https://github.com/igorwessel/tree/master/docs/PreGame/selectCharacter.md)
+    - [Quit Match](https://github.com/igorwessel/tree/master/docs/PreGame/quitMatch.md)
 - Contracts
     - [All](https://github.com/igorwessel/tree/master/docs/Contracts/all.md)
     - [Activate](https://github.com/igorwessel/tree/master/docs/Contracts/activate.md)
