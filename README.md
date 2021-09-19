@@ -4,9 +4,22 @@
 
 Valorant Client API Wrapper in NodeJS
 
+# Installation
+
+
+```sh
+yarn add valclient.js
+```
+
 # Usage
 
 ```js
+const { ValClient } = require("valclient.js");
+
+//or
+
+import { ValClient } from "valclient.js";
+
 const client = new ValClient()
 
 client.init({ region: "br" }) // we try to iniciate client locally when not pass auth
