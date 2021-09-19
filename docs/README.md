@@ -20,6 +20,11 @@
     - [Online Friend](https://github.com/igorwessel/tree/master/docs/Player/onlineFriend.md)
     - [Pending Friends Requests](https://github.com/igorwessel/tree/master/docs/Player/pendingFriendsRequests.md)
     - [Session](https://github.com/igorwessel/tree/master/docs/Player/session.md)
+- LiveGame
+    - [Current Live-Game](https://github.com/igorwessel/tree/master/docs/LiveGame/current.md)
+    - [Details](https://github.com/igorwessel/tree/master/docs/LiveGame/details.md)
+    - [Loadout](https://github.com/igorwessel/tree/master/docs/LiveGame/loadout.md)
+    - [Disconnect](https://github.com/igorwessel/tree/master/docs/LiveGame/disconnect.md)
 - PreGame
     - [Current Pre-Game](https://github.com/igorwessel/tree/master/docs/PreGame/current.md)
     - [Details](https://github.com/igorwessel/tree/master/docs/PreGame/details.md)
