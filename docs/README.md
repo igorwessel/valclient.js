@@ -13,3 +13,6 @@
     - [Wallet](https://github.com/igorwessel/docs/Store/wallet.md)
     - [Offers](https://github.com/igorwessel/docs/Store/offers.md)
     - [Current Offers](https://github.com/igorwessel/docs/Store/currentOffers.md)
+- Session
+    - [Current](https://github.com/igorwessel/docs/Session/current.md)
+    - [Reconnect](https://github.com/igorwessel/docs/Session/reconnect.md)
