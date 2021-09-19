@@ -70,11 +70,9 @@ class Store implements IStore {
     /**
      *  Store_GetEntitlements
      *  List what the player owns (agents, skins, buddies, ect.)
-     *  Correlate with the UUIDs in client.fetch_content() to know what items are owned
+     *  Correlate with the UUIDs in client.pvp.contents() to know what items are owned
      */
     async yourItems(item_type: ItemsType): Promise<YourItems> {
-        // TODO: change JSDocs correlate to correct method
-
         const id = itemsMappedByName[item_type];
 
         const data = await this._http.fetch<YourItems>(`/store/v1/entitlements/${this._puuid}/${id}`, "pd");
