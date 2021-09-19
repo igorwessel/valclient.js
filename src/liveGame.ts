@@ -56,7 +56,6 @@ class LiveGame implements ILiveGame {
      * CoreGame_DisassociatePlayer
      *
      * Leave an in-progress game
-     * @param match_id
      */
     async disconnect(): Promise<boolean> {
         const { MatchID } = await this.current();
