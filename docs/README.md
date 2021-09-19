@@ -13,6 +13,13 @@
     - [Match History](https://github.com/igorwessel/tree/master/docs/Pvp/matchHistory.md)
     - [MMR](https://github.com/igorwessel/tree/master/docs/Pvp/mmr.md)
     - [Player Restrictions](https://github.com/igorwessel/tree/master/docs/Pvp/playerRestrictions.md)
+- Player
+    - [Current](https://github.com/igorwessel/tree/master/docs/Player/current.md)
+    - [All Friends](https://github.com/igorwessel/tree/master/docs/Player/allFriends.md)
+    - [All Friends Online](https://github.com/igorwessel/tree/master/docs/Player/allFriendsOnline.md)
+    - [Online Friend](https://github.com/igorwessel/tree/master/docs/Player/onlineFriend.md)
+    - [Pending Friends Requests](https://github.com/igorwessel/tree/master/docs/Player/pendingFriendsRequests.md)
+    - [Session](https://github.com/igorwessel/tree/master/docs/Player/session.md)
 - PreGame
     - [Current Pre-Game](https://github.com/igorwessel/tree/master/docs/PreGame/current.md)
     - [Details](https://github.com/igorwessel/tree/master/docs/PreGame/details.md)
