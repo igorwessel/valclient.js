@@ -19,7 +19,7 @@ import { SystemNotSupported } from "@errors/systemNotSupported";
 import { EntitlementsTokenLocal, IPlayer } from "@interfaces/player";
 import { BaseEndpoints, ClientConfig, Headers, IValClient, LockFileType } from "@interfaces/client";
 import { Regions } from "@interfaces/resources";
-import { AuthInterface } from "@interfaces/auth";
+import { IAuth } from "@interfaces/auth";
 
 import { IValorant } from "@interfaces/valorant";
 import { IGroup } from "@interfaces/group";
@@ -75,7 +75,7 @@ class ValClient implements IValClient {
     private _headers: Partial<Headers>;
     private _region: Regions | null = null;
     private _shard: Regions;
-    private _auth: AuthInterface | null = null;
+    private _auth: IAuth | null = null;
     private _client_platform =
         "ew0KCSJwbGF0Zm9ybVR5cGUiOiAiUEMiLA0KCSJwbGF0Zm9ybU9TIjogIldpbmRvd3MiLA0KCSJwbGF0Zm9ybU9TVmVyc2lvbiI6ICIxMC4wLjE5MDQyLjEuMjU2LjY0Yml0IiwNCgkicGxhdGZvcm1DaGlwc2V0IjogIlVua25vd24iDQp9";
     private _client_version: string;
