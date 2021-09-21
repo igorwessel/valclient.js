@@ -4,8 +4,6 @@ import { BooleanString } from "./helpers";
 export interface IPvp {
     contents(): Promise<PvpContents>;
     accountXp(): Promise<PvpAccountXp>;
-    loadout(): Promise<PvpLoadout>;
-    changeLoadout(loadout: PvpLoadoutParams): Promise<PvpLoadout>;
     mmr(puuid?: string): Promise<PvpMMR>;
     matchHistory(params?: PvpMatchHistoryInput): Promise<PvpMatchHistory>;
     matchDetails(match_id: string): Promise<PvpMatchDetails>;
@@ -96,42 +94,6 @@ export interface PvpAccountXp {
     LastTimeGrantedFirstWin: string;
     NextTimeFirstWinAvailable: string;
 }
-
-export interface PvpLoadoutGun {
-    ID: string;
-    SkinID: string;
-    SkinLevelID: string;
-    ChromaID: string;
-    CharmInstanceID?: string;
-    CharmID?: string;
-    CharmLevelID?: string;
-    Attachments: unknown[];
-}
-
-export interface PvpLoadoutSpray {
-    EquipSlotID: string;
-    SprayID: string;
-    SprayLevelID: unknown | null;
-}
-
-export interface PvpLoadoutIdentity {
-    PlayerCardID: string;
-    PlayerTitleID: string;
-    AccountLevel: number;
-    PreferredLevelBorderID: string;
-    HideAccountLevel: boolean;
-}
-
-export interface PvpLoadout {
-    Subject: string;
-    Version: number;
-    Guns: PvpLoadoutGun[];
-    Sprays: PvpLoadoutSpray[];
-    Identity: PvpLoadoutIdentity;
-    Incognito: boolean;
-}
-
-export type PvpLoadoutParams = Pick<PvpLoadout, "Guns" | "Sprays" | "Identity" | "Incognito">;
 
 export interface PvpMMRLatestCompetitiveUpdate {
     MatchID: string;

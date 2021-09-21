@@ -1,9 +1,87 @@
-import { Guns, SkinsType } from "@resources/loadout";
+import { Guns, SkinsType, Levels, VariantSkin } from "@app/types/loadout";
+import { gunsIdMappedByName, skinsIdMappedByGunName } from "@resources/loadout";
 
-function changeGunSkin<T extends Guns>(weapon: T, skins: SkinsType<T>): void {
-    console.log(weapon);
-    console.log(skins);
-    return;
+import { IHttp } from "@interfaces/http";
+import { AxiosInstance } from "axios";
+import { LoadoutBody, LoadoutResponse } from "@interfaces/loadout";
+
+class Loadout {
+    private readonly _http: IHttp;
+    private readonly _puuid: string;
+    private readonly _valorant_api: AxiosInstance;
+
+    constructor(http: IHttp, puuid: string, api: AxiosInstance) {
+        this._http = http;
+        this._puuid = puuid;
+        this._valorant_api = api;
+    }
+
+    /**
+     * Player_Loadout_Current
+     *
+     * Get the player's current loadout
+     */
+    async loadout(): Promise<LoadoutResponse> {
+        const data = await this._http.fetch<LoadoutResponse>(
+            `/personalization/v2/players/${this._puuid}/playerloadout`,
+            "pd",
+        );
+
+        return data;
+    }
+
+    /**
+     * Player_Loadout_Update
+     *
+     * Loadout changes take effect when starting a new game
+     * @param weapon
+     * @param skins
+     * @param level
+     * @param variant
+     * @returns
+     */
+    async changeGunSkin<T extends Guns, K extends SkinsType<T>, V extends VariantSkin<K>>(
+        weapon: T,
+        skins: K,
+        level?: Levels,
+        variant?: V,
+    ): Promise<LoadoutResponse> {
+        level = level || "Level 1";
+
+        const gunId = gunsIdMappedByName[weapon].toLowerCase();
+        const skinId = skinsIdMappedByGunName[weapon][skins as string].toLowerCase();
+
+        const {
+            data: {
+                data: { chromas, levels },
+            },
+        } = await this._valorant_api.get(`weapons/skins/${skinId}`);
+
+        const { Guns, Sprays, Identity, Incognito } = await this.loadout();
+
+        const variantId = chromas.find((chroma) =>
+            variant ? chroma.displayName.includes(variant) : chroma.displayName === skins,
+        ).uuid;
+
+        const levelId = levels.find((levelApi) => levelApi.displayName.includes(level)).uuid;
+
+        const body: LoadoutBody = {
+            Guns: Guns.map((gun) =>
+                gun.ID === gunId ? { ...gun, SkinID: skinId, ChromaID: variantId, SkinLevelID: levelId } : gun,
+            ),
+            Sprays,
+            Identity,
+            Incognito,
+        };
+
+        const data = await this._changeLoadout(body);
+
+        return data;
+    }
+
+    private async _changeLoadout(body: LoadoutBody): Promise<LoadoutResponse> {
+        return await this._http.put(`/personalization/v2/players/${this._puuid}/playerloadout`, "pd", body);
+    }
 }
 
-export { changeGunSkin };
+export { Loadout };

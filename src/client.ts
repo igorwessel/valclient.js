@@ -29,6 +29,7 @@ import { ISession } from "@interfaces/session";
 import { IPvp } from "@interfaces/pvp";
 import { IStore } from "@interfaces/store";
 import { IContracts } from "@interfaces/contracts";
+import { ILoadout } from "@interfaces/loadout";
 
 import { Player } from "@app/player";
 import { Valorant } from "@app/valorant";
@@ -39,6 +40,7 @@ import { Session } from "@app/session";
 import { Pvp } from "@app/pvp";
 import { Store } from "@app/store";
 import { Contracts } from "@app/contracts";
+import { Loadout } from "@app/loadout";
 
 export const addAuthHeaders =
     (headers: Partial<Headers>) =>
@@ -92,6 +94,7 @@ class ValClient implements IValClient {
     public session: ISession | null = null;
     public pvp: IPvp | null = null;
     public store: IStore | null = null;
+    public loadout: ILoadout | null = null;
     public contracts: IContracts | null = null;
 
     constructor() {
@@ -142,6 +145,7 @@ class ValClient implements IValClient {
         this.pvp = new Pvp(this._http_service, this._puuid, this._region);
         this.store = new Store(this._http_service, this._puuid);
         this.contracts = new Contracts(this._http_service, this._puuid);
+        this.loadout = new Loadout(this._http_service, this._puuid, this._valorant_api);
     }
 
     /**
