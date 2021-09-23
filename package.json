@@ -22,7 +22,7 @@
         "test": "jest",
         "prepare": "husky install",
         "start": "cross-env NODE_ENV=development nodemon --watch src -r tsconfig-paths/register src/index.ts",
-        "build": "ttsc -P ./tsconfig.json && ttsc -P ./tsconfig-cjs.json",
+        "build": "ttsc -P ./tsconfig-build.json && ttsc -P ./tsconfig-cjs.json",
         "prepublishOnly": "yarn build"
     },
     "repository": {

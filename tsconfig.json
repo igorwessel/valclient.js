@@ -5,7 +5,6 @@
         "module": "ES2020",
         "esModuleInterop": true,
         "moduleResolution": "Node",
-        "rootDir": "src",
         "outDir": "dist/esm",
         "declaration": true,
         "declarationMap": true,
@@ -33,6 +32,6 @@
     },
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "include": ["src/**/*.ts"],
-    "exclude": ["__tests__/**/*.test.ts", "node_modules"]
+    "include": ["src/**/*.ts", "__tests__/**/*.test.ts"],
+    "exclude": ["node_modules", "dist"]
 }
