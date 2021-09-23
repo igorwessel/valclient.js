@@ -1,22 +1,25 @@
-export type Guns =
-    | "Odin"
-    | "Ares"
-    | "Vandal"
-    | "Bulldog"
-    | "Phantom"
-    | "Judge"
-    | "Bucky"
-    | "Frenzy"
-    | "Classic"
-    | "Ghost"
-    | "Sheriff"
-    | "Shorty"
-    | "Operator"
-    | "Guardian"
-    | "Marshal"
-    | "Spectre"
-    | "Stinger"
-    | "Knife";
+const guns = [
+    "Odin",
+    "Ares",
+    "Vandal",
+    "Bulldog",
+    "Phantom",
+    "Judge",
+    "Bucky",
+    "Frenzy",
+    "Classic",
+    "Ghost",
+    "Sheriff",
+    "Shorty",
+    "Operator",
+    "Guardian",
+    "Marshal",
+    "Spectre",
+    "Stinger",
+    "Knife",
+] as const;
+
+export type Guns = typeof guns[number];
 
 export type SkinsType<T> = T extends "Knife"
     ? KnifeSkins
