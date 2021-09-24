@@ -1,11 +1,14 @@
-import { Guns, SkinsType, Levels, VariantSkin } from "@app/types/loadout";
-import { gunsIdMappedByName, skinsIdMappedByGunName } from "@resources/loadout";
+import { GunsType, SkinsType, Levels } from "@type/loadout";
+import { VariantSkin } from "@type/chroma";
+
+import { gunsIdMappedByName } from "@resources/guns";
+import { skinsIdMappedByGunName } from "@resources/skins";
 
 import { IHttp } from "@interfaces/http";
 import { AxiosInstance } from "axios";
-import { LoadoutBody, LoadoutResponse } from "@interfaces/loadout";
+import { ILoadout, LoadoutBody, LoadoutResponse } from "@interfaces/loadout";
 
-class Loadout {
+class Loadout implements ILoadout {
     private readonly _http: IHttp;
     private readonly _puuid: string;
     private readonly _valorant_api: AxiosInstance;
@@ -40,7 +43,7 @@ class Loadout {
      * @param variant
      * @returns
      */
-    async changeGunSkin<T extends Guns, K extends SkinsType<T>, V extends VariantSkin<K>>(
+    async changeGunSkin<T extends GunsType, K extends SkinsType<T>, V extends VariantSkin<K>>(
         weapon: T,
         skins: K,
         level?: Levels,
@@ -49,8 +52,8 @@ class Loadout {
         level = level || "Level 1";
 
         const gunId = gunsIdMappedByName[weapon].toLowerCase();
-        const skinId = skinsIdMappedByGunName[weapon][skins as string].toLowerCase();
 
+        const skinId = skinsIdMappedByGunName[weapon][skins as string].toLowerCase();
         const {
             data: {
                 data: { chromas, levels },

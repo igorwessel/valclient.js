@@ -1,7 +1,8 @@
-import { Guns, Levels, SkinsType, VariantSkin } from "@app/types/loadout";
+import { GunsType, Levels, SkinsType } from "@type/loadout";
+import { VariantSkin } from "@type/chroma";
 
 export interface ILoadout {
-    changeGunSkin<T extends Guns, K extends SkinsType<T>, V extends VariantSkin<K>>(
+    changeGunSkin<T extends GunsType, K extends SkinsType<T>, V extends VariantSkin<K>>(
         weapon: T,
         skins: K,
         level: Levels,

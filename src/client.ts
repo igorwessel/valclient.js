@@ -82,7 +82,8 @@ class ValClient implements IValClient {
         "ew0KCSJwbGF0Zm9ybVR5cGUiOiAiUEMiLA0KCSJwbGF0Zm9ybU9TIjogIldpbmRvd3MiLA0KCSJwbGF0Zm9ybU9TVmVyc2lvbiI6ICIxMC4wLjE5MDQyLjEuMjU2LjY0Yml0IiwNCgkicGxhdGZvcm1DaGlwc2V0IjogIlVua25vd24iDQp9";
     private _client_version: string;
     private _local_username_auth = "riot";
-    private _valorant_api: AxiosInstance;
+
+    static valorant_api = axios.create({ baseURL: "https://valorant-api.com/v1" });
 
     public _http_service: HttpService;
 
@@ -98,7 +99,6 @@ class ValClient implements IValClient {
     public contracts: IContracts | null = null;
 
     constructor() {
-        this._valorant_api = axios.create({ baseURL: "https://valorant-api.com/v1" });
         this._http_service = new HttpService(this._axios);
     }
 
@@ -145,7 +145,7 @@ class ValClient implements IValClient {
         this.pvp = new Pvp(this._http_service, this._puuid, this._region);
         this.store = new Store(this._http_service, this._puuid);
         this.contracts = new Contracts(this._http_service, this._puuid);
-        this.loadout = new Loadout(this._http_service, this._puuid, this._valorant_api);
+        this.loadout = new Loadout(this._http_service, this._puuid, this.valorant_api);
     }
 
     /**
@@ -153,7 +153,7 @@ class ValClient implements IValClient {
      * baseUrl for endpoints is https://valorant-api.com/v1
      */
     get valorant_api(): AxiosInstance {
-        return this._valorant_api;
+        return this.valorant_api;
     }
 
     /**
@@ -270,7 +270,7 @@ class ValClient implements IValClient {
             data: {
                 data: { branch, buildVersion, version },
             },
-        } = await this._valorant_api.get("/version");
+        } = await this.valorant_api.get("/version");
 
         this._client_version = `${branch}-shipping-${buildVersion}-${version.split(".")[3]}`;
     }
