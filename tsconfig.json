@@ -13,6 +13,7 @@
         "paths": {
             "@utils": ["./utils"],
             "@utils/*": ["./utils/*"],
+            "@type/*": ["./types/*"],
             "@resources": ["./resources"],
             "@resources/*": ["./resources/*"],
             "@errors/*": ["./errors/*"],

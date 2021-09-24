@@ -18,10 +18,11 @@
         "npm"
     ],
     "scripts": {
-        "lint": "eslint '*/**/*.ts' --quiet --fix",
+        "lint": "eslint src/**/*.ts --quiet --fix",
         "test": "jest",
         "prepare": "husky install",
         "start": "cross-env NODE_ENV=development nodemon --watch src -r tsconfig-paths/register src/index.ts",
+        "update:types": "ts-node -r tsconfig-paths/register src/utils/updateTypes.ts && yarn lint",
         "build": "ttsc -P ./tsconfig-build.json && ttsc -P ./tsconfig-cjs.json",
         "prepublishOnly": "yarn build"
     },
