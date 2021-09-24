@@ -83,7 +83,7 @@ class ValClient implements IValClient {
     private _client_version: string;
     private _local_username_auth = "riot";
 
-    static valorant_api = axios.create({ baseURL: "https://valorant-api.com/v1" });
+    private _valorant_api: AxiosInstance;
 
     public _http_service: HttpService;
 
@@ -100,6 +100,7 @@ class ValClient implements IValClient {
 
     constructor() {
         this._http_service = new HttpService(this._axios);
+        this._valorant_api = axios.create({ baseURL: "https://valorant-api.com/v1" });
     }
 
     /**
@@ -153,7 +154,7 @@ class ValClient implements IValClient {
      * baseUrl for endpoints is https://valorant-api.com/v1
      */
     get valorant_api(): AxiosInstance {
-        return this.valorant_api;
+        return this._valorant_api;
     }
 
     /**

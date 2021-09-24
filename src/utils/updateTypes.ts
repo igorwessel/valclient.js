@@ -1,4 +1,4 @@
-import { ValClient } from "@app/client";
+import axios from "axios";
 import { guns, GunsType } from "@type/loadout";
 
 import { promises as fs } from "fs";
@@ -28,7 +28,7 @@ function createSkinsIdMappedByName(loadout: ValorantSkin[]) {
 }
 
 function createConditionalTypeForVariant(loadout: ValorantSkin[]): string {
-    const chroma = loadout.reduce((string, skin, skinIndex, skinOriginalArray) => {
+    const chroma = loadout.reduce((string, skin) => {
         const unionTypeChromas = skin.chromas.reduce((stringChroma, chroma, indexChroma, chromaOriginalArray) => {
             let [, chromaName] = chroma.displayName.includes("\n") ? chroma.displayName.split("\n") : [, "Default"];
 
@@ -50,12 +50,13 @@ function createConditionalTypeForVariant(loadout: ValorantSkin[]): string {
 }
 
 async function createTypeFile() {
-    const valorant_api = ValClient.valorant_api;
+    console.log("Starting update types...");
+
     const root = path.resolve(".");
 
     const {
         data: { data },
-    } = await valorant_api.get<ValorantSkinsResponse>("/weapons/skins");
+    } = await axios.get<ValorantSkinsResponse>("https://valorant-api.com/v1/weapons/skins");
 
     const fileGeneratedAutomatically = "/* FILE GENERATED AUTOMATICALLY */\n\n";
     const skinsIdMappedByGunName = {};
@@ -85,7 +86,6 @@ async function createTypeFile() {
 }
 
 (async () => {
-    console.log("Starting update types...");
     await createTypeFile();
     console.log("Update finished!");
 })();
