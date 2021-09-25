@@ -19,6 +19,7 @@ import {
     StingerSkin,
     VandalSkin,
 } from "@type/skins";
+import { BuddyType } from "./buddies";
 export const guns = [
     "Odin",
     "Ares",
@@ -82,8 +83,14 @@ export type SkinsType<T> = T extends "Knife"
 
 export type Levels = "Level 1" | "Level 2" | "Level 3" | "Level 4";
 
+export type CharmLevels = "1" | "2" | "3" | "4";
+
 export type SkinsIdMappedByGunName = {
     [gun in GunsType]: Record<SkinsType<gun>, string>;
 };
+
+export type BuddyIdMappedByName = Record<BuddyType, string>;
+
+export type BuddyLevelIdMappedByName = Record<BuddyType, { [key in CharmLevels]?: string }>;
 
 export type LoadoutBody = Pick<LoadoutResponse, "Guns" | "Sprays" | "Identity" | "Incognito">;

@@ -1,5 +1,6 @@
 import { GunsType, Levels, SkinsType } from "@type/loadout";
 import { VariantSkin } from "@type/chroma";
+import { BuddyType } from "@type/buddies";
 
 export interface ILoadout {
     current(): Promise<LoadoutResponse>;
@@ -9,6 +10,7 @@ export interface ILoadout {
         level: Levels,
         variant: V,
     ): Promise<LoadoutResponse>;
+    addSkinBuddy(gun: Exclude<GunsType, "Knife">, buddy: BuddyType): Promise<unknown>;
 }
 
 export interface LoadoutGun {
