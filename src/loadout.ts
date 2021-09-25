@@ -98,7 +98,15 @@ class Loadout implements ILoadout {
         return data;
     }
 
-    async addSkinBuddy(gun: Exclude<GunsType, "Knife">, buddy: BuddyType): Promise<unknown> {
+    /**
+     * Player_Loadout_Update
+     *
+     * Skin buddy changes take effect when starting a new game
+     * @param gun
+     * @param buddy
+     * @returns
+     */
+    async addSkinBuddy(gun: Exclude<GunsType, "Knife">, buddy: BuddyType): Promise<LoadoutResponse> {
         const gunId = gunsIdMappedByName[gun].toLowerCase();
         const buddyId = buddyIdMappedByName[buddy].toLowerCase();
         const buddyLevelId = buddyLevelIdMappedByName[buddy]["1"];

@@ -10,7 +10,7 @@ export interface ILoadout {
         level: Levels,
         variant: V,
     ): Promise<LoadoutResponse>;
-    addSkinBuddy(gun: Exclude<GunsType, "Knife">, buddy: BuddyType): Promise<unknown>;
+    addSkinBuddy(gun: Exclude<GunsType, "Knife">, buddy: BuddyType): Promise<LoadoutResponse>;
 }
 
 export interface LoadoutGun {
