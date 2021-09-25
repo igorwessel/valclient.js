@@ -42,6 +42,10 @@ client.init({ auth: { username: "teste", password: "teste" }, region: "br" })
         const player = await client.group.current()
     })
 ```
+
+# Docs
+
+Access the documentation via the link [docs](https://github.com/igorwessel/valclient.js/tree/master/docs).
 # Legal
 
 Riot Games, VALORANT, and any associated logos are trademarks, service marks, and/or registered trademarks of Riot Games, Inc.
