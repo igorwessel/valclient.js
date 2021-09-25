@@ -146,7 +146,7 @@ class ValClient implements IValClient {
         this.pvp = new Pvp(this._http_service, this._puuid, this._region);
         this.store = new Store(this._http_service, this._puuid);
         this.contracts = new Contracts(this._http_service, this._puuid);
-        this.loadout = new Loadout(this._http_service, this._puuid, this.valorant_api);
+        this.loadout = new Loadout(this._http_service, this._puuid, this.valorant_api, this.store);
     }
 
     /**

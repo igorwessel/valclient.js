@@ -1,3 +1,4 @@
+import { AxiosInstance } from "axios";
 import { GunsType, SkinsType, Levels } from "@type/loadout";
 import { VariantSkin } from "@type/chroma";
 
@@ -5,18 +6,20 @@ import { gunsIdMappedByName } from "@resources/guns";
 import { skinsIdMappedByGunName } from "@resources/skins";
 
 import { IHttp } from "@interfaces/http";
-import { AxiosInstance } from "axios";
 import { ILoadout, LoadoutBody, LoadoutResponse } from "@interfaces/loadout";
+import { IStore } from "@interfaces/store";
 
 class Loadout implements ILoadout {
     private readonly _http: IHttp;
+    private readonly _store: IStore;
     private readonly _puuid: string;
     private readonly _valorant_api: AxiosInstance;
 
-    constructor(http: IHttp, puuid: string, api: AxiosInstance) {
+    constructor(http: IHttp, puuid: string, api: AxiosInstance, store: IStore) {
         this._http = http;
         this._puuid = puuid;
         this._valorant_api = api;
+        this._store = store;
     }
 
     /**
@@ -54,6 +57,14 @@ class Loadout implements ILoadout {
         const gunId = gunsIdMappedByName[weapon].toLowerCase();
 
         const skinId = skinsIdMappedByGunName[weapon][skins as string].toLowerCase();
+
+        const { Entitlements } = await this._store.yourItems("skin_level");
+
+        const haveSkin = Entitlements.find(({ ItemID }) => ItemID === skinId);
+
+        if (!haveSkin) {
+            return null;
+        }
 
         const {
             data: {

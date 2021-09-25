@@ -2,6 +2,7 @@ import { Loadout } from "@app/loadout";
 
 import { IHttp } from "@interfaces/http";
 import { LoadoutResponse } from "@interfaces/loadout";
+import { IStore, YourItems } from "@interfaces/store";
 import { ValorantSkin } from "@interfaces/utils";
 import { gunsIdMappedByName } from "@resources/guns";
 import { skinsIdMappedByGunName } from "@resources/skins";
@@ -11,6 +12,8 @@ import { mock } from "jest-mock-extended";
 import { mocked } from "ts-jest/utils";
 
 const httpService = mock<IHttp>();
+const store = mock<IStore>();
+
 const valorantApi = mocked(axios, true);
 const puuid = "puuid";
 const skinLevelId = "newlevel-gun-id Level 4";
@@ -20,7 +23,7 @@ const skinId = skinsIdMappedByGunName["Judge"]["Celestial Judge"].toLowerCase();
 
 jest.mock("axios");
 
-const loadout = new Loadout(httpService, puuid, valorantApi as AxiosInstance);
+const loadout = new Loadout(httpService, puuid, valorantApi as AxiosInstance, store);
 
 const mockedCurrentLoadout: LoadoutResponse = {
     Guns: [
@@ -152,7 +155,26 @@ const mockedValorantApi: { data: { status: number; data: ValorantSkin } } = {
     },
 };
 
+const mockedYourItems: YourItems = {
+    ItemTypeID: "gun_id",
+    Entitlements: [
+        {
+            ItemID: "dont_have",
+            TypeID: "dont_have",
+        },
+        {
+            ItemID: skinsIdMappedByGunName["Vandal"]["Elderflame Vandal"].toLowerCase(),
+            TypeID: skinsIdMappedByGunName["Vandal"]["Elderflame Vandal"].toLowerCase(),
+        },
+        {
+            ItemID: skinsIdMappedByGunName["Judge"]["Celestial Judge"].toLowerCase(),
+            TypeID: skinsIdMappedByGunName["Judge"]["Celestial Judge"].toLowerCase(),
+        },
+    ],
+};
+
 afterEach(() => {
+    store.yourItems.mockClear();
     httpService.fetch.mockClear();
     httpService.put.mockClear();
     valorantApi.get.mockClear();
@@ -170,7 +192,16 @@ test("get current loadout for user", async () => {
     expect(data).toEqual(mockedCurrentLoadout);
 });
 
+test("if try to change a skin that doesn't have, return null", async () => {
+    store.yourItems.mockResolvedValueOnce(mockedYourItems);
+
+    const data = await loadout.changeGunSkin("Guardian", "Oni Guardian", "Level 4", "Black");
+
+    expect(data).toBeNull();
+});
+
 test("change a skin gun for user with all options", async () => {
+    store.yourItems.mockResolvedValueOnce(mockedYourItems);
     valorantApi.get.mockResolvedValueOnce(mockedValorantApi);
     httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadout);
     httpService.put.mockResolvedValueOnce(mockedChangeLoadout);
@@ -243,6 +274,7 @@ test("change a skin gun for user without options", async () => {
         ],
     };
 
+    store.yourItems.mockResolvedValueOnce(mockedYourItems);
     valorantApi.get.mockResolvedValueOnce(mockedValorantApiWithLevel1);
     httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadout);
     httpService.put.mockResolvedValueOnce(mockedChangeLoadoutLevel1);
@@ -333,6 +365,7 @@ test("change a skin gun for user, passing another variant", async () => {
         ],
     };
 
+    store.yourItems.mockResolvedValueOnce(mockedYourItems);
     valorantApi.get.mockResolvedValueOnce(mockedValorantApiDark);
     httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadout);
     httpService.put.mockResolvedValueOnce(mockedChangeLoadoutLevelAndVariantDark);
