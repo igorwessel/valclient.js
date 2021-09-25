@@ -22,13 +22,11 @@
     - [Refresh Player Pings](https://github.com/igorwessel/tree/master/docs/Group/refreshPlayerPings.md)
 - Pvp
     - [Account XP](https://github.com/igorwessel/tree/master/docs/Pvp/accountXp.md)
-    - [Change Loadout](https://github.com/igorwessel/tree/master/docs/Pvp/changeLoadout.md)
     - [Competitive Updates](https://github.com/igorwessel/tree/master/docs/Pvp/competitiveUpdates.md)
     - [Contents](https://github.com/igorwessel/tree/master/docs/Pvp/contents.md)
     - [Internal Config](https://github.com/igorwessel/tree/master/docs/Pvp/internalConfig.md)
     - [Item Progress Definitions](https://github.com/igorwessel/tree/master/docs/Pvp/itemProgressDefinitions.md)
     - [Leadersboards](https://github.com/igorwessel/tree/master/docs/Pvp/leadersboards.md)
-    - [Loadout](https://github.com/igorwessel/tree/master/docs/Pvp/loadout.md)
     - [Match Details](https://github.com/igorwessel/tree/master/docs/Pvp/matchDetails.md)
     - [Match History](https://github.com/igorwessel/tree/master/docs/Pvp/matchHistory.md)
     - [MMR](https://github.com/igorwessel/tree/master/docs/Pvp/mmr.md)
@@ -40,6 +38,9 @@
     - [Online Friend](https://github.com/igorwessel/tree/master/docs/Player/onlineFriend.md)
     - [Pending Friends Requests](https://github.com/igorwessel/tree/master/docs/Player/pendingFriendsRequests.md)
     - [Session](https://github.com/igorwessel/tree/master/docs/Player/session.md)
+- Loadout
+    - [Current](https://github.com/igorwessel/tree/master/docs/Loadout/current.md)
+    - [Change Gun Skin](https://github.com/igorwessel/tree/master/docs/Loadout/changeGunSkin.md)
 - LiveGame
     - [Current Live-Game](https://github.com/igorwessel/tree/master/docs/LiveGame/current.md)
     - [Details](https://github.com/igorwessel/tree/master/docs/LiveGame/details.md)
