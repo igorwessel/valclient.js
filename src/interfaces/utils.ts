@@ -18,7 +18,30 @@ export interface ValorantSkin {
     chromas: ValorantSkinLevel[];
     levels: ValorantSkinLevel[];
 }
+
+export interface ValorantSkinBuddyLevel {
+    uuid: string;
+    charmLevel: number;
+    displayName: string;
+    displayIcon: string;
+    assetPath: string;
+}
+
+export interface ValorantSkinBuddy {
+    uuid: string;
+    displayName: string;
+    isHiddenIfNotOwned: boolean;
+    themeUuid: string;
+    displayIcon: string;
+    assetPath: string;
+    levels: ValorantSkinBuddyLevel[];
+}
 export interface ValorantSkinsResponse {
     status: number;
     data: ValorantSkin[];
+}
+
+export interface ValorantSkinsBuddyResponse {
+    status: number;
+    data: ValorantSkinBuddy[];
 }

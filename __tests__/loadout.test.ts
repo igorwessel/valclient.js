@@ -4,6 +4,8 @@ import { IHttp } from "@interfaces/http";
 import { LoadoutResponse } from "@interfaces/loadout";
 import { IStore, YourItems } from "@interfaces/store";
 import { ValorantSkin } from "@interfaces/utils";
+import { itemsMappedByName } from "@resources";
+import { buddyIdMappedByName, buddyLevelIdMappedByName } from "@resources/buddies";
 import { gunsIdMappedByName } from "@resources/guns";
 import { skinsIdMappedByGunName } from "@resources/skins";
 import axios, { AxiosInstance } from "axios";
@@ -44,7 +46,7 @@ const mockedCurrentLoadout: LoadoutResponse = {
             SkinID: "another_gun",
             SkinLevelID: "another_gun",
             CharmID: "another_gun",
-            CharmInstanceID: "another_gun",
+            CharmInstanceID: "id_instance",
             CharmLevelID: "another_gun",
         },
     ],
@@ -86,7 +88,7 @@ const mockedChangeLoadout: LoadoutResponse = {
             SkinID: "another_gun",
             SkinLevelID: "another_gun",
             CharmID: "another_gun",
-            CharmInstanceID: "another_gun",
+            CharmInstanceID: "id_instance",
             CharmLevelID: "another_gun",
         },
     ],
@@ -155,8 +157,8 @@ const mockedValorantApi: { data: { status: number; data: ValorantSkin } } = {
     },
 };
 
-const mockedYourItems: YourItems = {
-    ItemTypeID: "gun_id",
+const mockedYourItems: YourItems<"nothing"> = {
+    ItemTypeID: itemsMappedByName["skin_level"],
     Entitlements: [
         {
             ItemID: "dont_have",
@@ -169,6 +171,27 @@ const mockedYourItems: YourItems = {
         {
             ItemID: skinsIdMappedByGunName["Judge"]["Celestial Judge"].toLowerCase(),
             TypeID: skinsIdMappedByGunName["Judge"]["Celestial Judge"].toLowerCase(),
+        },
+    ],
+};
+
+const mockedYourItemsBuddy: YourItems<"buddy"> = {
+    ItemTypeID: itemsMappedByName["buddy"],
+    Entitlements: [
+        {
+            ItemID: "test",
+            TypeID: "test",
+            InstanceID: "test",
+        },
+        {
+            ItemID: "another",
+            TypeID: "another",
+            InstanceID: "test",
+        },
+        {
+            ItemID: buddyLevelIdMappedByName["2021 VCT Masters Winner Buddy"]["1"],
+            TypeID: "test",
+            InstanceID: "id_instance",
         },
     ],
 };
@@ -389,4 +412,47 @@ test("change a skin gun for user, passing another variant", async () => {
     });
 
     expect(data).toEqual(mockedChangeLoadoutLevelAndVariantDark);
+});
+
+test("change a skin buddy, if doesn't have the skin buddy return null", async () => {
+    store.yourItems.mockResolvedValueOnce(mockedYourItemsBuddy);
+
+    const data = await loadout.addSkinBuddy("Spectre", "Ancient Inheritance Buddy");
+
+    expect(data).toBeNull();
+});
+
+test("change a skin buddy", async () => {
+    const mockedGunChangedLoadout: LoadoutResponse = {
+        ...mockedCurrentLoadout,
+        Guns: [
+            ...mockedCurrentLoadout.Guns,
+            {
+                ...mockedCurrentLoadout.Guns[1],
+                ID: gunsIdMappedByName["Guardian"],
+                CharmID: buddyIdMappedByName["2021 VCT Masters Winner Buddy"],
+                CharmLevelID: buddyLevelIdMappedByName["2021 VCT Masters Winner Buddy"]["1"],
+                CharmInstanceID: "id_instance",
+            },
+        ],
+    };
+
+    const mockedCurrentLoadoutWithGuardian: LoadoutResponse = {
+        ...mockedCurrentLoadout,
+        Guns: [
+            ...mockedCurrentLoadout.Guns,
+            {
+                ...mockedCurrentLoadout.Guns[0],
+                ID: gunsIdMappedByName["Guardian"].toLowerCase(),
+            },
+        ],
+    };
+
+    store.yourItems.mockResolvedValueOnce(mockedYourItemsBuddy);
+    httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadoutWithGuardian);
+    httpService.put.mockResolvedValueOnce(mockedGunChangedLoadout);
+
+    const data = await loadout.addSkinBuddy("Guardian", "2021 VCT Masters Winner Buddy");
+
+    expect(data).toEqual(mockedGunChangedLoadout);
 });

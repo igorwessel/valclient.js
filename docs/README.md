@@ -41,6 +41,7 @@
 - Loadout
     - [Current](https://github.com/igorwessel/valclient.js/tree/master/docs/Loadout/current.md)
     - [Change Gun Skin](https://github.com/igorwessel/valclient.js/tree/master/docs/Loadout/changeGunSkin.md)
+    - [Add Skin Buddy](https://github.com/igorwessel/valclient.js/tree/master/docs/Loadout/addSkinBuddy.md)
 - LiveGame
     - [Current Live-Game](https://github.com/igorwessel/valclient.js/tree/master/docs/LiveGame/current.md)
     - [Details](https://github.com/igorwessel/valclient.js/tree/master/docs/LiveGame/details.md)

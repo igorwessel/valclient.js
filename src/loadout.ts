@@ -1,6 +1,7 @@
 import { AxiosInstance } from "axios";
 import { GunsType, SkinsType, Levels, LoadoutBody } from "@type/loadout";
 import { VariantSkin } from "@type/chroma";
+import { BuddyType } from "@type/buddies";
 
 import { gunsIdMappedByName } from "@resources/guns";
 import { skinsIdMappedByGunName } from "@resources/skins";
@@ -8,6 +9,7 @@ import { skinsIdMappedByGunName } from "@resources/skins";
 import { IHttp } from "@interfaces/http";
 import { ILoadout, LoadoutResponse } from "@interfaces/loadout";
 import { IStore } from "@interfaces/store";
+import { buddyIdMappedByName, buddyLevelIdMappedByName } from "@resources/buddies";
 
 class Loadout implements ILoadout {
     private readonly _http: IHttp;
@@ -85,6 +87,59 @@ class Loadout implements ILoadout {
         const body: LoadoutBody = {
             Guns: Guns.map((gun) =>
                 gun.ID === gunId ? { ...gun, SkinID: skinId, ChromaID: variantId, SkinLevelID: levelId } : gun,
+            ),
+            Sprays,
+            Identity,
+            Incognito,
+        };
+
+        const data = await this._changeLoadout(body);
+
+        return data;
+    }
+
+    /**
+     * Player_Loadout_Update
+     *
+     * Skin buddy changes take effect when starting a new game
+     * @param gun
+     * @param buddy
+     * @returns
+     */
+    async addSkinBuddy(gun: Exclude<GunsType, "Knife">, buddy: BuddyType): Promise<LoadoutResponse> {
+        const gunId = gunsIdMappedByName[gun].toLowerCase();
+        const buddyId = buddyIdMappedByName[buddy].toLowerCase();
+        const buddyLevelId = buddyLevelIdMappedByName[buddy]["1"];
+
+        const { Entitlements } = await this._store.yourItems<"buddy">("buddy");
+
+        const haveSkin = Entitlements.filter(({ ItemID }) => ItemID === buddyLevelId);
+
+        if (haveSkin.length === 0) {
+            return null;
+        }
+
+        const { Guns, Sprays, Identity, Incognito } = await this.current();
+        const { InstanceID } = haveSkin[0];
+
+        const body = {
+            Guns: Guns.map((gun) =>
+                gun.CharmInstanceID === InstanceID
+                    ? {
+                          Attachments: gun.Attachments,
+                          ChromaID: gun.ChromaID,
+                          ID: gun.ID,
+                          SkinID: gun.SkinID,
+                          SkinLevelID: gun.SkinLevelID,
+                      }
+                    : gun.ID === gunId
+                    ? {
+                          ...gun,
+                          CharmInstanceID: InstanceID,
+                          CharmID: buddyId,
+                          CharmLevelID: buddyLevelId,
+                      }
+                    : gun,
             ),
             Sprays,
             Identity,
