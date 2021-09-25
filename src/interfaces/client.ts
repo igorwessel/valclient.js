@@ -1,6 +1,6 @@
 import { AxiosInstance } from "axios";
 
-import { Regions } from "@interfaces/resources";
+import { Regions } from "@type/resources";
 import { AuthInput } from "@interfaces/auth";
 
 import { IContracts } from "@interfaces/contracts";
@@ -65,5 +65,3 @@ export interface Headers {
     "X-Riot-ClientPlatform": string;
     "X-Riot-ClientVersion": string;
 }
-
-export type EndpointType = "pd" | "glz" | "shared" | "local";

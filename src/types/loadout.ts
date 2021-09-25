@@ -1,3 +1,4 @@
+import { LoadoutResponse } from "@interfaces/loadout";
 import {
     KnifeSkin,
     AresSkin,
@@ -84,3 +85,5 @@ export type Levels = "Level 1" | "Level 2" | "Level 3" | "Level 4";
 export type SkinsIdMappedByGunName = {
     [gun in GunsType]: Record<SkinsType<gun>, string>;
 };
+
+export type LoadoutBody = Pick<LoadoutResponse, "Guns" | "Sprays" | "Identity" | "Incognito">;

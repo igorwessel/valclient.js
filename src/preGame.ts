@@ -4,7 +4,7 @@ import { CoreGameResponse } from "@interfaces/liveGame";
 
 import { IHttp } from "@interfaces/http";
 
-import { Agents } from "@interfaces/resources";
+import { Agents } from "@type/resources";
 
 import { agentsMappedById } from "@resources";
 

@@ -3,7 +3,8 @@ import { mocked } from "ts-jest/utils";
 
 import { HttpService } from "@app/http";
 
-import { BaseEndpoints, EndpointType } from "@interfaces/client";
+import { BaseEndpoints } from "@interfaces/client";
+import { EndpointType } from "@type/client";
 
 const base_endpoints: BaseEndpoints = {
     pd: null,

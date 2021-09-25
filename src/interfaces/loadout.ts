@@ -44,5 +44,3 @@ export interface LoadoutResponse {
     Identity: LoadoutIdentity;
     Incognito: boolean;
 }
-
-export type LoadoutBody = Pick<LoadoutResponse, "Guns" | "Sprays" | "Identity" | "Incognito">;

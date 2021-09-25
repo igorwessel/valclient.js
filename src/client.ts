@@ -18,7 +18,7 @@ import { SystemNotSupported } from "@errors/systemNotSupported";
 /** Interfaces */
 import { EntitlementsTokenLocal, IPlayer } from "@interfaces/player";
 import { BaseEndpoints, ClientConfig, Headers, IValClient, LockFileType } from "@interfaces/client";
-import { Regions } from "@interfaces/resources";
+import { Regions } from "@type/resources";
 import { IAuth } from "@interfaces/auth";
 
 import { IValorant } from "@interfaces/valorant";

@@ -1,4 +1,4 @@
-import { EndpointType } from "@interfaces/client";
+import { EndpointType } from "@type/client";
 import { AxiosRequestConfig } from "axios";
 
 export interface IHttp {

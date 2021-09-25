@@ -2,7 +2,7 @@ import { Group } from "@app/group";
 import { mock } from "jest-mock-extended";
 import { CurrentAvailableGameModeResponse, CurrentGroupIdResponse, GroupDetails } from "@interfaces/group";
 
-import { Queues } from "@interfaces/resources";
+import { Queues } from "@type/resources";
 import { IHttp } from "@interfaces/http";
 
 const mockedHttpService = mock<IHttp>();

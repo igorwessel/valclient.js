@@ -1,6 +1,6 @@
 import { IHttp } from "@interfaces/http";
 
-import { Regions } from "@interfaces/resources";
+import { Regions } from "@type/resources";
 
 import {
     IPvp,

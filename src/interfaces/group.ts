@@ -1,5 +1,5 @@
-import { Queues, CustomGameMapsName, Maps, GameModes, CustomGameModes, RiotServers } from "@interfaces/resources";
-import { BooleanString, State } from "@interfaces/helpers";
+import { Queues, CustomGameMapsName, Maps, GameModes, CustomGameModes, RiotServers } from "@type/resources";
+import { BooleanString, State } from "@type/utils";
 
 export interface IGroup {
     current(): Promise<CurrentGroupIdResponse>;

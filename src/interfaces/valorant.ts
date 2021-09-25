@@ -1,5 +1,5 @@
 import { CrossHair } from "@interfaces/crosshair";
-import { Locale } from "@interfaces/resources";
+import { Locale } from "@type/resources";
 
 export interface IValorant {
     process(): Promise<ValorantProcessResponse | Record<string, never>>;

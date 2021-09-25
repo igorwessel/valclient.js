@@ -1,5 +1,6 @@
-import { Queues, Regions } from "@interfaces/resources";
-import { BooleanString } from "./helpers";
+import { Queues, Regions } from "@type/resources";
+import { PvpCompetitiveSeason, PvpEventItem, PvpItemProgressDefinitionsRewards } from "@type/pvp";
+import { BooleanString } from "@type/utils";
 
 export interface IPvp {
     contents(): Promise<PvpContents>;
@@ -30,15 +31,6 @@ export interface PvpSeasonsItem {
     IsActive: boolean;
     DevelopmentOnly: boolean;
 }
-
-export type PvpCompetitiveSeason = Pick<PvpSeasonsItem, "ID" | "StartTime" | "EndTime" | "DevelopmentOnly"> & {
-    SeasonID: string;
-};
-
-export type PvpEventItem = Pick<
-    PvpSeasonsItem,
-    "ID" | "Name" | "StartTime" | "EndTime" | "IsEnabled" | "IsActive" | "DevelopmentOnly"
->;
 
 export interface PvpContents {
     Characters: PvpContentItem[];
@@ -466,8 +458,6 @@ export interface PvpItemProgressDefinitionsWalletCost {
     CurrencyID: string;
     AmountToDeduct: number;
 }
-
-export type PvpItemProgressDefinitionsRewards = PvpItemProgressDefinitionsItem & { Amount: number };
 
 export interface PvpItemProgressDefinitionsOption {
     OptionID: string;

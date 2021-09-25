@@ -1,12 +1,12 @@
 import { AxiosInstance } from "axios";
-import { GunsType, SkinsType, Levels } from "@type/loadout";
+import { GunsType, SkinsType, Levels, LoadoutBody } from "@type/loadout";
 import { VariantSkin } from "@type/chroma";
 
 import { gunsIdMappedByName } from "@resources/guns";
 import { skinsIdMappedByGunName } from "@resources/skins";
 
 import { IHttp } from "@interfaces/http";
-import { ILoadout, LoadoutBody, LoadoutResponse } from "@interfaces/loadout";
+import { ILoadout, LoadoutResponse } from "@interfaces/loadout";
 import { IStore } from "@interfaces/store";
 
 class Loadout implements ILoadout {

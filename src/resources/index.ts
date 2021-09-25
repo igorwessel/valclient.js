@@ -1,14 +1,6 @@
-import {
-    Agents,
-    CustomGameMapsName,
-    CustomGameModes,
-    GameModes,
-    Maps,
-    Queues,
-    Regions,
-    RegionShardOverride,
-    ShardRegionOverride,
-} from "@interfaces/resources";
+import { RegionShardOverride, ShardRegionOverride } from "@interfaces/resources";
+
+import { Agents, CustomGameMapsName, CustomGameModes, GameModes, Maps, Queues, Regions } from "@type/resources";
 
 export const queues: Array<Queues> = [
     "competitive",

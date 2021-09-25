@@ -8,8 +8,8 @@ import {
     GroupDetails,
     IGroup,
 } from "@interfaces/group";
-import { State } from "@interfaces/helpers";
-import { Queues } from "@interfaces/resources";
+import { State } from "@type/utils";
+import { Queues } from "@type/resources";
 
 import { customGameModeMapped, customMappedMaps } from "@resources";
 

@@ -13,7 +13,7 @@ import {
     PvpMatchDetails,
     PvpCompetitiveUpdates,
 } from "@interfaces/pvp";
-import { Queues, Regions } from "@interfaces/resources";
+import { Queues, Regions } from "@type/resources";
 import { IHttp } from "@interfaces/http";
 
 const mockedHttpService = mock<IHttp>();
