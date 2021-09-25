@@ -79,7 +79,7 @@ const mockedWalletMapped: Record<WalletCurrencies, number> = {
     unknown: 0,
 };
 
-const mockedYourItems: YourItems = {
+const mockedYourItems: YourItems<"nothing"> = {
     Entitlements: [
         {
             ItemID: "test",
