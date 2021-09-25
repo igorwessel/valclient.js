@@ -99,3 +99,5 @@ export type SprayIdMappedByName = Record<SprayType, string>;
 export type SprayLevelIdMappedByName = Record<SprayType, { [key in CharmLevels]?: string }>;
 
 export type LoadoutBody = Pick<LoadoutResponse, "Guns" | "Sprays" | "Identity" | "Incognito">;
+
+export type SprayRounds = "PreRound" | "MiddleRound" | "EndRound";
