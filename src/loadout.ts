@@ -24,7 +24,7 @@ class Loadout implements ILoadout {
      *
      * Get the player's current loadout
      */
-    async loadout(): Promise<LoadoutResponse> {
+    async current(): Promise<LoadoutResponse> {
         const data = await this._http.fetch<LoadoutResponse>(
             `/personalization/v2/players/${this._puuid}/playerloadout`,
             "pd",
@@ -54,19 +54,22 @@ class Loadout implements ILoadout {
         const gunId = gunsIdMappedByName[weapon].toLowerCase();
 
         const skinId = skinsIdMappedByGunName[weapon][skins as string].toLowerCase();
+
         const {
             data: {
                 data: { chromas, levels },
             },
         } = await this._valorant_api.get(`weapons/skins/${skinId}`);
 
-        const { Guns, Sprays, Identity, Incognito } = await this.loadout();
+        const { Guns, Sprays, Identity, Incognito } = await this.current();
 
         const variantId = chromas.find((chroma) =>
-            variant ? chroma.displayName.includes(variant) : chroma.displayName === skins,
+            variant && variant !== "Default" ? chroma.displayName.includes(variant) : chroma.displayName === skins,
         ).uuid;
 
-        const levelId = levels.find((levelApi) => levelApi.displayName.includes(level)).uuid;
+        const levelId = levels.find((levelApi) =>
+            level && level !== "Level 1" ? levelApi.displayName.includes(level) : levelApi.displayName === skins,
+        ).uuid;
 
         const body: LoadoutBody = {
             Guns: Guns.map((gun) =>

@@ -2,6 +2,7 @@ import { GunsType, Levels, SkinsType } from "@type/loadout";
 import { VariantSkin } from "@type/chroma";
 
 export interface ILoadout {
+    current(): Promise<LoadoutResponse>;
     changeGunSkin<T extends GunsType, K extends SkinsType<T>, V extends VariantSkin<K>>(
         weapon: T,
         skins: K,
