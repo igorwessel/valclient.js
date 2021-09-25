@@ -46,7 +46,7 @@ const mockedCurrentLoadout: LoadoutResponse = {
             SkinID: "another_gun",
             SkinLevelID: "another_gun",
             CharmID: "another_gun",
-            CharmInstanceID: "another_gun",
+            CharmInstanceID: "id_instance",
             CharmLevelID: "another_gun",
         },
     ],
@@ -88,7 +88,7 @@ const mockedChangeLoadout: LoadoutResponse = {
             SkinID: "another_gun",
             SkinLevelID: "another_gun",
             CharmID: "another_gun",
-            CharmInstanceID: "another_gun",
+            CharmInstanceID: "id_instance",
             CharmLevelID: "another_gun",
         },
     ],
@@ -437,8 +437,19 @@ test("change a skin buddy", async () => {
         ],
     };
 
+    const mockedCurrentLoadoutWithGuardian: LoadoutResponse = {
+        ...mockedCurrentLoadout,
+        Guns: [
+            ...mockedCurrentLoadout.Guns,
+            {
+                ...mockedCurrentLoadout.Guns[0],
+                ID: gunsIdMappedByName["Guardian"].toLowerCase(),
+            },
+        ],
+    };
+
     store.yourItems.mockResolvedValueOnce(mockedYourItemsBuddy);
-    httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadout);
+    httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadoutWithGuardian);
     httpService.put.mockResolvedValueOnce(mockedGunChangedLoadout);
 
     const data = await loadout.addSkinBuddy("Guardian", "2021 VCT Masters Winner Buddy");
