@@ -180,24 +180,6 @@ const mockedValorantApi: { data: { status: number; data: ValorantSkin } } = {
     },
 };
 
-const mockedYourItems: YourItems<"nothing"> = {
-    ItemTypeID: itemsMappedByName["skin_level"],
-    Entitlements: [
-        {
-            ItemID: "dont_have",
-            TypeID: "dont_have",
-        },
-        {
-            ItemID: skinsIdMappedByGunName["Vandal"]["Elderflame Vandal"].toLowerCase(),
-            TypeID: skinsIdMappedByGunName["Vandal"]["Elderflame Vandal"].toLowerCase(),
-        },
-        {
-            ItemID: skinsIdMappedByGunName["Judge"]["Celestial Judge"].toLowerCase(),
-            TypeID: skinsIdMappedByGunName["Judge"]["Celestial Judge"].toLowerCase(),
-        },
-    ],
-};
-
 const mockedYourItemsBuddy: YourItems<"buddy"> = {
     ItemTypeID: itemsMappedByName["buddy"],
     Entitlements: [
@@ -256,16 +238,7 @@ test("get current loadout for user", async () => {
     expect(data).toEqual(mockedCurrentLoadout);
 });
 
-test("if try to change a skin that doesn't have, return null", async () => {
-    store.yourItems.mockResolvedValueOnce(mockedYourItems);
-
-    const data = await loadout.changeGunSkin("Guardian", "Oni Guardian", "Level 4", "Black");
-
-    expect(data).toBeNull();
-});
-
 test("change a skin gun for user with all options", async () => {
-    store.yourItems.mockResolvedValueOnce(mockedYourItems);
     valorantApi.get.mockResolvedValueOnce(mockedValorantApi);
     httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadout);
     httpService.put.mockResolvedValueOnce(mockedChangeLoadout);
@@ -338,7 +311,6 @@ test("change a skin gun for user without options", async () => {
         ],
     };
 
-    store.yourItems.mockResolvedValueOnce(mockedYourItems);
     valorantApi.get.mockResolvedValueOnce(mockedValorantApiWithLevel1);
     httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadout);
     httpService.put.mockResolvedValueOnce(mockedChangeLoadoutLevel1);
@@ -429,7 +401,6 @@ test("change a skin gun for user, passing another variant", async () => {
         ],
     };
 
-    store.yourItems.mockResolvedValueOnce(mockedYourItems);
     valorantApi.get.mockResolvedValueOnce(mockedValorantApiDark);
     httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadout);
     httpService.put.mockResolvedValueOnce(mockedChangeLoadoutLevelAndVariantDark);
