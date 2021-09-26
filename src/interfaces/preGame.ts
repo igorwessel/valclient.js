@@ -1,6 +1,5 @@
 import { CoreGameItem, CoreGameResponse, CoreGameSpraySelection } from "@interfaces/liveGame";
-import { GLZEndpointTokenResponse } from "@interfaces/group";
-import { Agents } from "@interfaces/resources";
+import { Agents } from "@type/resources";
 
 export interface IPreGame {
     current(): Promise<CoreGameResponse>;

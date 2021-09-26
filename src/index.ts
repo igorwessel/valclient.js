@@ -2,7 +2,6 @@ export * from "@app/client";
 
 export * from "@interfaces/crosshair";
 export * from "@interfaces/group";
-export * from "@interfaces/helpers";
 export * from "@interfaces/http";
 export * from "@interfaces/liveGame";
 export * from "@interfaces/player";

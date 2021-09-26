@@ -1,6 +1,6 @@
 import { IHttp } from "@interfaces/http";
 
-import { Regions } from "@interfaces/resources";
+import { Regions } from "@type/resources";
 
 import {
     IPvp,
@@ -12,8 +12,6 @@ import {
     PvpItemProgressDefinitionsResponse,
     PvpLeaderboard,
     PvpLeaderboardParams,
-    PvpLoadout,
-    PvpLoadoutParams,
     PvpMatchDetails,
     PvpMatchHistory,
     PvpMatchHistoryInput,
@@ -50,36 +48,6 @@ class Pvp implements IPvp {
      */
     async accountXp(): Promise<PvpAccountXp> {
         const data = await this._http.fetch<PvpAccountXp>(`/account-xp/v1/players/${this._puuid}`, "pd");
-
-        return data;
-    }
-
-    /**
-     * Player_Loadout_Current
-     *
-     * Get the player's current loadout
-     */
-    async loadout(): Promise<PvpLoadout> {
-        const data = await this._http.fetch<PvpLoadout>(
-            `/personalization/v2/players/${this._puuid}/playerloadout`,
-            "pd",
-        );
-
-        return data;
-    }
-
-    /**
-     * Player_Loadout_Update
-     *
-     * Loadout changes take effect when starting a new game
-     * @param loadout
-     */
-    async changeLoadout(loadout: PvpLoadoutParams): Promise<PvpLoadout> {
-        const data = await this._http.put<PvpLoadout>(
-            `/personalization/v2/players/${this._puuid}/playerloadout`,
-            "pd",
-            loadout,
-        );
 
         return data;
     }

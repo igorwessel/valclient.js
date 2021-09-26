@@ -1,5 +1,5 @@
-import { Base64 } from "@interfaces/helpers";
-import { Queues } from "@interfaces/resources";
+import { Base64 } from "@type/utils";
+import { Queues } from "@type/resources";
 
 export interface IPlayer {
     current: () => Promise<CurrentPlayerResponse>;

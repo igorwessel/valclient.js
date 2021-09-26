@@ -36,6 +36,10 @@ class Valorant implements IValorant {
         return data;
     }
 
+    /**
+     * Get crosshair settings
+     * @returns Profile name with crosshair settings
+     */
     async crossHair(): Promise<Record<string, CrossHair>> {
         const {
             data: { stringSettings },

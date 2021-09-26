@@ -4,7 +4,7 @@ export interface IStore {
     offers(): Promise<OffersResponse>;
     currentOffers(): Promise<CurrentOffersResponse>;
     wallet(): Promise<Record<WalletCurrencies, number>>;
-    yourItems(item_type: ItemsType): Promise<YourItems>;
+    yourItems<T>(item_type: ItemsType): Promise<YourItems<T>>;
 }
 export interface UpgradeCurrencyOffers {
     OfferID: string;
@@ -67,11 +67,14 @@ export interface WalletResponse {
     };
 }
 
-export interface YourItemsEntitlements {
+export type Entitlements = {
     TypeID: string;
     ItemID: string;
-}
-export interface YourItems {
+};
+
+export type YourItemsEntitlements<T> = T extends "buddy" ? Entitlements & { InstanceID: string } : Entitlements;
+
+export type YourItems<T> = {
     ItemTypeID: string;
-    Entitlements: YourItemsEntitlements[];
-}
+    Entitlements: YourItemsEntitlements<T>[];
+};

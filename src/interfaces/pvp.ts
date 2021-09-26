@@ -1,11 +1,10 @@
-import { Queues, Regions } from "@interfaces/resources";
-import { BooleanString } from "./helpers";
+import { Queues, Regions } from "@type/resources";
+import { PvpCompetitiveSeason, PvpEventItem, PvpItemProgressDefinitionsRewards } from "@type/pvp";
+import { BooleanString } from "@type/utils";
 
 export interface IPvp {
     contents(): Promise<PvpContents>;
     accountXp(): Promise<PvpAccountXp>;
-    loadout(): Promise<PvpLoadout>;
-    changeLoadout(loadout: PvpLoadoutParams): Promise<PvpLoadout>;
     mmr(puuid?: string): Promise<PvpMMR>;
     matchHistory(params?: PvpMatchHistoryInput): Promise<PvpMatchHistory>;
     matchDetails(match_id: string): Promise<PvpMatchDetails>;
@@ -32,15 +31,6 @@ export interface PvpSeasonsItem {
     IsActive: boolean;
     DevelopmentOnly: boolean;
 }
-
-export type PvpCompetitiveSeason = Pick<PvpSeasonsItem, "ID" | "StartTime" | "EndTime" | "DevelopmentOnly"> & {
-    SeasonID: string;
-};
-
-export type PvpEventItem = Pick<
-    PvpSeasonsItem,
-    "ID" | "Name" | "StartTime" | "EndTime" | "IsEnabled" | "IsActive" | "DevelopmentOnly"
->;
 
 export interface PvpContents {
     Characters: PvpContentItem[];
@@ -96,42 +86,6 @@ export interface PvpAccountXp {
     LastTimeGrantedFirstWin: string;
     NextTimeFirstWinAvailable: string;
 }
-
-export interface PvpLoadoutGun {
-    ID: string;
-    SkinID: string;
-    SkinLevelID: string;
-    ChromaID: string;
-    CharmInstanceID?: string;
-    CharmID?: string;
-    CharmLevelID?: string;
-    Attachments: unknown[];
-}
-
-export interface PvpLoadoutSpray {
-    EquipSlotID: string;
-    SprayID: string;
-    SprayLevelID: unknown | null;
-}
-
-export interface PvpLoadoutIdentity {
-    PlayerCardID: string;
-    PlayerTitleID: string;
-    AccountLevel: number;
-    PreferredLevelBorderID: string;
-    HideAccountLevel: boolean;
-}
-
-export interface PvpLoadout {
-    Subject: string;
-    Version: number;
-    Guns: PvpLoadoutGun[];
-    Sprays: PvpLoadoutSpray[];
-    Identity: PvpLoadoutIdentity;
-    Incognito: boolean;
-}
-
-export type PvpLoadoutParams = Pick<PvpLoadout, "Guns" | "Sprays" | "Identity" | "Incognito">;
 
 export interface PvpMMRLatestCompetitiveUpdate {
     MatchID: string;
@@ -504,8 +458,6 @@ export interface PvpItemProgressDefinitionsWalletCost {
     CurrencyID: string;
     AmountToDeduct: number;
 }
-
-export type PvpItemProgressDefinitionsRewards = PvpItemProgressDefinitionsItem & { Amount: number };
 
 export interface PvpItemProgressDefinitionsOption {
     OptionID: string;

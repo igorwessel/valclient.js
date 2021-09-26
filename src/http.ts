@@ -1,6 +1,7 @@
 import { AxiosRequestConfig, AxiosStatic } from "axios";
 
-import { BaseEndpoints, EndpointType } from "@interfaces/client";
+import { BaseEndpoints } from "@interfaces/client";
+import { EndpointType } from "@type/client";
 import { IHttp } from "@interfaces/http";
 
 class HttpService implements IHttp {

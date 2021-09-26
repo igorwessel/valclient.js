@@ -9,7 +9,7 @@ import {
     RNETFetchChatSession,
     PendingFriendsResponse,
 } from "@interfaces/player";
-import { Base64 } from "@interfaces/helpers";
+import { Base64 } from "@type/utils";
 import { IHttp } from "@interfaces/http";
 
 import { PrivateInformationJSON64 } from "@errors/privateInformationJSON64";

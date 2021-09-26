@@ -18,8 +18,8 @@ import { SystemNotSupported } from "@errors/systemNotSupported";
 /** Interfaces */
 import { EntitlementsTokenLocal, IPlayer } from "@interfaces/player";
 import { BaseEndpoints, ClientConfig, Headers, IValClient, LockFileType } from "@interfaces/client";
-import { Regions } from "@interfaces/resources";
-import { AuthInterface } from "@interfaces/auth";
+import { Regions } from "@type/resources";
+import { IAuth } from "@interfaces/auth";
 
 import { IValorant } from "@interfaces/valorant";
 import { IGroup } from "@interfaces/group";
@@ -29,6 +29,7 @@ import { ISession } from "@interfaces/session";
 import { IPvp } from "@interfaces/pvp";
 import { IStore } from "@interfaces/store";
 import { IContracts } from "@interfaces/contracts";
+import { ILoadout } from "@interfaces/loadout";
 
 import { Player } from "@app/player";
 import { Valorant } from "@app/valorant";
@@ -39,6 +40,7 @@ import { Session } from "@app/session";
 import { Pvp } from "@app/pvp";
 import { Store } from "@app/store";
 import { Contracts } from "@app/contracts";
+import { Loadout } from "@app/loadout";
 
 export const addAuthHeaders =
     (headers: Partial<Headers>) =>
@@ -75,11 +77,12 @@ class ValClient implements IValClient {
     private _headers: Partial<Headers>;
     private _region: Regions | null = null;
     private _shard: Regions;
-    private _auth: AuthInterface | null = null;
+    private _auth: IAuth | null = null;
     private _client_platform =
         "ew0KCSJwbGF0Zm9ybVR5cGUiOiAiUEMiLA0KCSJwbGF0Zm9ybU9TIjogIldpbmRvd3MiLA0KCSJwbGF0Zm9ybU9TVmVyc2lvbiI6ICIxMC4wLjE5MDQyLjEuMjU2LjY0Yml0IiwNCgkicGxhdGZvcm1DaGlwc2V0IjogIlVua25vd24iDQp9";
     private _client_version: string;
     private _local_username_auth = "riot";
+
     private _valorant_api: AxiosInstance;
 
     public _http_service: HttpService;
@@ -92,11 +95,12 @@ class ValClient implements IValClient {
     public session: ISession | null = null;
     public pvp: IPvp | null = null;
     public store: IStore | null = null;
+    public loadout: ILoadout | null = null;
     public contracts: IContracts | null = null;
 
     constructor() {
-        this._valorant_api = axios.create({ baseURL: "https://valorant-api.com/v1" });
         this._http_service = new HttpService(this._axios);
+        this._valorant_api = axios.create({ baseURL: "https://valorant-api.com/v1" });
     }
 
     /**
@@ -142,6 +146,7 @@ class ValClient implements IValClient {
         this.pvp = new Pvp(this._http_service, this._puuid, this._region);
         this.store = new Store(this._http_service, this._puuid);
         this.contracts = new Contracts(this._http_service, this._puuid);
+        this.loadout = new Loadout(this._http_service, this._puuid, this.valorant_api, this.store);
     }
 
     /**
@@ -266,7 +271,7 @@ class ValClient implements IValClient {
             data: {
                 data: { branch, buildVersion, version },
             },
-        } = await this._valorant_api.get("/version");
+        } = await this.valorant_api.get("/version");
 
         this._client_version = `${branch}-shipping-${buildVersion}-${version.split(".")[3]}`;
     }

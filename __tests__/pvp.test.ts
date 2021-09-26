@@ -7,14 +7,13 @@ import {
     PvpInternalConfig,
     PvpLeaderboard,
     PvpItemProgressDefinitionsResponse,
-    PvpLoadout,
     PvpMMR,
     PvpPlayerRestrictions,
     PvpMatchHistory,
     PvpMatchDetails,
     PvpCompetitiveUpdates,
 } from "@interfaces/pvp";
-import { Queues, Regions } from "@interfaces/resources";
+import { Queues, Regions } from "@type/resources";
 import { IHttp } from "@interfaces/http";
 
 const mockedHttpService = mock<IHttp>();
@@ -305,37 +304,37 @@ const mockedAccountXP: PvpAccountXp = {
     Version: 1,
 };
 
-const mockedLoadout: PvpLoadout = {
-    Subject: "test",
-    Version: 1,
-    Guns: [
-        {
-            Attachments: [],
-            ID: "test",
-            ChromaID: "test",
-            SkinID: "test",
-            SkinLevelID: "test",
-            CharmID: "test",
-            CharmInstanceID: "test",
-            CharmLevelID: "test",
-        },
-    ],
-    Sprays: [
-        {
-            EquipSlotID: "test",
-            SprayID: "test",
-            SprayLevelID: "test",
-        },
-    ],
-    Identity: {
-        AccountLevel: 1,
-        HideAccountLevel: true,
-        PlayerCardID: "test",
-        PlayerTitleID: "test",
-        PreferredLevelBorderID: "test",
-    },
-    Incognito: true,
-};
+// const mockedLoadout: LoadoutResponse = {
+//     Subject: "test",
+//     Version: 1,
+//     Guns: [
+//         {
+//             Attachments: [],
+//             ID: "test",
+//             ChromaID: "test",
+//             SkinID: "test",
+//             SkinLevelID: "test",
+//             CharmID: "test",
+//             CharmInstanceID: "test",
+//             CharmLevelID: "test",
+//         },
+//     ],
+//     Sprays: [
+//         {
+//             EquipSlotID: "test",
+//             SprayID: "test",
+//             SprayLevelID: "test",
+//         },
+//     ],
+//     Identity: {
+//         AccountLevel: 1,
+//         HideAccountLevel: true,
+//         PlayerCardID: "test",
+//         PlayerTitleID: "test",
+//         PreferredLevelBorderID: "test",
+//     },
+//     Incognito: true,
+// };
 
 const mockedInternalConfig: PvpInternalConfig = {
     LastApplication: "test",
@@ -1229,44 +1228,6 @@ test("should return account xp, level and xp history about current user authenti
     expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/account-xp/v1/players/${currentUserId}`, "pd");
 
     expect(data).toEqual(mockedAccountXP);
-});
-
-test("should return loadout from current user authenticated ", async () => {
-    mockedHttpService.fetch.mockResolvedValueOnce(mockedLoadout);
-
-    const data = await pvp.loadout();
-
-    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
-
-    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
-        `/personalization/v2/players/${currentUserId}/playerloadout`,
-        "pd",
-    );
-
-    expect(data).toEqual(mockedLoadout);
-});
-
-test("should update a loadout from current user authenticated", async () => {
-    mockedHttpService.put.mockResolvedValueOnce(mockedLoadout);
-
-    const body = {
-        Guns: mockedLoadout.Guns,
-        Identity: mockedLoadout.Identity,
-        Incognito: mockedLoadout.Incognito,
-        Sprays: mockedLoadout.Sprays,
-    };
-
-    const data = await pvp.changeLoadout(body);
-
-    expect(mockedHttpService.put).toHaveBeenCalledTimes(1);
-
-    expect(mockedHttpService.put).toHaveBeenCalledWith(
-        `/personalization/v2/players/${currentUserId}/playerloadout`,
-        "pd",
-        body,
-    );
-
-    expect(data).toEqual(mockedLoadout);
 });
 
 test("should return internal config setting by riot from current user authenticated", async () => {
