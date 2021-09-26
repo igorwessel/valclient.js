@@ -63,14 +63,6 @@ class Loadout implements ILoadout {
 
         const skinId = skinsIdMappedByGunName[weapon][skins as string].toLowerCase();
 
-        const { Entitlements } = await this._store.yourItems("skin_level");
-
-        const haveSkin = Entitlements.find(({ ItemID }) => ItemID === skinId);
-
-        if (!haveSkin) {
-            return null;
-        }
-
         const {
             data: {
                 data: { chromas, levels },
