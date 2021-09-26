@@ -4,10 +4,11 @@ import { IHttp } from "@interfaces/http";
 import { LoadoutResponse } from "@interfaces/loadout";
 import { IStore, YourItems } from "@interfaces/store";
 import { ValorantSkin } from "@interfaces/utils";
-import { itemsMappedByName } from "@resources";
+import { itemsMappedByName, sprayRoundsIdMappedByName } from "@resources";
 import { buddyIdMappedByName, buddyLevelIdMappedByName } from "@resources/buddies";
 import { gunsIdMappedByName } from "@resources/guns";
 import { skinsIdMappedByGunName } from "@resources/skins";
+import { sprayIdMappedByName } from "@resources/sprays";
 import axios, { AxiosInstance } from "axios";
 
 import { mock } from "jest-mock-extended";
@@ -59,7 +60,18 @@ const mockedCurrentLoadout: LoadoutResponse = {
     },
     Sprays: [
         {
-            EquipSlotID: "id",
+            EquipSlotID: sprayRoundsIdMappedByName["PreRound"],
+            SprayID: "id",
+            SprayLevelID: "id",
+        },
+        {
+            EquipSlotID: sprayRoundsIdMappedByName["MiddleRound"],
+            SprayID: "id",
+            SprayLevelID: "id",
+        },
+
+        {
+            EquipSlotID: sprayRoundsIdMappedByName["EndRound"],
             SprayID: "id",
             SprayLevelID: "id",
         },
@@ -101,7 +113,18 @@ const mockedChangeLoadout: LoadoutResponse = {
     },
     Sprays: [
         {
-            EquipSlotID: "id",
+            EquipSlotID: sprayRoundsIdMappedByName["PreRound"],
+            SprayID: "id",
+            SprayLevelID: "id",
+        },
+        {
+            EquipSlotID: sprayRoundsIdMappedByName["MiddleRound"],
+            SprayID: "id",
+            SprayLevelID: "id",
+        },
+
+        {
+            EquipSlotID: sprayRoundsIdMappedByName["EndRound"],
             SprayID: "id",
             SprayLevelID: "id",
         },
@@ -192,6 +215,24 @@ const mockedYourItemsBuddy: YourItems<"buddy"> = {
             ItemID: buddyLevelIdMappedByName["2021 VCT Masters Winner Buddy"]["1"],
             TypeID: "test",
             InstanceID: "id_instance",
+        },
+    ],
+};
+
+const mockedYourItemsSprays: YourItems<"spray"> = {
+    ItemTypeID: itemsMappedByName["spray"],
+    Entitlements: [
+        {
+            ItemID: "test",
+            TypeID: itemsMappedByName["spray"],
+        },
+        {
+            ItemID: "another",
+            TypeID: itemsMappedByName["spray"],
+        },
+        {
+            ItemID: sprayIdMappedByName["<3 Spray"],
+            TypeID: itemsMappedByName["spray"],
         },
     ],
 };
@@ -455,4 +496,35 @@ test("change a skin buddy", async () => {
     const data = await loadout.addSkinBuddy("Guardian", "2021 VCT Masters Winner Buddy");
 
     expect(data).toEqual(mockedGunChangedLoadout);
+});
+
+test("change a spray, if doesnt have the spray return null", async () => {
+    store.yourItems.mockResolvedValueOnce(mockedYourItemsSprays);
+    httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadout);
+
+    const data = await loadout.changeSpray("8-bit VALORANT Spray", "PreRound");
+
+    expect(data).toBeNull();
+});
+
+test("change a spray", async () => {
+    const mockedChangeSprayLoadout: LoadoutResponse = {
+        ...mockedChangeLoadout,
+        Sprays: [
+            {
+                ...mockedChangeLoadout.Sprays[0],
+                SprayID: sprayIdMappedByName["<3 Spray"],
+            },
+            mockedChangeLoadout.Sprays[1],
+            mockedChangeLoadout.Sprays[2],
+        ],
+    };
+
+    store.yourItems.mockResolvedValueOnce(mockedYourItemsSprays);
+    httpService.fetch.mockResolvedValueOnce(mockedCurrentLoadout);
+    httpService.put.mockResolvedValueOnce(mockedChangeSprayLoadout);
+
+    const data = await loadout.changeSpray("<3 Spray", "PreRound");
+
+    expect(data).toEqual(mockedChangeSprayLoadout);
 });
