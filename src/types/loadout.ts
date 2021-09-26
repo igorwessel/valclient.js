@@ -19,7 +19,8 @@ import {
     StingerSkin,
     VandalSkin,
 } from "@type/skins";
-import { BuddyType } from "./buddies";
+import { BuddyType } from "@type/buddies";
+import { SprayType } from "@type/sprays";
 export const guns = [
     "Odin",
     "Ares",
@@ -93,4 +94,10 @@ export type BuddyIdMappedByName = Record<BuddyType, string>;
 
 export type BuddyLevelIdMappedByName = Record<BuddyType, { [key in CharmLevels]?: string }>;
 
+export type SprayIdMappedByName = Record<SprayType, string>;
+
+export type SprayLevelIdMappedByName = Record<SprayType, { [key in CharmLevels]?: string }>;
+
 export type LoadoutBody = Pick<LoadoutResponse, "Guns" | "Sprays" | "Identity" | "Incognito">;
+
+export type SprayRounds = "PreRound" | "MiddleRound" | "EndRound";

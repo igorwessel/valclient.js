@@ -1,15 +1,18 @@
 import { AxiosInstance } from "axios";
-import { GunsType, SkinsType, Levels, LoadoutBody } from "@type/loadout";
+import { GunsType, SkinsType, Levels, LoadoutBody, SprayRounds } from "@type/loadout";
 import { VariantSkin } from "@type/chroma";
 import { BuddyType } from "@type/buddies";
+import { SprayType } from "@type/sprays";
 
 import { gunsIdMappedByName } from "@resources/guns";
 import { skinsIdMappedByGunName } from "@resources/skins";
+import { sprayIdMappedByName } from "@resources/sprays";
+import { buddyIdMappedByName, buddyLevelIdMappedByName } from "@resources/buddies";
+import { sprayRoundsIdMappedByName } from "@resources";
 
 import { IHttp } from "@interfaces/http";
 import { ILoadout, LoadoutResponse } from "@interfaces/loadout";
 import { IStore } from "@interfaces/store";
-import { buddyIdMappedByName, buddyLevelIdMappedByName } from "@resources/buddies";
 
 class Loadout implements ILoadout {
     private readonly _http: IHttp;
@@ -142,6 +145,40 @@ class Loadout implements ILoadout {
                     : gun,
             ),
             Sprays,
+            Identity,
+            Incognito,
+        };
+
+        const data = await this._changeLoadout(body);
+
+        return data;
+    }
+
+    /**
+     * Player_Loadout_Update
+     *
+     * Spray changes take effect when starting a new game
+     * @param gun
+     * @param buddy
+     * @returns
+     */
+    async changeSpray(spray: SprayType, slot: SprayRounds): Promise<LoadoutResponse> {
+        const sprayId = sprayIdMappedByName[spray];
+        const slotId = sprayRoundsIdMappedByName[slot];
+
+        const { Entitlements } = await this._store.yourItems("spray");
+
+        const haveSpray = Entitlements.find((entitlement) => entitlement.ItemID === sprayId);
+
+        if (!haveSpray) {
+            return null;
+        }
+
+        const { Guns, Sprays, Identity, Incognito } = await this.current();
+
+        const body = {
+            Guns,
+            Sprays: Sprays.map((spray) => (spray.EquipSlotID === slotId ? { ...spray, SprayID: sprayId } : spray)),
             Identity,
             Incognito,
         };

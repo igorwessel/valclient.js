@@ -4,7 +4,16 @@ import { guns, GunsType } from "@type/loadout";
 import { promises as fs } from "fs";
 import path from "path";
 
-import { ValorantSkin, ValorantSkinBuddy, ValorantSkinsBuddyResponse, ValorantSkinsResponse } from "@interfaces/utils";
+import {
+    CreateIdMappedByNameParameter,
+    CreateLevelIdMappedByNameParameter,
+    ValorantSkin,
+    ValorantSkinBuddy,
+    ValorantSkinsBuddyResponse,
+    ValorantSkinSpray,
+    ValorantSkinsResponse,
+    ValorantSkinsSpraysResponse,
+} from "@interfaces/utils";
 
 const root = path.resolve(".");
 
@@ -51,33 +60,38 @@ function createConditionalTypeForVariant(loadout: ValorantSkin[]): string {
     return chroma;
 }
 
-function createUnionTypeForBuddy(loadout: ValorantSkinBuddy[]): string {
+function createUnionType<T extends CreateIdMappedByNameParameter>(loadout: T[], typeName: string): string {
     const unionType = loadout.reduce(
         (string, valorantskin, index, array) =>
             string + '"' + valorantskin.displayName + '"' + `${index === array.length - 1 ? ";" : "| "}`,
         "",
     );
 
-    return `export type BuddyType = ${unionType}`;
+    return `export type ${typeName} = ${unionType}`;
 }
 
-function createBuddyLevelIdMappedByName(loadout: ValorantSkinBuddy[]): Record<string, unknown> {
-    const level = loadout.reduce((obj, buddy) => {
-        const levels = buddy.levels.reduce(
-            (objBuddyLevel, buddyLevel) => ({ ...objBuddyLevel, [buddyLevel.charmLevel]: buddyLevel.uuid }),
+function createLevelIdMappedByName<T extends CreateLevelIdMappedByNameParameter<T>>(
+    loadout: T[],
+): Record<string, unknown> {
+    const level = loadout.reduce((obj, mapped) => {
+        const levels = mapped.levels.reduce(
+            (objMappedLevel, mappedLevel) => ({
+                ...objMappedLevel,
+                [mappedLevel[`${"charmLevel" in mappedLevel ? "charmLevel" : "sprayLevel"}`]]: mappedLevel.uuid,
+            }),
             {},
         );
 
         return {
             ...obj,
-            [buddy.displayName]: levels,
+            [mapped.displayName]: levels,
         };
     }, {});
 
     return level;
 }
 
-function createBuddyIdMappedByName(loadout: ValorantSkinBuddy[]): Record<string, unknown> {
+function createIdMappedByName<T extends CreateIdMappedByNameParameter>(loadout: T[]): Record<string, unknown> {
     const buddyObject = loadout.reduce((obj, buddy) => {
         return {
             ...obj,
@@ -88,25 +102,13 @@ function createBuddyIdMappedByName(loadout: ValorantSkinBuddy[]): Record<string,
     return buddyObject;
 }
 
-async function createTypeFile() {
-    console.log("Starting update types...");
-
-    const {
-        data: { data },
-    } = await axios.get<ValorantSkinsResponse>("https://valorant-api.com/v1/weapons/skins");
-
-    const {
-        data: { data: buddies },
-    } = await axios.get<ValorantSkinsBuddyResponse>("https://valorant-api.com/v1/buddies");
-
-    const fileGeneratedAutomatically = "/* FILE GENERATED AUTOMATICALLY */\n\n";
+async function createSkinsFiles(skinsData: ValorantSkin[], startingFileData: string) {
     const skinsIdMappedByGunName = {};
-    let unionType = fileGeneratedAutomatically;
-    let buddyUnionType = fileGeneratedAutomatically;
-    let chroma = `${fileGeneratedAutomatically}export type VariantSkin<T> = `;
+    let unionType = startingFileData;
+    let chroma = `${startingFileData}export type VariantSkin<T> = `;
 
     for (const gun of guns) {
-        const skins = data.filter((skin) =>
+        const skins = skinsData.filter((skin) =>
             gun === "Knife" ? skin.assetPath.includes("Melee") : skin.displayName.includes(gun),
         );
 
@@ -115,25 +117,28 @@ async function createTypeFile() {
         skinsIdMappedByGunName[gun] = createSkinsIdMappedByName(skins);
     }
 
-    buddyUnionType += createUnionTypeForBuddy(buddies);
-    const buddyLevelIdMappedByName = createBuddyLevelIdMappedByName(buddies);
-    const buddyIdMappedByName = createBuddyIdMappedByName(buddies);
-
     await fs.writeFile(`${root}/src/types/skins.ts`, unionType);
-    await fs.writeFile(`${root}/src/types/buddies.ts`, buddyUnionType);
     await fs.writeFile(`${root}/src/types/chroma.ts`, chroma + "null;");
     await fs.writeFile(
         `${root}/src/resources/skins.ts`,
-        `${fileGeneratedAutomatically}import { SkinsIdMappedByGunName } from "@type/loadout";\n\nexport const skinsIdMappedByGunName: SkinsIdMappedByGunName = ${JSON.stringify(
+        `${startingFileData}import { SkinsIdMappedByGunName } from "@type/loadout";\n\nexport const skinsIdMappedByGunName: SkinsIdMappedByGunName = ${JSON.stringify(
             skinsIdMappedByGunName,
             null,
             2,
         )}`,
     );
+}
+
+async function createBuddiesFiles(buddiesData: ValorantSkinBuddy[], startingFileData: string) {
+    const buddyUnionType = `${startingFileData}${createUnionType(buddiesData, "BuddyType")}`;
+    const buddyLevelIdMappedByName = createLevelIdMappedByName(buddiesData);
+    const buddyIdMappedByName = createIdMappedByName(buddiesData);
+
+    await fs.writeFile(`${root}/src/types/buddies.ts`, buddyUnionType);
 
     await fs.writeFile(
         `${root}/src/resources/buddies.ts`,
-        `${fileGeneratedAutomatically}import { BuddyIdMappedByName, BuddyLevelIdMappedByName } from "@type/loadout";\n\nexport const buddyIdMappedByName: BuddyIdMappedByName = ${JSON.stringify(
+        `${startingFileData}import { BuddyIdMappedByName, BuddyLevelIdMappedByName } from "@type/loadout";\n\nexport const buddyIdMappedByName: BuddyIdMappedByName = ${JSON.stringify(
             buddyIdMappedByName,
             null,
             2,
@@ -145,7 +150,47 @@ async function createTypeFile() {
     );
 }
 
+async function createSprayFiles(spraysData: ValorantSkinSpray[], startingFileData: string) {
+    const spraysUnionType = `${startingFileData}${createUnionType(spraysData, "SprayType")}`;
+    const sprayLevelIdMappedByName = createLevelIdMappedByName(spraysData);
+    const sprayIdMappedByName = createIdMappedByName(spraysData);
+
+    await fs.writeFile(`${root}/src/types/sprays.ts`, spraysUnionType);
+
+    await fs.writeFile(
+        `${root}/src/resources/sprays.ts`,
+        `${startingFileData}import { SprayIdMappedByName, SprayLevelIdMappedByName } from "@type/loadout";\n\nexport const sprayIdMappedByName: SprayIdMappedByName = ${JSON.stringify(
+            sprayIdMappedByName,
+            null,
+            2,
+        )}\n\nexport const sprayLevelIdMappedByName: SprayLevelIdMappedByName = ${JSON.stringify(
+            sprayLevelIdMappedByName,
+            null,
+            2,
+        )}`,
+    );
+}
+
 (async () => {
-    await createTypeFile();
+    console.log("Starting update types...");
+
+    const {
+        data: { data: skins },
+    } = await axios.get<ValorantSkinsResponse>("https://valorant-api.com/v1/weapons/skins");
+
+    const {
+        data: { data: buddies },
+    } = await axios.get<ValorantSkinsBuddyResponse>("https://valorant-api.com/v1/buddies");
+
+    const {
+        data: { data: sprays },
+    } = await axios.get<ValorantSkinsSpraysResponse>("https://valorant-api.com/v1/sprays");
+
+    const fileGeneratedAutomatically = "/* FILE GENERATED AUTOMATICALLY */\n\n";
+
+    await createSkinsFiles(skins, fileGeneratedAutomatically);
+    await createBuddiesFiles(buddies, fileGeneratedAutomatically);
+    await createSprayFiles(sprays, fileGeneratedAutomatically);
+
     console.log("Update finished!");
 })();

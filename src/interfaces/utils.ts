@@ -27,6 +27,14 @@ export interface ValorantSkinBuddyLevel {
     assetPath: string;
 }
 
+export interface ValorantSkinSprayLevel {
+    uuid: string;
+    sprayLevel: number;
+    displayName: string;
+    displayIcon: string;
+    assetPath: string;
+}
+
 export interface ValorantSkinBuddy {
     uuid: string;
     displayName: string;
@@ -35,6 +43,18 @@ export interface ValorantSkinBuddy {
     displayIcon: string;
     assetPath: string;
     levels: ValorantSkinBuddyLevel[];
+}
+
+export interface ValorantSkinSpray {
+    uuid: string;
+    displayName: string;
+    category: string;
+    themeUuid: string;
+    displayIcon: string;
+    fullIcon: string;
+    fullTransparentIcon: string;
+    assetPath: string;
+    levels: ValorantSkinSprayLevel[];
 }
 export interface ValorantSkinsResponse {
     status: number;
@@ -45,3 +65,17 @@ export interface ValorantSkinsBuddyResponse {
     status: number;
     data: ValorantSkinBuddy[];
 }
+
+export interface ValorantSkinsSpraysResponse {
+    status: number;
+    data: ValorantSkinSpray[];
+}
+
+export interface CreateIdMappedByNameParameter {
+    displayName: string;
+    uuid: string;
+}
+
+export type CreateLevelIdMappedByNameParameter<T> = CreateIdMappedByNameParameter & {
+    levels: T extends ValorantSkinSpray ? ValorantSkinSprayLevel[] : ValorantSkinBuddyLevel[];
+};

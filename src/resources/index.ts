@@ -1,4 +1,5 @@
 import { RegionShardOverride, ShardRegionOverride } from "@interfaces/resources";
+import { SprayRounds } from "@type/loadout";
 
 import { Agents, CustomGameMapsName, CustomGameModes, GameModes, Maps, Queues, Regions } from "@type/resources";
 
@@ -91,6 +92,12 @@ export const itemsMappedByName: Record<ItemsType, string> = {
     spray: "d5f120f8-ff8c-4aac-92ea-f2b5acbe9475",
     player_card: "3f296c07-64c3-494c-923b-fe692a4fa1bd",
     player_title: "de7caa6b-adf7-4588-bbd1-143831e786c6",
+};
+
+export const sprayRoundsIdMappedByName: Record<SprayRounds, string> = {
+    PreRound: "0814b2fe-4512-60a4-5288-1fbdcec6ca48",
+    MiddleRound: "04af080a-4071-487b-61c0-5b9c0cfaac74",
+    EndRound: "5863985e-43ac-b05d-cb2d-139e72970014",
 };
 
 export const walletMappedByID: Record<string, WalletCurrencies> = {
