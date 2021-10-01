@@ -38,6 +38,48 @@ function createSkinsIdMappedByName(loadout: ValorantSkin[]) {
     return object;
 }
 
+function createSkinsLevelsIdMappedByName(loadout: ValorantSkin[]) {
+    const object = loadout.reduce((obj, skin) => {
+        const levels = skin.levels.reduce((objLevel, level) => {
+            const levelKey = level.displayName ? level.displayName.match(/Level \d/g) : "Level 2";
+
+            return {
+                ...objLevel,
+                [levelKey ? levelKey.toString() : "Level 1"]: level.uuid,
+            };
+        }, {});
+
+        return {
+            ...obj,
+            [skin.displayName]: levels,
+        };
+    }, {});
+
+    return object;
+}
+
+function createSkinsChromasIdMappedByName(loadout: ValorantSkin[]) {
+    const object = loadout.reduce((obj, skin) => {
+        const chromas = skin.chromas.reduce((objChroma, chroma) => {
+            let [, chromaName] = chroma.displayName.includes("\n") ? chroma.displayName.split("\n") : [, "Default"];
+
+            chromaName = chromaName.replace(/Variant|\s+|\d|\(|\)/g, "");
+
+            return {
+                ...objChroma,
+                [chromaName]: chroma.uuid,
+            };
+        }, {});
+
+        return {
+            ...obj,
+            [skin.displayName]: chromas,
+        };
+    }, {});
+
+    return object;
+}
+
 function createConditionalTypeForVariant(loadout: ValorantSkin[]): string {
     const chroma = loadout.reduce((string, skin) => {
         const unionTypeChromas = skin.chromas.reduce((stringChroma, chroma, indexChroma, chromaOriginalArray) => {
@@ -117,15 +159,28 @@ async function createSkinsFiles(skinsData: ValorantSkin[], startingFileData: str
         skinsIdMappedByGunName[gun] = createSkinsIdMappedByName(skins);
     }
 
+    const skinsChromasMapped = createSkinsChromasIdMappedByName(skinsData);
+    const skinsLevelsMapped = createSkinsLevelsIdMappedByName(skinsData);
+
     await fs.writeFile(`${root}/src/types/skins.ts`, unionType);
     await fs.writeFile(`${root}/src/types/chroma.ts`, chroma + "null;");
     await fs.writeFile(
         `${root}/src/resources/skins.ts`,
-        `${startingFileData}import { SkinsIdMappedByGunName } from "@type/loadout";\n\nexport const skinsIdMappedByGunName: SkinsIdMappedByGunName = ${JSON.stringify(
-            skinsIdMappedByGunName,
-            null,
-            2,
-        )}`,
+        [
+            startingFileData,
+            'import { SkinsIdMappedByGunName, SkinsLevelsMapped, SkinsVariantsMapped } from "@type/loadout";',
+            `export const skinsIdMappedByGunName: SkinsIdMappedByGunName = ${JSON.stringify(
+                skinsIdMappedByGunName,
+                null,
+                2,
+            )};`,
+            `export const skinsLevelMappedByName: SkinsLevelsMapped = ${JSON.stringify(skinsLevelsMapped, null, 2)};`,
+            `export const skinsChromasMappedByName: SkinsVariantsMapped = ${JSON.stringify(
+                skinsChromasMapped,
+                null,
+                2,
+            )};`,
+        ].join("\n\n"),
     );
 }
 
