@@ -23,7 +23,7 @@ jobs:
                       ${{ runner.os }}-build-${{ env.cache-name }}-
                       ${{ runner.os }}-build-
                       ${{ runner.os }}-
-                      
+
             - name: Install Axios
               if: steps.cache-node-modules.outputs.cache-hit != 'true' # Over here!
               run: yarn add axios
@@ -37,6 +37,16 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   title: "Updated Skins, Agents, Chroma, Sprays and Buddies"
-                  branch: "master"
-                  path: "src/resources src/types"
-                  commit-message: "chore: updated resources"
+                  branch: "action/update_valorant_resources"
+                  path: "src/resources"
+                  author: "ValClientAction <valclient@action.com>"
+                  commit-message: "chore: updated resources (skins,agents,sprays,buddies)"
+                  update-pull-request-title-and-body: false
+            - uses: gr2m/create-or-update-pull-request-action@v1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  branch: "action/update_valorant_resources"
+                  path: "src/types"
+                  author: "ValClientAction <valclient@action.com>"
+                  commit-message: "chore: updated types (skins,agents,sprays,buddies)"
