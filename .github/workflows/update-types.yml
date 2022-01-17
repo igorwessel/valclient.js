@@ -1,0 +1,42 @@
+name: Update Skins,Agents,Buddies,Chroma and Sprays
+on:
+    schedule:
+        - cron: "0 18 * * 2"
+    workflow_dispatch:
+jobs:
+    update-types:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  persist-credentials: false
+
+            - name: Cache node modules
+              uses: actions/cache@v2
+              env:
+                  cache-name: cache-node-modules
+              with:
+                  # npm cache files are stored in `~/.npm` on Linux/macOS
+                  path: "**/node_modules"
+                  key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-build-${{ env.cache-name }}-
+                      ${{ runner.os }}-build-
+                      ${{ runner.os }}-
+                      
+            - name: Install Axios
+              if: steps.cache-node-modules.outputs.cache-hit != 'true' # Over here!
+              run: yarn add axios
+
+            - name: Update Types
+              run: yarn update:types
+
+            - name: Create a pull-request with updates
+              uses: gr2m/create-or-update-pull-request-action@v1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  title: "Updated Skins, Agents, Chroma, Sprays and Buddies"
+                  branch: "master"
+                  path: "src/resources src/types"
+                  commit-message: "chore: updated resources"
