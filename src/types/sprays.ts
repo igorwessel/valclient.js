@@ -76,6 +76,7 @@ export type SprayType =
     | "Happy Frog Spray"
     | "Revive Me, Jett! Spray"
     | "Super! Spray"
+    | "¯_(ツ)_/¯ Spray"
     | "Nope Spray"
     | "Approved! Spray"
     | "Lobster? Spray"
