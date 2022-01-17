@@ -37,14 +37,11 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   title: "Updated Skins, Agents, Chroma, Sprays and Buddies"
-                  branch: "master"
                   path: "src/resources"
                   commit-message: "chore: updated resources (skins,agents,sprays,buddies)"
-                  auto-merge: squash
             - uses: gr2m/create-or-update-pull-request-action@v1
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  branch: "master"
                   path: "src/types"
                   commit-message: "chore: updated types (skins,agents,sprays,buddies)"
