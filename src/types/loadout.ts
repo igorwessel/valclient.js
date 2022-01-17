@@ -82,12 +82,60 @@ export type SkinsType<T> = T extends "Knife"
     ? OdinSkin
     : null;
 
-export type Levels = "Level 1" | "Level 2" | "Level 3" | "Level 4";
+export type Levels = "Level 1" | "Level 2" | "Level 3" | "Level 4" | "Level 5";
 
 export type CharmLevels = "1" | "2" | "3" | "4";
 
 export type SkinsIdMappedByGunName = {
     [gun in GunsType]: Record<SkinsType<gun>, string>;
+};
+export type SkinsLevelsMapped = {
+    [skin in
+        | KnifeSkin
+        | StingerSkin
+        | SpectreSkin
+        | MarshalSkin
+        | GuardianSkin
+        | OperatorSkin
+        | ShortySkin
+        | SheriffSkin
+        | GhostSkin
+        | ClassicSkin
+        | FrenzySkin
+        | BuckySkin
+        | JudgeSkin
+        | PhantomSkin
+        | BulldogSkin
+        | VandalSkin
+        | AresSkin
+        | OdinSkin]: {
+        [level in Levels]?: string;
+    };
+};
+
+export type SkinsVariantsMapped = {
+    [skin in
+        | KnifeSkin
+        | StingerSkin
+        | SpectreSkin
+        | MarshalSkin
+        | GuardianSkin
+        | OperatorSkin
+        | ShortySkin
+        | SheriffSkin
+        | GhostSkin
+        | ClassicSkin
+        | FrenzySkin
+        | BuckySkin
+        | JudgeSkin
+        | PhantomSkin
+        | BulldogSkin
+        | VandalSkin
+        | AresSkin
+        | OdinSkin]: {
+        [key: string]: string;
+        Default: string;
+    };
 };
 
 export type BuddyIdMappedByName = Record<BuddyType, string>;
