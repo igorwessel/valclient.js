@@ -4,9 +4,9 @@ import { CoreGameResponse } from "@interfaces/liveGame";
 
 import { IHttp } from "@interfaces/http";
 
-import { Agents } from "@type/resources";
+import { Agents } from "@type/agents";
 
-import { agentsMappedById } from "@resources";
+import { agentsMappedById } from "@resources/agents";
 
 class PreGame implements IPreGame {
     private readonly _http: IHttp;

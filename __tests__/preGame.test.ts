@@ -5,8 +5,8 @@ import { IHttp } from "@interfaces/http";
 import { CoreGameResponse } from "@interfaces/liveGame";
 import { PreGameDetailsResponse, PreGameLoadout } from "@interfaces/preGame";
 
-import { agentsMappedById } from "@resources";
-import { Agents } from "@type/resources";
+import { agentsMappedById } from "@resources/agents";
+import { Agents } from "@type/agents";
 
 const mockedHttpService = mock<IHttp>();
 

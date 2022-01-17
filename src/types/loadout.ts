@@ -82,7 +82,7 @@ export type SkinsType<T> = T extends "Knife"
     ? OdinSkin
     : null;
 
-export type Levels = "Level 1" | "Level 2" | "Level 3" | "Level 4";
+export type Levels = "Level 1" | "Level 2" | "Level 3" | "Level 4" | "Level 5";
 
 export type CharmLevels = "1" | "2" | "3" | "4";
 

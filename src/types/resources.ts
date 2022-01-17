@@ -19,28 +19,6 @@ export type Maps = "Breeze" | "Icebox" | "Heaven" | "Ascent" | "Bind" | "Fractur
 
 export type GameModes = "Bomb" | "Deathmatch" | "OneForAll" | "QuickBomb";
 
-export type Agents =
-    | "Breach"
-    | "Raze"
-    | "KAY/O"
-    | "Skye"
-    | "Cypher"
-    | "Sova"
-    | "Killjoy"
-    | "Viper"
-    | "Phoenix"
-    | "Astra"
-    | "Brimstone"
-    | "Yoru"
-    | "Sage"
-    | "Reyna"
-    | "Omen"
-    | "Jett";
-
-export type AgentMappedByDisplayName = {
-    [K in Agents]: string;
-};
-
 export type Locale =
     | "ar-AE"
     | "de-DE"
