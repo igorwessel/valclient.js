@@ -263,7 +263,10 @@ async function createAgentsFiles<G>(agentsData: G & { uuid: string; displayName:
 
     await createSkinsFiles(skins, fileGeneratedAutomatically);
     await createBuddiesFiles(buddies, fileGeneratedAutomatically);
-    await createSprayFiles(sprays, fileGeneratedAutomatically);
+    await createSprayFiles(
+        sprays.filter((spray) => !spray.displayName.includes("(ツ)")),
+        fileGeneratedAutomatically,
+    );
     await createAgentsFiles(agents, fileGeneratedAutomatically);
 
     console.log("Update finished!");
