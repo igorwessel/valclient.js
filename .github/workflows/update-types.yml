@@ -31,22 +31,24 @@ jobs:
             - name: Update Types
               run: yarn update:types
 
-            - name: Create a pull-request with updates
+            - name: Pull-request with updates
               uses: gr2m/create-or-update-pull-request-action@v1
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   title: "Updated Skins, Agents, Chroma, Sprays and Buddies"
-                  branch: "action/update_valorant_resources"
+                  body: "Workflow made to automatically update skins, agents, buddies and sprays."
+                  branch: "bot/update_valorant_resources"
                   path: "src/resources"
                   author: "ValClientAction <valclient@action.com>"
                   commit-message: "chore: updated resources (skins,agents,sprays,buddies)"
                   update-pull-request-title-and-body: false
-            - uses: gr2m/create-or-update-pull-request-action@v1
+            - name: Add commit for types in pull-request
+              uses: gr2m/create-or-update-pull-request-action@v1
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  branch: "action/update_valorant_resources"
+                  branch: "bot/update_valorant_resources"
                   path: "src/types"
                   author: "ValClientAction <valclient@action.com>"
                   commit-message: "chore: updated types (skins,agents,sprays,buddies)"
