@@ -226,6 +226,20 @@ async function createSprayFiles(spraysData: ValorantSkinSpray[], startingFileDat
     );
 }
 
+async function createAgentsFiles<G>(agentsData: G & { uuid: string; displayName: string }[], startingFileData) {
+    const agentsUnionType = createUnionType(agentsData, "Agents");
+    const agentsIdMappedByName = createIdMappedByName(agentsData);
+
+    await fs.writeFile(`${root}/src/types/agents.ts`, [startingFileData, agentsUnionType]);
+
+    await fs.writeFile(`${root}/src/resources/agents.ts`, [
+        startingFileData,
+        'import { Agents } from "@type/agents";\n\n',
+        "export const agentsMappedById: Record<Agents, string> = ",
+        JSON.stringify(agentsIdMappedByName, null, 2),
+    ]);
+}
+
 (async () => {
     console.log("Starting update types...");
 
@@ -241,11 +255,16 @@ async function createSprayFiles(spraysData: ValorantSkinSpray[], startingFileDat
         data: { data: sprays },
     } = await axios.get<ValorantSkinsSpraysResponse>("https://valorant-api.com/v1/sprays");
 
+    const {
+        data: { data: agents },
+    } = await axios.get<ValorantSkinsSpraysResponse>("https://valorant-api.com/v1/agents?isPlayableCharacter=true");
+
     const fileGeneratedAutomatically = "/* FILE GENERATED AUTOMATICALLY */\n\n";
 
     await createSkinsFiles(skins, fileGeneratedAutomatically);
     await createBuddiesFiles(buddies, fileGeneratedAutomatically);
     await createSprayFiles(sprays, fileGeneratedAutomatically);
+    await createAgentsFiles(agents, fileGeneratedAutomatically);
 
     console.log("Update finished!");
 })();
