@@ -1,8 +1,8 @@
 name: Update Skins,Agents,Buddies,Chroma and Sprays
 on:
     schedule:
-        - cron: "30 13,17 * * 2"
-        - cron: "30 21,24 * * 2"
+        - cron: "0 18 * * 2"
+    workflow_dispatch:
 jobs:
     update-types:
         runs-on: ubuntu-latest
@@ -15,14 +15,14 @@ jobs:
               uses: actions/cache@v2
               env:
                   cache-name: cache-node-modules
-                  with:
-                      # npm cache files are stored in `~/.npm` on Linux/macOS
-                      path: "**/node_modules"
-                      key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-                      restore-keys: |
-                          ${{ runner.os }}-build-${{ env.cache-name }}-
-                          ${{ runner.os }}-build-
-                          ${{ runner.os }}-
+              with:
+                  # npm cache files are stored in `~/.npm` on Linux/macOS
+                  path: "**/node_modules"
+                  key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-build-${{ env.cache-name }}-
+                      ${{ runner.os }}-build-
+                      ${{ runner.os }}-
 
             - name: Install Axios
               if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
@@ -38,11 +38,5 @@ jobs:
               with:
                   title: "Updated Skins, Agents, Chroma, Sprays and Buddies"
                   branch: "master"
-                  path: "src/resources"
+                  path: "src/resources src/types"
                   commit-message: "chore: updated resources"
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  branch: "master"
-                  path: "src/types"
-                  commit-message: "chore: updated types"
