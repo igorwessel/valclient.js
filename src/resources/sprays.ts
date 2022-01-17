@@ -78,7 +78,6 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Happy Frog Spray": "f1a0e638-4b6e-b521-f9e8-67b2ced8826f",
     "Revive Me, Jett! Spray": "0acc3505-4e1a-7d1f-2340-90b199ab81f4",
     "Super! Spray": "2acf4141-4c32-f916-25c4-91843376c083",
-    "¯\\_(ツ)_/¯ Spray": "ecba2299-4e4a-0ca7-a194-95a4c92f3f4a",
     "Nope Spray": "6f252a61-4a8e-b2f5-f48d-5699a32bdc79",
     "Approved! Spray": "94dc31dc-48b1-8279-ff69-f8828bbc7382",
     "Lobster? Spray": "fd92bdcd-4ae8-861e-843a-05a8113a4d11",
@@ -482,9 +481,6 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Super! Spray": {
         "1": "7a782bb5-4b92-883a-13f8-3099ffa26c45",
-    },
-    "¯\\_(ツ)_/¯ Spray": {
-        "1": "b9d66495-46b6-f781-9681-bf80e3532f41",
     },
     "Nope Spray": {
         "1": "b636ab6d-4c23-5059-dc8f-eb9a3e18ff75",
