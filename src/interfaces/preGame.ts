@@ -1,5 +1,5 @@
 import { CoreGameItem, CoreGameResponse, CoreGameSpraySelection } from "@interfaces/liveGame";
-import { Agents } from "@type/resources";
+import { Agents } from "@type/agents";
 
 export interface IPreGame {
     current(): Promise<CoreGameResponse>;
