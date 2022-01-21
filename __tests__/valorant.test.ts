@@ -40,9 +40,10 @@ const mockedClientSettings: ClientSettingsResponse = {
                 shift: true,
             },
         ],
+        settingsProfiles: [],
         axisMapping: [],
-        floatSettings: [{ settingEnum: "float_setting", value: 5 }],
-        intSettings: [{ settingEnum: "int_setting", value: 1 }],
+        floatSettings: [{ settingEnum: "EAresFloatSettingName::MouseSensitivity", value: 5 }],
+        intSettings: [{ settingEnum: "EAresIntSettingName::VoiceVolume", value: 1 }],
         roamingSetttingsVersion: 0,
         stringSettings: [
             {
@@ -239,4 +240,42 @@ test("should return crosshair profiles", async () => {
     );
 
     expect(data).toEqual(mockedCrossHairProfiles);
+});
+
+test("should update client settings", async () => {
+    const resolvedValue = {
+        data: "format",
+        type: "Ares.PlayerSettings",
+        modified: 1642758359892,
+    };
+
+    mockedHttpService.fetch.mockResolvedValueOnce(mockedClientSettings);
+    mockedHttpService.put.mockResolvedValueOnce(resolvedValue);
+
+    const { data: actualSettings } = await valorant.clientSettings();
+
+    expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
+
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(
+        "/player-preferences/v1/data-json/Ares.PlayerSettings",
+        "local",
+    );
+
+    const newSettings = {
+        ...actualSettings,
+        floatSettings: actualSettings.floatSettings.map((setting) =>
+            setting.settingEnum.includes("MouseSensitivity") ? { ...setting, value: 0.5 } : setting,
+        ),
+    };
+
+    const data = await valorant.changeSettings(newSettings);
+
+    expect(mockedHttpService.put).toHaveBeenCalledTimes(1);
+    expect(mockedHttpService.put).toHaveBeenCalledWith(
+        "/player-preferences/v1/data-json/Ares.PlayerSettings",
+        "local",
+        newSettings,
+    );
+
+    expect(data).toEqual(resolvedValue);
 });
