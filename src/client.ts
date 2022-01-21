@@ -30,6 +30,7 @@ import { IPvp } from "@interfaces/pvp";
 import { IStore } from "@interfaces/store";
 import { IContracts } from "@interfaces/contracts";
 import { ILoadout } from "@interfaces/loadout";
+import { IChat } from "@interfaces/chat";
 
 import { Player } from "@app/player";
 import { Valorant } from "@app/valorant";
@@ -41,6 +42,7 @@ import { Pvp } from "@app/pvp";
 import { Store } from "@app/store";
 import { Contracts } from "@app/contracts";
 import { Loadout } from "@app/loadout";
+import { Chat } from "@app/chat";
 
 export const addAuthHeaders =
     (headers: Partial<Headers>) =>
@@ -63,8 +65,6 @@ export const addLocalHeaders =
             };
 
             config.withCredentials = true;
-
-            return config;
         }
 
         return config;
@@ -88,6 +88,7 @@ class ValClient implements IValClient {
     public _http_service: HttpService;
 
     public player: IPlayer | null = null;
+    public chat: IChat | null = null;
     public valorant: IValorant | null = null;
     public group: IGroup | null = null;
     public live_game: ILiveGame | null = null;
@@ -133,6 +134,7 @@ class ValClient implements IValClient {
 
             this.player = new Player(this._http_service, this._puuid);
             this.valorant = new Valorant(this._http_service);
+            this.chat = new Chat(this._http_service);
         } else {
             await this._getAuthHeaders();
         }
