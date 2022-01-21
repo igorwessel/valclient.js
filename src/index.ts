@@ -13,6 +13,7 @@ export * from "@interfaces/store";
 export * from "@interfaces/valorant";
 export * from "@interfaces/auth";
 export * from "@interfaces/client";
+export * from "@interfaces/chat";
 export * from "@interfaces/contracts";
 
 export * from "@resources";
