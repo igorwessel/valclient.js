@@ -1,7 +1,7 @@
 import { CrossHair, CrossHairProfileData } from "@interfaces/crosshair";
 import { IHttp } from "@interfaces/http";
 
-import { ClientSettingsResponse, IValorant, ValorantProcessResponse } from "@interfaces/valorant";
+import { ClientSettingsResponse, IValorant, ValorantProcessResponse, ClientSettings } from "@interfaces/valorant";
 
 class Valorant implements IValorant {
     private readonly _http: IHttp;
@@ -31,6 +31,21 @@ class Valorant implements IValorant {
         const data = await this._http.fetch<ClientSettingsResponse>(
             "/player-preferences/v1/data-json/Ares.PlayerSettings",
             "local",
+        );
+
+        return data;
+    }
+
+    /**
+     *  RiotKV_RNet_PutSettings
+     *
+     *  Update client settings
+     */
+    async changeSettings(settings: ClientSettings): Promise<ClientSettingsResponse> {
+        const data = await this._http.put<ClientSettingsResponse>(
+            "/player-preferences/v1/data-json/Ares.PlayerSettings",
+            "local",
+            settings,
         );
 
         return data;

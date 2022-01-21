@@ -4,6 +4,7 @@ import { Locale } from "@type/resources";
 export interface IValorant {
     process(): Promise<ValorantProcessResponse | Record<string, never>>;
     clientSettings(): Promise<ClientSettingsResponse>;
+    changeSettings(data: ClientSettings): Promise<ClientSettingsResponse>;
     crossHair(): Promise<Record<string, CrossHair>>;
 }
 
@@ -40,15 +41,19 @@ export type SettingsEnumFloat =
     | "EAresFloatSettingName::CharacterSelectMusicVolume"
     | "EAresFloatSettingName::CrosshairOutlineOpacity"
     | "EAresFloatSettingName::CrosshairCenterDotSize"
+    | "EAresFloatSettingName::CrosshairCenterDotOpacity"
     | "EAresFloatSettingName::CrosshairInnerLinesLineThickness"
     | "EAresFloatSettingName::CrosshairInnerLinesLineLength"
     | "EAresFloatSettingName::CrosshairInnerLinesLineOffset"
-    | "EAresFloatSettingName::CrosshairOuterLinesOpacity";
+    | "EAresFloatSettingName::CrosshairInnerLinesOpacity"
+    | "EAresFloatSettingName::AimToolingRadialFrictionBaseSpeedMultiplierX";
 
 export type SettingsEnumBool =
+    | "EAresBoolSettingName::MinimapRotates"
     | "EAresBoolSettingName::MinimapTranslates"
     | "EAresBoolSettingName::PushToTalkEnabled"
-    | "EAresBoolSettingName::ShootingRangeBotArmorEnabled"
+    | "EAresBoolSettingName::FadeCrosshairWithFiringError"
+    | "EAresBoolSettingName::ShowCorpses"
     | "EAresBoolSettingName::CrosshairHasOutline"
     | "EAresBoolSettingName::CrosshairInnerLinesShowShootingError"
     | "EAresBoolSettingName::CrosshairOuterLinesShowMovementError"
@@ -63,27 +68,24 @@ export type SettingsEnumBool =
     | "EAresBoolSettingName::PlayerBehavior_MuteEnemyTextChat"
     | "EAresBoolSettingName::HasEverAppliedRoamingSettings";
 
-export interface SettingsNumber {
-    settingEnum: string;
-    value: number;
-}
-
-export interface SettingsString {
-    settingEnum: SettingsEnumString;
-    value: string;
-}
-
+export type SettingsValue<SettingEnum, Value> = {
+    settingEnum: SettingEnum;
+    value: Value;
+};
 export interface ClientSettingsResponse {
-    data: {
-        actionMappings: ActionMap[];
-        axisMapping: Record<string, unknown>[];
-        floatSettings: SettingsNumber[];
-        intSettings: SettingsNumber[];
-        roamingSetttingsVersion: number;
-        stringSettings: SettingsString[];
-    };
+    data: ClientSettings;
     modified: number;
     type: string;
+}
+
+export interface ClientSettings {
+    actionMappings: ActionMap[];
+    axisMapping: Record<string, unknown>[];
+    floatSettings: SettingsValue<SettingsEnumFloat, number>[];
+    intSettings: SettingsValue<SettingsEnumInt, number>[];
+    roamingSetttingsVersion: number;
+    stringSettings: SettingsValue<SettingsEnumString, string>[];
+    settingsProfiles: string[];
 }
 
 export interface ValorantProcessLaunchConfiguration {
