@@ -27,30 +27,13 @@ export interface PvpSeasonsItem {
     Type: string;
     StartTime: string;
     EndTime: string;
-    IsEnabled: boolean;
     IsActive: boolean;
     DevelopmentOnly: boolean;
 }
 
 export interface PvpContents {
-    Characters: PvpContentItem[];
-    Maps: PvpContentItem[];
-    Chromas: PvpContentItem[];
-    Skins: PvpContentItem[];
-    SkinLevels: PvpContentItem[];
-    Attachments: PvpContentItem[];
-    Equips: PvpContentItem[];
-    Themes: PvpContentItem[];
-    GameModes: PvpContentItem[];
-    Sprays: PvpContentItem[];
-    SprayLevels: PvpContentItem[];
-    Charms: PvpContentItem[];
-    CharmLevels: PvpContentItem[];
-    PlayerCards: PvpContentItem[];
-    PlayerTitles: PvpContentItem[];
-    StorefrontItems: PvpContentItem[];
+    DisabledIDs: unknown[];
     Seasons: PvpSeasonsItem[];
-    CompetitiveSeasons: PvpCompetitiveSeason[];
     Events: PvpEventItem[];
 }
 

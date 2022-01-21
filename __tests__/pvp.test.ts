@@ -165,110 +165,36 @@ const mockedPvpMmr: PvpMMR = {
 };
 
 const mockedContents: PvpContents = {
-    Attachments: [
+    DisabledIDs: [],
+    Seasons: [
         {
-            AssetName: "test",
-            ID: "test",
-            IsEnabled: true,
-            Name: "teste",
-        },
-    ],
-    Characters: [
-        {
-            AssetName: "test",
-            ID: "test",
-            IsEnabled: true,
-            Name: "teste",
-        },
-    ],
-    CharmLevels: [
-        {
-            AssetName: "test",
-            ID: "test",
-            IsEnabled: true,
-            Name: "teste",
-        },
-    ],
-    Charms: [
-        {
-            AssetName: "test",
-            ID: "test",
-            IsEnabled: true,
-            Name: "teste",
-        },
-    ],
-    Chromas: [
-        {
-            AssetName: "test",
-            ID: "test",
-            IsEnabled: true,
-            Name: "teste",
-        },
-    ],
-    CompetitiveSeasons: [
-        {
+            ID: "0df5adb9-4dcb-6899-1306-3e9860661dd3",
+            Name: "Closed Beta",
+            Type: "episode",
+            StartTime: "2020-04-07T05:15:00Z",
+            EndTime: "2020-05-29T20:14:00Z",
+            IsActive: false,
             DevelopmentOnly: false,
-            EndTime: "timestamp",
-            ID: "id",
-            SeasonID: "season",
-            StartTime: "timestamp",
-        },
-    ],
-    Equips: [
-        {
-            AssetName: "test",
-            ID: "test",
-            IsEnabled: true,
-            Name: "teste",
         },
     ],
     Events: [
         {
+            ID: "3bd00051-4518-411d-046d-a7a554850267",
+            Name: "YR1 ANNIVERSARY PASS",
+            StartTime: "2021-06-22T12:00:00Z",
+            EndTime: "2021-07-07T07:59:59Z",
+            IsActive: false,
             DevelopmentOnly: false,
-            EndTime: "timestamp",
-            ID: "id",
-            IsActive: true,
-            IsEnabled: true,
-            Name: "teste",
-            StartTime: "timestamp",
         },
-    ],
-    GameModes: [
         {
-            AssetName: "test",
-            ID: "test",
-            IsEnabled: true,
-            Name: "teste",
-        },
-    ],
-    Maps: [
-        {
-            AssetName: "test",
-            ID: "test",
-            IsEnabled: true,
-            Name: "teste",
-        },
-    ],
-    PlayerCards: [{ AssetName: "test", ID: "test", IsEnabled: true, Name: "teste" }],
-    PlayerTitles: [{ AssetName: "test", ID: "test", IsEnabled: true, Name: "teste" }],
-    Seasons: [
-        {
-            Name: "test",
-            IsEnabled: true,
-            IsActive: true,
-            StartTime: "timestamp",
-            ID: "test",
-            EndTime: "timestamp",
+            ID: "cee09894-41d6-7000-848b-ea9de6c28f44",
+            Name: "RiotX Arcane Pass",
+            StartTime: "2021-11-05T21:00:00Z",
+            EndTime: "2021-11-22T22:00:00Z",
+            IsActive: false,
             DevelopmentOnly: false,
-            Type: "type",
         },
     ],
-    SkinLevels: [{ AssetName: "test", ID: "test", IsEnabled: true, Name: "teste" }],
-    Skins: [{ AssetName: "test", ID: "test", IsEnabled: true, Name: "teste" }],
-    SprayLevels: [{ AssetName: "test", ID: "test", IsEnabled: true, Name: "teste" }],
-    Sprays: [{ AssetName: "test", ID: "test", IsEnabled: true, Name: "teste" }],
-    StorefrontItems: [{ AssetName: "test", ID: "test", IsEnabled: true, Name: "teste" }],
-    Themes: [{ AssetName: "test", ID: "test", IsEnabled: true, Name: "teste" }],
 };
 
 const mockedAccountXP: PvpAccountXp = {
@@ -1206,14 +1132,14 @@ test("should return mmr info about current user authenticated", async () => {
     expect(data).toEqual(mockedPvpMmr);
 });
 
-test("should return all game contents such as maps, agents, etc...", async () => {
+test("should return pvp game content (battlepass, act, events)", async () => {
     mockedHttpService.fetch.mockResolvedValueOnce(mockedContents);
 
     const data = await pvp.contents();
 
     expect(mockedHttpService.fetch).toHaveBeenCalledTimes(1);
 
-    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/content-service/v2/content`, "shared");
+    expect(mockedHttpService.fetch).toHaveBeenCalledWith(`/content-service/v3/content`, "shared");
 
     expect(data).toEqual(mockedContents);
 });

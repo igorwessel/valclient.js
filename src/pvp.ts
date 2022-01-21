@@ -33,10 +33,10 @@ class Pvp implements IPvp {
     /**
      * Content_FetchContent
      *
-     * Get names and ids for game content such as agents, maps, guns, etc.
+     * Get all PVP content e.g: battleplass, events, acts, etc...
      */
     async contents(): Promise<PvpContents> {
-        const data = await this._http.fetch<PvpContents>("/content-service/v2/content", "shared");
+        const data = await this._http.fetch<PvpContents>("/content-service/v3/content", "shared");
 
         return data;
     }

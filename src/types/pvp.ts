@@ -6,7 +6,7 @@ export type PvpCompetitiveSeason = Pick<PvpSeasonsItem, "ID" | "StartTime" | "En
 
 export type PvpEventItem = Pick<
     PvpSeasonsItem,
-    "ID" | "Name" | "StartTime" | "EndTime" | "IsEnabled" | "IsActive" | "DevelopmentOnly"
+    "ID" | "Name" | "StartTime" | "EndTime" | "IsActive" | "DevelopmentOnly"
 >;
 
 export type PvpItemProgressDefinitionsRewards = PvpItemProgressDefinitionsItem & { Amount: number };
