@@ -1,5 +1,4 @@
 import { Chat } from "@app/chat";
-
 import { mock } from "jest-mock-extended";
 
 import { IHttp } from "@interfaces/http";

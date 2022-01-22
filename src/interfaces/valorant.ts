@@ -83,6 +83,7 @@ export interface ClientSettings {
     axisMapping: Record<string, unknown>[];
     floatSettings: SettingsValue<SettingsEnumFloat, number>[];
     intSettings: SettingsValue<SettingsEnumInt, number>[];
+    boolSettings: SettingsValue<SettingsEnumBool, boolean>[];
     roamingSetttingsVersion: number;
     stringSettings: SettingsValue<SettingsEnumString, string>[];
     settingsProfiles: string[];

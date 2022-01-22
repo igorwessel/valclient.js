@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn test --coverage && npx istanbul-badges-readme && git add 'README.md'
+yarn test:unit --coverage && npx istanbul-badges-readme && git add 'README.md'
