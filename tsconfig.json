@@ -18,7 +18,8 @@
             "@resources/*": ["./resources/*"],
             "@errors/*": ["./errors/*"],
             "@interfaces/*": ["./interfaces/*"],
-            "@app/*": ["./*"]
+            "@app/*": ["./*"],
+            "@tests/*": ["../__tests__/*"]
         },
         "plugins": [
             {
@@ -33,6 +34,6 @@
     },
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "include": ["src/**/*.ts", "__tests__/**/*.test.ts"],
+    "include": ["src/**/*.ts", "__tests__/**/*.ts"],
     "exclude": ["node_modules", "dist"]
 }

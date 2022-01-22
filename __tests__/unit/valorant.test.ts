@@ -45,6 +45,12 @@ const mockedClientSettings: ClientSettingsResponse = {
         floatSettings: [{ settingEnum: "EAresFloatSettingName::MouseSensitivity", value: 5 }],
         intSettings: [{ settingEnum: "EAresIntSettingName::VoiceVolume", value: 1 }],
         roamingSetttingsVersion: 0,
+        boolSettings: [
+            {
+                settingEnum: "EAresBoolSettingName::CollectionShowOwnedOnly",
+                value: true,
+            },
+        ],
         stringSettings: [
             {
                 settingEnum: "EAresStringSettingName::SavedCrosshairProfileData",
