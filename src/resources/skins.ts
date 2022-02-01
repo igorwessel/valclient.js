@@ -123,6 +123,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Recon Phantom": "d67b929f-4431-61c0-286e-3ebf3d11c4af",
         "Infinity Phantom": "1f835677-4ed7-fec2-6b80-c3ac384323f6",
         "Standard Phantom": "337cb216-4a6e-d85d-88c2-f29ab317784c",
+        "Tigris Phantom": "e0cf9566-452c-1501-43b1-778e69c60dbf",
         "BlastX Phantom": "59af9c5d-43ee-1360-f3a7-a9a6ff6e478b",
         "Winterwunderland Phantom": "a5c64455-4fd0-9207-fc97-e086af99a2a6",
     },
@@ -287,6 +288,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Snakebite Shorty": "9428e52d-4611-c8ff-1b63-7b8e386fe8cb",
         "Standard Shorty": "48ad078a-4dae-2b85-a945-f4b6d1efecbb",
         "Aerosol Shorty": "a39bd1bb-4b17-4d57-c505-7eb15caffa4d",
+        "Tigris Shorty": "7b51fc8a-4a5c-712e-c663-e6a7eeb61d91",
         "Wayfinder Shorty": "e917273f-42d1-3a8d-7c9e-54afd6e5e68d",
         "Wasteland Shorty": "30635237-4877-4ea4-5ac4-239474d3a662",
     },
@@ -315,6 +317,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Cavalier Operator": "d47f9576-426f-4da3-761d-39967489550c",
         "Standard Operator": "d1f2920f-469a-3431-ad96-96afbd0017f2",
         "Aerosol Operator": "5f260f34-4021-ab2c-8080-6287c4f9974b",
+        "Tigris Operator": "b53a990d-45c2-6212-a98f-b0aa5d6e6c23",
         "Convex Operator": "ccb54094-4db8-2c9f-656b-f1bff329f469",
     },
     Guardian: {
@@ -384,6 +387,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Recon Spectre": "26b1c794-4370-f354-ff4d-3a8b95edff79",
         "Infinity Spectre": "53ab2a6a-46c5-32b9-e045-6781e677d7ff",
         "Standard Spectre": "f01d1307-4299-42f5-2c5e-7dab7e69ab19",
+        "Tigris Spectre": "910991b7-40de-183d-12ea-d99e67cfa910",
         "Convex Spectre": "c8a5ba23-4f0d-c7de-8e2f-c184e2fc27ba",
         "BlastX Spectre": "b4e5bb69-4e12-113f-c43b-efa5b13cb96d",
         "Wasteland Spectre": "f7da43d8-450b-a03f-ceb7-c4b20f738392",
@@ -452,6 +456,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         Prosperity: "f4e40444-43f3-e6f7-3271-bdb7d1492b05",
         "Recon Balisong": "39cf499b-4f82-e875-5320-b0a1d7fc58d4",
         Melee: "12cc9ed2-4430-d2fe-3064-f7a19b1ba7c7",
+        "Hu Else": "5724cd18-458b-af3d-b60a-239c5a8c081a",
         "Ego Knife": "c52fe5d7-4500-ffc0-cbcd-bfa29b7ea040",
         "BlastX Polymer KnifeTech Coated Knife": "5844ccd5-4a8d-e84d-b5b1-dfaaa8f34d84",
         "Winterwunderland Candy Cane": "e49c0fd2-435c-2c41-9164-4996080f455b",
@@ -490,7 +495,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "162beb92-4ab7-4383-da51-4b94ba90bd5d",
     },
     "Schema Odin": {
-        "Level 2": "15a5516d-412f-2db0-6bb3-3cbe40a2355f",
+        "Level 1": "15a5516d-412f-2db0-6bb3-3cbe40a2355f",
     },
     "Standard Odin": {
         "Level 1": "d91fb318-4e40-b4c9-8c0b-bb9da28bac55",
@@ -662,7 +667,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "3aeef60b-48fb-02aa-31b1-068aeb351213",
     },
     "Schema Vandal": {
-        "Level 2": "76c30002-4884-8193-dcf6-93a00b10bc15",
+        "Level 1": "76c30002-4884-8193-dcf6-93a00b10bc15",
     },
     "Sentinels of Light Vandal": {
         "Level 1": "968efd06-4549-65f4-9fb1-3f90d612e428",
@@ -878,6 +883,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Standard Phantom": {
         "Level 1": "871e73ed-452d-eb5a-3d6b-1d87060f35ce",
     },
+    "Tigris Phantom": {
+        "Level 1": "437fae46-4145-c8a5-14d7-9c8a05bddb05",
+    },
     "BlastX Phantom": {
         "Level 1": "7b534393-40b0-38d0-1ffc-2b8b78708264",
         "Level 2": "5725e2ca-4889-cd60-67e9-b4b968a2f461",
@@ -909,7 +917,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "77dd3407-4580-9734-a0bb-6b80a4e5be3e",
     },
     "Hydrodip Judge": {
-        "Level 2": "2a25f841-4769-6536-ded3-8890ee26c430",
+        "Level 1": "2a25f841-4769-6536-ded3-8890ee26c430",
     },
     "Outpost Judge": {
         "Level 1": "11e342ba-4f18-b9ab-964e-e48fdf610890",
@@ -974,7 +982,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "a773dd2f-4027-4b98-8d4b-5ea0c7924883",
     },
     "Hydrodip Bucky": {
-        "Level 2": "338bb3e6-4c47-425d-32a5-5ea1a96c78ae",
+        "Level 1": "338bb3e6-4c47-425d-32a5-5ea1a96c78ae",
     },
     "Prime//2.0 Bucky": {
         "Level 1": "f987be1f-4287-35a4-34a9-d6a92805e7ff",
@@ -1072,7 +1080,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "ccbd02ca-442d-08b7-e862-e1a350266fb4",
     },
     "Hydrodip Frenzy": {
-        "Level 2": "c485b3df-4ea3-d457-e75b-35add7e78e7e",
+        "Level 1": "c485b3df-4ea3-d457-e75b-35add7e78e7e",
     },
     "Prime//2.0 Frenzy": {
         "Level 1": "2607b2c6-45f7-e75e-94f8-58a738773d5c",
@@ -1351,7 +1359,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "ec570f46-4751-eeb6-7739-069bcbb8d05a",
     },
     "Schema Sheriff": {
-        "Level 2": "b5601f65-4467-7946-8a37-45bed5514f98",
+        "Level 1": "b5601f65-4467-7946-8a37-45bed5514f98",
     },
     "Sentinels of Light Sheriff": {
         "Level 1": "746a022b-48a9-c51b-f379-11a3e1e2bc8e",
@@ -1422,6 +1430,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Aerosol Shorty": {
         "Level 1": "1db941af-4587-c6a4-5885-dbb77fefcb32",
+    },
+    "Tigris Shorty": {
+        "Level 1": "9f282aa1-4d3e-7595-83ca-0a97fc89ba31",
     },
     "Wayfinder Shorty": {
         "Level 1": "673149d4-463f-27a5-163f-78a599244fc3",
@@ -1526,6 +1537,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Aerosol Operator": {
         "Level 1": "35001b1f-49fa-48ad-a087-03809f6f059e",
     },
+    "Tigris Operator": {
+        "Level 1": "2ecb0e86-4a14-b33b-8fe1-db96f2c3aa69",
+    },
     "Convex Operator": {
         "Level 1": "ed333b00-4e88-a9c5-d309-acae85438e93",
     },
@@ -1561,7 +1575,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "a2c59452-4420-130a-9aa1-cb8ea551a05d",
     },
     "Hydrodip Guardian": {
-        "Level 2": "0ab465ed-4539-16f1-b791-5384280e0a1c",
+        "Level 1": "0ab465ed-4539-16f1-b791-5384280e0a1c",
     },
     "Prime Guardian": {
         "Level 1": "9336ab9d-445c-0872-a283-9f9b61a0098a",
@@ -1774,6 +1788,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Standard Spectre": {
         "Level 1": "1dc45e18-4a07-c85f-0020-6da4db1486ce",
     },
+    "Tigris Spectre": {
+        "Level 1": "e041ba88-452e-d907-1a83-f6b7631cd053",
+    },
     "Convex Spectre": {
         "Level 1": "fbe265cf-4e3d-9891-791e-5089f1f7f102",
     },
@@ -1818,7 +1835,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "e2c84381-4fa6-29b4-37b9-21bba8ae24bf",
     },
     "Schema Stinger": {
-        "Level 2": "0329743b-4ce8-be9f-b531-f4aadc890287",
+        "Level 1": "0329743b-4ce8-be9f-b531-f4aadc890287",
     },
     "Sovereign Stinger": {
         "Level 1": "9bc535dd-4d91-3421-2cd0-7a8fdad3478b",
@@ -2002,6 +2019,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     Melee: {
         "Level 1": "854938f3-4532-b300-d9a2-379d987d7469",
+    },
+    "Hu Else": {
+        "Level 1": "d3a228df-4eb5-09c4-0e32-93b50c9ec842",
     },
     "Ego Knife": {
         "Level 1": "5bf17117-4ead-a0a8-2961-288d38985e93",
@@ -2463,6 +2483,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Standard Phantom": {
         Default: "52221ba2-4e4c-ec76-8c81-3483506d5242",
+    },
+    "Tigris Phantom": {
+        Default: "23e3b121-4847-5546-d7f3-be8d82c47ddd",
     },
     "BlastX Phantom": {
         Default: "0c6f30f3-4ed4-b113-6aaa-139e218f9dc6",
@@ -3052,6 +3075,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Aerosol Shorty": {
         Default: "acefbdfb-40e8-4d41-d879-d188dc6e01a1",
     },
+    "Tigris Shorty": {
+        Default: "a62fbde2-4a37-fd48-0f87-ec86cb66c5bf",
+    },
     "Wayfinder Shorty": {
         Default: "763d5a76-493f-4978-be73-c0a06d79a741",
     },
@@ -3154,6 +3180,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Aerosol Operator": {
         Default: "9d5173ed-4a57-eae5-fe88-159fa472aec9",
+    },
+    "Tigris Operator": {
+        Default: "82c279df-423e-f87c-f62e-93bd7604025c",
     },
     "Convex Operator": {
         Default: "5d5942c0-4824-11e9-0e91-65b4b76d3bea",
@@ -3426,6 +3455,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Standard Spectre": {
         Default: "a9aaccca-4cdc-02ea-1d7e-89bbacecc0e2",
     },
+    "Tigris Spectre": {
+        Default: "976c0258-41df-b35c-e053-87b501278957",
+    },
     "Convex Spectre": {
         Default: "b6a4a45d-4592-8216-21ac-c7bc26e947ba",
     },
@@ -3652,6 +3684,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     Melee: {
         Default: "cac83e5c-47a1-3519-5420-1db1fdbc4892",
+    },
+    "Hu Else": {
+        Default: "73190072-4d75-df43-9906-27b5dbad3d88",
     },
     "Ego Knife": {
         Default: "9c8ed548-4ad7-6d82-9d1e-a0a57d7e2267",

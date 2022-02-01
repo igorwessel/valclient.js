@@ -120,6 +120,7 @@ export type PhantomSkin =
     | "Recon Phantom"
     | "Infinity Phantom"
     | "Standard Phantom"
+    | "Tigris Phantom"
     | "BlastX Phantom"
     | "Winterwunderland Phantom";
 
@@ -284,6 +285,7 @@ export type ShortySkin =
     | "Snakebite Shorty"
     | "Standard Shorty"
     | "Aerosol Shorty"
+    | "Tigris Shorty"
     | "Wayfinder Shorty"
     | "Wasteland Shorty";
 
@@ -312,6 +314,7 @@ export type OperatorSkin =
     | "Cavalier Operator"
     | "Standard Operator"
     | "Aerosol Operator"
+    | "Tigris Operator"
     | "Convex Operator";
 
 export type GuardianSkin =
@@ -381,6 +384,7 @@ export type SpectreSkin =
     | "Recon Spectre"
     | "Infinity Spectre"
     | "Standard Spectre"
+    | "Tigris Spectre"
     | "Convex Spectre"
     | "BlastX Spectre"
     | "Wasteland Spectre";
@@ -449,6 +453,7 @@ export type KnifeSkin =
     | "Prosperity"
     | "Recon Balisong"
     | "Melee"
+    | "Hu Else"
     | "Ego Knife"
     | "BlastX Polymer KnifeTech Coated Knife"
     | "Winterwunderland Candy Cane";

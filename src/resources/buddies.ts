@@ -64,6 +64,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Donut Buddy": "26d1b452-461d-8d6f-526b-658c692e0f9e",
     "Elderflame Buddy": "38a10a3b-495c-eeff-b8af-c3b2b5cdc3f9",
     "VLT/R Buddy": "45b67ec9-4f33-6ba7-625a-36b81016297a",
+    "Happy Dumpling Buddy": "0911b78d-48a7-fb01-3ccd-0ca9a3996f75",
     "Dumpster Fire Buddy": "5e4482b8-4c85-d570-d9b6-929a8d6094d5",
     "Epilogue: Dumpster Fire Buddy": "6e7d4b62-402b-9e2a-c531-58b5091d8dc8",
     "Singularity Buddy": "2de08c48-4aa1-0c32-138d-4b834c21aee2",
@@ -194,6 +195,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Potato Aim Buddy": "55702e59-4e3f-e2dd-2b31-91b1938cf0e1",
     "Sample 36-K Buddy": "b37765f0-48cd-9a0b-ceb7-8e8d261f4373",
     "Radianite Orb Buddy": "cd1ef501-476d-e9fb-3944-a6b0e2a79878",
+    "Tigris Buddy": "d3cc1856-4df9-ca86-deee-3f80af0edf79",
     "Toaster Buddy": "22481bd6-45d7-55a9-db2f-f4a7b86c0d05",
     "Scuttle Trash Buddy": "476e2d56-46a1-3607-aa61-3487cf9ae80f",
     "Fist Bump Buddy": "ad508aeb-44b7-46bf-f923-959267483e78",
@@ -392,6 +394,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "VLT/R Buddy": {
         "1": "b3cee508-4897-6f83-4afe-1e81a78b432b",
+    },
+    "Happy Dumpling Buddy": {
+        "1": "a4e3fe97-4de9-c133-7dd0-f2b294a2ead2",
     },
     "Dumpster Fire Buddy": {
         "1": "01c0c583-4277-2ba2-6d45-18ac30c323de",
@@ -782,6 +787,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Radianite Orb Buddy": {
         "1": "45d9b8f8-41a6-0ff5-01eb-7987fb000d31",
+    },
+    "Tigris Buddy": {
+        "1": "d95a6ed0-4ce4-9730-a3ac-59af093dbdbf",
     },
     "Toaster Buddy": {
         "1": "7944b081-4b0f-81c8-e41f-3aa5c634b782",
