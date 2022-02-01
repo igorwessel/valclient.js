@@ -177,6 +177,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Variable Removed Spray": "b11b4890-4e7f-cf5f-be7c-9c85ecd50868",
     "Don't Cross Me Spray": "0a20236d-47d4-e9e6-adb1-a69ed3fdb1cd",
     "Lights Out Spray": "9c65bbe6-41da-c50c-be81-839214eede7c",
+    "Lucky Tiger Spray": "efd0d001-4edb-34eb-c05c-139817d4840a",
     "Celestial Spray": "cd9986f8-4473-914d-7918-caa21d23710f",
     "Magepunk, Ep 3 Spray": "562a64d8-483c-5853-4e7a-eea5ca95e3ce",
     "Flames in my Veins Spray": "f677065c-449d-dd91-78ef-6fa7d95ded8d",
@@ -242,6 +243,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Sage Spray": "2cf3c29c-49ec-7297-93f8-35988fce5ca6",
     "All Good Spray": "d16b0b8c-4106-493b-f231-ac9b4d56372f",
     "Pulse Check Spray": "6410980b-493b-63bf-0860-31940c553ead",
+    "Tigris Spray": "5cbab592-4571-be90-e1fa-268898ebd23c",
     "V for VALORANT Spray": "5d88fd45-434d-b0d6-2331-e8b3d47b8395",
     "Can't Teach That Spray": "48601754-442d-98cb-2109-3fb2075500ec",
     "Reyna Spray": "0c342c8c-492e-e20e-cf06-c694ec4a386f",
@@ -779,6 +781,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Lights Out Spray": {
         "1": "5c618d37-4959-19b0-4493-f698d330e5ea",
     },
+    "Lucky Tiger Spray": {
+        "1": "702907a2-4980-4bcb-48bb-4586a7777ba1",
+    },
     "Celestial Spray": {
         "1": "5f3a9e28-4c52-8ed4-944c-14b6e00af9a7",
     },
@@ -973,6 +978,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Pulse Check Spray": {
         "1": "28b0da71-4d01-825c-a7d5-d480f5d37ca7",
+    },
+    "Tigris Spray": {
+        "1": "e93166d8-4485-59e7-f065-82be40c7899a",
     },
     "V for VALORANT Spray": {
         "1": "280b9b3f-4bfa-9cf5-c72b-78ab277c30e7",
