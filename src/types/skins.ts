@@ -73,6 +73,7 @@ export type VandalSkin =
 export type BulldogSkin =
     | "Aristocrat Bulldog"
     | "Spectrum Bulldog"
+    | "Undercity Bulldog"
     | "Glitchpop Bulldog"
     | "Rush Bulldog"
     | "Velocity Bulldog"
@@ -94,6 +95,7 @@ export type PhantomSkin =
     | "Spectrum Phantom"
     | "Radiant Crisis 001 Phantom"
     | "Nebula Phantom"
+    | "Undercity Phantom"
     | "Glitchpop Phantom"
     | "Singularity Phantom"
     | "Rush Phantom"
@@ -125,6 +127,7 @@ export type PhantomSkin =
     | "Winterwunderland Phantom";
 
 export type JudgeSkin =
+    | "Undercity Judge"
     | "Glitchpop Judge"
     | "Elderflame Judge"
     | "Rush Judge"
@@ -197,6 +200,7 @@ export type ClassicSkin =
     | "Pistolinha Classic"
     | "Radiant Crisis 001 Classic"
     | "Red Alert Classic"
+    | "Undercity Classic"
     | "Glitchpop Classic"
     | "Finesse Classic"
     | "Surge Classic"
@@ -416,6 +420,7 @@ export type KnifeSkin =
     | "Origin Crescent Blade"
     | "Radiant Crisis 001 Baseball Bat"
     | "Nebula Knife"
+    | "Hack"
     | "Glitchpop Dagger"
     | "Glitchpop Axe"
     | "Elderflame Dagger"

@@ -76,6 +76,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Bulldog: {
         "Aristocrat Bulldog": "c610dbc8-4a90-3c86-7f9e-bfa910f75bb9",
         "Spectrum Bulldog": "fbe04552-445f-f202-923e-6fbd61b7e2aa",
+        "Undercity Bulldog": "4be8d0e7-48e0-eaa3-1db4-85a14094f369",
         "Glitchpop Bulldog": "285c6731-4451-b930-7a3d-c5a736d00f5e",
         "Rush Bulldog": "23399beb-4828-0d03-ae24-aaa62b08f796",
         "Velocity Bulldog": "706dcacc-432b-47e5-3cf7-2db432a8afe6",
@@ -97,6 +98,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Spectrum Phantom": "980fa063-436e-e51f-c38d-70a5b93a0f1c",
         "Radiant Crisis 001 Phantom": "2371d9e1-498c-1ad1-4f10-d1a339c7fda2",
         "Nebula Phantom": "57f91d68-4cda-76c0-c258-7ba507cd6f87",
+        "Undercity Phantom": "ed3ac995-4fd1-3079-27aa-4aab84447833",
         "Glitchpop Phantom": "25a7f0f2-4bce-7e45-b4b0-ca9264f5dfcc",
         "Singularity Phantom": "5eec4ce6-443d-e9b5-4c5b-2b967d426bd3",
         "Rush Phantom": "8db507b5-4d57-96e0-000e-2d8c8af79550",
@@ -128,6 +130,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Winterwunderland Phantom": "a5c64455-4fd0-9207-fc97-e086af99a2a6",
     },
     Judge: {
+        "Undercity Judge": "e413125e-40c6-cccd-de35-f28e34c57442",
         "Glitchpop Judge": "28a659a4-439e-fcd0-6236-d39979ee5c51",
         "Elderflame Judge": "0221b120-444b-6d1b-fc50-e4a98e470eb2",
         "Rush Judge": "f6db3976-4c70-c3bf-01f8-dca6d335319a",
@@ -200,6 +203,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Pistolinha Classic": "34919680-4f00-554b-0c2b-95acca7d0d36",
         "Radiant Crisis 001 Classic": "a95d08be-4e56-1189-801b-d9aa4efe32fa",
         "Red Alert Classic": "41fce834-4c76-a0f4-2cf8-cca3ae879eab",
+        "Undercity Classic": "ac14dca7-408b-7e8f-8ed0-99b8ed1ffe98",
         "Glitchpop Classic": "8b2598eb-4db9-6338-4a25-c780402c780e",
         "Finesse Classic": "3af7fef0-48cd-64d3-cead-dcb9cd07865a",
         "Surge Classic": "6cc70eae-4297-91d5-adb9-efa48004da77",
@@ -419,6 +423,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Origin Crescent Blade": "ac687fc4-40c5-4c41-6a7c-5eb59adabd60",
         "Radiant Crisis 001 Baseball Bat": "71020826-483d-34f8-8da7-928f87942c10",
         "Nebula Knife": "a4c41553-4ba5-efee-5685-7a9f0cdf7878",
+        Hack: "c91e4850-4d32-3b12-f411-3e9f644ea616",
         "Glitchpop Dagger": "ddc025b2-475f-889a-2800-80b4215582bc",
         "Glitchpop Axe": "f0c42e14-4a92-132d-dfd4-cbbef103340c",
         "Elderflame Dagger": "94b40026-4efb-39ea-69d7-fca60be39c56",
@@ -711,6 +716,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "674ca080-4624-3550-d1f3-dfac17d40918",
         "Level 4": "c6ad47ec-4078-2902-fdfe-2eae352bf4f4",
     },
+    "Undercity Bulldog": {
+        "Level 1": "89b68205-4fe5-2434-a731-e5a734bd4a7a",
+    },
     "Glitchpop Bulldog": {
         "Level 1": "4a5ad8cd-4684-a47c-b393-ce9c6760d21a",
         "Level 2": "44c5b5cc-4931-b4af-1a4a-17ab9ec2b89e",
@@ -779,6 +787,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Nebula Phantom": {
         "Level 1": "40308b30-4689-9713-52fb-6f8a3534213f",
+    },
+    "Undercity Phantom": {
+        "Level 1": "bbc68d13-42b8-6f2c-d5b2-e79c291677c5",
     },
     "Glitchpop Phantom": {
         "Level 1": "9f6e4612-433b-aea9-1683-3db7aee90848",
@@ -894,6 +905,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Winterwunderland Phantom": {
         "Level 1": "63a65008-4266-1117-fe3d-d1bf290b7da9",
+    },
+    "Undercity Judge": {
+        "Level 1": "f27be4ed-4fa5-9c3a-592a-b98bb455fd12",
     },
     "Glitchpop Judge": {
         "Level 1": "712c7a37-4524-0b27-dfdd-4e95181dd36e",
@@ -1140,6 +1154,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Red Alert Classic": {
         "Level 1": "d2b8b79b-4be7-4790-a356-4e9b06d3965e",
+    },
+    "Undercity Classic": {
+        "Level 1": "1590d353-4b81-4207-b79a-5493231cbee7",
     },
     "Glitchpop Classic": {
         "Level 1": "25cb63cd-416e-ab23-2377-d18638679871",
@@ -1890,6 +1907,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Nebula Knife": {
         "Level 1": "88d7c503-477f-c881-af2c-53bbab55807c",
     },
+    Hack: {
+        "Level 1": "bde59d0e-4ddc-aa88-5c37-50a84673e0ed",
+    },
     "Glitchpop Dagger": {
         "Level 1": "48ce4a70-4207-623b-4739-bfb937812432",
         "Level 2": "29bd8b5b-4d19-b6af-70c3-4797c0482e1c",
@@ -2293,6 +2313,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "a3ade5a6-4c44-83f5-d26d-4eb09dcf65f5",
         "Purple/Pink": "374c6007-431e-a9d9-279a-f7a9830e50e1",
     },
+    "Undercity Bulldog": {
+        Default: "a4621718-48a3-f8ce-d17c-d39ad4c085f0",
+    },
     "Glitchpop Bulldog": {
         Default: "f7dd47c7-467b-36f1-0d13-beb53372b666",
         Blue: "e4afd93d-43f4-948c-7e6a-f88b1549409b",
@@ -2366,6 +2389,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Nebula Phantom": {
         Default: "388dada2-4bbd-0cd9-f9a9-4c9b66c64240",
+    },
+    "Undercity Phantom": {
+        Default: "13c7d77d-4b4a-22bd-e886-ab8bda1fb1b5",
     },
     "Glitchpop Phantom": {
         Default: "7dd3f7d8-455b-bc3a-94b8-af9fba0bebed",
@@ -2495,6 +2521,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Winterwunderland Phantom": {
         Default: "c90457f0-4342-9615-d012-96a68cbf4304",
+    },
+    "Undercity Judge": {
+        Default: "1d574770-4b5e-6bb0-6376-27b79c130f36",
     },
     "Glitchpop Judge": {
         Default: "5966c88b-4662-be62-5ae6-50bc036700b5",
@@ -2758,6 +2787,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Red Alert Classic": {
         Default: "900becab-4e59-38d1-c668-449a236142cc",
+    },
+    "Undercity Classic": {
+        Default: "747a6229-4f18-f170-af78-719439ba122a",
     },
     "Glitchpop Classic": {
         Default: "bb1e1703-4ea1-9be5-c145-4480a6b9f0d7",
@@ -3556,6 +3588,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Nebula Knife": {
         Default: "82988b47-4439-3b28-cbbe-899d381b291e",
+    },
+    Hack: {
+        Default: "2e59d7f8-4932-8196-77c0-c182fb0dc259",
     },
     "Glitchpop Dagger": {
         Default: "9d137aeb-41a1-a84f-3523-5194e24cc580",
