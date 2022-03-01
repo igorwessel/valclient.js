@@ -28,6 +28,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Thumbs Up Spray": "43341e92-451f-c194-b4f6-0b926bdc3643",
     "Stay Safe, Wash Your Hands Spray": "5d6cadda-42c3-1cac-94d3-458917f5cb2c",
     "RGX 11z Pro Spray": "8035dd5d-4ddd-5dbd-165c-9886574fdff5",
+    "Gaia's Vengeance Spray": "8b7154e2-4453-2515-0867-62a1075b03ad",
     "Spectrum Spray": "a5ecf58a-44ce-75f6-abf7-bfb616c12f59",
     "Boom! Spray": "35d8fb90-49a9-641e-ff08-b4bc20421908",
     "Breach Spray": "a05c50b7-4a1d-c2de-e1e7-ac8a7730daa4",
@@ -154,10 +155,32 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Missed a Spot Spray": "e1f12119-480e-5979-a1c3-b98fc17f10a9",
     "Shoot Here Spray": "bf750412-4514-9e90-c279-feb8919d3824",
     "Use Ult Spray": "b36b1182-4cf2-ecbf-3146-fbac3ee73348",
+    "Woke Up Thinking Lineups Spray": "f165025c-4113-9b61-4465-ed956e4533e2",
+    "Bruno's Happy Dance Spray": "68d4f0b2-48fe-2514-2924-36b4a2cf5e62",
+    "Hang Loose Spray": "e4a8fb80-46ae-90ef-c633-0ead0f011001",
+    "Crying Mance Spray": "84ba844f-4240-8c16-4851-2ba490104728",
+    "All Aboard Spray": "5f5725b2-40b3-a5f6-0e91-01845c25e534",
+    "Matcha Break Spray": "15e84d29-480e-910b-53c3-ab85b8ca852a",
+    "Pros Don't Fake Spray": "b83adc4b-4566-6601-c460-039e9e78ac3f",
+    "Sheeeeesh Spray": "1521f1a0-40e9-bc68-e2f0-87b053418b82",
+    "Slipping Away Spray": "d725e767-4d73-a5a6-bb37-8c82cf3555cc",
+    "Stop! Spray": "c97f9381-4784-e244-dffa-9bbe2b359012",
+    "Tactibear's Balalaika Spray": "81a09bea-4868-454b-5732-3f83b397447f",
+    "Take a Bow Spray": "9c8143d5-467a-5ffa-1dde-f6b35411e15d",
+    "Many Thanks Spray": "2290b465-491f-2566-aa81-af83fa3e3036",
+    "Splitting Melons Spray": "3d79a7d2-4883-4394-13a5-f5ba3f16d86f",
+    "#SAVEWIDEJOY Spray": "7f36b59b-436a-f72b-1560-ec83c5f0a72f",
+    "Epilogue: #SAVEWIDEJOY Spray": "beeafc3b-49f8-d5e6-dbd4-b791c9ce91fe",
     "VCT 2021 Spark Spray": "f9bcf120-42b6-6986-2acd-6aa87bab4089",
     "Fist Bump Spray": "d8cfce74-4bb8-42b2-022e-9dbf9d648823",
+    "Team Ace // Jett Spray": "5e5fd29a-4e83-40fa-0012-e08470dacdd7",
+    "Team Ace // Phoenix Spray": "e3d197d4-458b-7e60-dbbf-378788cf4863",
+    "Team Ace // Raze Spray": "b57067d5-4d13-cd4d-7493-d386a2fc1cbb",
+    "Team Ace // Reyna Spray": "87a73941-4739-acbf-5c94-63ab07cd68d6",
+    "Team Ace // Yoru Spray": "db44205d-4b22-cf8a-cdee-a49fcf754ce3",
     "GG Shooter Spray": "b520005e-42cf-169c-ab30-a7a60d7f29f1",
     "GLHF Spray": "6983ae7c-4cb5-835c-8f62-b7affbaae20e",
+    "Googly Moogly Spray": "85637987-4961-177a-28f0-f3acf8facb6a",
     "KAY/O Spray": "0abec7c8-4fc7-4fc2-af4c-22ad4802b937",
     "Drained Spray": "e1f79c8d-4dd1-0541-e5f1-75a5c1e8e7cd",
     "Training Bot Spray": "4c893010-4967-131a-a9a5-789483dbd7a0",
@@ -201,7 +224,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Salt Shaker Spray": "eece70be-4f84-facb-49b0-fe95290eff67",
     "Brimstone Spray": "be343d37-465e-1878-e6d0-9aba467d7cca",
     "The Big One Spray": "b16024b9-4f5e-6dfa-c229-7d9c620c24d0",
-    "Getting Reps  Spray": "50bc437d-46c4-e58f-e479-848becfb48fd",
+    "Getting Reps Spray": "50bc437d-46c4-e58f-e479-848becfb48fd",
     "Loose Cannon Spray": "47575563-4d43-96fb-1586-849d35c7ddd5",
     "VALORANT GO! Vol. 1 Cypher Spray": "290565e7-4540-5764-31da-758846dc2a5a",
     "VALORANT GO! Vol. 1 Jett Spray": "31ba7f82-4fcb-4cbb-a719-06a3beef8603",
@@ -333,6 +356,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "RGX 11z Pro Spray": {
         "1": "cd431466-46b6-1ea9-abf3-77a9a42082c9",
+    },
+    "Gaia's Vengeance Spray": {
+        "1": "6ccd421a-4fc6-4be8-ae1d-799ca0c46d75",
     },
     "Spectrum Spray": {
         "1": "8262b1a6-488b-e567-35fb-cd84309092dd",
@@ -712,17 +738,83 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Use Ult Spray": {
         "1": "2391d455-43ae-d000-6d21-30bd2e748da9",
     },
+    "Woke Up Thinking Lineups Spray": {
+        "1": "6ad2c947-4929-1a6f-ca8d-b9bf53422e3b",
+    },
+    "Bruno's Happy Dance Spray": {
+        "1": "6b921deb-49e3-4798-3a42-8d9eedd22c11",
+    },
+    "Hang Loose Spray": {
+        "1": "e26c19cf-4cb0-f5f0-89f6-719b92875c62",
+    },
+    "Crying Mance Spray": {
+        "1": "7919223f-4be8-c2c4-c96c-c89d400c2db6",
+    },
+    "All Aboard Spray": {
+        "1": "83bb84b9-4cee-37c3-9012-abb928bca332",
+    },
+    "Matcha Break Spray": {
+        "1": "68efe166-44c1-2fc9-a3cc-91a175530e7f",
+    },
+    "Pros Don't Fake Spray": {
+        "1": "a426da57-443e-c4e3-2813-ddb05c1ecc5e",
+    },
+    "Sheeeeesh Spray": {
+        "1": "d149b2e0-4116-b4d5-27af-bba840e2cd20",
+    },
+    "Slipping Away Spray": {
+        "1": "3b5310a2-4155-a2a1-39eb-65bfed11ee65",
+    },
+    "Stop! Spray": {
+        "1": "2806ba57-4bf3-68c7-94d0-759ef2821aa7",
+    },
+    "Tactibear's Balalaika Spray": {
+        "1": "2e967868-4431-f037-956e-e982d1e36627",
+    },
+    "Take a Bow Spray": {
+        "1": "3c327110-45ce-cf80-9fdc-3ca8574c9e83",
+    },
+    "Many Thanks Spray": {
+        "1": "3a7506b8-4c84-9341-1bd4-75b513a2f659",
+    },
+    "Splitting Melons Spray": {
+        "1": "1fa6f275-48ba-3249-7f50-899855281e3f",
+    },
+    "#SAVEWIDEJOY Spray": {
+        "1": "9b026696-414a-5917-368d-53afb5be41b1",
+    },
+    "Epilogue: #SAVEWIDEJOY Spray": {
+        "1": "6ec55b14-428a-2bb6-8228-5fa77cee2fe8",
+    },
     "VCT 2021 Spark Spray": {
         "1": "9aea356b-41f7-b2eb-be07-138caa0a5dad",
     },
     "Fist Bump Spray": {
         "1": "65a0e616-4169-1187-8daa-d696777cba48",
     },
+    "Team Ace // Jett Spray": {
+        "1": "abe583ec-4500-c11b-24a9-63a459f31dbd",
+    },
+    "Team Ace // Phoenix Spray": {
+        "1": "7e13b68d-43a5-ff70-9978-6da8103b117e",
+    },
+    "Team Ace // Raze Spray": {
+        "1": "9614e744-4e06-2614-de41-eaba1b759a5b",
+    },
+    "Team Ace // Reyna Spray": {
+        "1": "7a628cc8-4883-beff-068a-55aacfb5e312",
+    },
+    "Team Ace // Yoru Spray": {
+        "1": "b2406336-4ec4-44c4-4c74-a0b17dc5f7ea",
+    },
     "GG Shooter Spray": {
         "1": "4471ce86-4fcc-e6ee-32ab-4ead1b475bda",
     },
     "GLHF Spray": {
         "1": "d774fc07-45e2-0f19-f475-c0b1b9661323",
+    },
+    "Googly Moogly Spray": {
+        "1": "b7bb11d4-46af-31db-737e-308d128a14e4",
     },
     "KAY/O Spray": {
         "1": "9b0f68b2-4d77-4374-fc79-bca691f9b095",
@@ -853,7 +945,7 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "The Big One Spray": {
         "1": "8dbd1739-4706-ca30-e907-cdb400f76cba",
     },
-    "Getting Reps  Spray": {
+    "Getting Reps Spray": {
         "1": "27d9d9df-4778-58bb-0514-1e922861c30e",
     },
     "Loose Cannon Spray": {
