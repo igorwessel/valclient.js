@@ -273,6 +273,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Leer Spray": "87b81520-4eaa-0536-4c45-babd5a35a15b",
     "Marked for Death Spray": "bb6fd4d0-4ba1-68a1-a1e2-d6b1a33d6b9d",
     "Vandal Life Spray": "27c5fd11-4f69-031a-6ee0-6da838ed7998",
+    "Accidental Renaissance Spray": "be8eeab6-43eb-d0b7-7b38-f6bb25ef7547",
     "Omen Spray": "fd1a5a33-4170-95a4-f02a-118fb3f0b5c3",
     "It Hunts Spray": "da814168-4ab3-98fb-847a-29967fa91c42",
     "Dark Focus Spray": "e3078809-4d75-8439-5bf6-2bada7e1e5a4",
@@ -1091,6 +1092,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Vandal Life Spray": {
         "1": "2db70e75-4601-7480-9481-479c090b9fca",
+    },
+    "Accidental Renaissance Spray": {
+        "1": "5e1f88b8-4f2c-1867-8ddb-f89516f9571f",
     },
     "Omen Spray": {
         "1": "2060fa45-4769-b918-84f9-7fbbb1856546",

@@ -132,6 +132,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "VALORANT Coin Buddy": "ac72bb9a-4368-8502-5dac-698d72021c81",
     "Oni Buddy": "57639cf0-4b2f-73f6-5c37-fe816fa560df",
     "Keep it Safe Buddy": "164a994d-45bf-573a-5322-70b8b1d57887",
+    "Keep it Safer Buddy": "c14745d0-4958-26d9-60e6-7c863080fef1",
     "Venom Vial Buddy": "bc76826c-4ac3-5c94-11af-1fb97ba3a835",
     "Dan the Penguin Buddy": "bd57203c-45d3-e5c0-7c61-6793f368de1a",
     "Hot Bling Buddy": "b9feb6b6-493c-b76e-ce8e-6fb371ca2cf5",
@@ -609,6 +610,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Keep it Safe Buddy": {
         "1": "73466a36-43e4-232f-63be-c390f8c5e139",
+    },
+    "Keep it Safer Buddy": {
+        "1": "6b111258-4ddd-8195-8293-a9b468e98659",
     },
     "Venom Vial Buddy": {
         "1": "b0e1c557-4c45-bdc7-3e02-1facc7b19182",

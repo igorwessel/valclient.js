@@ -21,6 +21,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Ares: {
         "VALORANT GO! Vol. 2 Ares": "e9fce399-4abc-bb3c-8992-f887918ce327",
         "Aristocrat Ares": "8b9855f2-4cc6-0c44-3e7c-d0b2a32c6950",
+        "Endeavour Ares": "bb004222-4ecd-e109-e875-069c820548fa",
         "Nebula Ares": "ac65b631-4bd1-b0fa-3313-0da74d4eba9d",
         "Singularity Ares": "e901bdeb-405f-d06c-0733-6783274d85b0",
         "Rush Ares": "4e04647a-4cfc-64f8-4643-f6b7dbcb2943",
@@ -46,6 +47,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "VALORANT GO! Vol. 2 Vandal": "ba6f2526-4ed2-8e62-49aa-ebbb04290682",
         "Aristocrat Vandal": "6191bb0b-456f-1a3e-df13-cdb0c1b8b1e4",
         "Gaia's Vengeance Vandal": "000ad7b1-44b0-9345-ea47-9cbd7dcdbb38",
+        "Endeavour Vandal": "d3733bfe-48d7-b119-3195-249d3b46b528",
         "Champions 2021 Vandal": "9bf19b77-4b33-7203-9f2c-16932970622f",
         "Origin Vandal": "6c4315b8-4ff1-baaa-5aac-5790c7443353",
         "Glitchpop Vandal": "74789f33-4632-8052-96d7-258538721a32",
@@ -80,6 +82,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     },
     Bulldog: {
         "Aristocrat Bulldog": "c610dbc8-4a90-3c86-7f9e-bfa910f75bb9",
+        "Endeavour Bulldog": "3f8be578-4e47-8afd-1e6c-cb9bb326e8b5",
         "Spectrum Bulldog": "fbe04552-445f-f202-923e-6fbd61b7e2aa",
         "Striker Bulldog": "9c056543-44af-0d36-d0f7-1196d93d264e",
         "Undercity Bulldog": "4be8d0e7-48e0-eaa3-1db4-85a14094f369",
@@ -240,6 +243,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Ghost: {
         "VALORANT GO! Vol. 1 Ghost": "3714831b-4b90-bb6b-4185-7fb05ba9b9a2",
         "Gaia's Vengeance Ghost": "daed0e44-4ab6-22b4-a5a5-57a4957a056b",
+        "Endeavour Ghost": "cd281dcd-4276-1def-11d9-74a4a72db204",
         "dot EXE Ghost": "67d3e2f7-4b73-7598-0027-63bd9e2e5fcc",
         "Hush Ghost": "a1d3a9e2-4f61-b1f7-3a01-cf867264d1cb",
         "Infantry Ghost": "65ce6a98-4867-b695-279f-819c44ec6f95",
@@ -312,6 +316,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     },
     Operator: {
         "VALORANT GO! Vol. 2 Operator": "4a1e0934-46ae-fa2a-a009-05ade5d43402",
+        "Endeavour Operator": "bdf1484c-44a7-2ef1-3d21-45b66ff8a89f",
         "Origin Operator": "17831113-4ff0-a6c9-0b20-6f9c077d74a2",
         "Striker Operator": "90ba4949-4a6a-cc54-efb2-3dbdbe1bf69c",
         "Red Alert Operator": "33aaa643-4bc4-4c5f-2762-228c7fc03949",
@@ -546,6 +551,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Aristocrat Ares": {
         "Level 1": "a2045403-40f7-2926-f955-028b6867c79a",
     },
+    "Endeavour Ares": {
+        "Level 1": "433e7f5e-4aaa-940e-4003-99bc0df92c17",
+    },
     "Nebula Ares": {
         "Level 1": "7d3c0ac4-42ce-7111-2c86-43be3d2e86a7",
     },
@@ -630,6 +638,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "0832fe9d-43bf-38bf-df60-9dac91449997",
         "Level 3": "d5c3e32c-4d18-7608-2bab-21851f4036e3",
         "Level 4": "4c4b080d-4b05-65e8-a9c1-6d90aafa7347",
+    },
+    "Endeavour Vandal": {
+        "Level 1": "44ffb8d4-4f48-9456-0463-a6bc1e6ecede",
     },
     "Champions 2021 Vandal": {
         "Level 1": "9f51da57-4623-415a-6313-f49588297d0e",
@@ -750,6 +761,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Aristocrat Bulldog": {
         "Level 1": "3bf9d39f-46b4-ba23-e079-488d799b9416",
+    },
+    "Endeavour Bulldog": {
+        "Level 1": "38dbcca0-493d-70eb-ef89-d281f33efc94",
     },
     "Spectrum Bulldog": {
         "Level 1": "43854c54-4263-571c-9be6-52b6d50d3190",
@@ -1299,6 +1313,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "1694d232-4a90-7da9-dd1f-268626aa573d",
         "Level 4": "13d0ce22-4c97-02a0-4e16-c7964d9b1332",
     },
+    "Endeavour Ghost": {
+        "Level 1": "80073abf-4fea-b06d-f70c-bdbe6d8ce0a7",
+    },
     "dot EXE Ghost": {
         "Level 1": "9466088a-4ad8-cb08-ec9a-45aaba3a6acd",
     },
@@ -1530,6 +1547,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "VALORANT GO! Vol. 2 Operator": {
         "Level 1": "68811d2b-4a6d-cbdc-39d3-f580aa97a297",
+    },
+    "Endeavour Operator": {
+        "Level 1": "fd486ca0-4d52-4e9b-ec35-dc8cd450b679",
     },
     "Origin Operator": {
         "Level 1": "4d19c241-4350-6658-f5a6-5c99ca8e5e99",
@@ -2221,6 +2241,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Aristocrat Ares": {
         Default: "45b00d43-4b76-8953-a87d-50b43c309d98",
     },
+    "Endeavour Ares": {
+        Default: "2e38d5d2-4bbb-69c3-1a90-688164dcf2f6",
+    },
     "Nebula Ares": {
         Default: "0856fa2a-472a-2cc6-fb33-1c984d6cecba",
     },
@@ -2309,6 +2332,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "ee020712-4e21-2d01-8ec7-5281fbc3489a",
         Green: "947f3bf8-4187-b89f-01ab-be97f949ac72",
         Orange: "c12e2ea7-49b3-1871-99ac-8f8385d78ed5",
+    },
+    "Endeavour Vandal": {
+        Default: "28fdbafd-4c12-be54-a3ab-5eaae7a1979a",
     },
     "Champions 2021 Vandal": {
         Default: "140a48ad-4daf-a6f8-027c-a5b890eac738",
@@ -2429,6 +2455,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Aristocrat Bulldog": {
         Default: "d2710367-42b2-cf4e-8b87-2f9d09a41261",
+    },
+    "Endeavour Bulldog": {
+        Default: "2f2e67cb-4e55-2668-088c-6cbcf1009d7c",
     },
     "Spectrum Bulldog": {
         Default: "8193b0d6-4f05-42f0-88fc-a9a8fca32f51",
@@ -3032,6 +3061,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Green: "1fce96b9-4043-3ce8-e5e2-b4870405f6f0",
         Orange: "ecc92d4d-4eab-255b-2075-5ba068915168",
     },
+    "Endeavour Ghost": {
+        Default: "e536f594-4e59-53b7-adf2-928332f092d3",
+    },
     "dot EXE Ghost": {
         Default: "12966603-4cb3-03dd-bf2e-338fb15d144f",
     },
@@ -3277,6 +3309,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "VALORANT GO! Vol. 2 Operator": {
         Default: "5220f477-4fbb-cfb6-60ce-ddb7bd215a66",
+    },
+    "Endeavour Operator": {
+        Default: "cbc11972-4bb3-3d06-48c6-4d9e5b58b06e",
     },
     "Origin Operator": {
         Default: "e9a1f1d7-4651-c94c-4e9f-94a4bb93232b",
