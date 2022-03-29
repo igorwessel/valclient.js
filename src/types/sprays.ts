@@ -271,6 +271,7 @@ export type SprayType =
     | "Leer Spray"
     | "Marked for Death Spray"
     | "Vandal Life Spray"
+    | "Accidental Renaissance Spray"
     | "Omen Spray"
     | "It Hunts Spray"
     | "Dark Focus Spray"

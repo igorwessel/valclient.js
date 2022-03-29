@@ -130,6 +130,7 @@ export type BuddyType =
     | "VALORANT Coin Buddy"
     | "Oni Buddy"
     | "Keep it Safe Buddy"
+    | "Keep it Safer Buddy"
     | "Venom Vial Buddy"
     | "Dan the Penguin Buddy"
     | "Hot Bling Buddy"

@@ -18,6 +18,7 @@ export type OdinSkin =
 export type AresSkin =
     | "VALORANT GO! Vol. 2 Ares"
     | "Aristocrat Ares"
+    | "Endeavour Ares"
     | "Nebula Ares"
     | "Singularity Ares"
     | "Rush Ares"
@@ -43,6 +44,7 @@ export type VandalSkin =
     | "VALORANT GO! Vol. 2 Vandal"
     | "Aristocrat Vandal"
     | "Gaia's Vengeance Vandal"
+    | "Endeavour Vandal"
     | "Champions 2021 Vandal"
     | "Origin Vandal"
     | "Glitchpop Vandal"
@@ -77,6 +79,7 @@ export type VandalSkin =
 
 export type BulldogSkin =
     | "Aristocrat Bulldog"
+    | "Endeavour Bulldog"
     | "Spectrum Bulldog"
     | "Striker Bulldog"
     | "Undercity Bulldog"
@@ -237,6 +240,7 @@ export type ClassicSkin =
 export type GhostSkin =
     | "VALORANT GO! Vol. 1 Ghost"
     | "Gaia's Vengeance Ghost"
+    | "Endeavour Ghost"
     | "dot EXE Ghost"
     | "Hush Ghost"
     | "Infantry Ghost"
@@ -309,6 +313,7 @@ export type ShortySkin =
 
 export type OperatorSkin =
     | "VALORANT GO! Vol. 2 Operator"
+    | "Endeavour Operator"
     | "Origin Operator"
     | "Striker Operator"
     | "Red Alert Operator"
