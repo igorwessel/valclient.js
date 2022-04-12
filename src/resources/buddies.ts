@@ -56,6 +56,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Radianite Crate Buddy": "0f1ce8ce-4615-637d-6772-0fa15b848fe4",
     "Red Alert Buddy": "fe997250-41ef-444a-a12b-7ca8ca87cb40",
     "Cup o' Crown Buddy": "271c1309-4185-d000-c8bf-56a170c17e1c",
+    "Prime Time Buddy": "d22eff46-419a-9ebc-c60a-4892359fa2d1",
     "Arcane Cupcake Buddy": "2092c352-47d8-be17-724c-14807ea7041a",
     "Divine Swine Buddy": "e643ce87-4d21-e8ae-4fd4-f4870eea33c7",
     "Glitchpop Buddy": "c5bee9f1-4548-03c3-f88d-d7bf38d1943e",
@@ -74,7 +75,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Songsteel Buddy": "3c9bfa19-4688-39ff-5377-3cac9d396a32",
     "Together Forever Buddy": "149f276c-474d-2171-43b3-41a6fc43dcc7",
     "2021 VCT Champions Winner Buddy": "e96e6f84-4315-409a-09bf-788e0cf13ecf",
-    "2021 VCT Masters Winner Buddy": "82bdb8b5-40bf-9b65-272e-4eb7dad1264e",
+    "VCT Masters Winner Buddy": "82bdb8b5-40bf-9b65-272e-4eb7dad1264e",
     "VCT 2021 Spark Buddy": "e2e5ab96-4103-8473-14a7-8d8321a3ae6e",
     "Good Boy, Bruno Buddy": "2d462f8e-47af-0678-dfa1-c3bc7c307ca7",
     "Nice Smile Buddy": "46841a97-48b1-3432-5b28-5ca47df923a9",
@@ -383,6 +384,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Cup o' Crown Buddy": {
         "1": "967652c0-48c5-1b18-ae3e-2bb066f2623d",
     },
+    "Prime Time Buddy": {
+        "1": "2d4dcbe6-452e-6b68-f977-c5ac74dc61eb",
+    },
     "Arcane Cupcake Buddy": {
         "1": "635aaf5b-4351-7d5e-ed47-e5aa3ad48214",
     },
@@ -437,7 +441,7 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "2021 VCT Champions Winner Buddy": {
         "1": "02b22bd6-42fa-90f6-0574-2091794d3eb1",
     },
-    "2021 VCT Masters Winner Buddy": {
+    "VCT Masters Winner Buddy": {
         "1": "ef6ddfab-45f9-7938-7ff2-9588dec2f71d",
     },
     "VCT 2021 Spark Buddy": {

@@ -48,6 +48,9 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Seeing Double Spray": "2ebcf963-4e55-e39c-d1aa-94ad6ec87424",
     "VALORANT Spray": "0a6db78c-48b9-a32d-c47a-82be597584c1",
     "Bruno Coin Spray": "e8a8c717-4845-3c69-9c16-d8a78153c51d",
+    "Doodle Buds // Tactifriends Spray": "8f9caa22-4dd6-5649-1007-0bbaf7001c04",
+    "Doodle Buds // League of Legends Spray": "bbdcf328-4f71-3c0c-7830-568913236d35",
+    "Doodle Buds // Agents Spray": "2e7b49d2-4022-a474-1feb-91872e6e2523",
     "Elderflame Spray": "0221e96d-49be-a601-52d6-ef8270773276",
     "Quack!! Spray": "3036069d-46c6-98ca-759f-9bb7f4c9ba15",
     "Spicy Spray": "ff4f634c-42f4-77bc-0811-b79681910c8b",
@@ -417,6 +420,15 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Bruno Coin Spray": {
         "1": "24c74dce-4f29-0fdd-84a3-e0a77dabadee",
+    },
+    "Doodle Buds // Tactifriends Spray": {
+        "1": "aad525de-4531-b4f3-20cc-ce8090396b59",
+    },
+    "Doodle Buds // League of Legends Spray": {
+        "1": "6f46a0b1-4886-7885-d62e-e28452868486",
+    },
+    "Doodle Buds // Agents Spray": {
+        "1": "667c20c2-40ff-07ed-9c4e-23826093bad2",
     },
     "Elderflame Spray": {
         "1": "001ca7bc-45b8-f89c-dd75-87874ad158f6",

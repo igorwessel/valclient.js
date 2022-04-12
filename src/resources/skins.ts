@@ -23,6 +23,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Aristocrat Ares": "8b9855f2-4cc6-0c44-3e7c-d0b2a32c6950",
         "Endeavour Ares": "bb004222-4ecd-e109-e875-069c820548fa",
         "Nebula Ares": "ac65b631-4bd1-b0fa-3313-0da74d4eba9d",
+        "Doodle Buds Ares": "35beb433-425e-7072-7ac3-9ca95d1d1fd9",
         "Singularity Ares": "e901bdeb-405f-d06c-0733-6783274d85b0",
         "Rush Ares": "4e04647a-4cfc-64f8-4643-f6b7dbcb2943",
         "Hivemind Ares": "556646c0-46dd-6986-00df-a78d1c17f268",
@@ -109,6 +110,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Nebula Phantom": "57f91d68-4cda-76c0-c258-7ba507cd6f87",
         "Undercity Phantom": "ed3ac995-4fd1-3079-27aa-4aab84447833",
         "Glitchpop Phantom": "25a7f0f2-4bce-7e45-b4b0-ca9264f5dfcc",
+        "Doodle Buds Phantom": "3a091315-4e87-31d5-7cdb-27804a177fd2",
         "Singularity Phantom": "5eec4ce6-443d-e9b5-4c5b-2b967d426bd3",
         "Rush Phantom": "8db507b5-4d57-96e0-000e-2d8c8af79550",
         "Velocity Phantom": "a17d4eeb-46e5-a041-ae7b-a2841ac6b36e",
@@ -299,6 +301,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Death Wish Sheriff": "bb0d20c6-415d-cf24-e738-0f99db6f9195",
     },
     Shorty: {
+        "Doodle Buds Shorty": "9a37b09b-4768-b368-52ef-58ac62564637",
         "Hivemind Shorty": "3a921c7b-4e8f-8543-bee8-01ba6da86874",
         "Velocity Shorty": "15588213-4d09-344b-c7e1-28af37374c82",
         "Ruin Shorty": "1064fbd1-416c-bf00-0e30-a282a359847f",
@@ -374,6 +377,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     },
     Marshal: {
         "Gaia's Vengeance Marshal": "fc802ceb-4a39-39ac-adf5-02a812be2f8e",
+        "Doodle Buds Marshal": "6250b40a-43a4-55d8-79d4-f6838d58151d",
         "Songsteel Marshal": "51da27fe-4a3f-016a-d18d-b68a47545f6f",
         "Ruin Marshal": "027a5d7f-4bfc-7c41-a012-24b8c6720fda",
         "Monarch Marshal": "028c7b80-46ea-8f1d-3f7a-4c9c13a79977",
@@ -425,6 +429,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "RGX 11z Pro Stinger": "282c15e6-4372-2f18-9143-2d9cdd942c4c",
         "Aristocrat Stinger": "42da0f19-4017-5cb8-08a4-368315561fdf",
         "Red Alert Stinger": "0cf70376-4150-39aa-5657-8890617bc0d1",
+        "Doodle Buds Stinger": "9444ba80-4ae7-985d-40a2-2788f96dd544",
         "Surge Stinger": "0a128cb6-4bbb-f618-85cb-82bbd17bcbb1",
         "Prism II Stinger": "338e3ee3-4927-733f-32b6-bcac795d23ac",
         "Couture Stinger": "598bb272-4bfd-ae82-0242-6490cc6f721e",
@@ -556,6 +561,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Nebula Ares": {
         "Level 1": "7d3c0ac4-42ce-7111-2c86-43be3d2e86a7",
+    },
+    "Doodle Buds Ares": {
+        "Level 1": "8e0c9fac-4d40-0a04-cf4a-4bb553952164",
+        "Level 2": "700f9bc6-448d-1159-64ad-ea98035581d1",
     },
     "Singularity Ares": {
         "Level 1": "642ee168-4f9e-1f5f-be72-01b3a41ac086",
@@ -854,6 +863,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "07e8bbcb-488e-b038-630f-c3a7c4f4763f",
         "Level 3": "7f54b1ac-49b5-48ec-9926-8a966a0233a5",
         "Level 4": "dee8b295-4a06-15fb-e952-acb6298d5929",
+    },
+    "Doodle Buds Phantom": {
+        "Level 1": "f9d54c11-4c6f-575b-5bed-3cb693f6f2ba",
+        "Level 2": "e5b46108-4d0a-c614-a845-fea7111beda7",
     },
     "Singularity Phantom": {
         "Level 1": "0ff7ff25-42cf-769a-4e6d-bd833121302d",
@@ -1500,6 +1513,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Death Wish Sheriff": {
         "Level 1": "a07ff70b-4b4b-ee36-78f5-8ba771b278ac",
     },
+    "Doodle Buds Shorty": {
+        "Level 1": "deb200a8-447c-0e47-5b92-e8aeb9cd5525",
+        "Level 2": "ba0193f6-4c7d-1b7f-b9dc-4e883a6ba21a",
+    },
     "Hivemind Shorty": {
         "Level 1": "d0a95805-4adb-95f7-3955-339d89769bec",
     },
@@ -1769,6 +1786,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "3cf85dde-4695-be31-41e9-c8ac2dd22d07",
         "Level 4": "c8fd6caf-43d1-f3ef-4a5d-1793ad9e558e",
     },
+    "Doodle Buds Marshal": {
+        "Level 1": "43ea5cae-4535-7903-f2c9-65bac9642a99",
+        "Level 2": "d0712e2e-4550-9ae9-d365-f498e21b50a4",
+    },
     "Songsteel Marshal": {
         "Level 1": "3e0a3431-4e78-89d1-ee57-d9837e324ee0",
     },
@@ -1947,6 +1968,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Red Alert Stinger": {
         "Level 1": "cd9beda3-4042-d79e-6d46-4daa61484362",
+    },
+    "Doodle Buds Stinger": {
+        "Level 1": "0a6790a2-4ddf-56aa-26e4-44b45d050060",
+        "Level 2": "082de448-49d3-d65d-e9c0-17949cd33422",
     },
     "Surge Stinger": {
         "Level 1": "77d5c1dc-4dde-539c-3a5a-0a95eecba1e4",
@@ -2246,6 +2271,11 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Nebula Ares": {
         Default: "0856fa2a-472a-2cc6-fb33-1c984d6cecba",
+    },
+    "Doodle Buds Ares": {
+        Default: "d16d060c-4a96-077a-4d6f-e399e57125f3",
+        Tactifriends: "22e563d3-4a87-bb96-dcd8-fc92bc76aa07",
+        LeagueofLegends: "2c372b76-480b-c619-cce2-399790ff0254",
     },
     "Singularity Ares": {
         Default: "e56c230f-447d-034f-fe57-ce935b3f8c55",
@@ -2556,6 +2586,11 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "ff938463-444c-9bdc-38fa-3c98e865ab31",
         Red: "710ff5e9-48fd-5890-b061-9689f54fe848",
         Gold: "ba802a0b-4038-4208-89c7-58828408ebed",
+    },
+    "Doodle Buds Phantom": {
+        Default: "04b49ef4-40a2-f6e9-c0ba-0995ca536f91",
+        Tactifriends: "8b6534d4-4460-20f5-15fc-83a5c301cdea",
+        LeagueofLegends: "b90cd8ea-46c2-b103-24aa-e782f9b01659",
     },
     "Singularity Phantom": {
         Default: "36d14ec2-4376-a355-ad98-bdbc9b4b9e9a",
@@ -3259,6 +3294,11 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Death Wish Sheriff": {
         Default: "3bc59f13-4259-9ba0-1b15-18bc8b61a642",
     },
+    "Doodle Buds Shorty": {
+        Default: "8341e29e-4faa-e5c6-b6db-c2bcfbdfbc55",
+        Tactifriends: "acb87714-4ea5-18b6-0d2a-fb8754340943",
+        LeagueofLegends: "a92fcaf4-4828-dea4-c00b-26b549011699",
+    },
     "Hivemind Shorty": {
         Default: "abd361b4-43a6-728c-376a-529b1f599ab9",
     },
@@ -3545,6 +3585,11 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Green: "3f2d412c-4140-10d9-cd31-c882672855bf",
         Orange: "792b819a-44f1-4920-4fda-84a8feefc188",
     },
+    "Doodle Buds Marshal": {
+        Default: "a0ed65cb-4c78-a8f8-8c50-098a7ac44bf6",
+        Tactifriends: "12d3f3b6-41ee-84b6-9d38-13864db801e9",
+        LeagueofLegends: "dd0f9f13-4e33-b428-2c9e-86b051c5c053",
+    },
     "Songsteel Marshal": {
         Default: "4156c0b0-44b8-7ea9-6707-75aec36ec5fb",
     },
@@ -3737,6 +3782,11 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Red Alert Stinger": {
         Default: "c4c8da8f-468b-f71b-c61e-779c2e256e92",
+    },
+    "Doodle Buds Stinger": {
+        Default: "73d27de9-45f2-3739-5fee-ce8b18acd136",
+        Tactifriends: "84e03f58-4f71-7969-2d24-5faadabf47a3",
+        LeagueofLegends: "e09da05d-484a-28f7-e227-ff90eabd2dc2",
     },
     "Surge Stinger": {
         Default: "0211a43e-4be7-3430-0080-ed93c58ac3d8",
