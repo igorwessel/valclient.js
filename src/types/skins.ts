@@ -20,6 +20,7 @@ export type AresSkin =
     | "Aristocrat Ares"
     | "Endeavour Ares"
     | "Nebula Ares"
+    | "Doodle Buds Ares"
     | "Singularity Ares"
     | "Rush Ares"
     | "Hivemind Ares"
@@ -106,6 +107,7 @@ export type PhantomSkin =
     | "Nebula Phantom"
     | "Undercity Phantom"
     | "Glitchpop Phantom"
+    | "Doodle Buds Phantom"
     | "Singularity Phantom"
     | "Rush Phantom"
     | "Velocity Phantom"
@@ -296,6 +298,7 @@ export type SheriffSkin =
     | "Death Wish Sheriff";
 
 export type ShortySkin =
+    | "Doodle Buds Shorty"
     | "Hivemind Shorty"
     | "Velocity Shorty"
     | "Ruin Shorty"
@@ -371,6 +374,7 @@ export type GuardianSkin =
 
 export type MarshalSkin =
     | "Gaia's Vengeance Marshal"
+    | "Doodle Buds Marshal"
     | "Songsteel Marshal"
     | "Ruin Marshal"
     | "Monarch Marshal"
@@ -422,6 +426,7 @@ export type StingerSkin =
     | "RGX 11z Pro Stinger"
     | "Aristocrat Stinger"
     | "Red Alert Stinger"
+    | "Doodle Buds Stinger"
     | "Surge Stinger"
     | "Prism II Stinger"
     | "Couture Stinger"
