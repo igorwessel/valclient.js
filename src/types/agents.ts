@@ -1,6 +1,7 @@
 /* FILE GENERATED AUTOMATICALLY */
 
 export type Agents =
+    | "Fade"
     | "Breach"
     | "Raze"
     | "Chamber"
