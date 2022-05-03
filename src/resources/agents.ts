@@ -3,6 +3,7 @@
 import { Agents } from "@type/agents";
 
 export const agentsMappedById: Record<Agents, string> = {
+    Fade: "dade69b4-4f5a-8528-247b-219e5a1facd6",
     Breach: "5f8d3a7f-467b-97f3-062c-13acf203c006",
     Raze: "f94c3b30-42be-e959-889c-5aa313dba261",
     Chamber: "22697a3d-45bf-8dd7-4fec-84a9e28c69d7",

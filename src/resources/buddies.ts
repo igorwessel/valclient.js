@@ -4,6 +4,7 @@ import { BuddyIdMappedByName, BuddyLevelIdMappedByName } from "@type/loadout";
 
 export const buddyIdMappedByName: BuddyIdMappedByName = {
     "RGX 11z Pro Buddy": "dce731f8-4560-5f30-6eb5-8ab2e36864ec",
+    "RGX 11z Pro, Ep 4 Buddy": "69c50b81-4484-838a-906a-b08d06c03cbd",
     "Gaia's Vengeance Buddy": "d6c38282-4f11-822b-8fe1-dd9ad9045514",
     "Zedd Buddy": "70963a6d-45b7-8fd4-c6aa-62b2155715aa",
     "Get Carried Buddy": "452194fb-4ebd-353a-2ff7-0e90cf5523f9",
@@ -12,6 +13,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Year One Buddy": "145da845-43f6-d4d4-d72d-53bd1d78cf28",
     "BlastX Buddy": "853da947-486d-feb3-ec2d-8ba25a6b545b",
     "Boba Buddy": "d400dd1a-4a81-1b26-b8f1-a994e13739b2",
+    "Nazar Bead Buddy": "f8c59f2f-48f8-a93d-5bef-a7902bde82a5",
     "Hammer Time Buddy": "8fbf09a5-4ad2-46ca-d44e-26b46587a1bf",
     "Big ol' Barrel Buddy": "0de92897-4ad5-9941-b3e8-f4bff93a81f7",
     "Easy Breezy Buddy": "ca16e324-47f3-5bca-9f25-99a09da14c94",
@@ -50,6 +52,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Ep 3 // 3 Coin Buddy": "0a31022f-4e2e-d59b-d0f3-a4b8e0da0564",
     "Ep 4 // 1 Coin Buddy": "06cccd4f-4502-ca82-9b56-e884e611ca2c",
     "Ep 4 // 2 Coin Buddy": "31e9874a-4e7b-da49-8f3c-2f8e0dff43ac",
+    "EP 4 // 3 Coin Buddy": "8955df3c-4021-3ad5-ef40-9f80e18618e7",
     "Follow Me Buddy": "bf01e45d-4c06-ee19-f66e-b1b5acf073c4",
     "Chilly McFreeze Buddy": "7ac1f7db-42a7-bf5a-5b13-95b70e618f5e",
     "Crate Buddy": "e0462e6c-4188-06cc-e28d-ac9abcc16bc2",
@@ -61,6 +64,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Divine Swine Buddy": "e643ce87-4d21-e8ae-4fd4-f4870eea33c7",
     "Glitchpop Buddy": "c5bee9f1-4548-03c3-f88d-d7bf38d1943e",
     "Glitchpop, EP 2 Buddy": "faca42f0-47d9-0fcb-116f-9e9b37060bd1",
+    "Dalgona Coffee Buddy": "a1e75ddf-47ab-ae85-e223-90b94563c702",
     "Danger Lizard Buddy": "d5b10115-43ea-42e7-8843-5bb5c1e73c6e",
     "Lucky Dice Buddy": "b0e6b3db-45fe-f622-52f2-51811650560e",
     "Discotech Buddy": "42afb96b-4d11-e465-55a4-0b87bdfbf244",
@@ -68,13 +72,14 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Donut Buddy": "26d1b452-461d-8d6f-526b-658c692e0f9e",
     "Elderflame Buddy": "38a10a3b-495c-eeff-b8af-c3b2b5cdc3f9",
     "VLT/R Buddy": "45b67ec9-4f33-6ba7-625a-36b81016297a",
+    "Ragna-Rock Out Buddy": "54bdfb80-4e4d-50eb-6db6-74b284a76835",
     "Happy Dumpling Buddy": "0911b78d-48a7-fb01-3ccd-0ca9a3996f75",
     "Dumpster Fire Buddy": "5e4482b8-4c85-d570-d9b6-929a8d6094d5",
     "Epilogue: Dumpster Fire Buddy": "6e7d4b62-402b-9e2a-c531-58b5091d8dc8",
     "Singularity Buddy": "2de08c48-4aa1-0c32-138d-4b834c21aee2",
     "Songsteel Buddy": "3c9bfa19-4688-39ff-5377-3cac9d396a32",
     "Together Forever Buddy": "149f276c-474d-2171-43b3-41a6fc43dcc7",
-    "2021 VCT Champions Winner Buddy": "e96e6f84-4315-409a-09bf-788e0cf13ecf",
+    "VCT Champions Winner Buddy": "e96e6f84-4315-409a-09bf-788e0cf13ecf",
     "VCT Masters Winner Buddy": "82bdb8b5-40bf-9b65-272e-4eb7dad1264e",
     "VCT 2021 Spark Buddy": "e2e5ab96-4103-8473-14a7-8d8321a3ae6e",
     "Good Boy, Bruno Buddy": "2d462f8e-47af-0678-dfa1-c3bc7c307ca7",
@@ -86,6 +91,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Arcane Poro Buddy": "237f36ef-40d5-410a-84be-6c896aad6fde",
     "Team Ace Buddy": "65990409-4ad4-86f2-8577-26a121bd0c2d",
     "KNG Meridian Buddy": "e661a25b-4ac4-83e7-e2b5-fba72c0944ac",
+    "Deep Divisions Buddy": "0e08fb58-4f37-0ffb-af30-ada764e6979c",
     "Le Baguette Buddy": "1078b8a1-494c-97d9-fdcf-489636dba733",
     "Froggie Hat Buddy": "b45b70fb-49d4-9d7f-afde-57a1ea79d9b5",
     "Spectrum Buddy": "4bd1070f-44ea-cdf5-9738-51a0e4e1c64a",
@@ -95,6 +101,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Caught Buddy": "500e6c02-4005-ebb9-528b-219b57a9cfd2",
     "Ruin Watcher Buddy": "41859a85-4344-aeee-483a-468bad39e5fd",
     "Memory Chip Buddy": "7cec4eb4-4078-4dc4-7f00-d6b7348e347a",
+    ".SYS Buddy": "c1755278-4574-7e9f-c7af-48820d6a02f4",
     "Hawko Buddy": "e4689a4b-4df6-86e8-8d34-a19bdc01afe7",
     "White Hat Buddy": "e058e4f5-40c4-a26a-e6c7-33a4baf2e21f",
     "Safe Haven Buddy": "ae240163-4893-5d7e-9029-31a3ca2a9c84",
@@ -138,6 +145,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Dan the Penguin Buddy": "bd57203c-45d3-e5c0-7c61-6793f368de1a",
     "Hot Bling Buddy": "b9feb6b6-493c-b76e-ce8e-6fb371ca2cf5",
     "High Top Heat Buddy": "9e601160-4679-d2df-261b-56a398248271",
+    "Hue Shift Buddy": "5fd3f15f-419b-0225-c0c8-b7bc555b447e",
     "Old Salt Buddy": "b5d5b1f3-40a2-07dc-f111-3aa87c596d7c",
     "Pizza Buddy": "15bc068c-4b1e-dfbc-cfbb-9283a8d0e0ee",
     "Magepunk, Ep 3 Buddy": "1cfa4641-4c44-4067-236c-f7be07d6ded7",
@@ -148,6 +156,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Pay Respects Buddy": "839c6e7d-4821-157b-fd38-71b3debc874f",
     "One Direction Buddy": "ce82d434-477f-43a3-963b-95b6657c46b6",
     "Protocol 781-A Buddy": "c628b79a-494b-fa32-fd4d-91bfe0b6206a",
+    "Original Protractor Buddy": "769ab062-4483-d3ba-659d-50b6c36b1ad2",
     "Lovebyte Gun Buddy": "42cb4b6a-45e3-8a83-2f52-0d90c7ca306d",
     "Lucky Rabbit Buddy": "be53b9d4-41de-3917-8f43-e58024a6e0de",
     "Radianite Crystal Buddy": "abfe3887-40f8-d3c1-08bb-ab89dae2a399",
@@ -203,6 +212,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Cheesed Buddy": "5de7339f-40fc-df25-1cf4-d3a5255ba1f7",
     "Bear Tactics Buddy": "2fbe33aa-4e7a-b601-5fa8-ce8fb6511113",
     "Bunny Tactics Buddy": "e645bf64-49c1-de39-d8d4-48bd11e0b7e0",
+    "UltraBright Torch Buddy": "4231564e-4354-3120-66c6-e6a3d9abab70",
     "Squirrel Tactics Buddy": "1f99d997-4afb-ef4c-e754-caa0bf84fce1",
     "Potato Aim Buddy": "55702e59-4e3f-e2dd-2b31-91b1938cf0e1",
     "Sample 36-K Buddy": "b37765f0-48cd-9a0b-ceb7-8e8d261f4373",
@@ -221,12 +231,16 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Soul Capsule Buddy": "c4f69de5-4440-19b5-8953-36b12ba42bb0",
     "Grim Delight Buddy": "7cf1fc2c-4456-fa8f-b9f6-c9be7092163f",
     "Pocket Knife Buddy": "a2e04067-4ea8-ff47-be4a-f780bdf5e1f7",
+    "PlayZilla Trick Master Buddy": "11b2689f-4955-82b6-0207-2d8f40978c39",
     "Zoomer Pop Buddy": "4bfcc79c-4352-aa06-53de-259530012e45",
 };
 
 export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "RGX 11z Pro Buddy": {
         "1": "a3043ec2-4a5b-ca46-d8f6-0399f1e52565",
+    },
+    "RGX 11z Pro, Ep 4 Buddy": {
+        "1": "d8d95c6b-403c-3e7e-6682-a396bf4b3c96",
     },
     "Gaia's Vengeance Buddy": {
         "1": "7c2881fb-4bd3-3d98-4e5b-72a939eb2cac",
@@ -251,6 +265,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Boba Buddy": {
         "1": "58584a97-4839-3cb0-6f21-02809648df92",
+    },
+    "Nazar Bead Buddy": {
+        "1": "4bea7864-4a08-e510-97c6-42bdd9e1182d",
     },
     "Hammer Time Buddy": {
         "1": "98a2fa9e-4e66-eec9-8b13-298498862f28",
@@ -366,6 +383,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Ep 4 // 2 Coin Buddy": {
         "1": "8bd7eb45-4f03-1c4f-615c-39830c57f3bb",
     },
+    "EP 4 // 3 Coin Buddy": {
+        "1": "83c144bc-44f7-2d80-23f5-1fb0782d23b2",
+    },
     "Follow Me Buddy": {
         "1": "c5f4c423-43de-9553-456d-fbb809cfb74c",
     },
@@ -399,6 +419,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Glitchpop, EP 2 Buddy": {
         "1": "3da96301-4edd-0d74-492c-6e9d0766665a",
     },
+    "Dalgona Coffee Buddy": {
+        "1": "35608d62-4f08-dc80-7211-ce94ec8b7508",
+    },
     "Danger Lizard Buddy": {
         "1": "28227664-476a-72db-adaa-159084fbd149",
     },
@@ -420,6 +443,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "VLT/R Buddy": {
         "1": "b3cee508-4897-6f83-4afe-1e81a78b432b",
     },
+    "Ragna-Rock Out Buddy": {
+        "1": "cdff7783-4977-f912-1b88-92be8883fc7a",
+    },
     "Happy Dumpling Buddy": {
         "1": "a4e3fe97-4de9-c133-7dd0-f2b294a2ead2",
     },
@@ -438,7 +464,7 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Together Forever Buddy": {
         "1": "ba3035e0-4eee-5059-64ed-d2943f3f624e",
     },
-    "2021 VCT Champions Winner Buddy": {
+    "VCT Champions Winner Buddy": {
         "1": "02b22bd6-42fa-90f6-0574-2091794d3eb1",
     },
     "VCT Masters Winner Buddy": {
@@ -474,6 +500,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "KNG Meridian Buddy": {
         "1": "205e055c-452b-fef8-3356-b8a1c000f1c0",
     },
+    "Deep Divisions Buddy": {
+        "1": "754ab032-4889-a01f-e6d3-cdb625a42561",
+    },
     "Le Baguette Buddy": {
         "1": "6c1a9a5c-4fc8-8ff7-5fb9-3b957b4fe2ac",
     },
@@ -500,6 +529,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Memory Chip Buddy": {
         "1": "473df037-45a2-43d6-4da1-8f99e220d0ad",
+    },
+    ".SYS Buddy": {
+        "1": "da93c98c-4473-c217-b666-168169395614",
     },
     "Hawko Buddy": {
         "1": "10d781c0-4500-19eb-5000-c6afac6f2c58",
@@ -630,6 +662,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "High Top Heat Buddy": {
         "1": "041a43a4-46fe-dab7-c974-36bf91eab33d",
     },
+    "Hue Shift Buddy": {
+        "1": "72a5a776-4763-0685-06c1-bbaa14d0f93d",
+    },
     "Old Salt Buddy": {
         "1": "e64b89a7-44ed-286e-08bf-0cb96fd2bfd2",
     },
@@ -659,6 +694,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Protocol 781-A Buddy": {
         "1": "6607dba5-4cb8-d860-3010-708bcbcbe808",
+    },
+    "Original Protractor Buddy": {
+        "1": "9ff61d8a-40e7-1d30-51a3-99806638ec35",
     },
     "Lovebyte Gun Buddy": {
         "1": "d88fa813-4ade-1585-0865-90be2c984214",
@@ -825,6 +863,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Bunny Tactics Buddy": {
         "1": "c44c3d43-45f4-1841-ec58-1885ef6fbcd5",
     },
+    "UltraBright Torch Buddy": {
+        "1": "d3706573-4b0c-83e0-af4b-f5a4e854e097",
+    },
     "Squirrel Tactics Buddy": {
         "1": "0b3f4807-4b50-2379-9690-398af0041dca",
     },
@@ -878,6 +919,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Pocket Knife Buddy": {
         "1": "cbc43eac-44f5-9bd6-f0dd-40954a12b709",
+    },
+    "PlayZilla Trick Master Buddy": {
+        "1": "76e55869-41dd-562b-24a1-e081df68e0ea",
     },
     "Zoomer Pop Buddy": {
         "1": "a20cf772-4d6a-d3c8-7e60-72bab4446f2f",

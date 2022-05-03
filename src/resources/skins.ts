@@ -10,6 +10,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Prime//2.0 Odin": "157bcebe-484d-82e2-2a60-c8b4b11197ea",
         "Prism III Odin": "72e724e9-4ba4-2d12-ce1a-8db1a528b9d3",
         "Smite Odin": "9e648b20-4ed5-1f34-87a9-979cbe9a958a",
+        "Coalition: Cobra Odin": "5c13101a-45e4-d568-aade-d6b0dadedcd1",
         "Sensation Odin": "65baa0cd-42ec-f99d-54a0-338d795b5824",
         "Lightwave Odin": "57523cf0-4574-968b-9f17-168e3bdb6d0d",
         "Schema Odin": "02cce94a-4dc2-d11a-33cf-d8aba4e36202",
@@ -59,6 +60,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Team Ace Vandal": "25980352-4407-60ff-eb27-058c1ea696cc",
         "Ruin Vandal": "948d31a0-4c2a-9c82-2b89-fe9f2ec65036",
         "dot EXE Vandal": "6f3a2a08-4f32-dbdc-8dca-628a5c840052",
+        ".SYS Vandal": "23d61dbb-457a-5590-2e91-38a67a52c332",
         "Horizon Vandal": "9d71edb0-453c-defa-507d-57aa2935b379",
         "Prime Vandal": "b9ee2457-481c-6776-3f5b-0ca8e8f90c89",
         "Avalanche Vandal": "41b55c92-4aeb-9c86-854a-4abcd48ea0ba",
@@ -95,6 +97,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Couture Bulldog": "199b8536-488a-09e6-8592-ff9cf21b4ceb",
         "Nunca Olvidados Bulldog": "9c91e507-4241-33d1-c63a-aeb9ec3d9d03",
         "Genesis Bulldog": "90e750e8-4a42-f5fc-9160-3ea5e5522c6e",
+        "Hue Shift Bulldog": "c2f87e28-4c3b-5dc3-0109-ffa3a0e43f4c",
         "POLYfox Bulldog": "dbf7b813-4931-3b45-db2b-ea8d418b2b1d",
         "Protocol 781-A Bulldog": "1daefbff-4581-aef3-5ed6-da894d7e4cc7",
         "Infinity Bulldog": "decd0962-453a-1551-47e1-1287aafb5a27",
@@ -104,6 +107,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Varnish Bulldog": "9bba8d9a-461e-9783-fcb7-f1a92192fb3a",
     },
     Phantom: {
+        "RGX 11z Pro Phantom": "499acf05-4f79-e345-3714-57bf7aa163ea",
         "VALORANT GO! Vol. 1 Phantom": "0acbabbe-4f4c-f643-284b-f69029abb54e",
         "Spectrum Phantom": "980fa063-436e-e51f-c38d-70a5b93a0f1c",
         "Radiant Crisis 001 Phantom": "2371d9e1-498c-1ad1-4f10-d1a339c7fda2",
@@ -129,6 +133,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Silvanus Phantom": "25824735-478d-30b7-8fc9-95b1999f9d3b",
         "Ion Phantom": "e86bf7e4-4dd3-fbee-533b-fa875344bbaf",
         "Oni Phantom": "36791b03-452d-8dad-0091-898cc28d2196",
+        "Hue Shift Phantom": "3a204da4-4aa4-d02f-73a0-55867bc8d501",
         "Aero Phantom": "56f075b7-4171-a977-90ac-d5ad786f1478",
         "Artisan Phantom": "909daea4-49ab-7b99-46fb-aa8c9e6fd837",
         "Protocol 781-A Phantom": "9877d50b-43b1-837a-802a-bf8a3b98e2dd",
@@ -156,6 +161,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Smite Judge": "5324bc65-44aa-1a16-ede4-0e9b56f35d0e",
         "Celestial Judge": "57ad1e5d-4289-4de0-7926-899cef10db37",
         "Luxe Judge": "5237cfca-4d83-6190-a7f9-d2bdc117ea67",
+        "Coalition: Cobra Judge": "0b8816a2-42ad-9353-c591-f7863981d7fe",
         "POLYfox Judge": "5d217dd0-4f2c-cfca-274e-3f8f9d518b13",
         "Divine Swine Judge": "a913d712-4c29-d7f4-0f8a-d790e023ba3c",
         "Jigsaw Judge": "ba93a991-407f-0c47-2d26-72a4196b4164",
@@ -170,6 +176,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Radiant Crisis 001 Bucky": "31072cda-4041-b4f0-119a-3692ea598321",
         "Red Alert Bucky": "1322a9a8-49ad-bc3a-2319-fb866e21334c",
         "Surge Bucky": "aa6162a5-4c73-1c6f-5c69-9b9082e321fd",
+        ".SYS Bucky": "82204cf0-4a3d-2802-6eb9-9eac53472a3f",
         "Horizon Bucky": "d493bec2-4e3f-19cd-8363-b1921489413c",
         "Monarch Bucky": "8f26c1e0-46b7-72d2-8307-11b03f3332f2",
         "Hydrodip Bucky": "50b0db3d-46a9-5c2f-2e57-7fbeedf30362",
@@ -204,6 +211,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Couture Frenzy": "08bfb08f-48cc-2699-2f5c-aabec43dd43a",
         "Nunca Olvidados Frenzy": "a878b90b-4d32-6e85-d49e-82bfba69471f",
         "Celestial Frenzy": "307dbbc2-442d-b92b-0af2-278a8505672a",
+        "Coalition: Cobra Frenzy": "bb46d680-4e05-bacd-6ecd-11895d2f22e7",
         "Spitfire Frenzy": "5bb5acb1-44dd-184b-484e-319188ef78eb",
         "Aero Frenzy": "12e6f520-460b-e69b-0617-bab9fff1a134",
         "Divine Swine Frenzy": "fa0bb312-4446-a061-9b06-ee88314e07fa",
@@ -214,6 +222,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "BlastX Frenzy": "79005812-4d5c-cc6d-e2bd-19bc86c29349",
     },
     Classic: {
+        "RGX 11z Pro Classic": "111680fd-4562-f658-af1c-ed8f9cfe9f9c",
         "VALORANT GO! Vol. 2 Classic": "b06e13ff-4f19-c750-ffcd-8084dfc3bbf5",
         "Spectrum Classic": "46f32f75-4fc8-7121-8a77-db8db43afc67",
         "Pistolinha Classic": "34919680-4f00-554b-0c2b-95acca7d0d36",
@@ -276,6 +285,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Nebula Sheriff": "55ef0ffa-44fe-03ac-dcf0-1982df0857aa",
         "Singularity Sheriff": "bfd9e773-4376-1f6a-98f2-dc93f0c0607c",
         "Surge Sheriff": "2674c385-4397-0383-04df-988d8d6fd2c8",
+        ".SYS Sheriff": "3850ea5a-4e51-d913-7a44-48b2589e06b9",
         "Protektor Sheriff": "4f1fde01-4130-0ae7-1320-6fb2f2fb6ab9",
         "Prism II Sheriff": "3194b53a-40a9-a419-a8a6-43b1a53cd0e9",
         "K/TAC Sheriff": "95eb82e2-4859-5564-7b3b-ddbf2fb8088d",
@@ -301,6 +311,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Death Wish Sheriff": "bb0d20c6-415d-cf24-e738-0f99db6f9195",
     },
     Shorty: {
+        "Karabasan Shorty": "0581fb92-4b2d-0ede-6bfc-8d93fde11f74",
         "Doodle Buds Shorty": "9a37b09b-4768-b368-52ef-58ac62564637",
         "Hivemind Shorty": "3a921c7b-4e8f-8543-bee8-01ba6da86874",
         "Velocity Shorty": "15588213-4d09-344b-c7e1-28af37374c82",
@@ -311,6 +322,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Genesis Shorty": "fcb18a37-4a0d-ecd3-ee2c-c38496ed5ae2",
         "Oni Shorty": "b36dad11-4105-6c08-0486-17ba96d0f2a4",
         "Snakebite Shorty": "9428e52d-4611-c8ff-1b63-7b8e386fe8cb",
+        "Hue Shift Shorty": "df0e23fe-4529-a9d5-c4c6-eaae086bda65",
         "Standard Shorty": "48ad078a-4dae-2b85-a945-f4b6d1efecbb",
         "Aerosol Shorty": "a39bd1bb-4b17-4d57-c505-7eb15caffa4d",
         "Tigris Shorty": "7b51fc8a-4a5c-712e-c663-e6a7eeb61d91",
@@ -318,6 +330,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Wasteland Shorty": "30635237-4877-4ea4-5ac4-239474d3a662",
     },
     Operator: {
+        "RGX 11z Pro Operator": "2e1936ed-4582-628f-da9c-25a7f47323cc",
         "VALORANT GO! Vol. 2 Operator": "4a1e0934-46ae-fa2a-a009-05ade5d43402",
         "Endeavour Operator": "bdf1484c-44a7-2ef1-3d21-45b66ff8a89f",
         "Origin Operator": "17831113-4ff0-a6c9-0b20-6f9c077d74a2",
@@ -384,6 +397,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Avalanche Marshal": "dd58ab43-4ff3-659e-8f30-b8bd26619d4d",
         "Couture Marshal": "6f48f7ff-40a5-cc9e-1320-bdaa388f5cbf",
         "Magepunk Marshal": "27ab5ed6-4614-d5c2-c53f-5391febe7099",
+        "Coalition: Cobra Marshal": "805722c4-4ac7-6179-7ce7-658b5f26d6ed",
         "Galleria Marshal": "ad6309b5-4788-d401-33d0-4dbaeeadaf87",
         "POLYfrog Marshal": "6eea7984-4ca4-d547-4d50-b4a608072feb",
         "Divine Swine Marshal": "ad83a57d-414c-f714-a97f-99bad1128b2b",
@@ -394,6 +408,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Winterwunderland Marshal": "c31856f4-4ae1-cfb8-14cc-10a92b81e7c3",
     },
     Spectre: {
+        "RGX 11z Pro Spectre": "4f0c9544-469c-0c62-df2e-95b15d6f2333",
         "VALORANT GO! Vol. 1 Spectre": "89b78398-4c56-6371-cad7-8eb78ee3f550",
         "Striker Spectre": "dbe2c9ea-41c4-522c-9204-dab09bac84d0",
         "Radiant Crisis 001 Spectre": "780a93e6-46aa-50c7-5e73-b885c5f6a141",
@@ -413,6 +428,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Magepunk Spectre": "a3f8e1b3-4654-f3ea-15ba-9eb9fd6a0b0d",
         "Spline Spectre": "418ef9fe-4675-6620-3755-c19aca3ff131",
         "Minima Spectre": "2d28e21f-4986-650d-70bd-a2927a0e337b",
+        "Hue Shift Spectre": "ed78f73b-4055-2bd2-7cd6-a1ae7e9025c5",
         "Aero Spectre": "fbaedf2b-4a8b-1949-ddaa-27ab3f6d8ae4",
         "POLYfrog Spectre": "9042279e-4491-1a01-a346-928f89f01ea7",
         "Protocol 781-A Spectre": "eaa73ab9-4688-0c40-09ad-85b535a50723",
@@ -431,6 +447,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Red Alert Stinger": "0cf70376-4150-39aa-5657-8890617bc0d1",
         "Doodle Buds Stinger": "9444ba80-4ae7-985d-40a2-2788f96dd544",
         "Surge Stinger": "0a128cb6-4bbb-f618-85cb-82bbd17bcbb1",
+        ".SYS Stinger": "bf7e260f-407e-9e16-e47e-ba921c10f046",
         "Prism II Stinger": "338e3ee3-4927-733f-32b6-bcac795d23ac",
         "Couture Stinger": "598bb272-4bfd-ae82-0242-6490cc6f721e",
         "Silvanus Stinger": "847fe9da-45cc-21d4-0138-7aa4d8b31d8e",
@@ -447,6 +464,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     },
     Knife: {
         "RGX 11z Pro Blade": "9fb366b6-46df-a722-0cf2-9c9b85936f17",
+        "RGX 11z Pro Firefly": "03de6b1a-4497-72e8-ae0c-2984b2e7e2b9",
         "VALORANT GO! Vol. 1 Knife": "9103fdf7-4361-5ac5-37ae-7cb51f13f45d",
         "Yoru's Stylish Butterfly Comb": "d034911c-45a6-1ce4-e6f5-4cbe57e9d4f1",
         "Gaia's Wrath": "f91a1dd8-4f5f-bce4-f01d-4da95322c485",
@@ -466,6 +484,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Forsaken Ritual Blade": "ed792f00-43a7-cc88-b64b-b78c9de399a1",
         "Velocity Karambit": "ccde2f25-4525-ef52-e1f0-bd88184bd4a4",
         "Ruin Dagger": "9c350ebe-458b-e6ed-ab77-2fb00cf249c1",
+        ".SYS Melee": "c8b926df-4554-1b07-5a43-a9850bafca96",
         "Prime Axe": "e100dff1-4cf5-54ec-aa65-6fadbc22973b",
         "Prime//2.0 Karambit": "9237e734-4a2a-38ae-7438-6cbee901877d",
         "Outpost Melee": "908be835-43bc-b728-35a4-0fa91f612cc0",
@@ -525,6 +544,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Smite Odin": {
         "Level 1": "c59442a5-4b74-792c-d996-71a5fb340625",
+    },
+    "Coalition: Cobra Odin": {
+        "Level 1": "dd2acfca-4366-7ac0-c13e-1eb2f1948273",
     },
     "Sensation Odin": {
         "Level 1": "1bfea917-4262-37ba-3a76-04b937f2d0be",
@@ -696,6 +718,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "dot EXE Vandal": {
         "Level 1": "c9ee9a00-453d-a358-8501-3ebb7ca3765e",
     },
+    ".SYS Vandal": {
+        "Level 1": "e9953add-4069-d71b-447a-a8ad94fe6526",
+    },
     "Horizon Vandal": {
         "Level 1": "26eee656-4f8d-bdd3-e4fe-ae9e808a3408",
     },
@@ -813,6 +838,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Genesis Bulldog": {
         "Level 1": "c5711665-4126-fa98-510f-5f8c82f52911",
     },
+    "Hue Shift Bulldog": {
+        "Level 1": "9db51105-45a7-d05e-6d7d-08962c65c386",
+    },
     "POLYfox Bulldog": {
         "Level 1": "0fce64bd-42c9-1755-8c67-e3a8cdd49de7",
     },
@@ -837,6 +865,13 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Varnish Bulldog": {
         "Level 1": "0edd85d1-4589-385a-e5e2-84a55ae9860d",
+    },
+    "RGX 11z Pro Phantom": {
+        "Level 1": "49a986d0-4a07-b756-331e-babe1b2839d9",
+        "Level 2": "4194e0af-4f61-f3e0-cf96-258f93cc82f4",
+        "Level 3": "745fd101-4ba4-a3f7-eeb1-2b9a201721aa",
+        "Level 4": "9d47f8ab-42fa-167c-7704-3f9f2103ddc6",
+        "Level 5": "c97c97b2-4f3b-fb34-32a4-548d32863042",
     },
     "VALORANT GO! Vol. 1 Phantom": {
         "Level 1": "30423af3-42f9-d0ba-dee5-0b93704b39c8",
@@ -937,6 +972,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "bb07581b-4733-ce33-53d4-3dadc038ca4a",
         "Level 4": "1b24255d-4f50-9202-7b6f-f7873db580d1",
     },
+    "Hue Shift Phantom": {
+        "Level 1": "d17aa037-40df-ce4d-1009-59a02323f002",
+    },
     "Aero Phantom": {
         "Level 1": "24a1644c-4aa9-50cc-9ca3-4aa7be12339d",
     },
@@ -1028,6 +1066,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Luxe Judge": {
         "Level 1": "cfeb4b7a-4310-796c-db4e-fb9844823992",
     },
+    "Coalition: Cobra Judge": {
+        "Level 1": "fe644484-4d07-5472-9e4a-d3992f2f2ecb",
+    },
     "POLYfox Judge": {
         "Level 1": "3c23fdc3-4300-ec78-5123-bcb0dc456473",
     },
@@ -1068,6 +1109,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Surge Bucky": {
         "Level 1": "1e7be2e9-418e-7f39-d879-a8912be1d3ab",
+    },
+    ".SYS Bucky": {
+        "Level 1": "b7652717-49c0-b658-529e-6f8146ab0eca",
     },
     "Horizon Bucky": {
         "Level 1": "f7425a39-43ca-e1fe-5b2b-56a51ed479c5",
@@ -1194,6 +1238,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Celestial Frenzy": {
         "Level 1": "4efc0af7-4623-cb2e-997c-6cbf2e5ddfb4",
     },
+    "Coalition: Cobra Frenzy": {
+        "Level 1": "337b4e6a-46d8-8359-50c0-388717617044",
+    },
     "Spitfire Frenzy": {
         "Level 1": "468505e6-46e2-af29-3974-5fbbe6bf212f",
     },
@@ -1220,6 +1267,13 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "3ce662ff-410f-4ed6-1e81-94ad17a685e3",
         "Level 3": "a37d950a-483a-ec0d-8ddb-218f726df65e",
         "Level 4": "79eabc1b-45ed-ea03-35f4-ffaadccfc675",
+    },
+    "RGX 11z Pro Classic": {
+        "Level 1": "90cd5d86-4516-918b-29af-07b116f63aa9",
+        "Level 2": "335af838-4f48-e2db-ca91-3d976aab34c2",
+        "Level 3": "c11deaae-4528-af24-25c6-7f8d928951a5",
+        "Level 4": "44fb2542-45e5-f504-fdb5-fdb075ece7af",
+        "Level 5": "4c741d16-4ab3-873f-99e0-7ab0c0643f08",
     },
     "VALORANT GO! Vol. 2 Classic": {
         "Level 1": "68ee5c6c-4424-e95a-f46f-c08ec2dfeb97",
@@ -1427,6 +1481,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Surge Sheriff": {
         "Level 1": "db36ee86-4aa7-249f-6745-5e9ddffa50b4",
     },
+    ".SYS Sheriff": {
+        "Level 1": "6287a1f1-4d10-5190-86ec-659b26020e87",
+    },
     "Protektor Sheriff": {
         "Level 1": "d9fc55c6-4b92-98ac-5052-2a8b5ca4fb71",
     },
@@ -1513,6 +1570,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Death Wish Sheriff": {
         "Level 1": "a07ff70b-4b4b-ee36-78f5-8ba771b278ac",
     },
+    "Karabasan Shorty": {
+        "Level 1": "f1f9cde8-4810-86a0-1c95-4ab214d4f6b8",
+    },
     "Doodle Buds Shorty": {
         "Level 1": "deb200a8-447c-0e47-5b92-e8aeb9cd5525",
         "Level 2": "ba0193f6-4c7d-1b7f-b9dc-4e883a6ba21a",
@@ -1547,6 +1607,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Snakebite Shorty": {
         "Level 1": "6f90d1ed-4acc-d925-4a8a-60913f14d16b",
     },
+    "Hue Shift Shorty": {
+        "Level 1": "31629ef7-47ac-908e-369b-16beabc02c5b",
+    },
     "Standard Shorty": {
         "Level 1": "a7f92a1c-4465-5ea3-7745-bd876117f4a7",
     },
@@ -1561,6 +1624,13 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Wasteland Shorty": {
         "Level 1": "a88a4c80-4913-a111-0fba-878adddd381a",
+    },
+    "RGX 11z Pro Operator": {
+        "Level 1": "2ad7a62f-4091-ecba-de21-d19edfb41086",
+        "Level 2": "873e2729-4986-6471-2c75-298a5e9205e3",
+        "Level 3": "6c940bdf-45a9-583f-7d14-028b380ed37b",
+        "Level 4": "2f1221b2-4e99-a2e7-4f63-0e9c6dab5b62",
+        "Level 5": "2084911a-479d-14e5-13b4-b3856a39885e",
     },
     "VALORANT GO! Vol. 2 Operator": {
         "Level 1": "68811d2b-4a6d-cbdc-39d3-f580aa97a297",
@@ -1811,6 +1881,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "9e70420e-4ac5-72c0-6e00-35882e13fc06",
         "Level 4": "3ba019cb-468e-d53a-e92d-c2a3ff804f59",
     },
+    "Coalition: Cobra Marshal": {
+        "Level 1": "4dd7d0b9-40a9-de6c-ac61-aea19a6d8a77",
+    },
     "Galleria Marshal": {
         "Level 1": "50265ad5-4f14-2b32-924e-02bbed2bea6f",
     },
@@ -1837,6 +1910,13 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Winterwunderland Marshal": {
         "Level 1": "4fcea818-4877-85f9-ba01-a0b02e1868f4",
+    },
+    "RGX 11z Pro Spectre": {
+        "Level 1": "737d2d1b-4b47-87a4-6045-5183580d27ec",
+        "Level 2": "273b3a0a-4bfc-7724-7fe7-7ca3868b3135",
+        "Level 3": "b5614b64-47f4-9cb7-71d2-f99afb43a131",
+        "Level 4": "6aef9ce2-4938-7050-a9d0-fe830cc8b5b7",
+        "Level 5": "66a49dfe-414c-e55c-4961-51885b097521",
     },
     "VALORANT GO! Vol. 1 Spectre": {
         "Level 1": "291cb44a-410d-b035-4d0b-608a92c2cd91",
@@ -1912,6 +1992,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Minima Spectre": {
         "Level 1": "1fdbe6f8-42ca-deb2-33da-caa2c4200544",
     },
+    "Hue Shift Spectre": {
+        "Level 1": "6803ed34-46cc-ba84-9e58-f78f6538151e",
+    },
     "Aero Spectre": {
         "Level 1": "cc3bb43a-4078-e7e6-5b43-3ba42fb9d7fb",
     },
@@ -1976,6 +2059,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Surge Stinger": {
         "Level 1": "77d5c1dc-4dde-539c-3a5a-0a95eecba1e4",
     },
+    ".SYS Stinger": {
+        "Level 1": "50e072a5-4f30-63a9-6dee-a8b33781269f",
+    },
     "Prism II Stinger": {
         "Level 1": "b5f7b00a-4c4b-a3d5-d2cc-fbb62c482ef6",
     },
@@ -2021,6 +2107,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "RGX 11z Pro Blade": {
         "Level 1": "a1762ed3-45bf-2dd5-776f-a18a33171e6f",
         "Level 2": "d67af30b-4b2a-b1e6-3ac2-6aba74b885d4",
+    },
+    "RGX 11z Pro Firefly": {
+        "Level 1": "424ed674-47dd-0488-de93-6cb8e13d0b90",
+        "Level 2": "662449ea-4e5e-376a-6482-83b478355047",
     },
     "VALORANT GO! Vol. 1 Knife": {
         "Level 1": "6e37a33a-416e-fcc0-ceb8-7784e18fbfe9",
@@ -2091,6 +2181,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Ruin Dagger": {
         "Level 1": "726b77c9-41c3-80c6-f33e-068b9f74ef56",
+    },
+    ".SYS Melee": {
+        "Level 1": "9d9ec56d-4973-3531-64f5-6d8eb2beb0a2",
     },
     "Prime Axe": {
         "Level 1": "249b0e46-4a11-f045-51bb-649151cd802a",
@@ -2232,6 +2325,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Smite Odin": {
         Default: "5da04039-4875-92ec-759f-5b9928d12b30",
+    },
+    "Coalition: Cobra Odin": {
+        Default: "e8874661-47d0-37cd-5f98-33b18e05872a",
+        Blue: "4a405c13-4440-94de-e894-82970565b71e",
+        Red: "b49c9d6f-46c8-3689-01c1-bd81beb4050d",
+        Orange: "c1e53748-4a97-c0a8-6759-59925fae909b",
     },
     "Sensation Odin": {
         Default: "53ce97ed-47e0-4856-0446-f7bc86e869e0",
@@ -2406,6 +2505,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "dot EXE Vandal": {
         Default: "2be20a2a-4582-b689-f00e-a98dafad65eb",
     },
+    ".SYS Vandal": {
+        Default: "51e4fbb2-439c-1640-6d35-358b3c70af30",
+    },
     "Horizon Vandal": {
         Default: "689e54c0-4089-2d91-de26-61aa4286d6cf",
     },
@@ -2536,6 +2638,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Genesis Bulldog": {
         Default: "49c0b811-4c16-b68f-b074-4f81d8f0563c",
     },
+    "Hue Shift Bulldog": {
+        Default: "7a5c47c8-4e83-917d-b0bf-dda86932d6ea",
+    },
     "POLYfox Bulldog": {
         Default: "28cf13a9-4457-027e-2c1f-6388ccc870f0",
     },
@@ -2562,6 +2667,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Varnish Bulldog": {
         Default: "97e3f19b-441e-4a98-a39f-fda730fa0bfd",
+    },
+    "RGX 11z Pro Phantom": {
+        Default: "1788506c-4cd4-5a85-12cc-288b566ed869",
+        Red: "36f8c874-43d9-5764-9585-55b0141fdb9c",
+        Blue: "f399ce20-4d22-b504-dbae-f8907bf25135",
+        Yellow: "24fd1841-4d50-31b9-8b45-edbfd0f42b03",
     },
     "VALORANT GO! Vol. 1 Phantom": {
         Default: "5802270a-45f9-737e-c5d0-e7a16957a3ca",
@@ -2663,6 +2774,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Black: "b639a920-424b-b855-1e30-7f9b026889f1",
         Green: "6f9c7109-485a-f2a3-cb1d-9f9a31a995d7",
         White: "32dfe871-4906-d2ce-4835-2d99aaa52f84",
+    },
+    "Hue Shift Phantom": {
+        Default: "3948f41b-4239-40b6-5a04-6ba0202a0ce0",
     },
     "Aero Phantom": {
         Default: "18d326de-48f5-762f-98be-86b51bd29a7a",
@@ -2769,6 +2883,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Luxe Judge": {
         Default: "5fc0a963-47d1-9336-ddf1-0c99d7169ad8",
     },
+    "Coalition: Cobra Judge": {
+        Default: "3b59035d-48a3-44b5-8041-1a8e18d908c1",
+        Blue: "da960815-4ae4-a761-2654-ba8d7264fcb0",
+        Red: "b42da578-4533-6c97-5d20-268c996fe1bc",
+        Orange: "9458b624-43e7-c0ad-ea8e-a2adce8c6fb7",
+    },
     "POLYfox Judge": {
         Default: "a0d5b67e-42ee-e831-f1b7-a39cb4f375f5",
     },
@@ -2813,6 +2933,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Black: "fd6330d1-4eea-006d-24ac-57a31d5c004d",
         Yellow: "8c6cbe68-4ca1-2ee3-177e-c6bbffdba724",
         Blue: "9b63be2e-49f4-b05c-9dfb-e0929a36365c",
+    },
+    ".SYS Bucky": {
+        Default: "c3bb30ce-432e-6ef3-6828-6981abf3f058",
     },
     "Horizon Bucky": {
         Default: "6e99ce94-4abd-4339-153c-ddb62112b10b",
@@ -2945,6 +3068,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Celestial Frenzy": {
         Default: "b738edd8-4f28-348b-3066-29b184f7032f",
     },
+    "Coalition: Cobra Frenzy": {
+        Default: "c7e6f961-4dae-0017-ef94-44b7d0665beb",
+        Blue: "3f9947e3-43c8-1ebb-01a4-c884a562b0bd",
+        Red: "a7ec5c43-4500-98d2-fefc-cdbcbf8c0c60",
+        Orange: "a063061c-4c33-0362-843f-45a8a552537f",
+    },
     "Spitfire Frenzy": {
         Default: "5a649a38-4c12-fb73-fc12-9f975495716f",
     },
@@ -2977,6 +3106,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Black: "db8e1292-4fae-d1bd-b35e-a6b62884cad3",
         Yellow: "54e09e83-46f8-b3ab-10ea-73bd242dfe37",
         Pink: "5c2ad1f3-4a4a-6ae0-69f6-d082c3721162",
+    },
+    "RGX 11z Pro Classic": {
+        Default: "eda9dfed-4d9f-bf1f-9d47-8598aeebd14d",
+        Red: "6bdc383f-49cd-ca87-ea30-e89a400d4b6a",
+        Blue: "63091ee5-47d9-f252-f7ad-09bb049c8673",
+        Yellow: "bd0feedc-4571-773b-0f94-6dad613537d1",
     },
     "VALORANT GO! Vol. 2 Classic": {
         Default: "21189635-4f65-c3a5-adb5-d1b7bb609c56",
@@ -3210,6 +3345,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Yellow: "475fe183-476e-f9a6-9134-24a506d65823",
         Blue: "f0665a84-48cd-da41-c46d-148f8802fad2",
     },
+    ".SYS Sheriff": {
+        Default: "c4a68945-4c6f-f844-3682-2498bc01e964",
+    },
     "Protektor Sheriff": {
         Default: "6671a60e-483f-706a-c59d-0697a1865f60",
     },
@@ -3294,6 +3432,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Death Wish Sheriff": {
         Default: "3bc59f13-4259-9ba0-1b15-18bc8b61a642",
     },
+    "Karabasan Shorty": {
+        Default: "74019079-43d3-2757-bf40-9792c930034e",
+    },
     "Doodle Buds Shorty": {
         Default: "8341e29e-4faa-e5c6-b6db-c2bcfbdfbc55",
         Tactifriends: "acb87714-4ea5-18b6-0d2a-fb8754340943",
@@ -3332,6 +3473,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Snakebite Shorty": {
         Default: "1c197677-4fc6-e4c8-69f3-389888e5b063",
     },
+    "Hue Shift Shorty": {
+        Default: "73db26ce-42da-5971-7d83-8ba0fb998612",
+    },
     "Standard Shorty": {
         Default: "95608504-4c8b-1408-1612-0f8200421c49",
     },
@@ -3346,6 +3490,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Wasteland Shorty": {
         Default: "701655f9-43d8-1c72-f567-acac565fd353",
+    },
+    "RGX 11z Pro Operator": {
+        Default: "5585cf27-4f9a-2957-3e55-32af1c77e578",
+        Red: "a4d1f2c2-4340-4527-7ef0-b9b0bd4d84ff",
+        Blue: "b3faf521-48ed-8829-14fc-12b662021f10",
+        Yellow: "3375e955-493f-479f-8937-2db8dbd9e516",
     },
     "VALORANT GO! Vol. 2 Operator": {
         Default: "5220f477-4fbb-cfb6-60ce-ddb7bd215a66",
@@ -3611,6 +3761,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Purple: "90252399-43e6-7970-1f86-96942f1f26b4",
         Orange: "49c54513-4b64-0019-9742-96aa1e6ee727",
     },
+    "Coalition: Cobra Marshal": {
+        Default: "77734ca5-4118-6569-f90e-90b5b9536913",
+        Blue: "ba6bb676-4271-8821-9ade-568a7e6912bf",
+        Red: "765ec9ab-468b-8640-1d7f-5285640381f3",
+        Orange: "3463d65c-42a7-da86-e6c9-0a8e750855b9",
+    },
     "Galleria Marshal": {
         Default: "f9800505-4923-a557-494b-02bf4c47ec2b",
     },
@@ -3640,6 +3796,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Winterwunderland Marshal": {
         Default: "ed72b5f0-4fa3-6998-88d8-209ba547ff1e",
+    },
+    "RGX 11z Pro Spectre": {
+        Default: "864a834b-4637-08d8-0a3d-cdbb317afb95",
+        Red: "1910433c-48ec-fe93-0798-a1bf1639e42c",
+        Blue: "47cd4c1c-4c8d-d262-a9f0-359206bf40dc",
+        Yellow: "e1cc60c3-4031-6111-0179-ceb150458419",
     },
     "VALORANT GO! Vol. 1 Spectre": {
         Default: "09d52346-42ba-8832-5981-c98db65774b8",
@@ -3720,6 +3882,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Minima Spectre": {
         Default: "0d608736-4753-dff9-c62d-e9b43f038317",
     },
+    "Hue Shift Spectre": {
+        Default: "66a8d891-4c73-c199-57ce-0090b25cc925",
+    },
     "Aero Spectre": {
         Default: "5f339b4d-4f97-5592-ea37-7b9668d7c6ed",
         "Cream/Pink": "3206b73c-4e77-fbd7-4cd7-7d9403ce0494",
@@ -3794,6 +3959,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Yellow: "55f6b4be-464a-e079-6ac7-94927ee403f5",
         Blue: "3549ad5e-4903-ad4d-f33e-9dbebaeaea44",
     },
+    ".SYS Stinger": {
+        Default: "6ed5702f-4873-236c-eb02-a3aabfba6afc",
+    },
     "Prism II Stinger": {
         Default: "c770bb5f-454f-8d69-5653-e0be2dd0d41c",
     },
@@ -3841,6 +4009,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "RGX 11z Pro Blade": {
         Default: "05029e79-4c74-85c3-30ee-78ab3179b600",
+    },
+    "RGX 11z Pro Firefly": {
+        Default: "2d0c7deb-4f5a-40ea-8fe8-288e060d02c6",
     },
     "VALORANT GO! Vol. 1 Knife": {
         Default: "2aebc30d-43d9-4501-69a6-b28648c2e4f6",
@@ -3907,6 +4078,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Ruin Dagger": {
         Default: "7c14d797-4a40-2fbc-c314-249f6029396f",
+    },
+    ".SYS Melee": {
+        Default: "7cf68fce-474d-cd59-5729-17a45fd83764",
     },
     "Prime Axe": {
         Default: "d2e296d9-448e-c58f-2229-14a481906686",
