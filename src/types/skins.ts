@@ -7,6 +7,7 @@ export type OdinSkin =
     | "Prime//2.0 Odin"
     | "Prism III Odin"
     | "Smite Odin"
+    | "Coalition: Cobra Odin"
     | "Sensation Odin"
     | "Lightwave Odin"
     | "Schema Odin"
@@ -56,6 +57,7 @@ export type VandalSkin =
     | "Team Ace Vandal"
     | "Ruin Vandal"
     | "dot EXE Vandal"
+    | ".SYS Vandal"
     | "Horizon Vandal"
     | "Prime Vandal"
     | "Avalanche Vandal"
@@ -92,6 +94,7 @@ export type BulldogSkin =
     | "Couture Bulldog"
     | "Nunca Olvidados Bulldog"
     | "Genesis Bulldog"
+    | "Hue Shift Bulldog"
     | "POLYfox Bulldog"
     | "Protocol 781-A Bulldog"
     | "Infinity Bulldog"
@@ -101,6 +104,7 @@ export type BulldogSkin =
     | "Varnish Bulldog";
 
 export type PhantomSkin =
+    | "RGX 11z Pro Phantom"
     | "VALORANT GO! Vol. 1 Phantom"
     | "Spectrum Phantom"
     | "Radiant Crisis 001 Phantom"
@@ -126,6 +130,7 @@ export type PhantomSkin =
     | "Silvanus Phantom"
     | "Ion Phantom"
     | "Oni Phantom"
+    | "Hue Shift Phantom"
     | "Aero Phantom"
     | "Artisan Phantom"
     | "Protocol 781-A Phantom"
@@ -153,6 +158,7 @@ export type JudgeSkin =
     | "Smite Judge"
     | "Celestial Judge"
     | "Luxe Judge"
+    | "Coalition: Cobra Judge"
     | "POLYfox Judge"
     | "Divine Swine Judge"
     | "Jigsaw Judge"
@@ -167,6 +173,7 @@ export type BuckySkin =
     | "Radiant Crisis 001 Bucky"
     | "Red Alert Bucky"
     | "Surge Bucky"
+    | ".SYS Bucky"
     | "Horizon Bucky"
     | "Monarch Bucky"
     | "Hydrodip Bucky"
@@ -201,6 +208,7 @@ export type FrenzySkin =
     | "Couture Frenzy"
     | "Nunca Olvidados Frenzy"
     | "Celestial Frenzy"
+    | "Coalition: Cobra Frenzy"
     | "Spitfire Frenzy"
     | "Aero Frenzy"
     | "Divine Swine Frenzy"
@@ -211,6 +219,7 @@ export type FrenzySkin =
     | "BlastX Frenzy";
 
 export type ClassicSkin =
+    | "RGX 11z Pro Classic"
     | "VALORANT GO! Vol. 2 Classic"
     | "Spectrum Classic"
     | "Pistolinha Classic"
@@ -273,6 +282,7 @@ export type SheriffSkin =
     | "Nebula Sheriff"
     | "Singularity Sheriff"
     | "Surge Sheriff"
+    | ".SYS Sheriff"
     | "Protektor Sheriff"
     | "Prism II Sheriff"
     | "K/TAC Sheriff"
@@ -298,6 +308,7 @@ export type SheriffSkin =
     | "Death Wish Sheriff";
 
 export type ShortySkin =
+    | "Karabasan Shorty"
     | "Doodle Buds Shorty"
     | "Hivemind Shorty"
     | "Velocity Shorty"
@@ -308,6 +319,7 @@ export type ShortySkin =
     | "Genesis Shorty"
     | "Oni Shorty"
     | "Snakebite Shorty"
+    | "Hue Shift Shorty"
     | "Standard Shorty"
     | "Aerosol Shorty"
     | "Tigris Shorty"
@@ -315,6 +327,7 @@ export type ShortySkin =
     | "Wasteland Shorty";
 
 export type OperatorSkin =
+    | "RGX 11z Pro Operator"
     | "VALORANT GO! Vol. 2 Operator"
     | "Endeavour Operator"
     | "Origin Operator"
@@ -381,6 +394,7 @@ export type MarshalSkin =
     | "Avalanche Marshal"
     | "Couture Marshal"
     | "Magepunk Marshal"
+    | "Coalition: Cobra Marshal"
     | "Galleria Marshal"
     | "POLYfrog Marshal"
     | "Divine Swine Marshal"
@@ -391,6 +405,7 @@ export type MarshalSkin =
     | "Winterwunderland Marshal";
 
 export type SpectreSkin =
+    | "RGX 11z Pro Spectre"
     | "VALORANT GO! Vol. 1 Spectre"
     | "Striker Spectre"
     | "Radiant Crisis 001 Spectre"
@@ -410,6 +425,7 @@ export type SpectreSkin =
     | "Magepunk Spectre"
     | "Spline Spectre"
     | "Minima Spectre"
+    | "Hue Shift Spectre"
     | "Aero Spectre"
     | "POLYfrog Spectre"
     | "Protocol 781-A Spectre"
@@ -428,6 +444,7 @@ export type StingerSkin =
     | "Red Alert Stinger"
     | "Doodle Buds Stinger"
     | "Surge Stinger"
+    | ".SYS Stinger"
     | "Prism II Stinger"
     | "Couture Stinger"
     | "Silvanus Stinger"
@@ -444,6 +461,7 @@ export type StingerSkin =
 
 export type KnifeSkin =
     | "RGX 11z Pro Blade"
+    | "RGX 11z Pro Firefly"
     | "VALORANT GO! Vol. 1 Knife"
     | "Yoru's Stylish Butterfly Comb"
     | "Gaia's Wrath"
@@ -463,6 +481,7 @@ export type KnifeSkin =
     | "Forsaken Ritual Blade"
     | "Velocity Karambit"
     | "Ruin Dagger"
+    | ".SYS Melee"
     | "Prime Axe"
     | "Prime//2.0 Karambit"
     | "Outpost Melee"

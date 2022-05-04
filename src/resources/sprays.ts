@@ -28,9 +28,13 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Thumbs Up Spray": "43341e92-451f-c194-b4f6-0b926bdc3643",
     "Stay Safe, Wash Your Hands Spray": "5d6cadda-42c3-1cac-94d3-458917f5cb2c",
     "RGX 11z Pro Spray": "8035dd5d-4ddd-5dbd-165c-9886574fdff5",
+    "RGX 11z Pro, Ep 4 Spray": "3db4ad9c-4a92-d8b0-a5a1-008a7c67d699",
     "Gaia's Vengeance Spray": "8b7154e2-4453-2515-0867-62a1075b03ad",
     "Spectrum Spray": "a5ecf58a-44ce-75f6-abf7-bfb616c12f59",
     "Boom! Spray": "35d8fb90-49a9-641e-ff08-b4bc20421908",
+    "Fade Spray": "e42f668f-4829-10af-02ca-4abf7fa74fb5",
+    "On the Prowl Spray": "da32f415-4593-dba5-e09c-9fb6af3325e0",
+    "Eye Opener Spray": "7a46d7de-409e-a15a-a052-89a6808eb549",
     "Breach Spray": "a05c50b7-4a1d-c2de-e1e7-ac8a7730daa4",
     "K.O. Spray": "dcc8f0df-46b9-0a3e-7a0f-74a7558ddafc",
     "Guns Out Spray": "92641409-4113-b674-f95d-fc85f29bf921",
@@ -174,6 +178,22 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Splitting Melons Spray": "3d79a7d2-4883-4394-13a5-f5ba3f16d86f",
     "#SAVEWIDEJOY Spray": "7f36b59b-436a-f72b-1560-ec83c5f0a72f",
     "Epilogue: #SAVEWIDEJOY Spray": "beeafc3b-49f8-d5e6-dbd4-b791c9ce91fe",
+    "Caution: Blinding Bird! Spray": "0e399ff1-44be-3289-23aa-5082090912fd",
+    "Cap? No Cap? Spray": "bae38782-4d0a-1e95-52a4-9ca8059ba6d2",
+    "Bawk Bawk Brimstone Spray": "f3788407-4ecf-4d91-72d5-63a9ec8c92dc",
+    "Keeping Secrets Spray": "ba0a3fdd-4f01-6766-a4c7-348bea8764bb",
+    "Backseat Coaching Spray": "47dfa1e6-43f8-5eab-7e4f-5f8f62158104",
+    "Heaven or Hell? Spray": "3ce8ebdc-435a-b6fb-c2f3-8e9877551a31",
+    "I Have Three Creds Spray": "c6b77fc4-4f49-9259-04a4-b68ad4c3f910",
+    "Charge Needed Spray": "0020abc7-41ce-d2f9-db8a-0b90e5a64547",
+    "Look Behind You Spray": "d0e2ca19-4329-9ef1-f2ed-4ca2150749fc",
+    "Coalition: Cobra Spray": "13b93799-4498-7429-2bef-9d8c36c23e27",
+    "Pretty Pretty Please Spray": "a71132dd-4f49-c391-fa4a-2fa410cd9b4b",
+    "It's Stinger Time Spray": "f917c3a1-4349-9335-4864-46806eb8c764",
+    "Epilogue: It's Stinger Time Spray": "89cd9d61-41c8-156a-6b07-b5af51aaf07f",
+    "Terrible Day for Rain Spray": "3b1a23b5-4119-3c68-27ed-3e85510c954e",
+    "Don't Watch This Spray": "41566c1b-4d7b-2cba-dd5a-01abf2d67242",
+    "Skeptical Viper Spray": "73292c82-4718-ad6e-0ae1-42a8f208b968",
     "VCT 2021 Spark Spray": "f9bcf120-42b6-6986-2acd-6aa87bab4089",
     "Fist Bump Spray": "d8cfce74-4bb8-42b2-022e-9dbf9d648823",
     "Team Ace // Jett Spray": "5e5fd29a-4e83-40fa-0012-e08470dacdd7",
@@ -361,6 +381,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "RGX 11z Pro Spray": {
         "1": "cd431466-46b6-1ea9-abf3-77a9a42082c9",
     },
+    "RGX 11z Pro, Ep 4 Spray": {
+        "1": "2e9f43da-415a-5988-e1c6-4fbbd62c9681",
+    },
     "Gaia's Vengeance Spray": {
         "1": "6ccd421a-4fc6-4be8-ae1d-799ca0c46d75",
     },
@@ -369,6 +392,15 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Boom! Spray": {
         "1": "a15b1907-49ad-36f4-0eb0-c5bc416f7c2b",
+    },
+    "Fade Spray": {
+        "1": "a1115f3c-446f-6714-c9cf-3ab8090afcb1",
+    },
+    "On the Prowl Spray": {
+        "1": "77b1e2f2-4b04-99fd-3303-b681d568b518",
+    },
+    "Eye Opener Spray": {
+        "1": "979d11a9-4848-24be-a23f-479a9b2e02f9",
     },
     "Breach Spray": {
         "1": "36ba4655-46f2-dc45-6172-559d66f7ffb5",
@@ -798,6 +830,54 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Epilogue: #SAVEWIDEJOY Spray": {
         "1": "6ec55b14-428a-2bb6-8228-5fa77cee2fe8",
+    },
+    "Caution: Blinding Bird! Spray": {
+        "1": "e5023866-4805-009c-bb36-d29dc7c540fe",
+    },
+    "Cap? No Cap? Spray": {
+        "1": "a8eb901f-4463-9a6f-a523-2686b161a484",
+    },
+    "Bawk Bawk Brimstone Spray": {
+        "1": "6942e138-46f4-6d23-80f3-b39405205c4b",
+    },
+    "Keeping Secrets Spray": {
+        "1": "664d71df-4f42-218b-a2c0-d8acfe091da0",
+    },
+    "Backseat Coaching Spray": {
+        "1": "72a3a0ea-413c-df24-9d2f-e181234f0dde",
+    },
+    "Heaven or Hell? Spray": {
+        "1": "3168cfd6-4727-9017-8a2a-e9a9a6a26e1c",
+    },
+    "I Have Three Creds Spray": {
+        "1": "000a0158-4687-35ab-00bf-1bb6be386472",
+    },
+    "Charge Needed Spray": {
+        "1": "083caf93-46e2-225c-f9d8-cebdb1f59344",
+    },
+    "Look Behind You Spray": {
+        "1": "326b4b7e-4f4e-c331-8840-d5b086c0ca3c",
+    },
+    "Coalition: Cobra Spray": {
+        "1": "264f9af7-47d7-fa2a-bdb4-3babd1c366a4",
+    },
+    "Pretty Pretty Please Spray": {
+        "1": "f2bdd622-443d-1751-1c28-07a2a0850c22",
+    },
+    "It's Stinger Time Spray": {
+        "1": "36a46f23-4ce4-d57b-3ff2-11bb805fe407",
+    },
+    "Epilogue: It's Stinger Time Spray": {
+        "1": "323d7d8f-45a5-51a4-04c1-bfa334dbd0b1",
+    },
+    "Terrible Day for Rain Spray": {
+        "1": "4da8035a-4fff-9951-a3ba-b3a3af9bbe58",
+    },
+    "Don't Watch This Spray": {
+        "1": "53793362-476d-77d6-12dd-81ae101f75d9",
+    },
+    "Skeptical Viper Spray": {
+        "1": "f4782db0-4593-9460-7565-4fb66d9b5f99",
     },
     "VCT 2021 Spark Spray": {
         "1": "9aea356b-41f7-b2eb-be07-138caa0a5dad",
