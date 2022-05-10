@@ -39,6 +39,7 @@ export type AresSkin =
     | "Sakura Ares"
     | "Snowfall Ares"
     | "Sentinels of Light Ares"
+    | "Titanmail Ares"
     | "Standard Ares";
 
 export type VandalSkin =
@@ -74,6 +75,7 @@ export type VandalSkin =
     | "Reaver Vandal"
     | "Tethered Realms Vandal"
     | "Cavalier Vandal"
+    | "Titanmail Vandal"
     | "Standard Vandal"
     | "Depths Vandal"
     | "Ego Vandal"
@@ -189,6 +191,7 @@ export type BuckySkin =
     | "Gravitational Uranium Neuroblaster Bucky"
     | "Lightwave Bucky"
     | "Cavalier Bucky"
+    | "Titanmail Bucky"
     | "Standard Bucky"
     | "Aerosol Bucky";
 
@@ -214,6 +217,7 @@ export type FrenzySkin =
     | "Divine Swine Frenzy"
     | "Sensation Frenzy"
     | "Lightwave Frenzy"
+    | "Titanmail Frenzy"
     | "Live Wire Frenzy"
     | "Standard Frenzy"
     | "BlastX Frenzy";
@@ -509,6 +513,7 @@ export type KnifeSkin =
     | "Sovereign Sword"
     | "Prosperity"
     | "Recon Balisong"
+    | "Titanmail Mace"
     | "Melee"
     | "Hu Else"
     | "Ego Knife"

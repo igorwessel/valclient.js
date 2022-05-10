@@ -42,6 +42,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Sakura Ares": "2666f98d-4f88-8cb9-4927-629d75a6a7ad",
         "Snowfall Ares": "43538e40-48bf-0262-d4a7-bbba3c56df77",
         "Sentinels of Light Ares": "9f3e2ba6-428f-c635-67e0-b8b7d9e3c2fc",
+        "Titanmail Ares": "d29d764d-41ce-5a4d-0a96-7b8b91da16fd",
         "Standard Ares": "5305d9c4-4f46-fbf4-9e9a-dea772c263b5",
     },
     Vandal: {
@@ -77,6 +78,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Reaver Vandal": "30388628-42f0-606c-82c0-73ad43de997f",
         "Tethered Realms Vandal": "f2b034e0-4b54-5abc-25c8-d293b6f1d247",
         "Cavalier Vandal": "1eb7639f-4e90-5b5b-9f53-a792103d6f29",
+        "Titanmail Vandal": "e8dc658b-4c7c-2338-facd-7d8d2813560a",
         "Standard Vandal": "27f21d97-4c4b-bd1c-1f08-31830ab0be84",
         "Depths Vandal": "f2871246-441c-5f41-3dac-13947139adec",
         "Ego Vandal": "8c22a4b2-4da0-f2f2-9bd1-c89d106cd646",
@@ -192,6 +194,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Gravitational Uranium Neuroblaster Bucky": "0dc9a874-41c5-e582-9a36-37946043346c",
         "Lightwave Bucky": "26582dc8-43dd-15b6-a31c-739b90302bea",
         "Cavalier Bucky": "e6eefed6-4d10-5794-4859-6d9ab5ff1d66",
+        "Titanmail Bucky": "1ecb1abc-41a4-f789-39a5-4583f043d688",
         "Standard Bucky": "70c97fb2-4d79-d4bb-5173-a1888cd4bfd9",
         "Aerosol Bucky": "cf2cc18c-42ec-3fb0-4ca7-3583373a33ab",
     },
@@ -217,6 +220,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Divine Swine Frenzy": "fa0bb312-4446-a061-9b06-ee88314e07fa",
         "Sensation Frenzy": "531135cc-48cb-68bf-8c99-149e46670c80",
         "Lightwave Frenzy": "f67d4d78-4567-f8ca-010b-18919c49aa05",
+        "Titanmail Frenzy": "324c837d-4e55-a259-0852-92bc27e724da",
         "Live Wire Frenzy": "f7fc6f86-4599-e131-e392-d6b2dfabd8cb",
         "Standard Frenzy": "f06657f3-48b6-6314-7235-a9a2749df5b9",
         "BlastX Frenzy": "79005812-4d5c-cc6d-e2bd-19bc86c29349",
@@ -512,6 +516,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Sovereign Sword": "2e77ac95-4681-3d87-bbdc-93a50ff6b1f6",
         Prosperity: "f4e40444-43f3-e6f7-3271-bdb7d1492b05",
         "Recon Balisong": "39cf499b-4f82-e875-5320-b0a1d7fc58d4",
+        "Titanmail Mace": "4f6033d5-4b24-94f0-31ab-f6969a2c926c",
         Melee: "12cc9ed2-4430-d2fe-3064-f7a19b1ba7c7",
         "Hu Else": "5724cd18-458b-af3d-b60a-239c5a8c081a",
         "Ego Knife": "c52fe5d7-4500-ffc0-cbcd-bfa29b7ea040",
@@ -648,6 +653,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "a92fc69d-4be1-74f5-938b-e0b27b2bb929",
         "Level 4": "0725b4f4-44eb-5297-9ea2-18a333a95087",
     },
+    "Titanmail Ares": {
+        "Level 1": "2317e839-44cd-2301-80a8-c4ac63c626ac",
+    },
     "Standard Ares": {
         "Level 1": "0f5f60f4-4c94-e4b2-ceab-e2b4e8b41784",
     },
@@ -777,6 +785,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Cavalier Vandal": {
         "Level 1": "8017a235-48d8-9f2a-42c2-7a865157c587",
+    },
+    "Titanmail Vandal": {
+        "Level 1": "17f044eb-4016-5f86-f4f7-1095cc292a15",
     },
     "Standard Vandal": {
         "Level 1": "1ab72e66-4da3-33a0-164f-908113e075a4",
@@ -1171,6 +1182,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Cavalier Bucky": {
         "Level 1": "b6a089dd-4616-be48-4f28-d8b2a539c0a5",
     },
+    "Titanmail Bucky": {
+        "Level 1": "0771ccd2-40b0-54cf-37b4-c3b5cac03bdb",
+    },
     "Standard Bucky": {
         "Level 1": "2f5078c7-4381-492d-cc00-9f96966ba1ec",
     },
@@ -1255,6 +1269,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Lightwave Frenzy": {
         "Level 1": "fe7ac291-4516-02d4-9101-0a990615a585",
+    },
+    "Titanmail Frenzy": {
+        "Level 1": "47ee5cb6-4059-df8b-6d40-5daaa01ff49f",
     },
     "Live Wire Frenzy": {
         "Level 1": "08e6ba32-4a6e-8680-df58-39af9c32cdac",
@@ -2280,6 +2297,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "e85cf8b6-467b-bc6c-9013-959383f71b2e",
         "Level 2": "6e6f577b-4a04-07d2-47f3-ec8cd4a684da",
     },
+    "Titanmail Mace": {
+        "Level 1": "4745ba48-4d62-b01c-9cb9-48848fec9b66",
+        "Level 2": "9acc22e7-4457-f294-0861-6bbeecb46316",
+    },
     Melee: {
         "Level 1": "854938f3-4532-b300-d9a2-379d987d7469",
     },
@@ -2441,6 +2462,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         "Red/Green": "39ed0f62-4d30-6fae-b8d7-9c943d6984cb",
         "Blue/Purple": "ab9a4b7b-4037-c491-093d-e99e8070031f",
     },
+    "Titanmail Ares": {
+        Default: "3288078d-415c-8611-3ac6-eebdc4f579d3",
+    },
     "Standard Ares": {
         Default: "b33de820-4061-8b85-31ce-808f1a2c58f5",
     },
@@ -2566,6 +2590,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Cavalier Vandal": {
         Default: "c6838523-4412-d800-84d3-1c93c15a8840",
+    },
+    "Titanmail Vandal": {
+        Default: "10b39a6f-494c-ca3c-497f-24877ab43a47",
     },
     "Standard Vandal": {
         Default: "19629ae1-4996-ae98-7742-24a240d41f99",
@@ -3000,6 +3027,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Cavalier Bucky": {
         Default: "dfc525fb-4515-1d0d-3292-959326cc86de",
     },
+    "Titanmail Bucky": {
+        Default: "1b8f0afc-4307-02a1-10d8-319d878f44cc",
+    },
     "Standard Bucky": {
         Default: "3d8ffcfe-4786-0180-42d7-e1be18dd1cab",
     },
@@ -3094,6 +3124,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "667e3d2c-414d-175a-8135-4886ea07bee7",
         Red: "e49b631b-4473-1238-5622-5dbdbd673de3",
         Gray: "2b8b1f40-43bb-72e2-e836-4d93dda662cb",
+    },
+    "Titanmail Frenzy": {
+        Default: "066caa0b-48ae-8d2c-f526-6081f2491cf0",
     },
     "Live Wire Frenzy": {
         Default: "557cc82e-45f7-c57c-55ed-b9bb76328606",
@@ -4176,6 +4209,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         RedCamo: "8a68cd7b-4658-bcad-4789-49bc842ab1ae",
         BlueCamo: "81877bc3-4227-1973-1af6-86b639bceaca",
         GreenCamo: "15129610-4b75-e263-b5d6-e99b8c471cc5",
+    },
+    "Titanmail Mace": {
+        Default: "9a2409be-4195-c29e-54dd-608c10a7a51c",
     },
     Melee: {
         Default: "cac83e5c-47a1-3519-5420-1db1fdbc4892",
