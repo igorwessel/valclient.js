@@ -45,6 +45,7 @@ export type AresSkin =
 export type VandalSkin =
     | "RGX 11z Pro Vandal"
     | "VALORANT GO! Vol. 2 Vandal"
+    | "Neptune Vandal"
     | "Aristocrat Vandal"
     | "Gaia's Vengeance Vandal"
     | "Endeavour Vandal"
@@ -312,6 +313,7 @@ export type SheriffSkin =
     | "Death Wish Sheriff";
 
 export type ShortySkin =
+    | "Neptune Shorty"
     | "Karabasan Shorty"
     | "Doodle Buds Shorty"
     | "Hivemind Shorty"
@@ -365,6 +367,7 @@ export type OperatorSkin =
 export type GuardianSkin =
     | "RGX 11z Pro Guardian"
     | "VALORANT GO! Vol. 1 Guardian"
+    | "Neptune Guardian"
     | "Gaia's Vengeance Guardian"
     | "Spectrum Guardian"
     | "Nebula Guardian"
@@ -411,6 +414,7 @@ export type MarshalSkin =
 export type SpectreSkin =
     | "RGX 11z Pro Spectre"
     | "VALORANT GO! Vol. 1 Spectre"
+    | "Neptune Spectre"
     | "Striker Spectre"
     | "Radiant Crisis 001 Spectre"
     | "Singularity Spectre"
@@ -468,6 +472,7 @@ export type KnifeSkin =
     | "RGX 11z Pro Firefly"
     | "VALORANT GO! Vol. 1 Knife"
     | "Yoru's Stylish Butterfly Comb"
+    | "Neptune Anchor"
     | "Gaia's Wrath"
     | "Waveform"
     | "Champions 2021 Karambit"

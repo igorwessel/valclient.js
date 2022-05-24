@@ -3,6 +3,7 @@
 export type BuddyType =
     | "RGX 11z Pro Buddy"
     | "RGX 11z Pro, Ep 4 Buddy"
+    | "Neptune Buddy"
     | "Gaia's Vengeance Buddy"
     | "Zedd Buddy"
     | "Get Carried Buddy"
@@ -123,6 +124,7 @@ export type BuddyType =
     | "Celestial Buddy"
     | "Magepunk Buddy"
     | "Spline Buddy"
+    | "On The Case Buddy"
     | "Magic Mance Buddy"
     | "Mango Tango Buddy"
     | "Time's Up Buddy"
@@ -153,6 +155,7 @@ export type BuddyType =
     | "Take on the Tundra Buddy"
     | "Pay Respects Buddy"
     | "One Direction Buddy"
+    | "Pride 2022 Buddy"
     | "Protocol 781-A Buddy"
     | "Original Protractor Buddy"
     | "Lovebyte Gun Buddy"
