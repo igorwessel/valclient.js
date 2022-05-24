@@ -48,6 +48,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Vandal: {
         "RGX 11z Pro Vandal": "e5490f71-455b-74ad-f762-f5a876d4dff9",
         "VALORANT GO! Vol. 2 Vandal": "ba6f2526-4ed2-8e62-49aa-ebbb04290682",
+        "Neptune Vandal": "db91451c-4309-2c8c-eded-bf842d844e52",
         "Aristocrat Vandal": "6191bb0b-456f-1a3e-df13-cdb0c1b8b1e4",
         "Gaia's Vengeance Vandal": "000ad7b1-44b0-9345-ea47-9cbd7dcdbb38",
         "Endeavour Vandal": "d3733bfe-48d7-b119-3195-249d3b46b528",
@@ -315,6 +316,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Death Wish Sheriff": "bb0d20c6-415d-cf24-e738-0f99db6f9195",
     },
     Shorty: {
+        "Neptune Shorty": "646e713f-4999-6c56-094c-dd9114bdb35a",
         "Karabasan Shorty": "0581fb92-4b2d-0ede-6bfc-8d93fde11f74",
         "Doodle Buds Shorty": "9a37b09b-4768-b368-52ef-58ac62564637",
         "Hivemind Shorty": "3a921c7b-4e8f-8543-bee8-01ba6da86874",
@@ -368,6 +370,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Guardian: {
         "RGX 11z Pro Guardian": "da29ce1e-43bb-c043-9cbc-34850517dc23",
         "VALORANT GO! Vol. 1 Guardian": "2c32d9e3-42a1-7387-35ef-0c8eefacee1c",
+        "Neptune Guardian": "1082032a-4f20-12db-93ea-549332f91ddf",
         "Gaia's Vengeance Guardian": "abd5415f-4851-244f-4b8b-31af8e268822",
         "Spectrum Guardian": "04ccfe05-497c-2d52-2bd0-64a68955175e",
         "Nebula Guardian": "6141a40d-48cf-8466-6d46-558c0ff145ea",
@@ -414,6 +417,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Spectre: {
         "RGX 11z Pro Spectre": "4f0c9544-469c-0c62-df2e-95b15d6f2333",
         "VALORANT GO! Vol. 1 Spectre": "89b78398-4c56-6371-cad7-8eb78ee3f550",
+        "Neptune Spectre": "55153919-4598-cb0f-4759-7ea546c6d121",
         "Striker Spectre": "dbe2c9ea-41c4-522c-9204-dab09bac84d0",
         "Radiant Crisis 001 Spectre": "780a93e6-46aa-50c7-5e73-b885c5f6a141",
         "Singularity Spectre": "0eab3e5c-4de4-e221-34fb-2ab435c89eb6",
@@ -471,6 +475,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "RGX 11z Pro Firefly": "03de6b1a-4497-72e8-ae0c-2984b2e7e2b9",
         "VALORANT GO! Vol. 1 Knife": "9103fdf7-4361-5ac5-37ae-7cb51f13f45d",
         "Yoru's Stylish Butterfly Comb": "d034911c-45a6-1ce4-e6f5-4cbe57e9d4f1",
+        "Neptune Anchor": "c3f1c9d6-441b-7def-1bf2-2c82719a4de8",
         "Gaia's Wrath": "f91a1dd8-4f5f-bce4-f01d-4da95322c485",
         Waveform: "400bb847-4f4f-a39e-cd52-589f00b2204f",
         "Champions 2021 Karambit": "1ea64c8d-43c4-fce8-7354-01bdd6c0ee17",
@@ -668,6 +673,11 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "VALORANT GO! Vol. 2 Vandal": {
         "Level 1": "23de6607-4647-bccd-8863-3da2720e4152",
+    },
+    "Neptune Vandal": {
+        "Level 1": "49cea67c-4552-13c2-6b4b-8ba07761504e",
+        "Level 2": "24e39414-4a8e-e800-1242-08bd94b5e3c4",
+        "Level 3": "7b2826b6-4771-7529-b656-b89b9c1d86b6",
     },
     "Aristocrat Vandal": {
         "Level 1": "9ff1a0e6-4f74-0e6d-9117-de8683db4eb5",
@@ -1587,6 +1597,11 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Death Wish Sheriff": {
         "Level 1": "a07ff70b-4b4b-ee36-78f5-8ba771b278ac",
     },
+    "Neptune Shorty": {
+        "Level 1": "93266c2b-400f-da62-24a0-739f51d33cc1",
+        "Level 2": "e40ba2a2-4b91-8144-0b62-7c8ede15bced",
+        "Level 3": "e70308c1-437a-d393-5c9a-7386bf8a7e28",
+    },
     "Karabasan Shorty": {
         "Level 1": "f1f9cde8-4810-86a0-1c95-4ab214d4f6b8",
     },
@@ -1771,6 +1786,11 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "VALORANT GO! Vol. 1 Guardian": {
         "Level 1": "920d9d08-4f22-9f1e-b309-ddbbe5ecb91c",
     },
+    "Neptune Guardian": {
+        "Level 1": "c9ceffba-471d-ed6c-04a5-11b71bef3f60",
+        "Level 2": "aa1d933d-4c1b-28d6-9607-1b95e44621e8",
+        "Level 3": "fcc8ce05-4a54-31d4-f1e6-febd8f8b567e",
+    },
     "Gaia's Vengeance Guardian": {
         "Level 1": "e16ea577-4d7f-e686-456a-54b4b1d9cba2",
         "Level 2": "6a379936-42ac-6988-f462-1abdf52b155a",
@@ -1937,6 +1957,11 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "VALORANT GO! Vol. 1 Spectre": {
         "Level 1": "291cb44a-410d-b035-4d0b-608a92c2cd91",
+    },
+    "Neptune Spectre": {
+        "Level 1": "ef773863-472d-4d81-e50e-1d887cea40f4",
+        "Level 2": "3f812317-4689-48c1-b546-dd9c9e585560",
+        "Level 3": "816d50c3-43e8-1d75-d27e-169c3d4da02f",
     },
     "Striker Spectre": {
         "Level 1": "6c69c2bc-4c7a-6308-8384-a1b2aa00a50b",
@@ -2136,6 +2161,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Yoru's Stylish Butterfly Comb": {
         "Level 1": "ec70c8c8-48db-b2dc-ab7d-1d9410b0cfbf",
         "Level 2": "da00cdf4-474d-960b-a011-f29d27403ff0",
+    },
+    "Neptune Anchor": {
+        "Level 1": "85db497e-4b7d-dd9d-bc09-6d926158ed74",
+        "Level 2": "f7f58211-4a5c-b514-e933-acb5fb77e6b2",
     },
     "Gaia's Wrath": {
         "Level 1": "f353f65b-4764-cfc5-df01-8db85ab28199",
@@ -2476,6 +2505,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "VALORANT GO! Vol. 2 Vandal": {
         Default: "730adb1b-4e94-f597-9f21-60b758da1156",
+    },
+    "Neptune Vandal": {
+        Default: "9a2125b3-4e53-4757-fe1c-4e9b31ae0c28",
+        Black: "ffc33c1e-473a-6609-3996-a787615ef467",
     },
     "Aristocrat Vandal": {
         Default: "d2cb89c5-4be5-efde-765e-43896e6e0a48",
@@ -3465,6 +3498,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Death Wish Sheriff": {
         Default: "3bc59f13-4259-9ba0-1b15-18bc8b61a642",
     },
+    "Neptune Shorty": {
+        Default: "90e6f275-4d58-7a80-cdaa-bdbeca6712a3",
+        Black: "d7f15e4a-446f-88bd-9daa-49b26d121ab3",
+    },
     "Karabasan Shorty": {
         Default: "74019079-43d3-2757-bf40-9792c930034e",
     },
@@ -3654,6 +3691,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "VALORANT GO! Vol. 1 Guardian": {
         Default: "3628cc8a-4153-9561-74a3-ea8f1ac7e0e4",
     },
+    "Neptune Guardian": {
+        Default: "81edf2ce-4919-03e6-5c49-c8a48648eea0",
+        Black: "899168e2-4825-235f-0dd3-f1995c4676ed",
+    },
     "Gaia's Vengeance Guardian": {
         Default: "275dc4de-4b7c-9423-e64b-498b63693755",
         Blue: "f04aad65-43ab-639e-d738-eeb8a64e8f1e",
@@ -3838,6 +3879,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "VALORANT GO! Vol. 1 Spectre": {
         Default: "09d52346-42ba-8832-5981-c98db65774b8",
+    },
+    "Neptune Spectre": {
+        Default: "b237dd0e-485e-c438-03f0-9ea6b12dc13d",
+        Black: "a28d0972-4e6c-cb5c-0dfa-19ab56d2a711",
     },
     "Striker Spectre": {
         Default: "fd6830da-4b56-ed28-b5b4-259c1a781336",
@@ -4051,6 +4096,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Yoru's Stylish Butterfly Comb": {
         Default: "d3f2119f-4853-e136-c807-e197b6a9c92e",
+    },
+    "Neptune Anchor": {
+        Default: "e6d3f9c9-4b20-881d-c990-0b97b49a3fd8",
     },
     "Gaia's Wrath": {
         Default: "deb72528-49ed-1943-4aed-da9248663a5a",

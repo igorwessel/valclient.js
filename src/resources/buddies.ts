@@ -5,6 +5,7 @@ import { BuddyIdMappedByName, BuddyLevelIdMappedByName } from "@type/loadout";
 export const buddyIdMappedByName: BuddyIdMappedByName = {
     "RGX 11z Pro Buddy": "dce731f8-4560-5f30-6eb5-8ab2e36864ec",
     "RGX 11z Pro, Ep 4 Buddy": "69c50b81-4484-838a-906a-b08d06c03cbd",
+    "Neptune Buddy": "f5e10416-436e-5ca1-89ce-feb1ea81ca1a",
     "Gaia's Vengeance Buddy": "d6c38282-4f11-822b-8fe1-dd9ad9045514",
     "Zedd Buddy": "70963a6d-45b7-8fd4-c6aa-62b2155715aa",
     "Get Carried Buddy": "452194fb-4ebd-353a-2ff7-0e90cf5523f9",
@@ -125,6 +126,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Celestial Buddy": "9f6bada3-4911-7863-ff39-6984140e0201",
     "Magepunk Buddy": "7b7d715a-48ff-ce97-4d7f-6cb75d763f7f",
     "Spline Buddy": "f696f391-4b0e-804c-0069-02a0d67dd170",
+    "On The Case Buddy": "7516ebb5-405d-e0ff-0fd9-67b8135b7821",
     "Magic Mance Buddy": "317e8d57-488e-05e5-779b-e98b541220d3",
     "Mango Tango Buddy": "bbd92afb-4a79-8b18-d723-78a169466703",
     "Time's Up Buddy": "c47cc20c-48eb-c5cf-95f5-0bbd1fb641d3",
@@ -155,6 +157,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Take on the Tundra Buddy": "f2b96400-4663-c2cf-699d-029e8b52836f",
     "Pay Respects Buddy": "839c6e7d-4821-157b-fd38-71b3debc874f",
     "One Direction Buddy": "ce82d434-477f-43a3-963b-95b6657c46b6",
+    "Pride 2022 Buddy": "2e7eaec5-4acd-6d51-4e73-a9bb30450480",
     "Protocol 781-A Buddy": "c628b79a-494b-fa32-fd4d-91bfe0b6206a",
     "Original Protractor Buddy": "769ab062-4483-d3ba-659d-50b6c36b1ad2",
     "Lovebyte Gun Buddy": "42cb4b6a-45e3-8a83-2f52-0d90c7ca306d",
@@ -241,6 +244,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "RGX 11z Pro, Ep 4 Buddy": {
         "1": "d8d95c6b-403c-3e7e-6682-a396bf4b3c96",
+    },
+    "Neptune Buddy": {
+        "1": "387e205b-4752-df32-41d0-5a81f617db4f",
     },
     "Gaia's Vengeance Buddy": {
         "1": "7c2881fb-4bd3-3d98-4e5b-72a939eb2cac",
@@ -602,6 +608,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Spline Buddy": {
         "1": "ec3745c4-432a-8173-8150-cfbb4841c121",
     },
+    "On The Case Buddy": {
+        "1": "373009dd-404c-27d2-3ed3-4889492c580d",
+    },
     "Magic Mance Buddy": {
         "1": "9a1f81d9-4fd2-35da-2cec-ba8b75ee6ef9",
     },
@@ -691,6 +700,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "One Direction Buddy": {
         "1": "b7a05430-4ae1-b88e-0b0b-d6956bf7f9ad",
+    },
+    "Pride 2022 Buddy": {
+        "1": "1a3a11bc-4477-4724-b804-3b9cdbf234d2",
     },
     "Protocol 781-A Buddy": {
         "1": "6607dba5-4cb8-d860-3010-708bcbcbe808",
