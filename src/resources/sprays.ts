@@ -229,6 +229,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Flames in my Veins Spray": "f677065c-449d-dd91-78ef-6fa7d95ded8d",
     "Just Business Spray": "40cc1645-43f4-4db3-ebb2-fdb46f8e9bf3",
     "Give Back Spray": "8f7ef66d-49f2-867f-2ff8-1391a23c89d0",
+    "Ego or Eco Spray": "5a328cd4-4cb5-4e64-60c2-6487281390ff",
     "Pity Party Spray": "2d9be381-4686-b392-310e-8bb2a6707f7e",
     "Tag! You're Dead! Spray": "7c3771b2-4ea7-9188-bfd4-c08feeca3984",
     "Nice One Spray": "63ce8a2b-40c9-f8c7-e15d-77b6e310dfbe",
@@ -983,6 +984,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Give Back Spray": {
         "1": "28e9f3d3-4bb8-87a4-e894-beb57f95de45",
+    },
+    "Ego or Eco Spray": {
+        "1": "72bf87ce-46b7-6666-5bcf-e1af202bba38",
     },
     "Pity Party Spray": {
         "1": "9b07f17e-4de4-0d6c-d7d7-d7b7ce769d33",

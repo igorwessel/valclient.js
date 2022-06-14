@@ -4,6 +4,7 @@ import { SkinsIdMappedByGunName, SkinsLevelsMapped, SkinsVariantsMapped } from "
 
 export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Odin: {
+        "Xenohunter Odin": "94c085e6-48e1-c879-2552-88bf7850c5a8",
         "Glitchpop Odin": "97af88e4-4176-9fa3-4a26-57919443dab7",
         "Nitro Odin": "2715f184-46cc-bec1-dd7c-e7b4d1aeb625",
         "dot EXE Odin": "cda41b87-4d3a-c17c-5f6d-8990cc9c5efb",
@@ -111,6 +112,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     },
     Phantom: {
         "RGX 11z Pro Phantom": "499acf05-4f79-e345-3714-57bf7aa163ea",
+        "Xenohunter Phantom": "fac0cea1-45a9-1549-c120-af8f0150e562",
         "VALORANT GO! Vol. 1 Phantom": "0acbabbe-4f4c-f643-284b-f69029abb54e",
         "Spectrum Phantom": "980fa063-436e-e51f-c38d-70a5b93a0f1c",
         "Radiant Crisis 001 Phantom": "2371d9e1-498c-1ad1-4f10-d1a339c7fda2",
@@ -175,6 +177,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Varnish Judge": "87591a69-47c1-a052-ba85-33a8097a0b07",
     },
     Bucky: {
+        "Xenohunter Bucky": "0666931c-4580-efd0-af47-afb9f2f72e55",
         "Origin Bucky": "96495eb3-40db-cb5b-1c69-17a3dde58ee3",
         "Radiant Crisis 001 Bucky": "31072cda-4041-b4f0-119a-3692ea598321",
         "Red Alert Bucky": "1322a9a8-49ad-bc3a-2319-fb866e21334c",
@@ -201,6 +204,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     },
     Frenzy: {
         "RGX 11z Pro Frenzy": "d5ea8ae9-4055-9b65-1f39-ed97372d887a",
+        "Xenohunter Frenzy": "a4b0cd8b-40dc-41e3-646d-d58802b2e310",
         "RagnaRocker Frenzy": "7d05d1ce-4bf2-fa96-d8f4-dca86052e3d2",
         "Origin Frenzy": "cceb25d7-41e7-1944-515f-2eb5695fd5cc",
         "Glitchpop Frenzy": "5596d764-4b62-210b-59db-7982e9d4c23f",
@@ -473,6 +477,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Knife: {
         "RGX 11z Pro Blade": "9fb366b6-46df-a722-0cf2-9c9b85936f17",
         "RGX 11z Pro Firefly": "03de6b1a-4497-72e8-ae0c-2984b2e7e2b9",
+        "Xenohunter Knife": "c5482640-4652-6948-29c6-769e8198db27",
         "VALORANT GO! Vol. 1 Knife": "9103fdf7-4361-5ac5-37ae-7cb51f13f45d",
         "Yoru's Stylish Butterfly Comb": "d034911c-45a6-1ce4-e6f5-4cbe57e9d4f1",
         "Neptune Anchor": "c3f1c9d6-441b-7def-1bf2-2c82719a4de8",
@@ -531,6 +536,10 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
 };
 
 export const skinsLevelMappedByName: SkinsLevelsMapped = {
+    "Xenohunter Odin": {
+        "Level 1": "89baf0f4-4648-69fc-f0af-2fbc69b97b80",
+        "Level 2": "289d7473-472b-68da-9019-da9594a8a127",
+    },
     "Glitchpop Odin": {
         "Level 1": "549b06bb-4704-25ce-19d5-c9b70b10de19",
         "Level 2": "3e7d08f9-4067-1abe-8159-87b8e31fc463",
@@ -894,6 +903,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 4": "9d47f8ab-42fa-167c-7704-3f9f2103ddc6",
         "Level 5": "c97c97b2-4f3b-fb34-32a4-548d32863042",
     },
+    "Xenohunter Phantom": {
+        "Level 1": "c0879eb2-4e41-d7bd-80f7-dd8cb13a1e20",
+        "Level 2": "5b63d322-4fb7-ef6d-c50e-fe89ecc520a8",
+    },
     "VALORANT GO! Vol. 1 Phantom": {
         "Level 1": "30423af3-42f9-d0ba-dee5-0b93704b39c8",
     },
@@ -1114,6 +1127,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Varnish Judge": {
         "Level 1": "07ac5e03-42e6-0fd9-b8fa-4d9f059b904f",
     },
+    "Xenohunter Bucky": {
+        "Level 1": "01a984b8-4b91-ab61-60b9-1bb9ce54bd04",
+        "Level 2": "a3073107-4927-808c-acce-e0972543f75a",
+    },
     "Origin Bucky": {
         "Level 1": "56042ce2-4f95-19be-7cac-5fb191683953",
         "Level 2": "d7ba0b3f-445b-1075-69b9-ebb3d79f7cc6",
@@ -1207,6 +1224,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "0342399f-45e4-869d-4426-cd8dfc9e0007",
         "Level 4": "61ceadee-4869-1676-4207-228ac4e19664",
         "Level 5": "17ccfd06-4449-de46-2170-a29448d8f4aa",
+    },
+    "Xenohunter Frenzy": {
+        "Level 1": "8f254346-439f-0e98-2428-62b0c669d2ae",
+        "Level 2": "59a1d043-41ad-111c-80c7-2a94d534819f",
     },
     "RagnaRocker Frenzy": {
         "Level 1": "b02520dd-48cd-466c-977d-529dc6a1d6f5",
@@ -2154,6 +2175,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "424ed674-47dd-0488-de93-6cb8e13d0b90",
         "Level 2": "662449ea-4e5e-376a-6482-83b478355047",
     },
+    "Xenohunter Knife": {
+        "Level 1": "8e9f610a-41ea-ff48-d102-c7a0e5614c84",
+        "Level 2": "ba8b620a-4a51-8ed6-d1a7-cb9a4b3d99bd",
+    },
     "VALORANT GO! Vol. 1 Knife": {
         "Level 1": "6e37a33a-416e-fcc0-ceb8-7784e18fbfe9",
         "Level 2": "ec6b04b8-4cd4-5778-7aa9-269c029d8958",
@@ -2349,6 +2374,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
 };
 
 export const skinsChromasMappedByName: SkinsVariantsMapped = {
+    "Xenohunter Odin": {
+        Default: "3cc39f94-443e-e0e1-39be-21a9c9f3b0aa",
+    },
     "Glitchpop Odin": {
         Default: "9667983e-4c8c-e5b2-68d7-be84f9b3d46c",
         Blue: "0b30b3e8-4696-7b7c-fed2-50b34234965a",
@@ -2734,6 +2762,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "f399ce20-4d22-b504-dbae-f8907bf25135",
         Yellow: "24fd1841-4d50-31b9-8b45-edbfd0f42b03",
     },
+    "Xenohunter Phantom": {
+        Default: "12ff6d65-4b3a-5789-c045-27b8129069a7",
+    },
     "VALORANT GO! Vol. 1 Phantom": {
         Default: "5802270a-45f9-737e-c5d0-e7a16957a3ca",
     },
@@ -2976,6 +3007,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Varnish Judge": {
         Default: "11f42c0a-4b6c-982e-8477-d5b55a329d43",
     },
+    "Xenohunter Bucky": {
+        Default: "d956ffba-4d51-9f09-bfe4-f8bc171ea164",
+    },
     "Origin Bucky": {
         Default: "4b659a6f-49a2-a97d-c207-4590e06ec3b5",
         Green: "62c9d24c-44d7-6357-268d-f993df039d8e",
@@ -3074,6 +3108,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "175503a8-4276-bc05-ab9f-6abdacf298a5",
         Blue: "9e241944-4fd8-0f64-bff0-609c3d8c428b",
         Yellow: "ab20e644-49ca-749a-cf5d-d59507361e9a",
+    },
+    "Xenohunter Frenzy": {
+        Default: "c1d82e3b-466f-abc2-e823-fbbff702a8f2",
     },
     "RagnaRocker Frenzy": {
         Default: "f4143c4c-4fa2-4922-c228-60a276bc9d7f",
@@ -4090,6 +4127,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "RGX 11z Pro Firefly": {
         Default: "2d0c7deb-4f5a-40ea-8fe8-288e060d02c6",
+    },
+    "Xenohunter Knife": {
+        Default: "37714c64-482b-d68d-f704-139156a2577c",
     },
     "VALORANT GO! Vol. 1 Knife": {
         Default: "2aebc30d-43d9-4501-69a6-b28648c2e4f6",
