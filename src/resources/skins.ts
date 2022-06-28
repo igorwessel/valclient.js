@@ -29,6 +29,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Singularity Ares": "e901bdeb-405f-d06c-0733-6783274d85b0",
         "Rush Ares": "4e04647a-4cfc-64f8-4643-f6b7dbcb2943",
         "Hivemind Ares": "556646c0-46dd-6986-00df-a78d1c17f268",
+        "Spitfire Ares": "04b1358c-4702-dd82-a135-368384b685dd",
         "Infantry Ares": "e089be41-4242-b28d-1894-bbba193957a2",
         "Goldwing Ares": "9d2b497b-434d-07fc-ea0f-ee96de4bffa1",
         "Outpost Ares": "4308fe43-44c1-9fe8-d5f9-95be2bc70d51",
@@ -56,6 +57,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Champions 2021 Vandal": "9bf19b77-4b33-7203-9f2c-16932970622f",
         "Origin Vandal": "6c4315b8-4ff1-baaa-5aac-5790c7443353",
         "Glitchpop Vandal": "74789f33-4632-8052-96d7-258538721a32",
+        "Prelude to Chaos Vandal": "522a264e-4ca7-adb0-6cf1-28b2ef938727",
         "Elderflame Vandal": "18609205-4edb-5966-cff8-0fba0230ba1e",
         "Nitro Vandal": "9b62faf1-416c-b736-0edb-39b890f1f18d",
         "Hivemind Vandal": "f7f63b78-4b12-b21e-a0e7-6bafbad81509",
@@ -96,6 +98,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Glitchpop Bulldog": "285c6731-4451-b930-7a3d-c5a736d00f5e",
         "Rush Bulldog": "23399beb-4828-0d03-ae24-aaa62b08f796",
         "Velocity Bulldog": "706dcacc-432b-47e5-3cf7-2db432a8afe6",
+        "Shimmer Bulldog": "cc8ad3b2-4b0f-6e8d-eae0-c98cc55d002f",
         "Horizon Bulldog": "e931dcc8-48d4-f895-48b1-199ec573625b",
         "K/TAC Bulldog": "f476843a-4fc1-32a1-5e32-c18b84003460",
         "Couture Bulldog": "199b8536-488a-09e6-8592-ff9cf21b4ceb",
@@ -111,6 +114,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Varnish Bulldog": "9bba8d9a-461e-9783-fcb7-f1a92192fb3a",
     },
     Phantom: {
+        "Task Force 809 Phantom": "3d71065e-4f0b-19a8-26d5-129cddeb013b",
         "RGX 11z Pro Phantom": "499acf05-4f79-e345-3714-57bf7aa163ea",
         "Xenohunter Phantom": "fac0cea1-45a9-1549-c120-af8f0150e562",
         "VALORANT GO! Vol. 1 Phantom": "0acbabbe-4f4c-f643-284b-f69029abb54e",
@@ -157,6 +161,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Elderflame Judge": "0221b120-444b-6d1b-fc50-e4a98e470eb2",
         "Rush Judge": "f6db3976-4c70-c3bf-01f8-dca6d335319a",
         "Team Ace Judge": "fdf7fef7-43db-9409-be4c-44bc0b5084f6",
+        "Shimmer Judge": "ce38c32d-43e6-e840-3981-668454383e22",
         "dot EXE Judge": "fbd23fdf-4d7b-8a50-afa5-c3ad6e7266e5",
         "Goldwing Judge": "37735cf0-4c4f-6efd-6222-8582622d68a0",
         "Hydrodip Judge": "3d8f9c7d-4259-4710-1f94-0fbc4f25035c",
@@ -203,6 +208,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Aerosol Bucky": "cf2cc18c-42ec-3fb0-4ca7-3583373a33ab",
     },
     Frenzy: {
+        "Task Force 809 Frenzy": "1bd0b030-49b3-4733-d6f0-28bcb7ed6df2",
         "RGX 11z Pro Frenzy": "d5ea8ae9-4055-9b65-1f39-ed97372d887a",
         "Xenohunter Frenzy": "a4b0cd8b-40dc-41e3-646d-d58802b2e310",
         "RagnaRocker Frenzy": "7d05d1ce-4bf2-fa96-d8f4-dca86052e3d2",
@@ -244,6 +250,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Surge Classic": "6cc70eae-4297-91d5-adb9-efa48004da77",
         "Songsteel Classic": "10354287-40e9-4087-85c5-aea7289d31f2",
         "Forsaken Classic": "c612138e-4007-6d0c-64ad-3690c65ee4a7",
+        "Shimmer Classic": "9a6d4520-48a6-d46c-5a3f-2ab0b10dd8f6",
         "FIRE/arm Classic": "144ac55d-42b9-338c-fb32-c9a31f4da5bb",
         "Goldwing Classic": "1180c78d-4b0d-491e-efdc-cfa5d948fa27",
         "Prime Classic": "d653f4a7-4e92-2559-0a97-2c9d46d009b3",
@@ -264,6 +271,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "VALORANT GO! Vol. 1 Ghost": "3714831b-4b90-bb6b-4185-7fb05ba9b9a2",
         "Gaia's Vengeance Ghost": "daed0e44-4ab6-22b4-a5a5-57a4957a056b",
         "Endeavour Ghost": "cd281dcd-4276-1def-11d9-74a4a72db204",
+        "Spitfire Ghost": "d2ed8432-44a2-fb53-cd5f-089251862942",
         "dot EXE Ghost": "67d3e2f7-4b73-7598-0027-63bd9e2e5fcc",
         "Hush Ghost": "a1d3a9e2-4f61-b1f7-3a01-cf867264d1cb",
         "Infantry Ghost": "65ce6a98-4867-b695-279f-819c44ec6f95",
@@ -322,6 +330,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Shorty: {
         "Neptune Shorty": "646e713f-4999-6c56-094c-dd9114bdb35a",
         "Karabasan Shorty": "0581fb92-4b2d-0ede-6bfc-8d93fde11f74",
+        "Prelude to Chaos Shorty": "c9572061-4ee1-ff7d-b60c-ebac198d3706",
         "Doodle Buds Shorty": "9a37b09b-4768-b368-52ef-58ac62564637",
         "Hivemind Shorty": "3a921c7b-4e8f-8543-bee8-01ba6da86874",
         "Velocity Shorty": "15588213-4d09-344b-c7e1-28af37374c82",
@@ -347,10 +356,12 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Striker Operator": "90ba4949-4a6a-cc54-efb2-3dbdbe1bf69c",
         "Red Alert Operator": "33aaa643-4bc4-4c5f-2762-228c7fc03949",
         "Glitchpop Operator": "a491b943-43e3-4e98-64a6-fc87fca43605",
+        "Prelude to Chaos Operator": "b450a73d-431e-56b7-5b7f-67bddd38ee66",
         "Elderflame Operator": "d722313d-43cb-b38d-7841-75880a3ed2cb",
         "Nitro Operator": "44064b11-4e74-19c9-80a4-9f80875adaf5",
         "Forsaken Operator": "c692e38e-4f38-0141-d0c9-aa99fab9362a",
         "Team Ace Operator": "279a54f8-4344-cd72-1d5b-15aa0e86a630",
+        "Spitfire Operator": "93ccaf1f-4e44-0bc7-9ec4-ebab43f73d10",
         "Infantry Operator": "341ef273-43fb-7911-71e8-50adada4cee1",
         "Prism Operator": "5ced2c69-442e-d1ad-83fe-8fb8b2ac0c0f",
         "K/TAC Operator": "9ffd45c4-4fa4-dca0-f46f-2d99ad1eae20",
@@ -380,6 +391,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Nebula Guardian": "6141a40d-48cf-8466-6d46-558c0ff145ea",
         "Nitro Guardian": "00e6b758-448e-af3b-7dee-879aa4a51324",
         "Songsteel Guardian": "2d5e6025-4166-730e-1024-abb766d19568",
+        "Spitfire Guardian": "3ab36c94-4c91-d722-6f10-11bbbe382159",
         "Ruin Guardian": "453a734b-4f14-9183-2be8-97b01f603368",
         "Infantry Guardian": "acd76d4d-4d05-2597-d63b-12851b2b61ee",
         "Hydrodip Guardian": "06854a71-4eac-cb4c-cdbe-bbbdda492e9c",
@@ -400,6 +412,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Ego Guardian": "0a81818d-406e-1d8c-ce4d-9ba89dfdf1ab",
     },
     Marshal: {
+        "Task Force 809 Marshal": "774dee9a-4809-0e4d-4153-a883e908d4b2",
         "Gaia's Vengeance Marshal": "fc802ceb-4a39-39ac-adf5-02a812be2f8e",
         "Doodle Buds Marshal": "6250b40a-43a4-55d8-79d4-f6838d58151d",
         "Songsteel Marshal": "51da27fe-4a3f-016a-d18d-b68a47545f6f",
@@ -419,6 +432,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Winterwunderland Marshal": "c31856f4-4ae1-cfb8-14cc-10a92b81e7c3",
     },
     Spectre: {
+        "Task Force 809 Spectre": "e78fb82c-4800-e102-b7a6-33946fa2f199",
         "RGX 11z Pro Spectre": "4f0c9544-469c-0c62-df2e-95b15d6f2333",
         "VALORANT GO! Vol. 1 Spectre": "89b78398-4c56-6371-cad7-8eb78ee3f550",
         "Neptune Spectre": "55153919-4598-cb0f-4759-7ea546c6d121",
@@ -457,8 +471,10 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "RGX 11z Pro Stinger": "282c15e6-4372-2f18-9143-2d9cdd942c4c",
         "Aristocrat Stinger": "42da0f19-4017-5cb8-08a4-368315561fdf",
         "Red Alert Stinger": "0cf70376-4150-39aa-5657-8890617bc0d1",
+        "Prelude to Chaos Stinger": "5a4a0ea0-4ac6-d130-c917-45a7bb89ae42",
         "Doodle Buds Stinger": "9444ba80-4ae7-985d-40a2-2788f96dd544",
         "Surge Stinger": "0a128cb6-4bbb-f618-85cb-82bbd17bcbb1",
+        "Shimmer Stinger": "3fc40900-4d9d-c22f-c0f6-e0b53827ef83",
         ".SYS Stinger": "bf7e260f-407e-9e16-e47e-ba921c10f046",
         "Prism II Stinger": "338e3ee3-4927-733f-32b6-bcac795d23ac",
         "Couture Stinger": "598bb272-4bfd-ae82-0242-6490cc6f721e",
@@ -475,6 +491,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Varnish Stinger": "26fbcf26-4135-b8e3-277e-8a9c27e3d34d",
     },
     Knife: {
+        "Task Force 809 Knife": "58442f45-4783-42a2-f4cb-789a27555889",
         "RGX 11z Pro Blade": "9fb366b6-46df-a722-0cf2-9c9b85936f17",
         "RGX 11z Pro Firefly": "03de6b1a-4497-72e8-ae0c-2984b2e7e2b9",
         "Xenohunter Knife": "c5482640-4652-6948-29c6-769e8198db27",
@@ -491,6 +508,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         Hack: "c91e4850-4d32-3b12-f411-3e9f644ea616",
         "Glitchpop Dagger": "ddc025b2-475f-889a-2800-80b4215582bc",
         "Glitchpop Axe": "f0c42e14-4a92-132d-dfd4-cbbef103340c",
+        "Blade of Chaos": "6e0496c1-4c98-7abe-16c4-7ca3653e5cd8",
         "Elderflame Dagger": "94b40026-4efb-39ea-69d7-fca60be39c56",
         "Singularity Knife": "151ee26c-4e82-e7ca-dad1-099e7fb34774",
         Songsteel: "45129867-4977-e2a5-bead-cb828101b623",
@@ -619,6 +637,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Hivemind Ares": {
         "Level 1": "65bb772a-41f2-8b25-a1af-75a79d596203",
     },
+    "Spitfire Ares": {
+        "Level 1": "e5b8e4ac-4092-6968-704c-df8acaf0ac1d",
+    },
     "Infantry Ares": {
         "Level 1": "6df8b470-4248-e29d-2879-bd840ed224c1",
     },
@@ -717,6 +738,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "c01d91bb-4203-4f78-0b6a-1aae9abb458b",
         "Level 3": "084e16e5-4340-618f-09ba-128331f9b8cc",
         "Level 4": "7a322cff-4acb-15c4-5006-049655bfa22f",
+    },
+    "Prelude to Chaos Vandal": {
+        "Level 1": "1010fb40-4344-6ec8-2a8a-33bf076339b6",
+        "Level 2": "273db50c-41fd-99eb-89fa-d0969ef739bb",
+        "Level 3": "0b2b3fb5-415d-ed9e-d865-5aa90a28894e",
+        "Level 4": "a4021006-49be-e1f3-b2e1-cc8635694d0c",
     },
     "Elderflame Vandal": {
         "Level 1": "b3d3ff38-4202-20d8-2f41-c783477e5636",
@@ -853,6 +880,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Velocity Bulldog": {
         "Level 1": "7561a8e0-4cc4-8644-a88b-48a88790b36f",
     },
+    "Shimmer Bulldog": {
+        "Level 1": "41a683ee-4d8d-51cb-db4f-06bfb2371d86",
+    },
     "Horizon Bulldog": {
         "Level 1": "079f6046-49c3-72e3-bcfa-a5b6d01910dc",
     },
@@ -895,6 +925,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Varnish Bulldog": {
         "Level 1": "0edd85d1-4589-385a-e5e2-84a55ae9860d",
+    },
+    "Task Force 809 Phantom": {
+        "Level 1": "eb32efb4-4db8-2740-e0ad-659a0cb8d174",
     },
     "RGX 11z Pro Phantom": {
         "Level 1": "49a986d0-4a07-b756-331e-babe1b2839d9",
@@ -1073,6 +1106,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Team Ace Judge": {
         "Level 1": "ca41d64f-4622-593f-382e-0484a1a3dd6b",
     },
+    "Shimmer Judge": {
+        "Level 1": "e6bdb298-4372-7c74-a057-f891a3ade5e7",
+    },
     "dot EXE Judge": {
         "Level 1": "f8cd4279-4530-db62-1e4e-aa82c129b045",
     },
@@ -1217,6 +1253,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Aerosol Bucky": {
         "Level 1": "5f2ae626-44a5-b1c5-a879-98bc2fe587c6",
+    },
+    "Task Force 809 Frenzy": {
+        "Level 1": "bea776cb-4d13-136a-be7f-639dbb7ba01e",
     },
     "RGX 11z Pro Frenzy": {
         "Level 1": "6f2aefab-439d-140a-4dc6-87818e2d72cd",
@@ -1370,6 +1409,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "64b7415b-4425-6d04-9aae-d8ac9c502f8f",
         "Level 4": "0256f32e-4c05-d95f-5a98-1caa0a3f7d6f",
     },
+    "Shimmer Classic": {
+        "Level 1": "54bce490-408d-3547-3d8a-aca353c2fa01",
+    },
     "FIRE/arm Classic": {
         "Level 1": "e7822f41-4dc8-6fab-a931-4fb1bb7590ab",
     },
@@ -1430,6 +1472,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Endeavour Ghost": {
         "Level 1": "80073abf-4fea-b06d-f70c-bdbe6d8ce0a7",
+    },
+    "Spitfire Ghost": {
+        "Level 1": "c247790e-4a6b-a3f2-1e1f-ccae710b5179",
     },
     "dot EXE Ghost": {
         "Level 1": "9466088a-4ad8-cb08-ec9a-45aaba3a6acd",
@@ -1626,6 +1671,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Karabasan Shorty": {
         "Level 1": "f1f9cde8-4810-86a0-1c95-4ab214d4f6b8",
     },
+    "Prelude to Chaos Shorty": {
+        "Level 1": "09fded5d-4add-00e7-d3c4-32b8f21c7944",
+        "Level 2": "a0708cc3-4f93-228c-fba0-b3938c5efea5",
+        "Level 3": "c977106d-4dc7-bbcd-74e4-efab54475915",
+        "Level 4": "8ca69aa7-451a-1af5-e897-3b9d309e82a4",
+    },
     "Doodle Buds Shorty": {
         "Level 1": "deb200a8-447c-0e47-5b92-e8aeb9cd5525",
         "Level 2": "ba0193f6-4c7d-1b7f-b9dc-4e883a6ba21a",
@@ -1709,6 +1760,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "95695ed5-4b4b-01a9-ba22-86981af7d2f2",
         "Level 4": "e177f0db-46fc-d779-fbea-d488780c322c",
     },
+    "Prelude to Chaos Operator": {
+        "Level 1": "7c89312b-45fb-a892-4525-659ba3de4475",
+        "Level 2": "2532802b-4090-340a-1ebc-7cad0600d09a",
+        "Level 3": "79d28c39-4418-2b35-74ef-989c4e270f87",
+        "Level 4": "77b80391-46c8-f950-0f28-15bf5dea85b6",
+    },
     "Elderflame Operator": {
         "Level 1": "5c273d0e-47fa-bb8c-d914-728de95da30e",
         "Level 2": "ea7094b7-4f29-2570-0003-14a9b872fc19",
@@ -1726,6 +1783,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Team Ace Operator": {
         "Level 1": "4491f330-4d30-04f7-d609-4face7e5bd5f",
+    },
+    "Spitfire Operator": {
+        "Level 1": "fd6e9471-490c-b17e-f17e-a7820f3d36a2",
     },
     "Infantry Operator": {
         "Level 1": "e7301730-418f-e0fb-c930-9598741d5c30",
@@ -1833,6 +1893,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Songsteel Guardian": {
         "Level 1": "6672800e-442c-a0b5-92d3-ed83483f04df",
     },
+    "Spitfire Guardian": {
+        "Level 1": "4b46b688-4da9-1a19-1be4-af9cafd7392d",
+    },
     "Ruin Guardian": {
         "Level 1": "c41a7b5d-4a04-a411-053d-818fe1d77ac6",
     },
@@ -1908,6 +1971,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Ego Guardian": {
         "Level 1": "fa3d6a11-46c4-2caf-f7e4-10a5013c034b",
     },
+    "Task Force 809 Marshal": {
+        "Level 1": "8c19bbbd-46aa-6037-b0fd-edafd6227de6",
+    },
     "Gaia's Vengeance Marshal": {
         "Level 1": "6046ca8f-4100-4b1a-7e8d-5e8c6625342f",
         "Level 2": "33d1d8ec-48fc-a601-8184-ec8249e76760",
@@ -1968,6 +2034,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Winterwunderland Marshal": {
         "Level 1": "4fcea818-4877-85f9-ba01-a0b02e1868f4",
+    },
+    "Task Force 809 Spectre": {
+        "Level 1": "303530db-47fe-0e6e-5ea9-0cb5ed61758d",
     },
     "RGX 11z Pro Spectre": {
         "Level 1": "737d2d1b-4b47-87a4-6045-5183580d27ec",
@@ -2115,12 +2184,21 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Red Alert Stinger": {
         "Level 1": "cd9beda3-4042-d79e-6d46-4daa61484362",
     },
+    "Prelude to Chaos Stinger": {
+        "Level 1": "5611fa1c-45bb-6c46-73cd-209031e72524",
+        "Level 2": "a8e8fc20-498e-b869-3858-d3802af9c4b8",
+        "Level 3": "281add0f-4b05-aa0e-0d98-e491d72b0a1f",
+        "Level 4": "9bbb7ff3-4681-f961-a880-819fa2fd813a",
+    },
     "Doodle Buds Stinger": {
         "Level 1": "0a6790a2-4ddf-56aa-26e4-44b45d050060",
         "Level 2": "082de448-49d3-d65d-e9c0-17949cd33422",
     },
     "Surge Stinger": {
         "Level 1": "77d5c1dc-4dde-539c-3a5a-0a95eecba1e4",
+    },
+    "Shimmer Stinger": {
+        "Level 1": "2c6fa705-433a-5f9e-294b-b39eef964b8c",
     },
     ".SYS Stinger": {
         "Level 1": "50e072a5-4f30-63a9-6dee-a8b33781269f",
@@ -2166,6 +2244,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Varnish Stinger": {
         "Level 1": "d1e1f521-4c6b-a47d-6c02-f5a5de9dab48",
+    },
+    "Task Force 809 Knife": {
+        "Level 1": "a2a5860a-4a34-8510-e067-93abc9f18e12",
     },
     "RGX 11z Pro Blade": {
         "Level 1": "a1762ed3-45bf-2dd5-776f-a18a33171e6f",
@@ -2228,6 +2309,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Glitchpop Axe": {
         "Level 1": "f27623a6-40de-20b9-17b5-c5bed27453a7",
         "Level 2": "3d6a7e42-4f6b-ee22-fa38-6cb370c93943",
+    },
+    "Blade of Chaos": {
+        "Level 1": "d6b75f1b-409b-bae9-d378-d3adf04a3ca9",
+        "Level 2": "02f5a8ee-4f2f-cc11-f59c-a0bf0c488ee6",
     },
     "Elderflame Dagger": {
         "Level 1": "f3594bcc-43a9-4a74-8c40-98a4e4a4569a",
@@ -2466,6 +2551,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Hivemind Ares": {
         Default: "0b299873-40d8-d0aa-0a06-04a1b7eb5bc7",
     },
+    "Spitfire Ares": {
+        Default: "f72769f3-4a87-fa60-b4ef-8287a718760d",
+    },
     "Infantry Ares": {
         Default: "ae8e1d37-46b6-9b74-ffd9-1fa1b5bac490",
     },
@@ -2564,6 +2652,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "05dc58f4-4170-c088-ba23-fd9a2ddcfa9d",
         Red: "16e8a438-4761-1887-3792-7bab966a7483",
         Gold: "d9c26f8e-496a-16c1-36e1-cfb81fb22d5f",
+    },
+    "Prelude to Chaos Vandal": {
+        Default: "10ff3757-4099-f828-d391-e28d2e634924",
+        Green: "eef9e539-48dc-f161-a608-ecb1634d3b6b",
+        White: "9c6107f4-4fbf-0b77-c291-1da85c76894b",
+        Blue: "fa0a3567-4a25-1a13-b078-3c97265e3adc",
     },
     "Elderflame Vandal": {
         Default: "835ad8e3-4b0e-071b-ce38-00a05032ac43",
@@ -2709,6 +2803,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Purple: "3f5b1b3b-4cb7-6e6c-6fd4-708482637800",
         Aquamarine: "0d5e6ad0-468d-15c6-21f0-b68c81f9d488",
     },
+    "Shimmer Bulldog": {
+        Default: "25b03c95-43d9-a69c-22e7-06b47184dd57",
+        Gold: "bf683155-49c6-9ff5-7812-8db4099199f0",
+        Red: "46b84788-444d-d7d2-6bb5-949fad03d3e3",
+        Teal: "1e6fbab8-41fe-4614-0b45-568675825c79",
+    },
     "Horizon Bulldog": {
         Default: "383ec3db-4a96-9cb3-473f-849185937687",
     },
@@ -2755,6 +2855,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Varnish Bulldog": {
         Default: "97e3f19b-441e-4a98-a39f-fda730fa0bfd",
+    },
+    "Task Force 809 Phantom": {
+        Default: "b95ebb33-4051-077d-5482-aaa6cee20577",
     },
     "RGX 11z Pro Phantom": {
         Default: "1788506c-4cd4-5a85-12cc-288b566ed869",
@@ -2944,6 +3047,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Team Ace Judge": {
         Default: "294fc224-4b8b-9411-7ff4-e883f4ddba97",
     },
+    "Shimmer Judge": {
+        Default: "fdbf9ae2-46c2-093c-2b62-8eae2370f04b",
+        Gold: "dede0f7f-4605-71ef-cc40-f8a5e26d2a10",
+        Red: "e01f967d-4aa0-6503-4cbf-17a8f000581b",
+        Teal: "f40c4b93-4678-927f-34e4-67bd1a61cdec",
+    },
     "dot EXE Judge": {
         Default: "066f07a2-42c5-4197-497a-f0a3fdbb4a6b",
     },
@@ -3102,6 +3211,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Aerosol Bucky": {
         Default: "0e383715-4dd6-4743-b69c-59aee968a865",
+    },
+    "Task Force 809 Frenzy": {
+        Default: "b8ddad9b-4622-3e0e-6821-56bf2e901bcf",
     },
     "RGX 11z Pro Frenzy": {
         Default: "1aaa2cf9-47eb-faf4-75ca-c383728ab1fc",
@@ -3265,6 +3377,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Default: "8726b894-4aab-8a7d-00ab-f18c3f202deb",
         Gold: "cd380fae-4628-5a94-b9cb-10bb10bd4804",
     },
+    "Shimmer Classic": {
+        Default: "c30108b4-4ad2-578e-1558-e9b8b2b515c9",
+        Gold: "c87e5861-4ff2-ca58-9c5f-e480785ce20b",
+        Red: "a4bbf75f-4366-b8aa-ab48-6e8c1a59b13d",
+        Teal: "3fd90a6a-423d-6acb-ac3a-9b965d01f758",
+    },
     "FIRE/arm Classic": {
         Default: "5f83b61d-444b-ead3-592c-a28cdc26d9d1",
     },
@@ -3336,6 +3454,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Endeavour Ghost": {
         Default: "e536f594-4e59-53b7-adf2-928332f092d3",
+    },
+    "Spitfire Ghost": {
+        Default: "aeaa83d1-48b6-faec-d176-97833ac00197",
     },
     "dot EXE Ghost": {
         Default: "12966603-4cb3-03dd-bf2e-338fb15d144f",
@@ -3542,6 +3663,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Karabasan Shorty": {
         Default: "74019079-43d3-2757-bf40-9792c930034e",
     },
+    "Prelude to Chaos Shorty": {
+        Default: "737ba496-4e0a-2e8a-ad46-27a8c58fb3ed",
+        Green: "b63b0226-40d0-f52d-1a7c-b6a7555d703d",
+        White: "51e5bab7-48d8-b8e3-3cf6-cbb1994eae0a",
+        Blue: "0164afa0-47dc-3c61-cd5b-8794b73c2540",
+    },
     "Doodle Buds Shorty": {
         Default: "8341e29e-4faa-e5c6-b6db-c2bcfbdfbc55",
         Tactifriends: "acb87714-4ea5-18b6-0d2a-fb8754340943",
@@ -3631,6 +3758,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "076b77c1-493d-ef86-2902-c4ac2a64dac2",
         Gold: "68b30d4e-4743-f1bd-b90f-fbaa6005a215",
     },
+    "Prelude to Chaos Operator": {
+        Default: "083504c5-42ad-216d-331f-4eb9c95514e9",
+        Green: "9a1e679d-4b6d-b3f9-642a-36a375d8cb7d",
+        White: "9b36cca5-414d-a43b-5f01-dab940b930d3",
+        Blue: "e1becf17-4a52-0ee9-68b4-85b14dabf552",
+    },
     "Elderflame Operator": {
         Default: "61583c81-4332-ff81-2ede-2a8248863c80",
         Red: "a8b125e5-4e33-953d-d02c-37ad9e284b6a",
@@ -3646,6 +3779,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Team Ace Operator": {
         Default: "728d6c82-478b-7924-2729-dca5a1473963",
+    },
+    "Spitfire Operator": {
+        Default: "87566c0f-4eb0-9029-bb7c-bbb10a7c16fe",
     },
     "Infantry Operator": {
         Default: "37617d36-4092-c473-9573-c69168c1b254",
@@ -3753,6 +3889,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Songsteel Guardian": {
         Default: "09ad889f-4f6b-038e-9b72-23a8203f393f",
     },
+    "Spitfire Guardian": {
+        Default: "d7fa6b9a-4623-788c-801a-2896a6177ab3",
+    },
     "Ruin Guardian": {
         Default: "5e4d839c-4f56-5173-088e-5cac4a2e5e67",
     },
@@ -3840,6 +3979,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Tan: "b8a7c66d-4dc8-d849-3fe7-5bbc0a6a4c35",
         Pink: "9d725c7c-4fb4-7a89-4798-b7af46065668",
     },
+    "Task Force 809 Marshal": {
+        Default: "c27a963f-4930-d471-a43e-4c9901add819",
+    },
     "Gaia's Vengeance Marshal": {
         Default: "b2883421-4cb0-7488-1da4-d7b5e3c349e7",
         Blue: "7bf9393e-448d-21ea-7819-d8a9c8128cb1",
@@ -3907,6 +4049,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Winterwunderland Marshal": {
         Default: "ed72b5f0-4fa3-6998-88d8-209ba547ff1e",
+    },
+    "Task Force 809 Spectre": {
+        Default: "7d3cb935-4301-e73f-ca90-ecbf58612c44",
     },
     "RGX 11z Pro Spectre": {
         Default: "864a834b-4637-08d8-0a3d-cdbb317afb95",
@@ -4063,6 +4208,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Red Alert Stinger": {
         Default: "c4c8da8f-468b-f71b-c61e-779c2e256e92",
     },
+    "Prelude to Chaos Stinger": {
+        Default: "0d84fb3c-4eda-c7f0-6c1d-8eb9ef0ba5ee",
+        Green: "3b0daf2c-4390-2d67-e489-0f8d38e0ba5c",
+        White: "9d0ed9fa-4392-a5b8-3090-9f9627e21739",
+        Blue: "a7c03e3b-48b2-7d7e-fb00-70aa1c168dba",
+    },
     "Doodle Buds Stinger": {
         Default: "73d27de9-45f2-3739-5fee-ce8b18acd136",
         Tactifriends: "84e03f58-4f71-7969-2d24-5faadabf47a3",
@@ -4073,6 +4224,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Black: "dc9d4105-4cf2-aa79-0535-ae961ad95571",
         Yellow: "55f6b4be-464a-e079-6ac7-94927ee403f5",
         Blue: "3549ad5e-4903-ad4d-f33e-9dbebaeaea44",
+    },
+    "Shimmer Stinger": {
+        Default: "2d36afb7-41fe-1d2d-ac50-b18e4a9f1e65",
+        Gold: "f22d64b1-4464-efeb-3e63-c8b3de447e2d",
+        Red: "45acee49-43c8-4b8d-ddb5-d7a2faaea795",
+        Teal: "915a1133-4c5b-b34f-d191-36a40b384e73",
     },
     ".SYS Stinger": {
         Default: "6ed5702f-4873-236c-eb02-a3aabfba6afc",
@@ -4121,6 +4278,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Varnish Stinger": {
         Default: "b4c63d7e-448c-2c23-ad49-0f8b61f18b1d",
+    },
+    "Task Force 809 Knife": {
+        Default: "5d5b1d55-4047-a5c6-b1d2-23a940d55fb0",
     },
     "RGX 11z Pro Blade": {
         Default: "05029e79-4c74-85c3-30ee-78ab3179b600",
@@ -4175,6 +4335,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Glitchpop Axe": {
         Default: "ded15275-482e-e9da-0002-1b9d495d2e98",
+    },
+    "Blade of Chaos": {
+        Default: "54417551-4a5d-9b90-35dc-a28b93feb50b",
+        Green: "7e655ee7-4cc3-c281-d498-8181d0071f4a",
+        White: "62bed7a0-4e84-a226-bef1-e1a774b0946f",
+        Blue: "485f20ad-4390-fcbb-b755-68a95facfed5",
     },
     "Elderflame Dagger": {
         Default: "d74171bf-4f3a-7dd7-76b9-04afeaeb72c0",

@@ -51,6 +51,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Chamber Spray": "1be33c9a-48a8-5aa8-3798-3989c40c96e1",
     "Seeing Double Spray": "2ebcf963-4e55-e39c-d1aa-94ad6ec87424",
     "VALORANT Spray": "0a6db78c-48b9-a32d-c47a-82be597584c1",
+    "Prelude to Chaos Spray": "5492634a-48f8-1f15-19cb-beacabcb0a4e",
     "Bruno Coin Spray": "e8a8c717-4845-3c69-9c16-d8a78153c51d",
     "Doodle Buds // Tactifriends Spray": "8f9caa22-4dd6-5649-1007-0bbaf7001c04",
     "Doodle Buds // League of Legends Spray": "bbdcf328-4f71-3c0c-7830-568913236d35",
@@ -194,6 +195,21 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Terrible Day for Rain Spray": "3b1a23b5-4119-3c68-27ed-3e85510c954e",
     "Don't Watch This Spray": "41566c1b-4d7b-2cba-dd5a-01abf2d67242",
     "Skeptical Viper Spray": "73292c82-4718-ad6e-0ae1-42a8f208b968",
+    "That's a Blowout Spray": "01d4de2a-4eda-dbed-2051-4cabb86d7c26",
+    "A Perfect Score Spray": "1a617656-4208-9da3-98c4-be8430df45ca",
+    "Just Jokin' Spray": "f52e0361-444e-b8b6-f549-8787f396c662",
+    "Trailblazing Tiger Spray": "b13c2ff5-4059-c411-1cf1-d5827375024d",
+    "Cool Joy Spray": "40208cd8-4217-8b62-b9fb-7fa6dd266d34",
+    "Waddle Walk Spray": "6e035225-4ef8-0004-f8cd-b6bf278ea9d0",
+    "You Wanna Play? Spray": "16f7cea0-4bfe-dc59-42a3-9f90387f6071",
+    "No Duelist No Problem Spray": "8a1d9314-4c0d-16dd-da83-0b819c668987",
+    "Never Forget Leg Day Spray": "3a1ba136-4c17-ed2f-9899-4690a2c4294d",
+    "Neon Bot Spray": "a2565f52-46b8-e3a7-efc1-eaa74c019eb2",
+    "Nosey Neighbor Spray": "f3f30bd8-493e-c4bb-fe49-44bb87eee2d6",
+    "No Spectre Spray": "56d0f84d-4b57-844f-4159-9390b6967fe5",
+    "Winner's Ribbon Spray": "dc75fa75-438d-c536-8080-f385cf5b0609",
+    "Sage Signal Spray": "98d3d8a3-46e2-d7c8-acbb-d4b818fc5bdf",
+    "We Can Do It Spray": "9db4721a-4eac-47f7-8805-31b79f2103f3",
     "VCT 2021 Spark Spray": "f9bcf120-42b6-6986-2acd-6aa87bab4089",
     "Fist Bump Spray": "d8cfce74-4bb8-42b2-022e-9dbf9d648823",
     "Team Ace // Jett Spray": "5e5fd29a-4e83-40fa-0012-e08470dacdd7",
@@ -450,6 +466,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "VALORANT Spray": {
         "1": "af3a4261-4c81-266d-7963-82ad714b190f",
+    },
+    "Prelude to Chaos Spray": {
+        "1": "1945d20c-4ae2-f0b3-9f18-15aed2617f75",
     },
     "Bruno Coin Spray": {
         "1": "24c74dce-4f29-0fdd-84a3-e0a77dabadee",
@@ -879,6 +898,51 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Skeptical Viper Spray": {
         "1": "f4782db0-4593-9460-7565-4fb66d9b5f99",
+    },
+    "That's a Blowout Spray": {
+        "1": "69cedbf1-4be7-5fef-8b49-bbad4954b37d",
+    },
+    "A Perfect Score Spray": {
+        "1": "82dee9a2-4d37-4bf8-eba0-a1ab6bd1b732",
+    },
+    "Just Jokin' Spray": {
+        "1": "b8b38b38-44f0-44e0-a411-3e97fee18451",
+    },
+    "Trailblazing Tiger Spray": {
+        "1": "c7c6c83a-43ed-02bd-62e3-549fc26f94df",
+    },
+    "Cool Joy Spray": {
+        "1": "52db726c-4109-bafb-61f5-708b2c42280c",
+    },
+    "Waddle Walk Spray": {
+        "1": "85dcfdd5-4641-3c0d-c239-8b8667d98527",
+    },
+    "You Wanna Play? Spray": {
+        "1": "d4468cea-44f8-7ae9-eda5-d684f3fc11cb",
+    },
+    "No Duelist No Problem Spray": {
+        "1": "6328ee42-4fe4-007e-ebab-efa20ccef00a",
+    },
+    "Never Forget Leg Day Spray": {
+        "1": "26475667-4eb7-8092-09f8-27aee380af8f",
+    },
+    "Neon Bot Spray": {
+        "1": "648fadc4-4c08-06bc-fb1b-9abd9b35be3a",
+    },
+    "Nosey Neighbor Spray": {
+        "1": "34635c7c-44a4-7e7e-25cf-179b7f1a883f",
+    },
+    "No Spectre Spray": {
+        "1": "5b35edd6-41b9-ef41-7655-ff82140c950c",
+    },
+    "Winner's Ribbon Spray": {
+        "1": "19dd5306-4607-1abb-e9c5-56ae6a2ebd97",
+    },
+    "Sage Signal Spray": {
+        "1": "aa12170d-41c5-45e1-ce96-e898fe6125cc",
+    },
+    "We Can Do It Spray": {
+        "1": "07d99624-46da-1b7f-e04b-e382f4b5b34e",
     },
     "VCT 2021 Spark Spray": {
         "1": "9aea356b-41f7-b2eb-be07-138caa0a5dad",
