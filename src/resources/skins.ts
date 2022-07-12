@@ -59,6 +59,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Glitchpop Vandal": "74789f33-4632-8052-96d7-258538721a32",
         "Prelude to Chaos Vandal": "522a264e-4ca7-adb0-6cf1-28b2ef938727",
         "Elderflame Vandal": "18609205-4edb-5966-cff8-0fba0230ba1e",
+        "Sarmad Vandal": "5b6b1eee-4185-8f83-9374-3391d0f0f742",
         "Nitro Vandal": "9b62faf1-416c-b736-0edb-39b890f1f18d",
         "Hivemind Vandal": "f7f63b78-4b12-b21e-a0e7-6bafbad81509",
         "Forsaken Vandal": "437307c6-424c-6a48-9738-949b91166353",
@@ -125,6 +126,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Glitchpop Phantom": "25a7f0f2-4bce-7e45-b4b0-ca9264f5dfcc",
         "Doodle Buds Phantom": "3a091315-4e87-31d5-7cdb-27804a177fd2",
         "Singularity Phantom": "5eec4ce6-443d-e9b5-4c5b-2b967d426bd3",
+        "Sarmad Phantom": "cd07ba8f-4dae-0410-582e-71acdef102ce",
         "Rush Phantom": "8db507b5-4d57-96e0-000e-2d8c8af79550",
         "Velocity Phantom": "a17d4eeb-46e5-a041-ae7b-a2841ac6b36e",
         "Team Ace Phantom": "f7a779db-4835-6561-ce1a-d1921a24de46",
@@ -215,6 +217,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Origin Frenzy": "cceb25d7-41e7-1944-515f-2eb5695fd5cc",
         "Glitchpop Frenzy": "5596d764-4b62-210b-59db-7982e9d4c23f",
         "Elderflame Frenzy": "4fb9ea7d-45a6-9154-7a46-648781b081c4",
+        "Sarmad Frenzy": "3fd33106-4816-c257-d27f-2b86c5d76c66",
         "Rush Frenzy": "a010c5fc-4343-067d-4dfb-ee836ec0a45f",
         "Team Ace Frenzy": "5947209b-4864-fb3b-bc48-74a7924e4412",
         "Swooping Frenzy": "d6af3716-4ab5-8204-a2f4-1eb4ffc51088",
@@ -439,6 +442,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Striker Spectre": "dbe2c9ea-41c4-522c-9204-dab09bac84d0",
         "Radiant Crisis 001 Spectre": "780a93e6-46aa-50c7-5e73-b885c5f6a141",
         "Singularity Spectre": "0eab3e5c-4de4-e221-34fb-2ab435c89eb6",
+        "Sarmad Spectre": "5137dacb-4df6-b513-765b-96b9ecfc435c",
         "Hivemind Spectre": "d405272b-4388-578c-e33b-04842496b8c1",
         "Forsaken Spectre": "a786ea8f-42f2-ae5f-376f-2bb66df1a62f",
         "Velocity Spectre": "6196c91c-4f0a-2aa2-342a-6fbac6d4ec3c",
@@ -511,6 +515,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Blade of Chaos": "6e0496c1-4c98-7abe-16c4-7ca3653e5cd8",
         "Elderflame Dagger": "94b40026-4efb-39ea-69d7-fca60be39c56",
         "Singularity Knife": "151ee26c-4e82-e7ca-dad1-099e7fb34774",
+        "Blade of Serket": "6417e12d-4f03-13d4-8704-20bf3a1bcb5b",
         Songsteel: "45129867-4977-e2a5-bead-cb828101b623",
         "Hivemind Sword": "24cf2882-48c7-f287-155a-a4b6b083baa4",
         "Forsaken Ritual Blade": "ed792f00-43a7-cc88-b64b-b78c9de399a1",
@@ -751,6 +756,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "77569f90-4e7f-7d91-bd18-2aa12bdba709",
         "Level 4": "4fb025db-471f-3891-6e30-b98866abb2f9",
     },
+    "Sarmad Vandal": {
+        "Level 1": "becdafdf-4d4b-0a8c-75d1-b8908db15ce5",
+    },
     "Nitro Vandal": {
         "Level 1": "f910a11a-40ab-d799-3782-c58674f7ada0",
     },
@@ -975,6 +983,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "48e976cc-4be8-87c6-2848-dd87bbc0acf8",
         "Level 3": "5791fe6e-4c59-b6ef-a7d4-05b0d7c9aed4",
         "Level 4": "9e2df910-4927-7313-e6b9-639454ef0e91",
+    },
+    "Sarmad Phantom": {
+        "Level 1": "f0a2a250-4cab-264b-30b0-8ea0706589ff",
     },
     "Rush Phantom": {
         "Level 1": "d39a4263-49d3-f2e0-2c13-c299f8644518",
@@ -1288,6 +1299,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "63307028-4680-bbf3-a69f-7faad8113a49",
         "Level 3": "b86ea344-404d-de22-92c8-1b89c455c47d",
         "Level 4": "f70dc825-4be6-0074-0526-758b3f183152",
+    },
+    "Sarmad Frenzy": {
+        "Level 1": "1ef9fcc9-4087-a079-616a-849f43c51665",
     },
     "Rush Frenzy": {
         "Level 1": "3e32c58e-4347-e4b1-4502-6dab0dc516a8",
@@ -2067,6 +2081,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "d9c7f033-42e9-57c8-7e94-dd9294018e44",
         "Level 4": "ccba3803-510b-4af4-a2bd-f530d8725fd1",
     },
+    "Sarmad Spectre": {
+        "Level 1": "3d9792a3-4614-c8e0-6eda-58bb52e69d8b",
+    },
     "Hivemind Spectre": {
         "Level 1": "4d02d9fa-4cb4-4d87-bdf0-97bd5f960c12",
     },
@@ -2321,6 +2338,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Singularity Knife": {
         "Level 1": "ea441610-42da-e46f-8d7b-1b9759c105cd",
         "Level 2": "34cdb942-4829-edbf-63ce-bfb3d993bdd1",
+    },
+    "Blade of Serket": {
+        "Level 1": "ed0080a9-4d77-d279-5a5c-f2bdb630307d",
+        "Level 2": "a58b52ec-454d-1222-289b-6398e704c18f",
     },
     Songsteel: {
         "Level 1": "e701b267-43bb-7862-cebb-9695590b68ac",
@@ -2665,6 +2686,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "6fb459fa-4368-7d20-106a-629db9825a2b",
         Dark: "403f7d3e-4e96-6566-42f3-01b7a803d660",
     },
+    "Sarmad Vandal": {
+        Default: "8b1098f4-41d0-043d-382a-19a2dff966bb",
+    },
     "Nitro Vandal": {
         Default: "da58de2d-48c2-b00f-8647-2c86b49dc680",
     },
@@ -2902,6 +2926,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "a5529ec0-4bc2-d6c1-7699-a1a3d3809313",
         Red: "6a3a49bb-4daf-7c92-3497-299a59836322",
         Purple: "a99ac58b-41b0-e1cd-89fd-f3ad171410df",
+    },
+    "Sarmad Phantom": {
+        Default: "a6798c54-438d-c398-a8ff-4f9558a9c782",
     },
     "Rush Phantom": {
         Default: "2e3b98b6-46e9-e233-1e1b-269ebd84598a",
@@ -3192,7 +3219,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Default: "ba632e0d-4f74-2b45-5094-c2baa0764cd6",
         Chrome: "822401fe-4388-c203-3784-a0958885be07",
         Black: "5f9ccde4-456a-67eb-0a7b-d1b8fd0b0258",
-        RWB: "af2c044e-4c83-04a4-bc7a-42a16be55796",
+        "Red/Blue": "af2c044e-4c83-04a4-bc7a-42a16be55796",
     },
     "Lightwave Bucky": {
         Default: "57e0882d-44c2-c87a-f9ee-10a6fd156da8",
@@ -3244,6 +3271,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "f40759fa-4a3a-3bb1-484e-4fabf878a774",
         Blue: "a0e8d567-4673-2f0c-7bb0-debb86d3f4ef",
         Dark: "3f8b9999-4a92-de0a-8a0a-4ebf04258950",
+    },
+    "Sarmad Frenzy": {
+        Default: "e1974304-4c95-3cd7-a463-d3827bf41f20",
     },
     "Rush Frenzy": {
         Default: "1ee55fe2-49b9-67d3-13c3-6cbf7b8a23ef",
@@ -3423,7 +3453,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Default: "16b745ac-4e5f-10ab-32b0-fa8384ecb69f",
         Chrome: "e410eff8-4aae-3ed3-d2ec-71bcb45954d1",
         Black: "39d5da8e-4e4e-e2a2-30a9-e8b7785225e4",
-        RWB: "bf7a6ba8-4e33-9499-f829-dc9230d458de",
+        "Red/Blue": "bf7a6ba8-4e33-9499-f829-dc9230d458de",
     },
     "Sakura Classic": {
         Default: "1bcfd66f-4eff-e119-387e-94868ad48a29",
@@ -3823,7 +3853,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Default: "fc0a7435-4786-e732-9f08-a6a9e84f42ce",
         Chrome: "f5c22f67-4e6f-c23d-24bd-3bb19cf3bf62",
         Black: "d3e0fa29-4ba2-e2e3-c829-c9aee0768585",
-        RWB: "b867c4a0-408c-2f04-2e8e-36a22e85c8f2",
+        "Red/Blue": "b867c4a0-408c-2f04-2e8e-36a22e85c8f2",
     },
     "Sentinels of Light Operator": {
         Default: "01563242-4a63-2250-95ee-db995bb29c84",
@@ -4081,6 +4111,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "6779fd51-4671-d13f-c3c4-7f8e7a32e107",
         Purple: "9c0f0344-4582-176f-8920-3a947e968675",
     },
+    "Sarmad Spectre": {
+        Default: "92fa6a1d-44aa-fae7-a478-3d9233be5063",
+    },
     "Hivemind Spectre": {
         Default: "0bf12530-4abb-8851-0420-199af20c2a2a",
     },
@@ -4102,9 +4135,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Prime Spectre": {
         Default: "48b6e421-4f93-5a00-62b3-20a1d320b040",
-        Yellow: "4c67e98b-4e1f-9f53-3163-16b393849f9d",
-        Blue: "f55e732b-4798-2f21-c099-f7ba8facc0bf",
         Orange: "e6586300-4434-2dee-8867-45b47980f7a5",
+        Blue: "f55e732b-4798-2f21-c099-f7ba8facc0bf",
+        Yellow: "4c67e98b-4e1f-9f53-3163-16b393849f9d",
     },
     "Avalanche Spectre": {
         Default: "4cc2203e-4ee9-1dbf-fd6b-3597cc965540",
@@ -4164,7 +4197,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Default: "271728d3-47c2-cc82-f850-debaad2f84c8",
         Chrome: "74b5a7a2-43b5-4343-2dc8-c2801230e288",
         Black: "22f733f9-4fb3-20f9-e032-f194d22c3d9a",
-        RWB: "4de533bf-44d1-d8d2-9969-168e5a22d910",
+        "Red/Blue": "4de533bf-44d1-d8d2-9969-168e5a22d910",
     },
     "Recon Spectre": {
         Default: "cd3cec90-4ac5-c499-a29f-0dbc9e0b8004",
@@ -4347,6 +4380,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Singularity Knife": {
         Default: "a42d1c90-4fcf-b6f5-4889-41b6805c0214",
+    },
+    "Blade of Serket": {
+        Default: "c540628b-41e2-1789-92ad-7084372b03ee",
     },
     Songsteel: {
         Default: "db9cbc78-43a8-cc55-22c0-f9abd8f48c9e",
