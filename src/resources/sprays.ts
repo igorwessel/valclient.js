@@ -242,7 +242,9 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Lucky Tiger Spray": "efd0d001-4edb-34eb-c05c-139817d4840a",
     "Celestial Spray": "cd9986f8-4473-914d-7918-caa21d23710f",
     "Magepunk, Ep 3 Spray": "562a64d8-483c-5853-4e7a-eea5ca95e3ce",
+    "Champions 2022 Curse Spray": "a7b00f01-49ee-c0c2-a910-4d9ae605dbe1",
     "Flames in my Veins Spray": "f677065c-449d-dd91-78ef-6fa7d95ded8d",
+    "Runnin' on Empty Spray": "3085ca2f-4e7a-25a5-909d-33940b0148e2",
     "Just Business Spray": "40cc1645-43f4-4db3-ebb2-fdb46f8e9bf3",
     "Give Back Spray": "8f7ef66d-49f2-867f-2ff8-1391a23c89d0",
     "Ego or Eco Spray": "5a328cd4-4cb5-4e64-60c2-6487281390ff",
@@ -293,6 +295,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Reaver Spray": "1658e811-4084-8775-28df-5a9feabc52d8",
     "Ego Spray": "71d260ca-4bad-81f2-0298-44860341a7a6",
     "BlastX Spray": "636722a7-4149-8319-c15e-14b17c2c47d1",
+    "Reaver, EP 5 Spray": "b909e6f9-426c-e77d-9016-60ae23a0d11f",
     "Sovereign Spray": "d54e0883-4967-5808-e25c-37b3e6313e5c",
     "Clip It Spray": "180a93cb-4ba4-db87-b357-b9b104373a74",
     "Neon Spray": "bcf042e4-463c-7fc1-a2c7-0ca17791da9c",
@@ -1040,8 +1043,14 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Magepunk, Ep 3 Spray": {
         "1": "ddb5c1ee-4d61-e9dd-83a5-62a25a3e2468",
     },
+    "Champions 2022 Curse Spray": {
+        "1": "47cf9fac-4d86-93f8-3b11-3fbc1e3cdc71",
+    },
     "Flames in my Veins Spray": {
         "1": "a155e9ba-41fa-a677-2e03-58b333ed7013",
+    },
+    "Runnin' on Empty Spray": {
+        "1": "ac6aa349-44eb-316c-6fc0-85995f93ae21",
     },
     "Just Business Spray": {
         "1": "406a5f6b-4361-eea0-05c2-be95e4881fa5",
@@ -1192,6 +1201,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "BlastX Spray": {
         "1": "2e7d593b-4c68-fcf0-99da-8fbecbd52789",
+    },
+    "Reaver, EP 5 Spray": {
+        "1": "a6a4ae29-4b62-b21d-85b7-34a6d2cf0169",
     },
     "Sovereign Spray": {
         "1": "8a017ce8-430c-4b97-fcc6-178b79bb2800",

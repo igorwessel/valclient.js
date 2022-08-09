@@ -221,6 +221,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Snowfall Buddy": "67310368-40c0-75fc-4853-3192ddf3011a",
     "Sentinels of Light Buddy": "72a48d20-40b8-8a99-1c96-c7a549af4640",
     "Reaver Buddy": "0eab96da-ed34-4bdb-978f-b02b2fb4ebcc",
+    "Reaver, EP 5 Buddy": "9b960309-47e1-aaac-0341-00b8bbcc11d8",
     "Sovereign Buddy": "a8e2dac4-4be6-75e7-bf76-1f9b5a6d5fb5",
     "Hot Take Buddy": "278e4d19-4026-02ac-263e-bca2b69df8fb",
     "The Spike Buddy": "0ec28d81-498c-af58-722c-baa60a84151c",
@@ -911,6 +912,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Reaver Buddy": {
         "1": "f344bead-bb25-4226-a990-b5d9694d475d",
+    },
+    "Reaver, EP 5 Buddy": {
+        "1": "20eea728-493e-6e47-8121-159c67f4ba52",
     },
     "Sovereign Buddy": {
         "1": "547c3aa6-4e86-199c-b190-01b75287f30b",

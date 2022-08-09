@@ -16,6 +16,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Lightwave Odin": "57523cf0-4574-968b-9f17-168e3bdb6d0d",
         "Schema Odin": "02cce94a-4dc2-d11a-33cf-d8aba4e36202",
         "Lycan's Bane Odin": "468fdc95-443f-f1c2-bd22-fc8e1af0de39",
+        "Reaver, EP 5 Odin": "8dda01a6-4237-f430-ac70-c3ba677963e9",
         "Standard Odin": "f454efd1-49cb-372f-7096-d394df615308",
         "Aerosol Odin": "befa2f32-410f-a418-d8d3-b194dcf2ec6d",
         "BlastX Odin": "85ed3f9d-4e59-a709-8faf-bc86effb3a07",
@@ -150,6 +151,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Protocol 781-A Phantom": "9877d50b-43b1-837a-802a-bf8a3b98e2dd",
         "Lightwave Phantom": "29665396-4dc8-c409-5e38-228949690f1e",
         "Snowfall Phantom": "a74f77fd-4e69-f16e-b1eb-ceb5198f423d",
+        "Reaver, EP 5 Phantom": "044b28ba-4c3b-d315-140d-d9a249da5567",
         "Recon Phantom": "d67b929f-4431-61c0-286e-3ebf3d11c4af",
         "Infinity Phantom": "1f835677-4ed7-fec2-6b80-c3ac384323f6",
         "Standard Phantom": "337cb216-4a6e-d85d-88c2-f29ab317784c",
@@ -289,6 +291,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Jigsaw Ghost": "f20bdd80-4cbf-67a8-106e-72bbf94336aa",
         "Eclipse Ghost": "4725c2c4-45b7-d9ab-ff4f-a79c3b2dd9ec",
         "Lycan's Bane Ghost": "1a9afd32-46fc-43c1-ab92-0a95e912805b",
+        "Reaver, EP 5 Ghost": "c7261be6-47d2-ef86-82f4-6a844e45d33c",
         "Sovereign Ghost": "a9890917-41ea-eb55-47e7-ee990a87fa4e",
         "Tethered Realms Ghost": "efbd92f3-4abc-b077-76fd-dc805b3d72a0",
         "Recon Ghost": "bb28991f-4ca9-ca54-962d-31b68c838625",
@@ -463,6 +466,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "POLYfrog Spectre": "9042279e-4491-1a01-a346-928f89f01ea7",
         "Protocol 781-A Spectre": "eaa73ab9-4688-0c40-09ad-85b535a50723",
         "Gravitational Uranium Neuroblaster Spectre": "4a8e8ff6-44f2-0ebf-6fa8-a5af76b628ee",
+        "Reaver, EP 5 Spectre": "1cb1ab52-4c7d-0775-77f4-eaac99968261",
         "Recon Spectre": "26b1c794-4370-f354-ff4d-3a8b95edff79",
         "Infinity Spectre": "53ab2a6a-46c5-32b9-e045-6781e677d7ff",
         "Standard Spectre": "f01d1307-4299-42f5-2c5e-7dab7e69ab19",
@@ -546,6 +550,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Snowfall Wand": "52a1647c-42d9-b40e-16cf-a7821566ad81",
         "Relic of the Sentinel": "6fd8cc46-48b3-f02c-46e3-cba372e7a328",
         "Reaver Knife": "0aecb2b8-49cc-560e-42c7-6cbce44f05cf",
+        "Reaver, EP 5 Karambit": "b73d7b16-4652-bc5b-5c4c-068aabb19d0a",
         "Sovereign Sword": "2e77ac95-4681-3d87-bbdc-93a50ff6b1f6",
         Prosperity: "f4e40444-43f3-e6f7-3271-bdb7d1492b05",
         "Recon Balisong": "39cf499b-4f82-e875-5320-b0a1d7fc58d4",
@@ -601,6 +606,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Lycan's Bane Odin": {
         "Level 1": "e1a05cb4-4ac5-b15a-e86e-bab0f7e093ad",
+    },
+    "Reaver, EP 5 Odin": {
+        "Level 1": "f5ce6297-4cd4-4b09-3931-5f8b20a4317d",
+        "Level 2": "2bb3b930-48d4-c32a-2972-6ba60f1e3d96",
+        "Level 3": "2a4c3d8a-44ec-0097-5afc-1bb1044605b4",
+        "Level 4": "606a2388-440f-7858-e5e3-5a94d7aeb64f",
     },
     "Standard Odin": {
         "Level 1": "d91fb318-4e40-b4c9-8c0b-bb9da28bac55",
@@ -1072,6 +1083,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Snowfall Phantom": {
         "Level 1": "00eb5b5b-4697-44b5-a926-7e86b730e812",
     },
+    "Reaver, EP 5 Phantom": {
+        "Level 1": "4c18d802-409d-ec20-f630-d3abfcaa37c7",
+        "Level 2": "8f9e6d07-40aa-7ae0-eedf-d391fcf9a00e",
+        "Level 3": "a32255f0-4c5a-e518-b83e-3585564e4abb",
+        "Level 4": "0e321f27-4803-1df8-7414-78b96f1afe7e",
+    },
     "Recon Phantom": {
         "Level 1": "5be0b43b-4e66-ab8a-91d9-be9137e2e1c2",
         "Level 2": "a8509c8d-4061-1c57-60a5-61a025f28408",
@@ -1537,6 +1554,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Lycan's Bane Ghost": {
         "Level 1": "04c6f57c-4463-f8b7-a475-6c89b2ec4416",
+    },
+    "Reaver, EP 5 Ghost": {
+        "Level 1": "a6fe7710-4edc-5e23-223d-aeaef3d17866",
+        "Level 2": "aef240db-4587-9d5d-bf89-eab5eeacf28e",
+        "Level 3": "ab52517a-4a6c-0af9-1fc4-dbba07d6cd16",
+        "Level 4": "8ac0b94e-4b23-d9d2-8bc0-a7a34b477930",
     },
     "Sovereign Ghost": {
         "Level 1": "ed8a1109-4e48-f077-636b-e98dd332bfcc",
@@ -2161,6 +2184,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "8a1b2c5b-4692-78ae-9d5c-cdac6a61e4f4",
         "Level 2": "984fa47b-4c3f-cb2a-3fdb-098e342a52f3",
     },
+    "Reaver, EP 5 Spectre": {
+        "Level 1": "0a0237d3-4d57-0ed2-ab65-c898a7bc755b",
+        "Level 2": "3c7e7ebd-4b7f-f475-d714-47a52a116c82",
+        "Level 3": "88257dda-4c34-f3ca-4495-d6b9ebd6ddbf",
+        "Level 4": "a8849563-498e-d080-85df-df891c878566",
+    },
     "Recon Spectre": {
         "Level 1": "613dd54a-4068-0fab-7670-bf8268a9b76b",
         "Level 2": "2006e869-4d76-294f-c0a1-b3b2f27a4dc2",
@@ -2446,6 +2475,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "d7a02a43-47a5-556c-a69f-ec9cf6ede66d",
         "Level 2": "20f6764c-4561-0152-e8a1-e2a75deb1872",
     },
+    "Reaver, EP 5 Karambit": {
+        "Level 1": "5ac106cd-45ef-a26f-2058-f382f20c64db",
+        "Level 2": "84d08ce6-468c-b95b-9bbb-408dcdcee76f",
+    },
     "Sovereign Sword": {
         "Level 1": "90fe45d6-41ea-1c49-8fb9-46b0e98c0077",
         "Level 2": "5e7f5d27-46ca-abd5-72d8-ecbb413ec217",
@@ -2530,6 +2563,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Lycan's Bane Odin": {
         Default: "42bdb11e-4d51-27eb-37e5-5c91c5c94a61",
+    },
+    "Reaver, EP 5 Odin": {
+        Default: "cf42ad75-43db-5426-0645-a7a3fac452c5",
+        Red: "0c643904-4cbc-8806-3198-eb86c22472bf",
+        Black: "c8a7b6ae-4aaa-ba5b-9fad-0da1c8b25f9e",
+        White: "2f6c84b9-40dd-4c58-8f29-a6af6a31a09f",
     },
     "Standard Odin": {
         Default: "2f93861d-4b2f-2175-af0c-3ba0c736e257",
@@ -3025,6 +3064,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Snowfall Phantom": {
         Default: "2e170ea2-434d-5a0f-dc28-3aada990a266",
+    },
+    "Reaver, EP 5 Phantom": {
+        Default: "444ee547-4a4a-8202-685f-50b15113a77f",
+        Red: "d3d5ab8a-4785-da17-acf9-f6a0cc0e6467",
+        Black: "0e3787c9-47df-1fe3-8643-f3837674c8ed",
+        White: "1708505a-4d55-73d3-8e85-b1ac190fe89c",
     },
     "Recon Phantom": {
         Default: "273edf84-45cf-0266-21d8-a4969bd31b6d",
@@ -3541,6 +3586,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Lycan's Bane Ghost": {
         Default: "50694c36-4d57-6d9c-8a41-0aaeaf5258fb",
+    },
+    "Reaver, EP 5 Ghost": {
+        Default: "04bcace1-4d82-7093-f812-a5bff8306a54",
+        Red: "4e3b34c5-4012-7842-3f42-9aaaa6af2f98",
+        Black: "b7dc18e4-42bf-d734-1b3e-afa72c497c77",
+        White: "99f5b206-40d3-025a-9143-828c2ca40bf6",
     },
     "Sovereign Ghost": {
         Default: "a84764d9-4f1e-a652-3530-1497e2505285",
@@ -4199,6 +4250,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Black: "22f733f9-4fb3-20f9-e032-f194d22c3d9a",
         "Red/Blue": "4de533bf-44d1-d8d2-9969-168e5a22d910",
     },
+    "Reaver, EP 5 Spectre": {
+        Default: "1cb0fe08-40f8-431c-0cde-129fcd217cc4",
+        Red: "3a2ed05c-456e-3d79-c5c6-4eb3a4cedcb7",
+        Black: "9ce7d74f-4444-4676-1a31-dba72c553cee",
+        White: "746c227d-47be-f1c7-b69d-48a9b497268b",
+    },
     "Recon Spectre": {
         Default: "cd3cec90-4ac5-c499-a29f-0dbc9e0b8004",
         RedCamo: "b567c4f8-4789-a563-8225-0b8a3312f202",
@@ -4487,6 +4544,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Reaver Knife": {
         Default: "71241f8e-4689-a110-0b22-8eac0aa512aa",
+    },
+    "Reaver, EP 5 Karambit": {
+        Default: "61eb0d02-4dfe-4413-6e29-4d9f9500e6a5",
+        Red: "9c55fcb9-4710-48fd-642d-fd90c6c3b895",
+        Black: "517f5413-4859-ab98-fec8-4ebd39a15121",
+        White: "cf9fc0dc-48d9-34a6-95fd-cea860d2df5e",
     },
     "Sovereign Sword": {
         Default: "3391be35-4eab-936c-f26d-ec810f4454c8",
