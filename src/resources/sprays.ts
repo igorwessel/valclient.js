@@ -210,6 +210,22 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Winner's Ribbon Spray": "dc75fa75-438d-c536-8080-f385cf5b0609",
     "Sage Signal Spray": "98d3d8a3-46e2-d7c8-acbb-d4b818fc5bdf",
     "We Can Do It Spray": "9db4721a-4eac-47f7-8805-31b79f2103f3",
+    "Immortalized Spray": "e8d3de82-4bef-c14a-d8b9-aab7a125b4e2",
+    "Hide the Pain, Brimstone Spray": "c7d15108-42bb-dd70-4eb7-c29e705bf9e8",
+    "Piedra del Sol Spray": "91463c73-4553-5736-8ea4-97bc58df62fa",
+    "Unamused Chamber Spray": "a56ccd58-4eda-21b3-ec0c-1ea9fa873fbe",
+    "Phoenix Rise Spray": "2c640eed-4463-0de1-4733-ccb96df51879",
+    "I've Been Hit Spray": "919b23a7-42fa-ef0c-adbe-438351a90687",
+    "Hehehehehe Spray": "8a1b7f3e-4499-53a3-2ef2-8d8d5c851381",
+    "Let Me In Spray": "72f818b8-4efb-ed8a-fc36-90a780bd1255",
+    "No Sentinels Spray": "5e16f6fa-4b5e-05e9-2cbd-c5a7dfda0901",
+    "Very Sneaky Spray": "c0d282f7-4659-7699-4dd9-6c8364791d7f",
+    "Raze has Range Spray": "a39f1e29-4079-8ae4-8a50-6aafe9f61c0a",
+    "Guess That's It Spray": "a1895f5a-4718-1654-3214-52a59fcad821",
+    "Blasting Away Spray": "336a188d-4855-682f-071c-7d89517ab041",
+    "Choose Your Match Spray": "785990dc-4cbc-5e49-09e7-ac8415093a6d",
+    "You Are Here Spray": "3eb2d891-470b-c4aa-654a-0ebd4d94090f",
+    "Champions 2022 Jett Diff Spray": "556008f0-41bb-d752-3747-1aabc73499c8",
     "VCT 2021 Spark Spray": "f9bcf120-42b6-6986-2acd-6aa87bab4089",
     "Fist Bump Spray": "d8cfce74-4bb8-42b2-022e-9dbf9d648823",
     "Team Ace // Jett Spray": "5e5fd29a-4e83-40fa-0012-e08470dacdd7",
@@ -278,6 +294,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "VALORANT GO! Vol. 2 Sova Spray": "7b0e0c8d-4f91-2a76-19b9-079def2fa843",
     "VALORANT GO! Vol. 2 Viper Spray": "ea087a08-4b9f-bd0d-15a5-d3ba09c4c381",
     "VALORANT GO! Vol. 2 Yoru Spray": "40ff9251-4c11-b729-1f27-088ee032e7ce",
+    "Champions 2022 Spray": "cd785f82-41a2-f7b4-0f17-e69b0fe5beb3",
     "Origin Spray": "c495e583-42d5-e9fe-c460-9f946ff369f6",
     "Glitchpop Spray": "2e37f837-425d-45f2-22a2-71a9af5c118f",
     "Glitchpop, EP 2 Spray": "8dbcccdf-44fc-58ec-5c2a-b68530c4a039",
@@ -947,6 +964,54 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "We Can Do It Spray": {
         "1": "07d99624-46da-1b7f-e04b-e382f4b5b34e",
     },
+    "Immortalized Spray": {
+        "1": "085a9278-41bd-62ab-7b71-85a25bb2cd3c",
+    },
+    "Hide the Pain, Brimstone Spray": {
+        "1": "fa9a7a13-4824-9627-ff9d-48a78f71442c",
+    },
+    "Piedra del Sol Spray": {
+        "1": "fc04567e-4b4c-3b43-57fb-44a6cc7f0235",
+    },
+    "Unamused Chamber Spray": {
+        "1": "4004b3f1-4849-8c1a-aad4-918c92ac2570",
+    },
+    "Phoenix Rise Spray": {
+        "1": "f1aef89b-44ea-2cba-daf4-4b867c94942a",
+    },
+    "I've Been Hit Spray": {
+        "1": "8dd18a92-4347-7c74-895e-07b8ff0edf3d",
+    },
+    "Hehehehehe Spray": {
+        "1": "0cf17bc3-4f5f-d02d-12d1-59b9184cbfb0",
+    },
+    "Let Me In Spray": {
+        "1": "c6ac13bd-4a97-bc52-7734-0bbc3bc7e7d9",
+    },
+    "No Sentinels Spray": {
+        "1": "3fe8c17c-4e9d-70dd-9a24-ecbcaab38dff",
+    },
+    "Very Sneaky Spray": {
+        "1": "f4c5e6e2-46b9-6945-a2c6-cb900602ef35",
+    },
+    "Raze has Range Spray": {
+        "1": "92612cd8-49ca-7c07-8ee5-5eb32e2360c6",
+    },
+    "Guess That's It Spray": {
+        "1": "c9f5fdd0-4722-97f6-ae74-9e8406321fb8",
+    },
+    "Blasting Away Spray": {
+        "1": "f1a2b9bd-4793-00d1-14b3-ca84a6b5596d",
+    },
+    "Choose Your Match Spray": {
+        "1": "20851fba-483e-689e-9ced-c2a46f596eab",
+    },
+    "You Are Here Spray": {
+        "1": "1f8dc0c2-471b-e677-1957-4d99d4943506",
+    },
+    "Champions 2022 Jett Diff Spray": {
+        "1": "39ee62f9-4aa1-6331-85d1-fe8c9116c960",
+    },
     "VCT 2021 Spark Spray": {
         "1": "9aea356b-41f7-b2eb-be07-138caa0a5dad",
     },
@@ -1150,6 +1215,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "VALORANT GO! Vol. 2 Yoru Spray": {
         "1": "b107a08c-4fc6-df0a-1605-a9ba7f49170e",
+    },
+    "Champions 2022 Spray": {
+        "1": "a5c5e4c9-486b-dae5-8051-8ca7c9222391",
     },
     "Origin Spray": {
         "1": "beac7e52-45b0-36c3-4c49-3aa05e50fefe",

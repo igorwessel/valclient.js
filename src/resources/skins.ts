@@ -16,7 +16,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Lightwave Odin": "57523cf0-4574-968b-9f17-168e3bdb6d0d",
         "Schema Odin": "02cce94a-4dc2-d11a-33cf-d8aba4e36202",
         "Lycan's Bane Odin": "468fdc95-443f-f1c2-bd22-fc8e1af0de39",
-        "Reaver, EP 5 Odin": "8dda01a6-4237-f430-ac70-c3ba677963e9",
+        "Reaver Odin": "8dda01a6-4237-f430-ac70-c3ba677963e9",
         "Standard Odin": "f454efd1-49cb-372f-7096-d394df615308",
         "Aerosol Odin": "befa2f32-410f-a418-d8d3-b194dcf2ec6d",
         "BlastX Odin": "85ed3f9d-4e59-a709-8faf-bc86effb3a07",
@@ -42,6 +42,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "POLYfrog Ares": "ff555802-4633-0c8b-93f8-b8887666e3ad",
         "Divine Swine Ares": "398ef7c2-4055-980e-a8b4-669ca8bc5084",
         "Jigsaw Ares": "e4b7f196-4f05-825f-e795-a59fc829195d",
+        "Premiere Collision Ares": "165116bf-497a-3ffa-38dc-c58d4475e225",
         "Sakura Ares": "2666f98d-4f88-8cb9-4927-629d75a6a7ad",
         "Snowfall Ares": "43538e40-48bf-0262-d4a7-bbba3c56df77",
         "Sentinels of Light Ares": "9f3e2ba6-428f-c635-67e0-b8b7d9e3c2fc",
@@ -49,6 +50,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Standard Ares": "5305d9c4-4f46-fbf4-9e9a-dea772c263b5",
     },
     Vandal: {
+        "Immortalized Vandal": "d980c0c8-492b-b8df-2d91-af99a7707170",
         "RGX 11z Pro Vandal": "e5490f71-455b-74ad-f762-f5a876d4dff9",
         "VALORANT GO! Vol. 2 Vandal": "ba6f2526-4ed2-8e62-49aa-ebbb04290682",
         "Neptune Vandal": "db91451c-4309-2c8c-eded-bf842d844e52",
@@ -109,6 +111,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Hue Shift Bulldog": "c2f87e28-4c3b-5dc3-0109-ffa3a0e43f4c",
         "POLYfox Bulldog": "dbf7b813-4931-3b45-db2b-ea8d418b2b1d",
         "Protocol 781-A Bulldog": "1daefbff-4581-aef3-5ed6-da894d7e4cc7",
+        "Premiere Collision Bulldog": "fbf8ca06-41c9-6293-24cc-b6b292db5cf7",
         "Infinity Bulldog": "decd0962-453a-1551-47e1-1287aafb5a27",
         "Standard Bulldog": "724a7f42-4315-eccf-0e76-77bdd3ec2e09",
         "Convex Bulldog": "f580899d-49c4-8bf8-9718-c9a6a38dd503",
@@ -121,6 +124,8 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Xenohunter Phantom": "fac0cea1-45a9-1549-c120-af8f0150e562",
         "VALORANT GO! Vol. 1 Phantom": "0acbabbe-4f4c-f643-284b-f69029abb54e",
         "Spectrum Phantom": "980fa063-436e-e51f-c38d-70a5b93a0f1c",
+        "Piedra del Sol Phantom": "d556b1c2-46fa-fca4-0516-5c887fd2352a",
+        "Champions 2022 Phantom": "8c72ae0b-4357-1a75-ad62-fbaec7b64f92",
         "Radiant Crisis 001 Phantom": "2371d9e1-498c-1ad1-4f10-d1a339c7fda2",
         "Nebula Phantom": "57f91d68-4cda-76c0-c258-7ba507cd6f87",
         "Undercity Phantom": "ed3ac995-4fd1-3079-27aa-4aab84447833",
@@ -151,7 +156,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Protocol 781-A Phantom": "9877d50b-43b1-837a-802a-bf8a3b98e2dd",
         "Lightwave Phantom": "29665396-4dc8-c409-5e38-228949690f1e",
         "Snowfall Phantom": "a74f77fd-4e69-f16e-b1eb-ceb5198f423d",
-        "Reaver, EP 5 Phantom": "044b28ba-4c3b-d315-140d-d9a249da5567",
+        "Reaver Phantom": "044b28ba-4c3b-d315-140d-d9a249da5567",
         "Recon Phantom": "d67b929f-4431-61c0-286e-3ebf3d11c4af",
         "Infinity Phantom": "1f835677-4ed7-fec2-6b80-c3ac384323f6",
         "Standard Phantom": "337cb216-4a6e-d85d-88c2-f29ab317784c",
@@ -160,6 +165,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Winterwunderland Phantom": "a5c64455-4fd0-9207-fc97-e086af99a2a6",
     },
     Judge: {
+        "Piedra del Sol Judge": "d7717613-4ef6-b314-6a95-9e8a1ee603bf",
         "Undercity Judge": "e413125e-40c6-cccd-de35-f28e34c57442",
         "Glitchpop Judge": "28a659a4-439e-fcd0-6236-d39979ee5c51",
         "Elderflame Judge": "0221b120-444b-6d1b-fc50-e4a98e470eb2",
@@ -187,6 +193,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     },
     Bucky: {
         "Xenohunter Bucky": "0666931c-4580-efd0-af47-afb9f2f72e55",
+        "Piedra del Sol Bucky": "001e4ce2-4b30-8203-365a-828e2e3a5826",
         "Origin Bucky": "96495eb3-40db-cb5b-1c69-17a3dde58ee3",
         "Radiant Crisis 001 Bucky": "31072cda-4041-b4f0-119a-3692ea598321",
         "Red Alert Bucky": "1322a9a8-49ad-bc3a-2319-fb866e21334c",
@@ -265,6 +272,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Smite Classic": "22fdc42d-4ad6-2bec-8033-8a8bdf178826",
         "Spline Classic": "750d4f04-4fea-391b-fa8b-539815a63164",
         "Galleria Classic": "2f9f4637-4377-b55f-97a1-1e8974e29b27",
+        "Premiere Collision Classic": "c4c0edc9-4ce3-3945-81f5-1bb80aeb22fe",
         "Gravitational Uranium Neuroblaster Classic": "81ddbfcd-4081-8341-ff76-ad8cdb26ce4c",
         "Sakura Classic": "6ba7a7a0-4057-4d5c-7c98-579f232db298",
         "Snowfall Classic": "464887be-4a07-690e-2d02-e187c8bbe8d5",
@@ -276,6 +284,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "VALORANT GO! Vol. 1 Ghost": "3714831b-4b90-bb6b-4185-7fb05ba9b9a2",
         "Gaia's Vengeance Ghost": "daed0e44-4ab6-22b4-a5a5-57a4957a056b",
         "Endeavour Ghost": "cd281dcd-4276-1def-11d9-74a4a72db204",
+        "Piedra del Sol Ghost": "9db45d13-4cc3-4b6c-4801-459b79f8cda5",
         "Spitfire Ghost": "d2ed8432-44a2-fb53-cd5f-089251862942",
         "dot EXE Ghost": "67d3e2f7-4b73-7598-0027-63bd9e2e5fcc",
         "Hush Ghost": "a1d3a9e2-4f61-b1f7-3a01-cf867264d1cb",
@@ -291,7 +300,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Jigsaw Ghost": "f20bdd80-4cbf-67a8-106e-72bbf94336aa",
         "Eclipse Ghost": "4725c2c4-45b7-d9ab-ff4f-a79c3b2dd9ec",
         "Lycan's Bane Ghost": "1a9afd32-46fc-43c1-ab92-0a95e912805b",
-        "Reaver, EP 5 Ghost": "c7261be6-47d2-ef86-82f4-6a844e45d33c",
+        "Reaver Ghost": "c7261be6-47d2-ef86-82f4-6a844e45d33c",
         "Sovereign Ghost": "a9890917-41ea-eb55-47e7-ee990a87fa4e",
         "Tethered Realms Ghost": "efbd92f3-4abc-b077-76fd-dc805b3d72a0",
         "Recon Ghost": "bb28991f-4ca9-ca54-962d-31b68c838625",
@@ -304,6 +313,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Soul Silencer Ghost": "e24330ef-4315-512c-4588-95a601995888",
     },
     Sheriff: {
+        "Immortalized Sheriff": "304e1a7a-411d-2d27-dad6-c09702b5ea2f",
         "Aristocrat Sheriff": "840f12d8-467b-1a5e-f79c-b893b72b2fbc",
         "Nebula Sheriff": "55ef0ffa-44fe-03ac-dcf0-1982df0857aa",
         "Singularity Sheriff": "bfd9e773-4376-1f6a-98f2-dc93f0c0607c",
@@ -389,6 +399,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Convex Operator": "ccb54094-4db8-2c9f-656b-f1bff329f469",
     },
     Guardian: {
+        "Immortalized Guardian": "6558fd5d-4dc7-90f7-beea-ba9303551c3b",
         "RGX 11z Pro Guardian": "da29ce1e-43bb-c043-9cbc-34850517dc23",
         "VALORANT GO! Vol. 1 Guardian": "2c32d9e3-42a1-7387-35ef-0c8eefacee1c",
         "Neptune Guardian": "1082032a-4f20-12db-93ea-549332f91ddf",
@@ -432,6 +443,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "POLYfrog Marshal": "6eea7984-4ca4-d547-4d50-b4a608072feb",
         "Divine Swine Marshal": "ad83a57d-414c-f714-a97f-99bad1128b2b",
         "Artisan Marshal": "4986a893-48a5-4c23-11f2-70bb9e9d284d",
+        "Premiere Collision Marshal": "b273ade7-4971-c274-eb92-219ef6def086",
         "Sovereign Marshal": "5211efa8-4efd-09bb-6cee-72b86a8a5972",
         "Standard Marshal": "fd44b2d5-49ee-77ab-fa56-588f3ac0c268",
         "Wasteland Marshal": "19f06522-40c8-8dc6-a0cd-92808b24751f",
@@ -466,7 +478,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "POLYfrog Spectre": "9042279e-4491-1a01-a346-928f89f01ea7",
         "Protocol 781-A Spectre": "eaa73ab9-4688-0c40-09ad-85b535a50723",
         "Gravitational Uranium Neuroblaster Spectre": "4a8e8ff6-44f2-0ebf-6fa8-a5af76b628ee",
-        "Reaver, EP 5 Spectre": "1cb1ab52-4c7d-0775-77f4-eaac99968261",
+        "Reaver Spectre": "1cb1ab52-4c7d-0775-77f4-eaac99968261",
         "Recon Spectre": "26b1c794-4370-f354-ff4d-3a8b95edff79",
         "Infinity Spectre": "53ab2a6a-46c5-32b9-e045-6781e677d7ff",
         "Standard Spectre": "f01d1307-4299-42f5-2c5e-7dab7e69ab19",
@@ -476,6 +488,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Wasteland Spectre": "f7da43d8-450b-a03f-ceb7-c4b20f738392",
     },
     Stinger: {
+        "Immortalized Stinger": "66a6a6a1-44c7-beac-0b67-54aaa8243367",
         "RGX 11z Pro Stinger": "282c15e6-4372-2f18-9143-2d9cdd942c4c",
         "Aristocrat Stinger": "42da0f19-4017-5cb8-08a4-368315561fdf",
         "Red Alert Stinger": "0cf70376-4150-39aa-5657-8890617bc0d1",
@@ -508,7 +521,9 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Neptune Anchor": "c3f1c9d6-441b-7def-1bf2-2c82719a4de8",
         "Gaia's Wrath": "f91a1dd8-4f5f-bce4-f01d-4da95322c485",
         Waveform: "400bb847-4f4f-a39e-cd52-589f00b2204f",
+        Obsidiana: "8330a4c0-4e98-1cb7-9695-6b998b77138d",
         "Champions 2021 Karambit": "1ea64c8d-43c4-fce8-7354-01bdd6c0ee17",
+        "Champions 2022 Butterfly Knife": "6946cd0e-4e4a-ec4f-9238-dfb71715722b",
         "Origin Crescent Blade": "ac687fc4-40c5-4c41-6a7c-5eb59adabd60",
         "Striker Knife": "31309f0b-49cd-295c-490d-96821a21c72f",
         "Radiant Crisis 001 Baseball Bat": "71020826-483d-34f8-8da7-928f87942c10",
@@ -550,7 +565,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Snowfall Wand": "52a1647c-42d9-b40e-16cf-a7821566ad81",
         "Relic of the Sentinel": "6fd8cc46-48b3-f02c-46e3-cba372e7a328",
         "Reaver Knife": "0aecb2b8-49cc-560e-42c7-6cbce44f05cf",
-        "Reaver, EP 5 Karambit": "b73d7b16-4652-bc5b-5c4c-068aabb19d0a",
+        "Reaver Karambit": "b73d7b16-4652-bc5b-5c4c-068aabb19d0a",
         "Sovereign Sword": "2e77ac95-4681-3d87-bbdc-93a50ff6b1f6",
         Prosperity: "f4e40444-43f3-e6f7-3271-bdb7d1492b05",
         "Recon Balisong": "39cf499b-4f82-e875-5320-b0a1d7fc58d4",
@@ -607,7 +622,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Lycan's Bane Odin": {
         "Level 1": "e1a05cb4-4ac5-b15a-e86e-bab0f7e093ad",
     },
-    "Reaver, EP 5 Odin": {
+    "Reaver Odin": {
         "Level 1": "f5ce6297-4cd4-4b09-3931-5f8b20a4317d",
         "Level 2": "2bb3b930-48d4-c32a-2972-6ba60f1e3d96",
         "Level 3": "2a4c3d8a-44ec-0097-5afc-1bb1044605b4",
@@ -692,6 +707,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Jigsaw Ares": {
         "Level 1": "3ee60a8a-4736-5a6d-3713-00a05402481d",
     },
+    "Premiere Collision Ares": {
+        "Level 1": "7090c9c1-454e-6f83-1b4d-7b961b55cf01",
+    },
     "Sakura Ares": {
         "Level 1": "9fbe39c6-42d7-b1db-9048-f0951ce2ff94",
     },
@@ -709,6 +727,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Standard Ares": {
         "Level 1": "0f5f60f4-4c94-e4b2-ceab-e2b4e8b41784",
+    },
+    "Immortalized Vandal": {
+        "Level 1": "1e84a5bd-4350-c804-d6cc-79a2d98e6344",
     },
     "RGX 11z Pro Vandal": {
         "Level 1": "4e435234-49a2-1444-4640-908692c855b8",
@@ -930,6 +951,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 4": "78665dc8-4a75-76f6-a9e5-97819158eed8",
         "Level 5": "282305ae-4707-c58e-bf3a-3cb333c5664d",
     },
+    "Premiere Collision Bulldog": {
+        "Level 1": "94eda9e6-47cf-a0dc-a1f9-03a41f50e5d3",
+    },
     "Infinity Bulldog": {
         "Level 1": "5fc3c5e8-470e-7683-b594-6580d5e3d624",
     },
@@ -967,6 +991,15 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "8021e6d9-4916-32a9-e2cd-ff9c947a96c5",
         "Level 3": "831939b1-42e6-6ad3-708b-b58ff2ea64fb",
         "Level 4": "2a744a2b-4dab-71a6-0e2e-7f84d4cf8365",
+    },
+    "Piedra del Sol Phantom": {
+        "Level 1": "bebefdf3-43cb-fc4c-cd0a-52a9dd9b035f",
+    },
+    "Champions 2022 Phantom": {
+        "Level 1": "524b0c42-47da-e7ca-dc04-85ba285b2e71",
+        "Level 2": "3e511130-4d87-06dc-d6b3-45909bcba884",
+        "Level 3": "6ce75c5a-4bf8-bdf3-2c13-1a97866c2d9a",
+        "Level 4": "2e15c392-4f9a-e7cc-97ba-ae8fa37dfa14",
     },
     "Radiant Crisis 001 Phantom": {
         "Level 1": "52c3bbf6-491f-fef1-faa9-e19df06a687c",
@@ -1083,7 +1116,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Snowfall Phantom": {
         "Level 1": "00eb5b5b-4697-44b5-a926-7e86b730e812",
     },
-    "Reaver, EP 5 Phantom": {
+    "Reaver Phantom": {
         "Level 1": "4c18d802-409d-ec20-f630-d3abfcaa37c7",
         "Level 2": "8f9e6d07-40aa-7ae0-eedf-d391fcf9a00e",
         "Level 3": "a32255f0-4c5a-e518-b83e-3585564e4abb",
@@ -1112,6 +1145,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Winterwunderland Phantom": {
         "Level 1": "63a65008-4266-1117-fe3d-d1bf290b7da9",
+    },
+    "Piedra del Sol Judge": {
+        "Level 1": "d73d6605-40b3-6a79-ad77-adbfc2e20742",
     },
     "Undercity Judge": {
         "Level 1": "f27be4ed-4fa5-9c3a-592a-b98bb455fd12",
@@ -1194,6 +1230,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Xenohunter Bucky": {
         "Level 1": "01a984b8-4b91-ab61-60b9-1bb9ce54bd04",
         "Level 2": "a3073107-4927-808c-acce-e0972543f75a",
+    },
+    "Piedra del Sol Bucky": {
+        "Level 1": "154dea46-45a7-828d-5e0a-b9b3e4f7d7e3",
     },
     "Origin Bucky": {
         "Level 1": "56042ce2-4f95-19be-7cac-5fb191683953",
@@ -1473,6 +1512,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Galleria Classic": {
         "Level 1": "b8bc5d1b-44aa-aa83-0246-b1a6bb496177",
     },
+    "Premiere Collision Classic": {
+        "Level 1": "8bd8c44c-4c30-947a-5531-a0b823d574ea",
+    },
     "Gravitational Uranium Neuroblaster Classic": {
         "Level 1": "f35f6e13-4b7b-da38-c0de-5c91fffd584b",
         "Level 2": "6958fbf5-4708-f97e-92e1-c7abdf6724b1",
@@ -1503,6 +1545,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Endeavour Ghost": {
         "Level 1": "80073abf-4fea-b06d-f70c-bdbe6d8ce0a7",
+    },
+    "Piedra del Sol Ghost": {
+        "Level 1": "8f9a3c0c-47ac-6032-7027-899c7e35958e",
     },
     "Spitfire Ghost": {
         "Level 1": "c247790e-4a6b-a3f2-1e1f-ccae710b5179",
@@ -1555,7 +1600,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Lycan's Bane Ghost": {
         "Level 1": "04c6f57c-4463-f8b7-a475-6c89b2ec4416",
     },
-    "Reaver, EP 5 Ghost": {
+    "Reaver Ghost": {
         "Level 1": "a6fe7710-4edc-5e23-223d-aeaef3d17866",
         "Level 2": "aef240db-4587-9d5d-bf89-eab5eeacf28e",
         "Level 3": "ab52517a-4a6c-0af9-1fc4-dbba07d6cd16",
@@ -1595,6 +1640,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Soul Silencer Ghost": {
         "Level 1": "b85b3760-43bb-507d-323e-1682fa76d96b",
+    },
+    "Immortalized Sheriff": {
+        "Level 1": "d3f40fb9-40ec-b61f-7479-ceaded7b176a",
     },
     "Aristocrat Sheriff": {
         "Level 1": "6d4766d0-41f0-8493-93eb-a4902a0c6034",
@@ -1894,6 +1942,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Convex Operator": {
         "Level 1": "ed333b00-4e88-a9c5-d309-acae85438e93",
     },
+    "Immortalized Guardian": {
+        "Level 1": "bfbcae59-45a0-c60a-29d5-7f8780f3b0d4",
+    },
     "RGX 11z Pro Guardian": {
         "Level 1": "43361d49-4331-ee30-e356-0f925e6e17b9",
         "Level 2": "ae053014-4e34-41a4-2d4d-ac87e0498e42",
@@ -2057,6 +2108,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Artisan Marshal": {
         "Level 1": "c779f43f-47cc-fe29-63aa-bb8b91b36e42",
     },
+    "Premiere Collision Marshal": {
+        "Level 1": "c7d5f553-4239-7124-3932-6a83a019d527",
+    },
     "Sovereign Marshal": {
         "Level 1": "c5dd6298-4928-5d64-5cd0-7fa41ea89d81",
         "Level 2": "5dfc0af6-4c03-03b0-7066-6ea1770fe6c0",
@@ -2184,7 +2238,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "8a1b2c5b-4692-78ae-9d5c-cdac6a61e4f4",
         "Level 2": "984fa47b-4c3f-cb2a-3fdb-098e342a52f3",
     },
-    "Reaver, EP 5 Spectre": {
+    "Reaver Spectre": {
         "Level 1": "0a0237d3-4d57-0ed2-ab65-c898a7bc755b",
         "Level 2": "3c7e7ebd-4b7f-f475-d714-47a52a116c82",
         "Level 3": "88257dda-4c34-f3ca-4495-d6b9ebd6ddbf",
@@ -2216,6 +2270,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Wasteland Spectre": {
         "Level 1": "a83ac09d-4c19-fda6-8e4d-c1b77dc2b479",
+    },
+    "Immortalized Stinger": {
+        "Level 1": "40243b02-4a32-d406-6b40-bc99e8a6fde2",
     },
     "RGX 11z Pro Stinger": {
         "Level 1": "4dbeebb2-4b39-8aec-b639-00bc4948d0f3",
@@ -2326,10 +2383,18 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "f58e7da3-4567-707f-cb1e-3a9add422481",
         "Level 2": "fe57fe97-4b0b-4a97-3050-2eb0a236f564",
     },
+    Obsidiana: {
+        "Level 1": "3f5b498c-4ca1-b441-4433-a186e4ae2054",
+    },
     "Champions 2021 Karambit": {
         "Level 1": "470e2855-4b86-f62d-258f-4588056a7b23",
         "Level 2": "5f991913-44c1-ba78-9547-5d8de87f04c2",
         "Level 3": "250ff684-42e9-108d-4722-a9a3ac8733e6",
+    },
+    "Champions 2022 Butterfly Knife": {
+        "Level 1": "ba0abff4-41e4-4036-980d-90a55837b692",
+        "Level 2": "08caa8e3-47a6-e8b9-2411-56ad2182a140",
+        "Level 3": "781ee669-4036-0481-c1a5-1881df718881",
     },
     "Origin Crescent Blade": {
         "Level 1": "5f059d7e-413c-445c-e36f-9a9791fba5b0",
@@ -2475,7 +2540,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "d7a02a43-47a5-556c-a69f-ec9cf6ede66d",
         "Level 2": "20f6764c-4561-0152-e8a1-e2a75deb1872",
     },
-    "Reaver, EP 5 Karambit": {
+    "Reaver Karambit": {
         "Level 1": "5ac106cd-45ef-a26f-2058-f382f20c64db",
         "Level 2": "84d08ce6-468c-b95b-9bbb-408dcdcee76f",
     },
@@ -2564,7 +2629,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Lycan's Bane Odin": {
         Default: "42bdb11e-4d51-27eb-37e5-5c91c5c94a61",
     },
-    "Reaver, EP 5 Odin": {
+    "Reaver Odin": {
         Default: "cf42ad75-43db-5426-0645-a7a3fac452c5",
         Red: "0c643904-4cbc-8806-3198-eb86c22472bf",
         Black: "c8a7b6ae-4aaa-ba5b-9fad-0da1c8b25f9e",
@@ -2655,6 +2720,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Astra: "7ec12c6f-42d6-3105-3181-f986df3b1c5b",
         Yoru: "78621693-4fb7-422b-84ee-1ba64ea68076",
     },
+    "Premiere Collision Ares": {
+        Default: "94a90423-43d7-16c5-9017-2fbe89d1b602",
+    },
     "Sakura Ares": {
         Default: "e6444ff5-4466-5468-be0a-aa997a688422",
     },
@@ -2672,6 +2740,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Standard Ares": {
         Default: "b33de820-4061-8b85-31ce-808f1a2c58f5",
+    },
+    "Immortalized Vandal": {
+        Default: "64c51524-43da-875e-ff0d-db97f3e6194e",
+        Orange: "9928d119-4f2b-0412-fcc0-389c367d1989",
+        Blue: "c6adc25d-4747-abca-1d1e-5e8973af0c68",
+        Green: "220f305f-4e8a-2505-388f-e5a805cd34a7",
     },
     "RGX 11z Pro Vandal": {
         Default: "742740d0-4e50-57e1-af32-f991c7c640f8",
@@ -2901,6 +2975,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         "Red/Blue": "9fc743eb-46c8-e382-39e4-23b5ac835efc",
         Green: "57d458a2-4457-daa3-c6af-79ba6c9f6e5a",
     },
+    "Premiere Collision Bulldog": {
+        Default: "69906458-4876-9061-0980-20a0dc06a52e",
+    },
     "Infinity Bulldog": {
         Default: "01f3fffe-4306-7b4b-9cb8-afb0027f4cf9",
         White: "ffcc04b1-43c6-29c7-9a16-3692dd0a763a",
@@ -2939,6 +3016,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Black: "e924a97d-46aa-3c3e-ec39-9abfeb811f2b",
         Red: "449a0d94-4320-dd8c-d458-fba5fdc04eb0",
         "Purple/Pink": "7e10eabf-476b-0bcb-5847-e8958d6f1132",
+    },
+    "Piedra del Sol Phantom": {
+        Default: "91cba992-415a-2aa2-d0f4-4080c360d0b4",
+    },
+    "Champions 2022 Phantom": {
+        Default: "0d81cec6-46a2-300f-c3c6-7aa67c2b8547",
     },
     "Radiant Crisis 001 Phantom": {
         Default: "0bddb2dc-44c0-a476-ca06-629b1f110515",
@@ -3065,7 +3148,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Snowfall Phantom": {
         Default: "2e170ea2-434d-5a0f-dc28-3aada990a266",
     },
-    "Reaver, EP 5 Phantom": {
+    "Reaver Phantom": {
         Default: "444ee547-4a4a-8202-685f-50b15113a77f",
         Red: "d3d5ab8a-4785-da17-acf9-f6a0cc0e6467",
         Black: "0e3787c9-47df-1fe3-8643-f3837674c8ed",
@@ -3097,6 +3180,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Winterwunderland Phantom": {
         Default: "c90457f0-4342-9615-d012-96a68cbf4304",
+    },
+    "Piedra del Sol Judge": {
+        Default: "22df7eec-4f4e-cea4-8b10-8ba645035b7a",
     },
     "Undercity Judge": {
         Default: "1d574770-4b5e-6bb0-6376-27b79c130f36",
@@ -3190,6 +3276,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Xenohunter Bucky": {
         Default: "d956ffba-4d51-9f09-bfe4-f8bc171ea164",
+    },
+    "Piedra del Sol Bucky": {
+        Default: "a3722498-4a7d-5e61-d4d4-07b9e242b424",
     },
     "Origin Bucky": {
         Default: "4b659a6f-49a2-a97d-c207-4590e06ec3b5",
@@ -3494,6 +3583,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Galleria Classic": {
         Default: "ab72692d-4447-3cb0-e8a8-30ac11d82213",
     },
+    "Premiere Collision Classic": {
+        Default: "23da120e-408d-2234-4cac-58bcf1557752",
+    },
     "Gravitational Uranium Neuroblaster Classic": {
         Default: "16b745ac-4e5f-10ab-32b0-fa8384ecb69f",
         Chrome: "e410eff8-4aae-3ed3-d2ec-71bcb45954d1",
@@ -3529,6 +3621,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Endeavour Ghost": {
         Default: "e536f594-4e59-53b7-adf2-928332f092d3",
+    },
+    "Piedra del Sol Ghost": {
+        Default: "582f5609-4ba2-1e31-d830-8c843bc2d8ab",
     },
     "Spitfire Ghost": {
         Default: "aeaa83d1-48b6-faec-d176-97833ac00197",
@@ -3587,7 +3682,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Lycan's Bane Ghost": {
         Default: "50694c36-4d57-6d9c-8a41-0aaeaf5258fb",
     },
-    "Reaver, EP 5 Ghost": {
+    "Reaver Ghost": {
         Default: "04bcace1-4d82-7093-f812-a5bff8306a54",
         Red: "4e3b34c5-4012-7842-3f42-9aaaa6af2f98",
         Black: "b7dc18e4-42bf-d734-1b3e-afa72c497c77",
@@ -3631,6 +3726,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Soul Silencer Ghost": {
         Default: "2a46e69b-4458-15ea-9d8d-a984f1265098",
+    },
+    "Immortalized Sheriff": {
+        Default: "52701d90-45ff-9831-fd16-b19dc3c5b03b",
+        Orange: "18479c74-4dca-42cb-3c82-80a6a4414c97",
+        Blue: "0efa44ca-4a81-34c3-a43f-e7bade630933",
+        Green: "c890f2dc-4ab6-37d9-8f3e-6e935af70be3",
     },
     "Aristocrat Sheriff": {
         Default: "d7216a04-4148-e210-8cc7-e1aaf06255f2",
@@ -3936,6 +4037,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Convex Operator": {
         Default: "5d5942c0-4824-11e9-0e91-65b4b76d3bea",
     },
+    "Immortalized Guardian": {
+        Default: "297c7dae-4e11-6d00-ae5f-0cb9ec868d87",
+        Orange: "09325d4b-43b5-4d94-936d-3eafd8a04d2b",
+        Blue: "1dfb5491-4306-4e61-c3b3-fe9f94508c4d",
+        Green: "541fd719-46b8-3e06-c25d-98958075c289",
+    },
     "RGX 11z Pro Guardian": {
         Default: "04b12bb8-4ba5-6611-ec16-02862bcfb939",
         Red: "78736e18-4ccc-d804-665f-8799aeb0600f",
@@ -4116,6 +4223,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Green: "9de8140d-4f88-0f50-0689-2fbc6019003f",
         Blue: "acf1784e-4796-794d-97c3-0ba1fdc7f7c0",
     },
+    "Premiere Collision Marshal": {
+        Default: "229e680e-4b55-94b7-8a07-618468647fa3",
+    },
     "Sovereign Marshal": {
         Default: "18c67b9a-419d-aa6d-224f-869f7e541fff",
         Gold: "079e90b2-4492-3f73-95bd-f5b74a7ac295",
@@ -4250,7 +4360,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Black: "22f733f9-4fb3-20f9-e032-f194d22c3d9a",
         "Red/Blue": "4de533bf-44d1-d8d2-9969-168e5a22d910",
     },
-    "Reaver, EP 5 Spectre": {
+    "Reaver Spectre": {
         Default: "1cb0fe08-40f8-431c-0cde-129fcd217cc4",
         Red: "3a2ed05c-456e-3d79-c5c6-4eb3a4cedcb7",
         Black: "9ce7d74f-4444-4676-1a31-dba72c553cee",
@@ -4285,6 +4395,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Wasteland Spectre": {
         Default: "967fc785-4b8e-0e3c-6232-07b20c01dc81",
+    },
+    "Immortalized Stinger": {
+        Default: "c7487aac-4242-67ee-28dd-638fc6971fc4",
+        Orange: "0f7ebf60-4794-1116-0af2-5f83ee488631",
+        Blue: "af03c22d-4fde-43df-0666-009f152e031b",
+        Green: "a442335b-4ad3-9802-8f77-4890ac5a8aa6",
     },
     "RGX 11z Pro Stinger": {
         Default: "1539cc4b-444d-b775-f17e-5a9a13f5ba81",
@@ -4399,8 +4515,14 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "4f97d9b1-4359-6655-64e3-5cbf2707db71",
         "Purple/Pink": "69f35d1a-486c-dd5a-4989-b7ba11cdadf5",
     },
+    Obsidiana: {
+        Default: "327d0558-4ba5-db35-2a40-d8852cd02f6d",
+    },
     "Champions 2021 Karambit": {
         Default: "62926dfc-4ffb-c65e-dd4b-8b96b6deee77",
+    },
+    "Champions 2022 Butterfly Knife": {
+        Default: "579c78dc-405e-8e01-949f-d6afb4fb1bc3",
     },
     "Origin Crescent Blade": {
         Default: "3d37799a-4ec1-61c1-ac3a-8db96119897e",
@@ -4545,7 +4667,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Reaver Knife": {
         Default: "71241f8e-4689-a110-0b22-8eac0aa512aa",
     },
-    "Reaver, EP 5 Karambit": {
+    "Reaver Karambit": {
         Default: "61eb0d02-4dfe-4413-6e29-4d9f9500e6a5",
         Red: "9c55fcb9-4710-48fd-642d-fd90c6c3b895",
         Black: "517f5413-4859-ab98-fec8-4ebd39a15121",
