@@ -254,6 +254,8 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Killjoy Spray": "17678625-4f24-6bde-58fb-7198778e4fdb",
     "Variable Removed Spray": "b11b4890-4e7f-cf5f-be7c-9c85ecd50868",
     "Don't Cross Me Spray": "0a20236d-47d4-e9e6-adb1-a69ed3fdb1cd",
+    "Matsuba Spray": "96f0973a-43fd-db33-2c17-a7a4e1cf3461",
+    "Kohaku Spray": "1e7cdd34-476c-00ee-4169-87a643709e3d",
     "Lights Out Spray": "9c65bbe6-41da-c50c-be81-839214eede7c",
     "Lucky Tiger Spray": "efd0d001-4edb-34eb-c05c-139817d4840a",
     "Celestial Spray": "cd9986f8-4473-914d-7918-caa21d23710f",
@@ -1095,6 +1097,12 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Don't Cross Me Spray": {
         "1": "6e045ccf-42e9-1acf-9522-5b8c34193fac",
+    },
+    "Matsuba Spray": {
+        "1": "d2e64030-440a-721a-21e3-39a724501b83",
+    },
+    "Kohaku Spray": {
+        "1": "7edd58a5-4c93-ba60-8863-938231ebb04b",
     },
     "Lights Out Spray": {
         "1": "5c618d37-4959-19b0-4493-f698d330e5ea",

@@ -119,6 +119,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     ".SYS Buddy": "c1755278-4574-7e9f-c7af-48820d6a02f4",
     "Hawko Buddy": "e4689a4b-4df6-86e8-8d34-a19bdc01afe7",
     "White Hat Buddy": "e058e4f5-40c4-a26a-e6c7-33a4baf2e21f",
+    "Ready to Roll Buddy": "5f5db91e-4fd5-e0f9-3944-63a93397d3ee",
     "Safe Haven Buddy": "ae240163-4893-5d7e-9029-31a3ca2a9c84",
     "Xpert Comms Buddy": "8848ff77-43b1-5f73-8106-778f1ea8593e",
     "Owl Charm Buddy": "ebbced2d-4851-6b5d-ff3f-5baaea322dbf",
@@ -138,6 +139,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Kingdom Logo Buddy": "15031b6f-47f4-d8e5-6025-4fb692c841a1",
     "Kitsune Mask Buddy": "7c62571f-49ce-2af5-0e0c-f38845168da7",
     "Perfect Pattern Buddy": "25c6099b-411e-573e-673c-b594cba84c10",
+    "Kohaku & Matsuba Buddy": "e052f69c-48e2-4d3f-6616-6695d419a3e7",
     "Dance of Luck Buddy": "90b6b7eb-4960-5a26-7d49-7cbab0d7cfb2",
     "GL Have Cat Buddy": "d8c85cae-44fd-8d97-a948-25acfe80b109",
     "Celestial Buddy": "9f6bada3-4911-7863-ff39-6984140e0201",
@@ -619,6 +621,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "White Hat Buddy": {
         "1": "abd3d1c7-42b6-46fc-35d2-ac9cf1f33607",
     },
+    "Ready to Roll Buddy": {
+        "1": "699b5264-46c0-d474-3f44-7fa3e62bde94",
+    },
     "Safe Haven Buddy": {
         "1": "d606df6a-4f8a-1273-083a-5b925a178e36",
     },
@@ -675,6 +680,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Perfect Pattern Buddy": {
         "1": "abd1acb2-45ca-67a2-328e-b9afc833240a",
+    },
+    "Kohaku & Matsuba Buddy": {
+        "1": "98442884-4d6e-65d8-3295-69bde3315d92",
     },
     "Dance of Luck Buddy": {
         "1": "fdc908cf-493d-4b1d-bdbd-0da7e7525520",

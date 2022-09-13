@@ -7,7 +7,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Xenohunter Odin": "94c085e6-48e1-c879-2552-88bf7850c5a8",
         "Glitchpop Odin": "97af88e4-4176-9fa3-4a26-57919443dab7",
         "Nitro Odin": "2715f184-46cc-bec1-dd7c-e7b4d1aeb625",
-        "dot EXE Odin": "cda41b87-4d3a-c17c-5f6d-8990cc9c5efb",
+        ".EXE Odin": "cda41b87-4d3a-c17c-5f6d-8990cc9c5efb",
         "Prime//2.0 Odin": "157bcebe-484d-82e2-2a60-c8b4b11197ea",
         "Prism III Odin": "72e724e9-4ba4-2d12-ce1a-8db1a528b9d3",
         "Smite Odin": "9e648b20-4ed5-1f34-87a9-979cbe9a958a",
@@ -68,7 +68,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Forsaken Vandal": "437307c6-424c-6a48-9738-949b91166353",
         "Team Ace Vandal": "25980352-4407-60ff-eb27-058c1ea696cc",
         "Ruin Vandal": "948d31a0-4c2a-9c82-2b89-fe9f2ec65036",
-        "dot EXE Vandal": "6f3a2a08-4f32-dbdc-8dca-628a5c840052",
+        ".EXE Vandal": "6f3a2a08-4f32-dbdc-8dca-628a5c840052",
         ".SYS Vandal": "23d61dbb-457a-5590-2e91-38a67a52c332",
         "Horizon Vandal": "9d71edb0-453c-defa-507d-57aa2935b379",
         "Prime Vandal": "b9ee2457-481c-6776-3f5b-0ca8e8f90c89",
@@ -142,6 +142,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Serenity Phantom": "a903e567-480f-a3f9-adb8-1da714a2d63c",
         "Ruination Phantom": "5b43d27b-419c-f2bc-53fe-d7829dad46b3",
         "Kingdom Phantom": "e13afe1e-4734-2094-fee8-9db016e4d54a",
+        "Kohaku & Matsuba Phantom": "8f82cff0-44b9-b792-8dd2-b2be8538421b",
         "Smite Phantom": "8d3ead4a-4421-f1f2-4292-ecac859fc135",
         "Celestial Phantom": "8c0cc1e8-4c1b-20a0-122d-16b4334d1b80",
         "Spline Phantom": "13f553a1-4124-7c29-05e9-e7932fdeabb6",
@@ -172,12 +173,13 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Rush Judge": "f6db3976-4c70-c3bf-01f8-dca6d335319a",
         "Team Ace Judge": "fdf7fef7-43db-9409-be4c-44bc0b5084f6",
         "Shimmer Judge": "ce38c32d-43e6-e840-3981-668454383e22",
-        "dot EXE Judge": "fbd23fdf-4d7b-8a50-afa5-c3ad6e7266e5",
+        ".EXE Judge": "fbd23fdf-4d7b-8a50-afa5-c3ad6e7266e5",
         "Goldwing Judge": "37735cf0-4c4f-6efd-6222-8582622d68a0",
         "Hydrodip Judge": "3d8f9c7d-4259-4710-1f94-0fbc4f25035c",
         "Outpost Judge": "400d71b1-4090-6abf-224e-21938569fe24",
         "Prism III Judge": "1fc3f066-4211-d65a-42ab-b287c6bb2448",
         "Serenity Judge": "3a1c857a-4671-0667-8efe-ee90b8ba1e5a",
+        "Kohaku & Matsuba Judge": "da3cedea-4f2e-c501-ec79-438433ffabdf",
         "Smite Judge": "5324bc65-44aa-1a16-ede4-0e9b56f35d0e",
         "Celestial Judge": "57ad1e5d-4289-4de0-7926-899cef10db37",
         "Luxe Judge": "5237cfca-4d83-6190-a7f9-d2bdc117ea67",
@@ -269,6 +271,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Avalanche Classic": "6b6a219d-490a-45f1-1e5c-40bbf3df5f28",
         "Prism III Classic": "62abf8b2-4511-131d-42c9-81a5efd1b901",
         "Kingdom Classic": "e72d72ab-4284-1469-b544-478a811a29a6",
+        "Kohaku & Matsuba Classic": "be7cf362-4993-b9e4-9ba9-cdac6c99b8e4",
         "Smite Classic": "22fdc42d-4ad6-2bec-8033-8a8bdf178826",
         "Spline Classic": "750d4f04-4fea-391b-fa8b-539815a63164",
         "Galleria Classic": "2f9f4637-4377-b55f-97a1-1e8974e29b27",
@@ -286,7 +289,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Endeavour Ghost": "cd281dcd-4276-1def-11d9-74a4a72db204",
         "Piedra del Sol Ghost": "9db45d13-4cc3-4b6c-4801-459b79f8cda5",
         "Spitfire Ghost": "d2ed8432-44a2-fb53-cd5f-089251862942",
-        "dot EXE Ghost": "67d3e2f7-4b73-7598-0027-63bd9e2e5fcc",
+        ".EXE Ghost": "67d3e2f7-4b73-7598-0027-63bd9e2e5fcc",
         "Hush Ghost": "a1d3a9e2-4f61-b1f7-3a01-cf867264d1cb",
         "Infantry Ghost": "65ce6a98-4867-b695-279f-819c44ec6f95",
         "Goldwing Ghost": "44be88b3-4a0e-64c8-950d-66a969e71f7e",
@@ -381,6 +384,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Infantry Operator": "341ef273-43fb-7911-71e8-50adada4cee1",
         "Prism Operator": "5ced2c69-442e-d1ad-83fe-8fb8b2ac0c0f",
         "K/TAC Operator": "9ffd45c4-4fa4-dca0-f46f-2d99ad1eae20",
+        "Kohaku & Matsuba Operator": "403cce8c-4484-a796-a6f6-a0a07d9832e0",
         "Luxe Operator": "0bd5da19-491f-dd4a-27e2-c9959b10a87a",
         "Magepunk Operator": "7e831918-4580-5e2a-089a-84ad58fe1aae",
         "Spline Operator": "b2164926-4b85-852a-4bd7-d9bc27a642da",
@@ -549,6 +553,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Broken Blade of the Ruined King": "b1e9530d-4618-4f2e-1b75-f1a90c91b19e",
         "Kingdom Knife": "f82aa022-4a6c-fa40-105d-92af6510ae1b",
         "K/TAC Blade": "83e8641b-41d0-821d-5eeb-5999e9294a0c",
+        Equilibrium: "2e4300f9-49b3-6bbe-af7c-94a6f56ff12e",
         "Smite Knife": "46163791-47b9-2ef0-d255-aaa5146051bb",
         Catrina: "8e760310-4d95-354b-a910-049eaa4d2fc6",
         "Celestial Fan": "7d45aaad-4ac9-77b1-e7ca-3991be5721dd",
@@ -592,7 +597,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Nitro Odin": {
         "Level 1": "5f86ac54-46b0-806f-f200-dd89fbcd7cb9",
     },
-    "dot EXE Odin": {
+    ".EXE Odin": {
         "Level 1": "49292f21-4f5e-0a1a-3671-54b7ca8fe65a",
     },
     "Prime//2.0 Odin": {
@@ -809,7 +814,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Ruin Vandal": {
         "Level 1": "3d1bc8e8-4759-148c-7775-5a96e8c975fd",
     },
-    "dot EXE Vandal": {
+    ".EXE Vandal": {
         "Level 1": "c9ee9a00-453d-a358-8501-3ebb7ca3765e",
     },
     ".SYS Vandal": {
@@ -1064,6 +1069,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Kingdom Phantom": {
         "Level 1": "a7229cba-4691-62b0-9c40-f59a29817ddc",
     },
+    "Kohaku & Matsuba Phantom": {
+        "Level 1": "dd5154b6-434a-9db7-0583-3e9ef8f63319",
+    },
     "Smite Phantom": {
         "Level 1": "19b20b51-472b-e837-e5da-f8a348110dbf",
     },
@@ -1173,7 +1181,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Shimmer Judge": {
         "Level 1": "e6bdb298-4372-7c74-a057-f891a3ade5e7",
     },
-    "dot EXE Judge": {
+    ".EXE Judge": {
         "Level 1": "f8cd4279-4530-db62-1e4e-aa82c129b045",
     },
     "Goldwing Judge": {
@@ -1190,6 +1198,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Serenity Judge": {
         "Level 1": "4afdc818-4665-1582-6319-8081aa64e550",
+    },
+    "Kohaku & Matsuba Judge": {
+        "Level 1": "ccf16a23-4222-1abe-d8f0-93a782b5b449",
     },
     "Smite Judge": {
         "Level 1": "1b94d997-4db6-014f-4cb8-c1b4df7d7ebc",
@@ -1503,6 +1514,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Kingdom Classic": {
         "Level 1": "6ab90b28-49f1-9e1b-5083-2da2de61e109",
     },
+    "Kohaku & Matsuba Classic": {
+        "Level 1": "066f6d01-4940-606a-70f6-e78fb20f5d2d",
+    },
     "Smite Classic": {
         "Level 1": "eb35e4e1-4138-9ece-08e2-69bd414cf598",
     },
@@ -1552,7 +1566,7 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Spitfire Ghost": {
         "Level 1": "c247790e-4a6b-a3f2-1e1f-ccae710b5179",
     },
-    "dot EXE Ghost": {
+    ".EXE Ghost": {
         "Level 1": "9466088a-4ad8-cb08-ec9a-45aaba3a6acd",
     },
     "Hush Ghost": {
@@ -1880,6 +1894,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "K/TAC Operator": {
         "Level 1": "e045334d-4b19-26df-739c-f89fd561714f",
+    },
+    "Kohaku & Matsuba Operator": {
+        "Level 1": "1fe051aa-40e9-3ff6-585a-e384f0197224",
     },
     "Luxe Operator": {
         "Level 1": "e5a2e04a-4805-1244-5376-06b40d7c6cbb",
@@ -2482,6 +2499,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "K/TAC Blade": {
         "Level 1": "a17e9fcc-4081-9b5a-cf63-fca395e652df",
     },
+    Equilibrium: {
+        "Level 1": "ef67d6cb-4f7f-28ce-2973-cf90a97ae54d",
+        "Level 2": "99a21016-41bf-2dfe-43e6-6f9ffe50d8c0",
+    },
     "Smite Knife": {
         "Level 1": "b6768f01-4d72-f0f1-65b5-71b751536490",
     },
@@ -2590,7 +2611,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Nitro Odin": {
         Default: "064eb4b1-477a-23ba-2f70-6a9732f68ece",
     },
-    "dot EXE Odin": {
+    ".EXE Odin": {
         Default: "c1ed5bf3-4827-3e3a-ebbb-1ba42a226e59",
     },
     "Prime//2.0 Odin": {
@@ -2818,7 +2839,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Ruin Vandal": {
         Default: "9ff28c95-4e69-56b2-6980-e09b503572bb",
     },
-    "dot EXE Vandal": {
+    ".EXE Vandal": {
         Default: "2be20a2a-4582-b689-f00e-a98dafad65eb",
     },
     ".SYS Vandal": {
@@ -3088,6 +3109,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Kingdom Phantom": {
         Default: "83697aaa-415d-3ec3-0205-fcab8de464d2",
     },
+    "Kohaku & Matsuba Phantom": {
+        Default: "949da68e-45c0-5808-4ffc-8ca8648bd75e",
+        Dark: "85f4ac84-4449-34de-79d5-d39a9139f690",
+    },
     "Smite Phantom": {
         Default: "3af79e9d-4e55-425e-22da-dcab4985706a",
     },
@@ -3211,7 +3236,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "e01f967d-4aa0-6503-4cbf-17a8f000581b",
         Teal: "f40c4b93-4678-927f-34e4-67bd1a61cdec",
     },
-    "dot EXE Judge": {
+    ".EXE Judge": {
         Default: "066f07a2-42c5-4197-497a-f0a3fdbb4a6b",
     },
     "Goldwing Judge": {
@@ -3231,6 +3256,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Serenity Judge": {
         Default: "7242d958-42f4-ca19-bb8b-7db67de3d8c5",
+    },
+    "Kohaku & Matsuba Judge": {
+        Default: "40a5a161-4e9f-9017-2cf7-d8b1e5b80255",
+        Dark: "5b93f92b-41b7-f264-e25e-c5a5f6b1644b",
     },
     "Smite Judge": {
         Default: "b56dc59c-4b76-bee2-9896-a5b778041865",
@@ -3571,6 +3600,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Kingdom Classic": {
         Default: "e7644f3c-42d3-8336-5135-17a4883032fd",
     },
+    "Kohaku & Matsuba Classic": {
+        Default: "ccbc3fdc-4117-0626-aece-be9ab47d961e",
+        Dark: "06bab6d9-4aa3-e6dd-911c-0b912de2b8c8",
+    },
     "Smite Classic": {
         Default: "6853e4e7-4241-a574-f4cd-0d9949008cfe",
     },
@@ -3628,7 +3661,7 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Spitfire Ghost": {
         Default: "aeaa83d1-48b6-faec-d176-97833ac00197",
     },
-    "dot EXE Ghost": {
+    ".EXE Ghost": {
         Default: "12966603-4cb3-03dd-bf2e-338fb15d144f",
     },
     "Hush Ghost": {
@@ -3973,6 +4006,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "K/TAC Operator": {
         Default: "cff27f2f-4788-daf3-8297-939da197bab1",
+    },
+    "Kohaku & Matsuba Operator": {
+        Default: "fc6a67b3-43d8-14db-a4b7-8d8d5e06f330",
+        Dark: "a8270780-4e7d-53f7-a9da-3fb0f003db1d",
     },
     "Luxe Operator": {
         Default: "6a0320ac-4cfc-c805-f75c-b9879cd842c1",
@@ -4610,6 +4647,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "K/TAC Blade": {
         Default: "2265cbe1-4b96-9f34-68ed-09900e0eaba9",
+    },
+    Equilibrium: {
+        Default: "2733ffb9-4285-f7cf-e01e-dbb9314f3a96",
+        Dark: "f6eb564b-4b08-ad4c-6704-42bf4e91453e",
     },
     "Smite Knife": {
         Default: "9c0fc8e8-4e36-86b7-8905-ee848916ea03",
