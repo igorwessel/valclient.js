@@ -46,6 +46,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "BoomShaka Spray": "32fc4bfd-4897-ce74-55d2-9bb008f0decb",
     "Bombshell Spray": "a64b8eda-4920-434a-5346-30bfb1b58e39",
     "Explorgi Spray": "25d82d17-4739-e206-e8aa-d1bd4fd4dae6",
+    "ChronoVoid Spray": "ee9aebf4-4cc7-8fe8-022b-1c8f50500e7b",
     "Danger Spray": "32570250-4795-981d-bda7-34963aa042f9",
     "One In The Chamber Spray": "90b297b4-4e8f-f87c-8008-36905268fe52",
     "Chamber Spray": "1be33c9a-48a8-5aa8-3798-3989c40c96e1",
@@ -473,6 +474,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Explorgi Spray": {
         "1": "1dc18b98-4993-5fab-304f-6eaba1b85c44",
+    },
+    "ChronoVoid Spray": {
+        "1": "79c7a0ad-4795-fc93-d524-83b319cd8029",
     },
     "Danger Spray": {
         "1": "4dd06ffc-45eb-85e1-0c70-b78ca9f52ac7",

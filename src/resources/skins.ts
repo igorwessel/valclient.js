@@ -60,6 +60,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Champions 2021 Vandal": "9bf19b77-4b33-7203-9f2c-16932970622f",
         "Origin Vandal": "6c4315b8-4ff1-baaa-5aac-5790c7443353",
         "Glitchpop Vandal": "74789f33-4632-8052-96d7-258538721a32",
+        "ChronoVoid Vandal": "8e762a1f-4102-b7ce-d6a0-9690c5bfe160",
         "Prelude to Chaos Vandal": "522a264e-4ca7-adb0-6cf1-28b2ef938727",
         "Elderflame Vandal": "18609205-4edb-5966-cff8-0fba0230ba1e",
         "Sarmad Vandal": "5b6b1eee-4185-8f83-9374-3391d0f0f742",
@@ -130,6 +131,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Nebula Phantom": "57f91d68-4cda-76c0-c258-7ba507cd6f87",
         "Undercity Phantom": "ed3ac995-4fd1-3079-27aa-4aab84447833",
         "Glitchpop Phantom": "25a7f0f2-4bce-7e45-b4b0-ca9264f5dfcc",
+        "ChronoVoid Phantom": "2aac8bb3-4cfa-b806-21e4-5a8e9904caa4",
         "Doodle Buds Phantom": "3a091315-4e87-31d5-7cdb-27804a177fd2",
         "Singularity Phantom": "5eec4ce6-443d-e9b5-4c5b-2b967d426bd3",
         "Sarmad Phantom": "cd07ba8f-4dae-0410-582e-71acdef102ce",
@@ -169,6 +171,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Piedra del Sol Judge": "d7717613-4ef6-b314-6a95-9e8a1ee603bf",
         "Undercity Judge": "e413125e-40c6-cccd-de35-f28e34c57442",
         "Glitchpop Judge": "28a659a4-439e-fcd0-6236-d39979ee5c51",
+        "ChronoVoid Judge": "4d2ec3f4-446e-a501-74d8-5ab750f50984",
         "Elderflame Judge": "0221b120-444b-6d1b-fc50-e4a98e470eb2",
         "Rush Judge": "f6db3976-4c70-c3bf-01f8-dca6d335319a",
         "Team Ace Judge": "fdf7fef7-43db-9409-be4c-44bc0b5084f6",
@@ -319,6 +322,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Immortalized Sheriff": "304e1a7a-411d-2d27-dad6-c09702b5ea2f",
         "Aristocrat Sheriff": "840f12d8-467b-1a5e-f79c-b893b72b2fbc",
         "Nebula Sheriff": "55ef0ffa-44fe-03ac-dcf0-1982df0857aa",
+        "ChronoVoid Sheriff": "e1fdd246-4a6c-af26-f0a0-65a48f2586da",
         "Singularity Sheriff": "bfd9e773-4376-1f6a-98f2-dc93f0c0607c",
         "Surge Sheriff": "2674c385-4397-0383-04df-988d8d6fd2c8",
         ".SYS Sheriff": "3850ea5a-4e51-d913-7a44-48b2589e06b9",
@@ -535,6 +539,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         Hack: "c91e4850-4d32-3b12-f411-3e9f644ea616",
         "Glitchpop Dagger": "ddc025b2-475f-889a-2800-80b4215582bc",
         "Glitchpop Axe": "f0c42e14-4a92-132d-dfd4-cbbef103340c",
+        "Terminus A Quo": "1b8de6d7-4f37-7170-acd7-e78829f7959a",
         "Blade of Chaos": "6e0496c1-4c98-7abe-16c4-7ca3653e5cd8",
         "Elderflame Dagger": "94b40026-4efb-39ea-69d7-fca60be39c56",
         "Singularity Knife": "151ee26c-4e82-e7ca-dad1-099e7fb34774",
@@ -781,6 +786,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "084e16e5-4340-618f-09ba-128331f9b8cc",
         "Level 4": "7a322cff-4acb-15c4-5006-049655bfa22f",
     },
+    "ChronoVoid Vandal": {
+        "Level 1": "59d61899-4573-65ea-0e42-2ea6d324d32b",
+        "Level 2": "6553ba0a-4d44-799e-69cc-a89aae212409",
+        "Level 3": "bd2d47b0-42f8-6684-bf01-6c886faff0c8",
+        "Level 4": "a722bac4-457a-959b-3770-e0b3eaf6528e",
+    },
     "Prelude to Chaos Vandal": {
         "Level 1": "1010fb40-4344-6ec8-2a8a-33bf076339b6",
         "Level 2": "273db50c-41fd-99eb-89fa-d0969ef739bb",
@@ -1023,6 +1034,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "7f54b1ac-49b5-48ec-9926-8a966a0233a5",
         "Level 4": "dee8b295-4a06-15fb-e952-acb6298d5929",
     },
+    "ChronoVoid Phantom": {
+        "Level 1": "aeb0ea2e-4f50-6b34-27b0-f2a755d27f6a",
+        "Level 2": "fb9ba36e-4901-e621-cc0b-dba82ba9eded",
+        "Level 3": "78f1af5d-45f3-544f-3aec-0bb5f6b0efcf",
+        "Level 4": "cf09f992-4a76-aeb4-7ca6-35b5d823ec81",
+    },
     "Doodle Buds Phantom": {
         "Level 1": "f9d54c11-4c6f-575b-5bed-3cb693f6f2ba",
         "Level 2": "e5b46108-4d0a-c614-a845-fea7111beda7",
@@ -1165,6 +1182,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "c9480c4d-4005-8cd9-e1a2-18bed7f2e801",
         "Level 3": "6f48190c-403c-3a92-1a89-f983fa9281db",
         "Level 4": "c60c98e3-41de-ed9c-fb92-aa9c6e0bc7a0",
+    },
+    "ChronoVoid Judge": {
+        "Level 1": "b0d5c4da-4d81-4386-e841-759818ce9b6c",
+        "Level 2": "c6065860-4afc-ef16-97a0-c88445221a2c",
+        "Level 3": "6ee35273-4fe5-c352-1332-57b0eb04ccac",
+        "Level 4": "b05f2a52-40c9-10de-9c90-2ca8e01a5da4",
     },
     "Elderflame Judge": {
         "Level 1": "d8c9fee3-4e02-bc92-a235-608a556905ae",
@@ -1663,6 +1686,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Nebula Sheriff": {
         "Level 1": "353c1e5f-4258-c49a-c0d6-319ad33bffea",
+    },
+    "ChronoVoid Sheriff": {
+        "Level 1": "ade427fc-4b24-f290-c91a-b1904b787f42",
+        "Level 2": "5ea7ae90-4b5c-bc7d-e1b4-25a1dae54e6d",
+        "Level 3": "dc7fb3f6-476b-fac7-2e2d-f4b1d1ed062d",
+        "Level 4": "1e60239c-4322-aec5-8e82-f39cfb196f88",
     },
     "Singularity Sheriff": {
         "Level 1": "4276d2b5-4b1c-b636-aff0-4ea579d875d7",
@@ -2438,6 +2467,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "f27623a6-40de-20b9-17b5-c5bed27453a7",
         "Level 2": "3d6a7e42-4f6b-ee22-fa38-6cb370c93943",
     },
+    "Terminus A Quo": {
+        "Level 1": "96fe45cd-448d-890f-f3f6-86b25516c1a0",
+        "Level 2": "4840c1fc-4570-d487-1dff-68977a0d6e67",
+    },
     "Blade of Chaos": {
         "Level 1": "d6b75f1b-409b-bae9-d378-d3adf04a3ca9",
         "Level 2": "02f5a8ee-4f2f-cc11-f59c-a0bf0c488ee6",
@@ -2808,6 +2841,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "16e8a438-4761-1887-3792-7bab966a7483",
         Gold: "d9c26f8e-496a-16c1-36e1-cfb81fb22d5f",
     },
+    "ChronoVoid Vandal": {
+        Default: "d6be385b-44f7-271a-6b1b-34be3251b6c7",
+        Purple: "44ecb28b-4e9b-5a0c-336e-66939aed72b1",
+        Red: "95246972-4a7c-01f9-16dc-d3aab7cc1b45",
+        Black: "57892cff-49ce-a57e-e657-faa1226b587c",
+    },
     "Prelude to Chaos Vandal": {
         Default: "10ff3757-4099-f828-d391-e28d2e634924",
         Green: "eef9e539-48dc-f161-a608-ecb1634d3b6b",
@@ -3059,6 +3098,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "710ff5e9-48fd-5890-b061-9689f54fe848",
         Gold: "ba802a0b-4038-4208-89c7-58828408ebed",
     },
+    "ChronoVoid Phantom": {
+        Default: "6a203339-4efb-55fd-3473-b59503c224b2",
+        Purple: "048ae1e3-48e5-c5dd-65ef-01b962267db2",
+        Red: "765c1e64-4e53-f855-a0f9-c7bb0254d4e5",
+        Black: "62228fbd-418d-a7d6-e44a-06885debdef5",
+    },
     "Doodle Buds Phantom": {
         Default: "04b49ef4-40a2-f6e9-c0ba-0995ca536f91",
         Tactifriends: "8b6534d4-4460-20f5-15fc-83a5c301cdea",
@@ -3217,6 +3262,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "2abe2d6a-4d38-434a-ff64-608b936c2661",
         Red: "1e959cbe-4649-a049-f789-b2b9c9d7ec26",
         Gold: "bb88381f-423f-cd76-9ac1-7e9fe541cf25",
+    },
+    "ChronoVoid Judge": {
+        Default: "663d71a6-4bbb-19e7-5985-8394c4bd434c",
+        Purple: "d3382bfe-4890-7c3d-7372-51893966d4a8",
+        Red: "df6555e9-42c9-4793-35f8-6b948994ea66",
+        Black: "4d490e20-4d13-9308-7abc-c29732caaef1",
     },
     "Elderflame Judge": {
         Default: "72b9e3f7-427f-3d24-f618-11b0f28feb89",
@@ -3771,6 +3822,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Nebula Sheriff": {
         Default: "27881222-49ea-88b1-c2f6-c5b440ed91c1",
+    },
+    "ChronoVoid Sheriff": {
+        Default: "30d62003-49f2-9ef8-8393-6aa94893c18d",
+        Purple: "510c3370-4218-985e-77a6-f7849207aeff",
+        Red: "f916f30e-45dd-7c0d-e218-faa924a41746",
+        Black: "641c542b-40f5-70dc-677f-c8a0f3603d2f",
     },
     "Singularity Sheriff": {
         Default: "00831706-4e60-d5f9-b600-e38be89828d0",
@@ -4584,6 +4641,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Glitchpop Axe": {
         Default: "ded15275-482e-e9da-0002-1b9d495d2e98",
+    },
+    "Terminus A Quo": {
+        Default: "27bfba0e-4747-41ca-b1c1-2082db194ba1",
+        Purple: "e07b0750-4eb5-c92c-f863-838f159ac23e",
+        Red: "8d257fcd-4fd0-a428-2566-a0b8b3332ac7",
+        Black: "3c8953f2-4c99-0dbd-e06b-0abfadd5ec99",
     },
     "Blade of Chaos": {
         Default: "54417551-4a5d-9b90-35dc-a28b93feb50b",

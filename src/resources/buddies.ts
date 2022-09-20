@@ -74,6 +74,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Glitchpop Buddy": "c5bee9f1-4548-03c3-f88d-d7bf38d1943e",
     "Glitchpop, EP 2 Buddy": "faca42f0-47d9-0fcb-116f-9e9b37060bd1",
     "Champions 2022 Dad Hat Buddy": "9a6231c0-41e5-c42d-9745-cc9010877fdc",
+    "ChronoVoid Buddy": "b681b5cf-4394-1af7-7ccb-b8a412d05010",
     "Dalgona Coffee Buddy": "a1e75ddf-47ab-ae85-e223-90b94563c702",
     "Danger Lizard Buddy": "d5b10115-43ea-42e7-8843-5bb5c1e73c6e",
     "Prelude to Chaos Buddy": "cd1500f0-470c-9753-1cb9-43924c98fc84",
@@ -485,6 +486,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Champions 2022 Dad Hat Buddy": {
         "1": "68dab3e8-4bd0-f504-f1c6-a0a307634264",
+    },
+    "ChronoVoid Buddy": {
+        "1": "fdfc3887-4522-02d5-ae1e-be9170758667",
     },
     "Dalgona Coffee Buddy": {
         "1": "35608d62-4f08-dc80-7211-ce94ec8b7508",
