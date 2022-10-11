@@ -79,6 +79,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Nunca Olvidados Vandal": "6460e252-48ef-8312-6f4f-2cb5f1b56972",
         "Luxe Vandal": "30fd16af-4560-b2e2-7780-ee8148a0946a",
         "Silvanus Vandal": "d758abc0-4d99-62d3-b22b-0db0e57de881",
+        "Crimsonbeast Vandal": "8b688de6-42d3-9430-8f38-32b0b3d1c2c6",
         "Sensation Vandal": "72c1e90b-40ca-4304-02eb-28bb2aea4ed2",
         "Sakura Vandal": "f946ef5c-46ab-e146-a712-1d99a1651356",
         "Schema Vandal": "9a6c6db7-4f56-12d6-8339-6386f12090e8",
@@ -187,6 +188,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Celestial Judge": "57ad1e5d-4289-4de0-7926-899cef10db37",
         "Luxe Judge": "5237cfca-4d83-6190-a7f9-d2bdc117ea67",
         "Coalition: Cobra Judge": "0b8816a2-42ad-9353-c591-f7863981d7fe",
+        "Crimsonbeast Judge": "5e342c5c-4757-4c4e-ca7c-a4b97930308b",
         "POLYfox Judge": "5d217dd0-4f2c-cfca-274e-3f8f9d518b13",
         "Divine Swine Judge": "a913d712-4c29-d7f4-0f8a-d790e023ba3c",
         "Jigsaw Judge": "ba93a991-407f-0c47-2d26-72a4196b4164",
@@ -332,6 +334,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Magepunk Sheriff": "6460edbf-458d-bf61-7519-519305ba5da2",
         "Minima Sheriff": "46ffe3ea-4fb5-7773-6242-f5b57bf53ef8",
         "Silvanus Sheriff": "721ab58c-4ba2-b7ae-c571-0993d9799fc5",
+        "Crimsonbeast Sheriff": "97a3cdc4-4f3a-ed26-02d6-6dbf6c1380d0",
         "Ion Sheriff": "83778c03-45a3-67a2-3c89-6b8598327d58",
         "POLYfox Sheriff": "54337477-4aec-4a68-4673-7c8731639d30",
         "POLYfrog Sheriff": "91d95358-4a3e-3abc-a251-98826225f18d",
@@ -448,6 +451,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Magepunk Marshal": "27ab5ed6-4614-d5c2-c53f-5391febe7099",
         "Coalition: Cobra Marshal": "805722c4-4ac7-6179-7ce7-658b5f26d6ed",
         "Galleria Marshal": "ad6309b5-4788-d401-33d0-4dbaeeadaf87",
+        "Crimsonbeast Marshal": "af77e583-41fc-b0c2-3728-058d02502039",
         "POLYfrog Marshal": "6eea7984-4ca4-d547-4d50-b4a608072feb",
         "Divine Swine Marshal": "ad83a57d-414c-f714-a97f-99bad1128b2b",
         "Artisan Marshal": "4986a893-48a5-4c23-11f2-70bb9e9d284d",
@@ -566,11 +570,13 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Magepunk Electroblade": "c18e781e-40a0-80e6-256a-54ae7355e7eb",
         "Magepunk Shock Gauntlet": "59f627f1-42f3-670d-5323-3499c2913289",
         "Spline Dagger": "f6cfd500-4eab-3c1d-9eeb-188e90731692",
+        "Crimsonbeast Hammer": "ec04e1a4-4067-bb9c-c18b-46a80e5f3f1f",
         "Genesis Arc": "3209e2af-4703-088b-ebef-8da89b4cef87",
         "Ion Energy Sword": "46664f5b-49ca-3e09-4fe5-56bdef536335",
         "Oni Claw": "206fc3fe-45a0-6c19-c367-229b98b6a2aa",
         "Artisan Foil": "c39f405f-42f1-acd1-a350-d3af39c32e33",
         "Personal Administrative Melee Unit": "239ed20b-479c-e08e-c4b5-6ba0394576d4",
+        "Random Favorite Skin": "b5f42a00-425a-6fdf-61af-bb9a564c3d79",
         "Gravitational Uranium Neuroblaster Baton": "0357caf1-41a9-cb1c-c080-38aab13d9a7e",
         "Snowfall Wand": "52a1647c-42d9-b40e-16cf-a7821566ad81",
         "Relic of the Sentinel": "6fd8cc46-48b3-f02c-46e3-cba372e7a328",
@@ -622,6 +628,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Sensation Odin": {
         "Level 1": "1bfea917-4262-37ba-3a76-04b937f2d0be",
+    },
+    "Random Favorite Skin": {
+        "Level 1": "059c9307-4d19-00f3-c0e5-49b8bc66bd40",
     },
     "Lightwave Odin": {
         "Level 1": "162beb92-4ab7-4383-da51-4b94ba90bd5d",
@@ -857,6 +866,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Silvanus Vandal": {
         "Level 1": "9d501eec-4084-5d44-32ef-6e8ed5b0ed49",
+    },
+    "Crimsonbeast Vandal": {
+        "Level 1": "aae492eb-4d6d-097d-1d47-4fa31ced9751",
+        "Level 2": "7c3e8050-40ce-9a75-c1ef-7fa270990ceb",
     },
     "Sensation Vandal": {
         "Level 1": "f4bfff96-487a-cf9e-08cc-d590d962c4e6",
@@ -1236,6 +1249,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Coalition: Cobra Judge": {
         "Level 1": "fe644484-4d07-5472-9e4a-d3992f2f2ecb",
+    },
+    "Crimsonbeast Judge": {
+        "Level 1": "8c02ea4f-45ce-76ba-9ea6-198156deb9eb",
+        "Level 2": "e1401626-424d-a263-2b60-4eb2147c096c",
     },
     "POLYfox Judge": {
         "Level 1": "3c23fdc3-4300-ec78-5123-bcb0dc456473",
@@ -1726,6 +1743,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Silvanus Sheriff": {
         "Level 1": "9dbc52e2-4889-cbe5-b874-4f8f0f8f3781",
     },
+    "Crimsonbeast Sheriff": {
+        "Level 1": "72586d88-46c4-1532-7507-d6bb5c2d201c",
+        "Level 2": "11217acc-4f12-d9fe-60a4-88b32f355bd2",
+    },
     "Ion Sheriff": {
         "Level 1": "2b555f97-46bb-5949-3531-979f5bc817f0",
         "Level 2": "a60421b9-4b86-ccd3-ca08-808ef4cf112b",
@@ -2145,6 +2166,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Galleria Marshal": {
         "Level 1": "50265ad5-4f14-2b32-924e-02bbed2bea6f",
     },
+    "Crimsonbeast Marshal": {
+        "Level 1": "57a31c23-4742-9bef-740e-c998061d720b",
+        "Level 2": "55db84f5-4b04-b9a8-6994-30bfe598286d",
+    },
     "POLYfrog Marshal": {
         "Level 1": "f1b4577e-4dd3-6573-472c-a68cfe695d60",
     },
@@ -2560,6 +2585,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Spline Dagger": {
         "Level 1": "d6e93360-46a2-0103-afa0-8b91e78b6fe8",
     },
+    "Crimsonbeast Hammer": {
+        "Level 1": "5a27fbea-4f1d-62f9-8e5f-f494b4f0d322",
+        "Level 2": "ba4bb49f-4494-4698-8d5f-e5952c92604b",
+    },
     "Genesis Arc": {
         "Level 1": "a080b538-4593-b092-d29c-04b80e6e983f",
     },
@@ -2670,6 +2699,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Sensation Odin": {
         Default: "53ce97ed-47e0-4856-0446-f7bc86e869e0",
+    },
+    "Random Favorite Skin": {
+        Default: "d1d33fe3-444e-3391-cd3f-92ae4c15c3cd",
     },
     "Lightwave Odin": {
         Default: "156158a5-4eb2-79ef-49e9-16a680fe93a9",
@@ -2912,6 +2944,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Silvanus Vandal": {
         Default: "d5327938-46fb-929c-e117-59888b3516df",
+    },
+    "Crimsonbeast Vandal": {
+        Default: "c6cba7e7-4a2d-546f-9994-bb9e943cec14",
     },
     "Sensation Vandal": {
         Default: "e5ca1ad8-4548-43f8-13b3-a89cc50aa319",
@@ -3326,6 +3361,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "da960815-4ae4-a761-2654-ba8d7264fcb0",
         Red: "b42da578-4533-6c97-5d20-268c996fe1bc",
         Orange: "9458b624-43e7-c0ad-ea8e-a2adce8c6fb7",
+    },
+    "Crimsonbeast Judge": {
+        Default: "03203254-4310-9150-ed4f-6a8c58454ab6",
     },
     "POLYfox Judge": {
         Default: "a0d5b67e-42ee-e831-f1b7-a39cb4f375f5",
@@ -3865,6 +3903,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Silvanus Sheriff": {
         Default: "38b2c658-45a5-e807-3be6-bbaebae3d5ce",
     },
+    "Crimsonbeast Sheriff": {
+        Default: "6c78d9d4-4955-1044-f7e9-b4bd2c7b4dbd",
+    },
     "Ion Sheriff": {
         Default: "d3f81911-44e7-f0c1-cc6c-34bda3bff6d3",
     },
@@ -4305,6 +4346,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Galleria Marshal": {
         Default: "f9800505-4923-a557-494b-02bf4c47ec2b",
     },
+    "Crimsonbeast Marshal": {
+        Default: "d7ac88cd-4d2d-f6b3-e7fe-f291b6c7f751",
+    },
     "POLYfrog Marshal": {
         Default: "8502c2a0-439b-89bb-4f04-a09611b01ab9",
     },
@@ -4740,6 +4784,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Spline Dagger": {
         Default: "a31fc599-4de8-a3cd-11fe-36ba7990832b",
+    },
+    "Crimsonbeast Hammer": {
+        Default: "e740a207-4cd8-da88-84b3-11af53748fb6",
     },
     "Genesis Arc": {
         Default: "550d4b9c-4fe9-0f15-d4e9-3f9466685596",

@@ -244,6 +244,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Surge Protector Buddy": "89dac44e-42b3-3fd3-50ec-7982980d2b53",
     "Dimensional Fragment Buddy": "db524f8d-46eb-6a7d-cc74-e9a0ccafeeee",
     "Sock of Cheer Buddy": "bc8e9f3d-432b-3971-5525-01ace2a74eca",
+    "Riptide Buddy": "ba57ccb8-4536-1859-22ca-419eeda037d2",
     "Cheesed Buddy": "5de7339f-40fc-df25-1cf4-d3a5255ba1f7",
     "Bear Tactics Buddy": "2fbe33aa-4e7a-b601-5fa8-ce8fb6511113",
     "Bunny Tactics Buddy": "e645bf64-49c1-de39-d8d4-48bd11e0b7e0",
@@ -996,6 +997,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Sock of Cheer Buddy": {
         "1": "0da068f3-4742-b0b6-5c63-aeac0fcf983f",
+    },
+    "Riptide Buddy": {
+        "1": "8648a41f-4ce8-92af-c6ce-3fbe4a93fba1",
     },
     "Cheesed Buddy": {
         "1": "e88f43b7-4b9a-1050-c1e7-d883a8f706f2",

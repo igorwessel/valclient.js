@@ -265,10 +265,13 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Flames in my Veins Spray": "f677065c-449d-dd91-78ef-6fa7d95ded8d",
     "Runnin' on Empty Spray": "3085ca2f-4e7a-25a5-909d-33940b0148e2",
     "Just Business Spray": "40cc1645-43f4-4db3-ebb2-fdb46f8e9bf3",
+    "Sic' Em Spray": "166a3fb6-492c-9437-417d-b8852128f73c",
     "Give Back Spray": "8f7ef66d-49f2-867f-2ff8-1391a23c89d0",
     "Ego or Eco Spray": "5a328cd4-4cb5-4e64-60c2-6487281390ff",
+    "Shreddy Teddy Spray": "6aff01b3-443c-d98c-820e-05852efc075f",
     "Pity Party Spray": "2d9be381-4686-b392-310e-8bb2a6707f7e",
     "Tag! You're Dead! Spray": "7c3771b2-4ea7-9188-bfd4-c08feeca3984",
+    "Crimsonbeast Spray": "13aa2012-4149-e57a-b21d-a8a795cdb131",
     "Nice One Spray": "63ce8a2b-40c9-f8c7-e15d-77b6e310dfbe",
     "Octo Attack 2 Spray": "cd3d4242-4282-9210-f34f-9998e8b1f9e0",
     "Pick Your Poison Spray": "145dc009-4f60-0872-0f81-69957d520317",
@@ -1132,17 +1135,26 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Just Business Spray": {
         "1": "406a5f6b-4361-eea0-05c2-be95e4881fa5",
     },
+    "Sic' Em Spray": {
+        "1": "2048c47c-4dd1-9248-1d14-6c9e78286866",
+    },
     "Give Back Spray": {
         "1": "28e9f3d3-4bb8-87a4-e894-beb57f95de45",
     },
     "Ego or Eco Spray": {
         "1": "72bf87ce-46b7-6666-5bcf-e1af202bba38",
     },
+    "Shreddy Teddy Spray": {
+        "1": "b710df76-41ae-1fd5-8553-dfad259c1910",
+    },
     "Pity Party Spray": {
         "1": "9b07f17e-4de4-0d6c-d7d7-d7b7ce769d33",
     },
     "Tag! You're Dead! Spray": {
         "1": "3b28b078-4575-e117-9f2f-04bca5882b4f",
+    },
+    "Crimsonbeast Spray": {
+        "1": "4687d7dd-4cce-4ffd-37ae-a795d55214f0",
     },
     "Nice One Spray": {
         "1": "8626c534-4d7b-c8f1-2ef2-629fc199ddbb",
