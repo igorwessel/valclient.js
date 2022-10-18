@@ -5,6 +5,7 @@ import { SkinsIdMappedByGunName, SkinsLevelsMapped, SkinsVariantsMapped } from "
 export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Odin: {
         "Xenohunter Odin": "94c085e6-48e1-c879-2552-88bf7850c5a8",
+        "Rune Stone Odin": "abef8114-4495-6da7-2ade-02bd0f014fd3",
         "Glitchpop Odin": "97af88e4-4176-9fa3-4a26-57919443dab7",
         "Nitro Odin": "2715f184-46cc-bec1-dd7c-e7b4d1aeb625",
         ".EXE Odin": "cda41b87-4d3a-c17c-5f6d-8990cc9c5efb",
@@ -39,6 +40,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Celestial Ares": "d21e2975-4586-635c-3fe4-e6be738243b3",
         "Magepunk Ares": "0fac1dcf-48d0-c6c4-675e-2a8013bc879c",
         "Minima Ares": "cd8eb70d-443c-d9fd-48cd-98bace9d5132",
+        "Ion Ares": "0f4b0478-4759-911d-c44b-2a907534789d",
         "POLYfrog Ares": "ff555802-4633-0c8b-93f8-b8887666e3ad",
         "Divine Swine Ares": "398ef7c2-4055-980e-a8b4-669ca8bc5084",
         "Jigsaw Ares": "e4b7f196-4f05-825f-e795-a59fc829195d",
@@ -59,6 +61,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Endeavour Vandal": "d3733bfe-48d7-b119-3195-249d3b46b528",
         "Champions 2021 Vandal": "9bf19b77-4b33-7203-9f2c-16932970622f",
         "Origin Vandal": "6c4315b8-4ff1-baaa-5aac-5790c7443353",
+        "Starlit Odyssey Vandal": "ffb65a92-4654-a7f8-1908-bf9bb18995a3",
         "Glitchpop Vandal": "74789f33-4632-8052-96d7-258538721a32",
         "ChronoVoid Vandal": "8e762a1f-4102-b7ce-d6a0-9690c5bfe160",
         "Prelude to Chaos Vandal": "522a264e-4ca7-adb0-6cf1-28b2ef938727",
@@ -80,6 +83,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Luxe Vandal": "30fd16af-4560-b2e2-7780-ee8148a0946a",
         "Silvanus Vandal": "d758abc0-4d99-62d3-b22b-0db0e57de881",
         "Crimsonbeast Vandal": "8b688de6-42d3-9430-8f38-32b0b3d1c2c6",
+        "Ion Vandal": "596ce51d-40e3-dc21-b02d-b08d070a7883",
         "Sensation Vandal": "72c1e90b-40ca-4304-02eb-28bb2aea4ed2",
         "Sakura Vandal": "f946ef5c-46ab-e146-a712-1d99a1651356",
         "Schema Vandal": "9a6c6db7-4f56-12d6-8339-6386f12090e8",
@@ -100,6 +104,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Endeavour Bulldog": "3f8be578-4e47-8afd-1e6c-cb9bb326e8b5",
         "Spectrum Bulldog": "fbe04552-445f-f202-923e-6fbd61b7e2aa",
         "Striker Bulldog": "9c056543-44af-0d36-d0f7-1196d93d264e",
+        "Rune Stone Bulldog": "8594c025-4c96-e258-13da-53a2f747bca2",
         "Undercity Bulldog": "4be8d0e7-48e0-eaa3-1db4-85a14094f369",
         "Glitchpop Bulldog": "285c6731-4451-b930-7a3d-c5a736d00f5e",
         "Rush Bulldog": "23399beb-4828-0d03-ae24-aaa62b08f796",
@@ -185,6 +190,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Serenity Judge": "3a1c857a-4671-0667-8efe-ee90b8ba1e5a",
         "Kohaku & Matsuba Judge": "da3cedea-4f2e-c501-ec79-438433ffabdf",
         "Smite Judge": "5324bc65-44aa-1a16-ede4-0e9b56f35d0e",
+        "Iridian Thorn Judge": "0cba5a5f-41ab-ed7d-158e-4fb92ab25c47",
         "Celestial Judge": "57ad1e5d-4289-4de0-7926-899cef10db37",
         "Luxe Judge": "5237cfca-4d83-6190-a7f9-d2bdc117ea67",
         "Coalition: Cobra Judge": "0b8816a2-42ad-9353-c591-f7863981d7fe",
@@ -212,6 +218,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Prime//2.0 Bucky": "89eebdb1-4df6-0a1d-8988-f495cca4badb",
         "Prism II Bucky": "a6b07d50-4731-2775-042e-a896cb51bf13",
         "Kingdom Bucky": "75e55415-45ce-b48b-b471-84bef2368e33",
+        "Iridian Thorn Bucky": "d95fe9cc-4b39-6f54-1912-d796b5912481",
         "Magepunk Bucky": "5ac14aef-41cc-a0c8-895f-e1a69b33aeff",
         "Galleria Bucky": "2a0700dc-4181-ae19-2b49-818b24dceacb",
         "Genesis Bucky": "daf3c0d8-4c6f-23c0-20cc-96b0386b548f",
@@ -245,6 +252,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Nunca Olvidados Frenzy": "a878b90b-4d32-6e85-d49e-82bfba69471f",
         "Celestial Frenzy": "307dbbc2-442d-b92b-0af2-278a8505672a",
         "Coalition: Cobra Frenzy": "bb46d680-4e05-bacd-6ecd-11895d2f22e7",
+        "Ion Frenzy": "906dcda9-477a-6d09-f85d-599ccb86e168",
         "Spitfire Frenzy": "5bb5acb1-44dd-184b-484e-319188ef78eb",
         "Aero Frenzy": "12e6f520-460b-e69b-0617-bab9fff1a134",
         "Divine Swine Frenzy": "fa0bb312-4446-a061-9b06-ee88314e07fa",
@@ -293,6 +301,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Gaia's Vengeance Ghost": "daed0e44-4ab6-22b4-a5a5-57a4957a056b",
         "Endeavour Ghost": "cd281dcd-4276-1def-11d9-74a4a72db204",
         "Piedra del Sol Ghost": "9db45d13-4cc3-4b6c-4801-459b79f8cda5",
+        "Starlit Odyssey Ghost": "df65f29b-465c-827a-7c34-15be149b883e",
         "Spitfire Ghost": "d2ed8432-44a2-fb53-cd5f-089251862942",
         ".EXE Ghost": "67d3e2f7-4b73-7598-0027-63bd9e2e5fcc",
         "Hush Ghost": "a1d3a9e2-4f61-b1f7-3a01-cf867264d1cb",
@@ -321,6 +330,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Soul Silencer Ghost": "e24330ef-4315-512c-4588-95a601995888",
     },
     Sheriff: {
+        "Wayfarer Sheriff": "34f735c0-4fcd-b4fd-fb34-fbab97b42a41",
         "Immortalized Sheriff": "304e1a7a-411d-2d27-dad6-c09702b5ea2f",
         "Aristocrat Sheriff": "840f12d8-467b-1a5e-f79c-b893b72b2fbc",
         "Nebula Sheriff": "55ef0ffa-44fe-03ac-dcf0-1982df0857aa",
@@ -331,6 +341,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Protektor Sheriff": "4f1fde01-4130-0ae7-1320-6fb2f2fb6ab9",
         "Prism II Sheriff": "3194b53a-40a9-a419-a8a6-43b1a53cd0e9",
         "K/TAC Sheriff": "95eb82e2-4859-5564-7b3b-ddbf2fb8088d",
+        "Iridian Thorn Sheriff": "6b57a839-4f3e-8df9-4b05-0db2c9fa1fae",
         "Magepunk Sheriff": "6460edbf-458d-bf61-7519-519305ba5da2",
         "Minima Sheriff": "46ffe3ea-4fb5-7773-6242-f5b57bf53ef8",
         "Silvanus Sheriff": "721ab58c-4ba2-b7ae-c571-0993d9799fc5",
@@ -356,6 +367,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Shorty: {
         "Neptune Shorty": "646e713f-4999-6c56-094c-dd9114bdb35a",
         "Karabasan Shorty": "0581fb92-4b2d-0ede-6bfc-8d93fde11f74",
+        "Rune Stone Shorty": "acedb6db-407b-5d62-9c27-07bbb2313fe3",
         "Prelude to Chaos Shorty": "c9572061-4ee1-ff7d-b60c-ebac198d3706",
         "Doodle Buds Shorty": "9a37b09b-4768-b368-52ef-58ac62564637",
         "Hivemind Shorty": "3a921c7b-4e8f-8543-bee8-01ba6da86874",
@@ -392,6 +404,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Prism Operator": "5ced2c69-442e-d1ad-83fe-8fb8b2ac0c0f",
         "K/TAC Operator": "9ffd45c4-4fa4-dca0-f46f-2d99ad1eae20",
         "Kohaku & Matsuba Operator": "403cce8c-4484-a796-a6f6-a0a07d9832e0",
+        "Iridian Thorn Operator": "cb07878f-484f-50dd-ab6b-5380640b13c5",
         "Luxe Operator": "0bd5da19-491f-dd4a-27e2-c9959b10a87a",
         "Magepunk Operator": "7e831918-4580-5e2a-089a-84ad58fe1aae",
         "Spline Operator": "b2164926-4b85-852a-4bd7-d9bc27a642da",
@@ -416,6 +429,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Neptune Guardian": "1082032a-4f20-12db-93ea-549332f91ddf",
         "Gaia's Vengeance Guardian": "abd5415f-4851-244f-4b8b-31af8e268822",
         "Spectrum Guardian": "04ccfe05-497c-2d52-2bd0-64a68955175e",
+        "Starlit Odyssey Guardian": "16dba725-4de2-8412-c07f-af95c65db9a2",
         "Nebula Guardian": "6141a40d-48cf-8466-6d46-558c0ff145ea",
         "Nitro Guardian": "00e6b758-448e-af3b-7dee-879aa4a51324",
         "Songsteel Guardian": "2d5e6025-4166-730e-1024-abb766d19568",
@@ -442,6 +456,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Marshal: {
         "Task Force 809 Marshal": "774dee9a-4809-0e4d-4153-a883e908d4b2",
         "Gaia's Vengeance Marshal": "fc802ceb-4a39-39ac-adf5-02a812be2f8e",
+        "Rune Stone Marshal": "db3bf2d9-449e-cd8a-950e-018ca893d404",
         "Doodle Buds Marshal": "6250b40a-43a4-55d8-79d4-f6838d58151d",
         "Songsteel Marshal": "51da27fe-4a3f-016a-d18d-b68a47545f6f",
         "Ruin Marshal": "027a5d7f-4bfc-7c41-a012-24b8c6720fda",
@@ -468,6 +483,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Neptune Spectre": "55153919-4598-cb0f-4759-7ea546c6d121",
         "Striker Spectre": "dbe2c9ea-41c4-522c-9204-dab09bac84d0",
         "Radiant Crisis 001 Spectre": "780a93e6-46aa-50c7-5e73-b885c5f6a141",
+        "Starlit Odyssey Spectre": "1e473101-488a-e8ab-41cd-c6ad9d53443a",
         "Singularity Spectre": "0eab3e5c-4de4-e221-34fb-2ab435c89eb6",
         "Sarmad Spectre": "5137dacb-4df6-b513-765b-96b9ecfc435c",
         "Hivemind Spectre": "d405272b-4388-578c-e33b-04842496b8c1",
@@ -485,6 +501,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Magepunk Spectre": "a3f8e1b3-4654-f3ea-15ba-9eb9fd6a0b0d",
         "Spline Spectre": "418ef9fe-4675-6620-3755-c19aca3ff131",
         "Minima Spectre": "2d28e21f-4986-650d-70bd-a2927a0e337b",
+        "Ion Spectre": "eacea54e-4e53-2715-cd4a-5d860aa68449",
         "Hue Shift Spectre": "ed78f73b-4055-2bd2-7cd6-a1ae7e9025c5",
         "Aero Spectre": "fbaedf2b-4a8b-1949-ddaa-27ab3f6d8ae4",
         "POLYfrog Spectre": "9042279e-4491-1a01-a346-928f89f01ea7",
@@ -565,6 +582,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         Equilibrium: "2e4300f9-49b3-6bbe-af7c-94a6f56ff12e",
         "Smite Knife": "46163791-47b9-2ef0-d255-aaa5146051bb",
         Catrina: "8e760310-4d95-354b-a910-049eaa4d2fc6",
+        "Iridian Thorn Blade": "16da5cca-49bc-2516-8ee6-c98d93e2d911",
         "Celestial Fan": "7d45aaad-4ac9-77b1-e7ca-3991be5721dd",
         "Luxe Knife": "4af88517-4949-9caa-9dda-1980f07202a4",
         "Magepunk Electroblade": "c18e781e-40a0-80e6-256a-54ae7355e7eb",
@@ -573,6 +591,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Crimsonbeast Hammer": "ec04e1a4-4067-bb9c-c18b-46a80e5f3f1f",
         "Genesis Arc": "3209e2af-4703-088b-ebef-8da89b4cef87",
         "Ion Energy Sword": "46664f5b-49ca-3e09-4fe5-56bdef536335",
+        "Ion Karambit": "a590c03a-43b1-a408-4c6b-0bb9fdda1570",
         "Oni Claw": "206fc3fe-45a0-6c19-c367-229b98b6a2aa",
         "Artisan Foil": "c39f405f-42f1-acd1-a350-d3af39c32e33",
         "Personal Administrative Melee Unit": "239ed20b-479c-e08e-c4b5-6ba0394576d4",
@@ -598,6 +617,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Xenohunter Odin": {
         "Level 1": "89baf0f4-4648-69fc-f0af-2fbc69b97b80",
         "Level 2": "289d7473-472b-68da-9019-da9594a8a127",
+    },
+    "Rune Stone Odin": {
+        "Level 1": "a00e2e2b-431a-1f84-e6d0-a58f4fe1e56b",
     },
     "Glitchpop Odin": {
         "Level 1": "549b06bb-4704-25ce-19d5-c9b70b10de19",
@@ -717,6 +739,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Minima Ares": {
         "Level 1": "792656ff-445c-fa7f-301a-8490f638b168",
     },
+    "Ion Ares": {
+        "Level 1": "c6c7ffc4-4892-6393-38b3-1b92837a8038",
+        "Level 2": "c36fda0b-4ea8-9052-d6e4-4298a213154d",
+        "Level 3": "8710d3a0-4c50-9f52-5076-f78418701e57",
+        "Level 4": "5d746e26-4d66-a65f-1364-0e8cd49eae72",
+    },
     "POLYfrog Ares": {
         "Level 1": "9b61f5ca-4aa2-8557-37b2-a1b05f30c678",
     },
@@ -788,6 +816,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "2ee1c6e6-4213-723f-1fd8-c9a76c00ff72",
         "Level 3": "43e8a873-4ddf-1c73-6d91-3786b9fb3145",
         "Level 4": "66c8a651-4a8c-aa44-1af0-088118b9a975",
+    },
+    "Starlit Odyssey Vandal": {
+        "Level 1": "214578e1-4895-3b35-0d3d-85a8beac1b59",
     },
     "Glitchpop Vandal": {
         "Level 1": "7e44fc1b-44fa-cdda-8491-f8a5bca1cfa3",
@@ -871,6 +902,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "aae492eb-4d6d-097d-1d47-4fa31ced9751",
         "Level 2": "7c3e8050-40ce-9a75-c1ef-7fa270990ceb",
     },
+    "Ion Vandal": {
+        "Level 1": "a8c10620-46a8-794e-be55-a0a13edb8d44",
+        "Level 2": "3db5cce4-41e7-b538-4d0d-82bd64362480",
+        "Level 3": "fefee60e-4270-0ea8-6187-3aaf57196b05",
+        "Level 4": "cc63e209-471d-26e8-4b8c-b9aba3bb1b32",
+    },
     "Sensation Vandal": {
         "Level 1": "f4bfff96-487a-cf9e-08cc-d590d962c4e6",
     },
@@ -933,6 +970,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Striker Bulldog": {
         "Level 1": "842dbe37-4bc7-95b3-26d7-a0af65615d5e",
+    },
+    "Rune Stone Bulldog": {
+        "Level 1": "85e74e8f-4360-2961-dd91-52bb854e495f",
     },
     "Undercity Bulldog": {
         "Level 1": "89b68205-4fe5-2434-a731-e5a734bd4a7a",
@@ -1241,6 +1281,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Smite Judge": {
         "Level 1": "1b94d997-4db6-014f-4cb8-c1b4df7d7ebc",
     },
+    "Iridian Thorn Judge": {
+        "Level 1": "7fa021e2-4881-d71e-f7a1-a6947b4b48d9",
+    },
     "Celestial Judge": {
         "Level 1": "4f45735c-4513-e9a6-48ac-35acca4c3410",
     },
@@ -1325,6 +1368,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Kingdom Bucky": {
         "Level 1": "4caa7fb0-4751-52f3-6eed-6ab6232be131",
+    },
+    "Iridian Thorn Bucky": {
+        "Level 1": "d1d98507-48c7-a7ed-003c-90b085632fb9",
     },
     "Magepunk Bucky": {
         "Level 1": "78776175-4040-282f-07a1-0199b1fdcf58",
@@ -1445,6 +1491,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Coalition: Cobra Frenzy": {
         "Level 1": "337b4e6a-46d8-8359-50c0-388717617044",
+    },
+    "Ion Frenzy": {
+        "Level 1": "64fcb53f-465d-318e-5bf9-bfa7c39b1d67",
+        "Level 2": "828b7634-4bea-0558-0383-94961e3019f3",
+        "Level 3": "396da3b7-4830-9e1e-5915-7dbba955b95c",
+        "Level 4": "76d90e0a-494a-8cdb-6c21-10b02f27ccc8",
     },
     "Spitfire Frenzy": {
         "Level 1": "468505e6-46e2-af29-3974-5fbbe6bf212f",
@@ -1603,6 +1655,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Piedra del Sol Ghost": {
         "Level 1": "8f9a3c0c-47ac-6032-7027-899c7e35958e",
     },
+    "Starlit Odyssey Ghost": {
+        "Level 1": "0235ff00-4ba4-2092-ea7d-b99299d7017f",
+    },
     "Spitfire Ghost": {
         "Level 1": "c247790e-4a6b-a3f2-1e1f-ccae710b5179",
     },
@@ -1695,6 +1750,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Soul Silencer Ghost": {
         "Level 1": "b85b3760-43bb-507d-323e-1682fa76d96b",
     },
+    "Wayfarer Sheriff": {
+        "Level 1": "b9bf9657-411e-8fe3-b717-b99ba01fe07a",
+    },
     "Immortalized Sheriff": {
         "Level 1": "d3f40fb9-40ec-b61f-7479-ceaded7b176a",
     },
@@ -1730,6 +1788,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "K/TAC Sheriff": {
         "Level 1": "df35b7df-4add-58fb-418c-0dbea48b7e82",
+    },
+    "Iridian Thorn Sheriff": {
+        "Level 1": "c5ee573f-4f5d-e64c-240c-89a1d1be64a1",
     },
     "Magepunk Sheriff": {
         "Level 1": "59733cf9-490b-e25b-2c6f-eca947628079",
@@ -1819,6 +1880,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Karabasan Shorty": {
         "Level 1": "f1f9cde8-4810-86a0-1c95-4ab214d4f6b8",
+    },
+    "Rune Stone Shorty": {
+        "Level 1": "f990616a-44ab-ec78-fe3d-8b9ce27a5d18",
     },
     "Prelude to Chaos Shorty": {
         "Level 1": "09fded5d-4add-00e7-d3c4-32b8f21c7944",
@@ -1948,6 +2012,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Kohaku & Matsuba Operator": {
         "Level 1": "1fe051aa-40e9-3ff6-585a-e384f0197224",
     },
+    "Iridian Thorn Operator": {
+        "Level 1": "d4a5f5a7-4831-f240-fac7-bfa06b50cd73",
+    },
     "Luxe Operator": {
         "Level 1": "e5a2e04a-4805-1244-5376-06b40d7c6cbb",
     },
@@ -2038,6 +2105,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "e03cf7b6-453e-5fb7-3240-11afd5ed4b47",
         "Level 3": "1fbad515-44c3-123e-8e80-96a4a4bf40ca",
         "Level 4": "d4794a6a-4c89-8765-0081-55a61376b10a",
+    },
+    "Starlit Odyssey Guardian": {
+        "Level 1": "9815f9fe-40c5-db68-9ac3-e69c926daf12",
     },
     "Nebula Guardian": {
         "Level 1": "bf6df430-4e46-5c51-df6f-c2bc3b1cb4fe",
@@ -2135,6 +2205,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "3cf85dde-4695-be31-41e9-c8ac2dd22d07",
         "Level 4": "c8fd6caf-43d1-f3ef-4a5d-1793ad9e558e",
     },
+    "Rune Stone Marshal": {
+        "Level 1": "3e87c99d-4a98-15f5-ba6d-0383db725558",
+    },
     "Doodle Buds Marshal": {
         "Level 1": "43ea5cae-4535-7903-f2c9-65bac9642a99",
         "Level 2": "d0712e2e-4550-9ae9-d365-f498e21b50a4",
@@ -2223,6 +2296,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "ecac2484-4837-b580-a15d-0aab63d56dbf",
         "Level 3": "199d6f90-4a79-9c54-8830-529652499249",
     },
+    "Starlit Odyssey Spectre": {
+        "Level 1": "a9e8ca5e-405e-db36-b240-bbb43dca41b1",
+    },
     "Singularity Spectre": {
         "Level 1": "3b955119-421c-3319-50cc-1aaf06b42338",
         "Level 2": "53068012-45a5-232e-0bd7-d5aa786c0347",
@@ -2288,6 +2364,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Minima Spectre": {
         "Level 1": "1fdbe6f8-42ca-deb2-33da-caa2c4200544",
+    },
+    "Ion Spectre": {
+        "Level 1": "8af83962-4e2f-f58e-588e-ef85e4882b79",
+        "Level 2": "d1469f2a-4f98-67dc-ad71-6ab75b9e720b",
+        "Level 3": "1c5a796e-4d2d-ee9f-a9e3-c087f328d9c7",
+        "Level 4": "3cd34480-4704-e443-fffd-a9a3120b73d6",
     },
     "Hue Shift Spectre": {
         "Level 1": "6803ed34-46cc-ba84-9e58-f78f6538151e",
@@ -2567,6 +2649,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     Catrina: {
         "Level 1": "dc5e3cfc-466a-4819-e93b-2ba5f1847915",
     },
+    "Iridian Thorn Blade": {
+        "Level 1": "9464eca6-4ba2-adaa-a57a-d78eb0b38696",
+    },
     "Celestial Fan": {
         "Level 1": "7302d465-46cd-2a43-655f-93aee59030db",
         "Level 2": "ee4add11-4b78-250e-742a-fcbeca66ab05",
@@ -2595,6 +2680,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Ion Energy Sword": {
         "Level 1": "21ceb4b1-480f-dddb-1422-8aad73519181",
         "Level 2": "24a079a6-4194-0008-bd1c-a980889bb912",
+    },
+    "Ion Karambit": {
+        "Level 1": "a45e899f-459d-469b-dc8f-8da5c0546bf0",
+        "Level 2": "4b418533-4b77-c755-e471-79902c74928b",
     },
     "Oni Claw": {
         "Level 1": "e34039b6-441d-3e17-2773-bdaf5c3d2faa",
@@ -2663,6 +2752,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
 export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Xenohunter Odin": {
         Default: "3cc39f94-443e-e0e1-39be-21a9c9f3b0aa",
+    },
+    "Rune Stone Odin": {
+        Default: "bf2fea95-4b73-05e3-9956-b8828a0f2edf",
     },
     "Glitchpop Odin": {
         Default: "9667983e-4c8c-e5b2-68d7-be84f9b3d46c",
@@ -2794,6 +2886,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Minima Ares": {
         Default: "0577d5b6-40a5-2edd-f4dc-9b88676b3667",
     },
+    "Ion Ares": {
+        Default: "0129321b-4e7e-6a56-d4f5-f690d8fb6909",
+        Green: "ecc43648-49ba-f0d7-8981-e1ab4f7cd192",
+        Yellow: "5ec7b626-4789-f017-d7d7-dfb5980e0418",
+        Blue: "267ac45e-471b-c985-47e3-2995fa1294bb",
+    },
     "POLYfrog Ares": {
         Default: "3c0d0c63-4c14-c181-f53c-b8b174b8c1ec",
     },
@@ -2866,6 +2964,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Green: "11406ee3-472c-dc1a-98f7-bfa8f2e3658b",
         Red: "6153bc01-4807-c705-e576-63beb9c8e930",
         White: "0e16ba9e-48d4-85fd-3b76-84abc19932a0",
+    },
+    "Starlit Odyssey Vandal": {
+        Default: "0f85e1e8-4f6e-1a01-210a-b1948c05f8ea",
+        Twilight: "cfd94267-4a21-ee29-5552-789041329e88",
+        Sunset: "d02335f6-4216-3eee-0251-188fd0e025ea",
+        Midnight: "8a0f162d-4d44-fa0e-f6a9-b382ff34d9db",
     },
     "Glitchpop Vandal": {
         Default: "b58f249b-4e8f-5532-6f35-a9b3b39dc15c",
@@ -2948,6 +3052,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Crimsonbeast Vandal": {
         Default: "c6cba7e7-4a2d-546f-9994-bb9e943cec14",
     },
+    "Ion Vandal": {
+        Default: "22ec09d9-4b0f-c9a4-e843-db8d6af8d110",
+        Green: "e4726462-4cae-b5ba-efe3-21bed0890ecd",
+        Yellow: "e58db59a-43ec-36dc-a646-98a932ed6094",
+        Blue: "a7bd562d-4a2c-b272-f46b-f5892745a38f",
+    },
     "Sensation Vandal": {
         Default: "e5ca1ad8-4548-43f8-13b3-a89cc50aa319",
     },
@@ -3016,6 +3126,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         "Green/Yellow/Black": "c7abcab1-4fba-0ba9-e312-919032b5edf0",
         "Pink/Teal/Purple": "8467eea0-4954-c22f-b0ad-d3b517c2e298",
         "Blue/White/Red": "9cc6710d-4db6-9b39-4d3f-bf9769db5537",
+    },
+    "Rune Stone Bulldog": {
+        Default: "c4508633-4701-a745-251d-0bb0884f14ef",
     },
     "Undercity Bulldog": {
         Default: "a4621718-48a3-f8ce-d17c-d39ad4c085f0",
@@ -3350,6 +3463,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Smite Judge": {
         Default: "b56dc59c-4b76-bee2-9896-a5b778041865",
     },
+    "Iridian Thorn Judge": {
+        Default: "18c824c6-4074-96d4-67ed-13a51309ee71",
+    },
     "Celestial Judge": {
         Default: "c8d3c3a4-49eb-6ee4-50cf-c1bf6cfd2a12",
     },
@@ -3439,6 +3555,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Kingdom Bucky": {
         Default: "8bb9c93c-4f27-89f8-3bf7-06b9101daa85",
+    },
+    "Iridian Thorn Bucky": {
+        Default: "0d885f51-43d3-5391-0097-61b69873beef",
     },
     "Magepunk Bucky": {
         Default: "0c92fe47-43e7-4b9e-09b1-0889ac65fc9b",
@@ -3567,6 +3686,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Blue: "3f9947e3-43c8-1ebb-01a4-c884a562b0bd",
         Red: "a7ec5c43-4500-98d2-fefc-cdbcbf8c0c60",
         Orange: "a063061c-4c33-0362-843f-45a8a552537f",
+    },
+    "Ion Frenzy": {
+        Default: "9f96527a-4a4d-586b-dd25-bfae0086f468",
+        Green: "1f95d958-47b3-69a1-10a9-6399bc0b4447",
+        Yellow: "628d771b-4706-ed3d-a952-6ebc25f3bf7e",
+        Blue: "6ab70f1c-4758-f7b5-08ed-d788c7006378",
     },
     "Spitfire Frenzy": {
         Default: "5a649a38-4c12-fb73-fc12-9f975495716f",
@@ -3747,6 +3872,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Piedra del Sol Ghost": {
         Default: "582f5609-4ba2-1e31-d830-8c843bc2d8ab",
     },
+    "Starlit Odyssey Ghost": {
+        Default: "4e362535-4f11-253e-c9ef-93a1e5f46f60",
+        Twilight: "cc6cbeaf-4e44-309c-0ede-5fa5af9fec60",
+        Sunset: "11dfc352-4962-4219-9f1d-d0b9b01f9ed5",
+        Midnight: "816b8709-4d58-0864-4f4f-03b4a752c16c",
+    },
     "Spitfire Ghost": {
         Default: "aeaa83d1-48b6-faec-d176-97833ac00197",
     },
@@ -3849,6 +3980,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Soul Silencer Ghost": {
         Default: "2a46e69b-4458-15ea-9d8d-a984f1265098",
     },
+    "Wayfarer Sheriff": {
+        Default: "0d3c5ca0-49a2-eef8-d01a-2e9dd8d5d574",
+    },
     "Immortalized Sheriff": {
         Default: "52701d90-45ff-9831-fd16-b19dc3c5b03b",
         Orange: "18479c74-4dca-42cb-3c82-80a6a4414c97",
@@ -3890,6 +4024,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "K/TAC Sheriff": {
         Default: "354c354d-4c59-7d3f-498e-43970ff44c69",
+    },
+    "Iridian Thorn Sheriff": {
+        Default: "7f4259ea-468e-4743-0e28-e1bc05967650",
     },
     "Magepunk Sheriff": {
         Default: "2f82f035-47c9-e040-fb43-77a67ee408d9",
@@ -3975,6 +4112,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Karabasan Shorty": {
         Default: "74019079-43d3-2757-bf40-9792c930034e",
+    },
+    "Rune Stone Shorty": {
+        Default: "9c81a88b-47d1-0813-1534-088e9e9678d6",
     },
     "Prelude to Chaos Shorty": {
         Default: "737ba496-4e0a-2e8a-ad46-27a8c58fb3ed",
@@ -4109,6 +4249,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Default: "fc6a67b3-43d8-14db-a4b7-8d8d5e06f330",
         Dark: "a8270780-4e7d-53f7-a9da-3fb0f003db1d",
     },
+    "Iridian Thorn Operator": {
+        Default: "1fd790ca-42a2-4dd2-ebce-60a88735b3e3",
+    },
     "Luxe Operator": {
         Default: "6a0320ac-4cfc-c805-f75c-b9879cd842c1",
     },
@@ -4202,6 +4345,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Black: "fa3cea63-4bbd-ebf6-808c-d1ae736f0dd4",
         Red: "59432b53-44bc-6e8e-c341-f083a9f759da",
         "Purple/Pink": "d1e44ee7-4089-6358-f980-0ebd4a7c88a7",
+    },
+    "Starlit Odyssey Guardian": {
+        Default: "f239edb5-467a-d4f2-c78d-5f81ce8162c1",
+        Twilight: "45dd5db6-4e5b-f6c8-698f-d5b66400a072",
+        Sunset: "401fe474-4b0b-1aa3-8745-7f835fd83ee4",
+        Midnight: "3baa00d8-471a-2f49-4e0f-1296ead72848",
     },
     "Nebula Guardian": {
         Default: "e6f6e321-4de6-5d25-69ea-baa30d693373",
@@ -4311,6 +4460,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Green: "3f2d412c-4140-10d9-cd31-c882672855bf",
         Orange: "792b819a-44f1-4920-4fda-84a8feefc188",
     },
+    "Rune Stone Marshal": {
+        Default: "dfb8b619-49c8-745e-e6ba-62a9339daf86",
+    },
     "Doodle Buds Marshal": {
         Default: "a0ed65cb-4c78-a8f8-8c50-098a7ac44bf6",
         Tactifriends: "12d3f3b6-41ee-84b6-9d38-13864db801e9",
@@ -4404,6 +4556,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Radiant Crisis 001 Spectre": {
         Default: "750dda5b-4aac-6381-82f6-6b9c08dd783b",
     },
+    "Starlit Odyssey Spectre": {
+        Default: "57df5949-46ab-5458-2cbc-66b519a495ad",
+        Twilight: "445f2cd5-4571-6ba2-0b55-c7873e2af197",
+        Sunset: "c41c4849-41f6-1905-8a35-58a6e5f2404a",
+        Midnight: "33b432fd-4766-e358-9b71-89bc6a98719c",
+    },
     "Singularity Spectre": {
         Default: "da0d77b2-49b4-148d-e32e-d79aef1b3829",
         Blue: "9f4b2fa6-4de6-e59a-927f-ea86203824b0",
@@ -4473,6 +4631,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Minima Spectre": {
         Default: "0d608736-4753-dff9-c62d-e9b43f038317",
+    },
+    "Ion Spectre": {
+        Default: "f97b465b-467e-f7ce-d3d1-4981cbd23954",
+        Green: "43f02741-4f21-0a47-72c9-898e859d50d3",
+        Yellow: "647811d0-4fd6-4f05-6f29-45b1be7fb189",
+        Blue: "7896afcd-4d80-859a-90ac-638efedd1e19",
     },
     "Hue Shift Spectre": {
         Default: "66a8d891-4c73-c199-57ce-0090b25cc925",
@@ -4767,6 +4931,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Living: "bf7eb630-4852-01fe-fde4-689bd889a2e9",
         Eternal: "d32d79d4-4308-c3a1-d9c7-5d87d33d4e12",
     },
+    "Iridian Thorn Blade": {
+        Default: "236deb7d-4aea-5aae-4730-dca65f88e4b3",
+    },
     "Celestial Fan": {
         Default: "beaac174-44a6-0ee8-4607-939405782cae",
     },
@@ -4794,6 +4961,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Ion Energy Sword": {
         Default: "066f353c-42d9-3020-f11b-78b6eb29fdb8",
     },
+    "Ion Karambit": {
+        Default: "43f1a063-47e7-fb46-7949-87a89a982afb",
+        Green: "4d6f6fa7-4848-718f-801f-6a9077d8cee2",
+        Yellow: "c8642bb8-454d-5768-03c6-4fbc46c678c3",
+        Blue: "2798ecd0-4c79-44d2-18e0-858c98a86c70",
+    },
     "Oni Claw": {
         Default: "94bf2d2a-4f1b-b68e-0de1-f2ac152d1127",
     },
@@ -4813,7 +4986,10 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Default: "29dd7a19-4654-af07-59bb-14b11db66e1a",
     },
     "Relic of the Sentinel": {
-        Default: "1bd34c76-4cf5-f2a7-7b01-69a60f910941",
+        Default: "ab3d2950-426a-9b94-193d-65b53348386a",
+        Pink: "54d0f235-4bef-94ae-6772-c59cb4e8e352",
+        "Red/Green": "4cbf1d8c-4144-a224-c93c-1680b2a28b8a",
+        "Blue/Purple": "1bd34c76-4cf5-f2a7-7b01-69a60f910941",
     },
     "Reaver Knife": {
         Default: "71241f8e-4689-a110-0b22-8eac0aa512aa",

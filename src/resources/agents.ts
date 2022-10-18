@@ -12,6 +12,7 @@ export const agentsMappedById: Record<Agents, string> = {
     Cypher: "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
     Sova: "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
     Killjoy: "1e58de9c-4950-5125-93e9-a0aee9f98746",
+    Harbor: "95b78ed7-4637-86d9-7e41-71ba8c293152",
     Viper: "707eab51-4836-f488-046a-cda6bf494859",
     Phoenix: "eb93336a-449b-9c1b-0a54-a891f7921d69",
     Astra: "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",

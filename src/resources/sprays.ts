@@ -226,6 +226,21 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Blasting Away Spray": "336a188d-4855-682f-071c-7d89517ab041",
     "Choose Your Match Spray": "785990dc-4cbc-5e49-09e7-ac8415093a6d",
     "You Are Here Spray": "3eb2d891-470b-c4aa-654a-0ebd4d94090f",
+    "Sketchy AFK Spray": "1dab3f4e-49f5-7e5d-f654-daae8772fc41",
+    "Simple Instructions Spray": "1cab25c9-4b3d-5dad-3be9-b395bccf13e0",
+    "Hawk Out Spray": "78d6be00-4cb3-a38d-8d8a-108afa75b678",
+    "Always Watching Spray": "dc5edd15-455d-1782-7ee3-a294a6a3d293",
+    "Fascinating Spray": "3f8324c0-4f94-425a-1b31-56b4bcdd59b1",
+    "Breach's Approval Spray": "81c97a7d-4d76-38df-2e66-42a916fb811e",
+    "Mind Blown Spray": "14b3b3f7-4733-7802-3978-17ae5f97c184",
+    "No Vision Spray": "91ff04cf-4b54-8a65-b042-53a069ef0a2b",
+    "Treat Those Burns Spray": "935b114a-4b19-2e03-202f-3b84d6916647",
+    "Fill Your Card Spray": "80cf0ffc-4810-7d4a-a791-c88e4ea9276c",
+    "I Sleep Spray": "38b459ee-46f6-5f3b-147c-6a9492f667b2",
+    "Written in the Stars Spray": "b16b3044-4376-831a-574c-9299cee1b74f",
+    "See You Next Round Spray": "081262e8-42db-ac4a-c94b-a89b623525c0",
+    "Surprise! It's a Tiger Spray": "1284b594-4bb8-7bce-8165-239757222cf8",
+    "Unconditional Surrender Spray": "30b0ab90-4cba-6c69-c7d2-f68b14574aa2",
     "Champions 2022 Jett Diff Spray": "556008f0-41bb-d752-3747-1aabc73499c8",
     "VCT 2021 Spark Spray": "f9bcf120-42b6-6986-2acd-6aa87bab4089",
     "Fist Bump Spray": "d8cfce74-4bb8-42b2-022e-9dbf9d648823",
@@ -260,6 +275,9 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Lights Out Spray": "9c65bbe6-41da-c50c-be81-839214eede7c",
     "Lucky Tiger Spray": "efd0d001-4edb-34eb-c05c-139817d4840a",
     "Celestial Spray": "cd9986f8-4473-914d-7918-caa21d23710f",
+    "Stay Hydrated Spray": "b58a7069-4f24-6b17-74d1-9fa72362ab0e",
+    "Harbor Spray": "867051e2-4e73-8281-d98a-9799559459d4",
+    "That's a Six Spray": "2b881576-448d-abec-e43c-a8af733b57c8",
     "Magepunk, Ep 3 Spray": "562a64d8-483c-5853-4e7a-eea5ca95e3ce",
     "Champions 2022 Curse Spray": "a7b00f01-49ee-c0c2-a910-4d9ae605dbe1",
     "Flames in my Veins Spray": "f677065c-449d-dd91-78ef-6fa7d95ded8d",
@@ -312,6 +330,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Magepunk Spray": "405beaef-4c2d-df2d-fe9d-689d59d08e65",
     "Spline Spray": "9a657204-4376-ed61-ad3e-0a8b7bbecd18",
     "Ion Spray": "444464f1-445f-8f75-3c8d-a7bd8f24e654",
+    "Ion, Ep5 Spray": "e269f912-4d39-e844-7b85-e495cca6b04a",
     "Oni Spray": "1091d2cc-430b-56ca-a82b-279b70026193",
     "Gravitational Uranium Neuroblaster Spray": "735e6c3c-4899-532d-60cf-1ba0ce1a450d",
     "Sentinels of Light Spray": "829a47d5-4580-8428-2437-8daffdbc52ac",
@@ -1018,6 +1037,51 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "You Are Here Spray": {
         "1": "1f8dc0c2-471b-e677-1957-4d99d4943506",
     },
+    "Sketchy AFK Spray": {
+        "1": "62ab32c5-47d5-33a2-bd34-ef9c825589e6",
+    },
+    "Simple Instructions Spray": {
+        "1": "4af0f78e-4250-32c8-e462-1689d8cf4a2a",
+    },
+    "Hawk Out Spray": {
+        "1": "8753cd9b-4d33-3128-ec6b-4490ad931251",
+    },
+    "Always Watching Spray": {
+        "1": "a10a5079-4fac-aa6f-2aed-fe9e7620cc81",
+    },
+    "Fascinating Spray": {
+        "1": "0feb0cc7-45bc-117b-9c56-9cbf28787707",
+    },
+    "Breach's Approval Spray": {
+        "1": "8d6df619-45d3-cf2b-d6ff-2bb7806a9b3c",
+    },
+    "Mind Blown Spray": {
+        "1": "d7237195-48e6-c2a1-a2c6-069be3caaca5",
+    },
+    "No Vision Spray": {
+        "1": "ad4def94-46de-e690-b676-63a429a64f0e",
+    },
+    "Treat Those Burns Spray": {
+        "1": "b5dc84de-4e26-bbb1-1d2d-57916c56e9ee",
+    },
+    "Fill Your Card Spray": {
+        "1": "0ab65544-4234-6ad2-22bb-37aa6f56eabd",
+    },
+    "I Sleep Spray": {
+        "1": "1d1dc9d5-41bc-f7e1-a6e5-01a137c632f9",
+    },
+    "Written in the Stars Spray": {
+        "1": "10263937-4094-b80b-410d-24bb57240640",
+    },
+    "See You Next Round Spray": {
+        "1": "9c24cda0-4c3b-9c03-3654-4e915384ecf9",
+    },
+    "Surprise! It's a Tiger Spray": {
+        "1": "09d2a18a-492b-9fa3-58b7-2da6c6b40113",
+    },
+    "Unconditional Surrender Spray": {
+        "1": "c56d2279-4908-8f53-e3ae-589c4eafe1de",
+    },
     "Champions 2022 Jett Diff Spray": {
         "1": "39ee62f9-4aa1-6331-85d1-fe8c9116c960",
     },
@@ -1119,6 +1183,15 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Celestial Spray": {
         "1": "5f3a9e28-4c52-8ed4-944c-14b6e00af9a7",
+    },
+    "Stay Hydrated Spray": {
+        "1": "28398415-4e55-4db1-1e7e-dab9d4998afa",
+    },
+    "Harbor Spray": {
+        "1": "fbaab4e3-4fc6-d699-33cb-e5ade56aa8d6",
+    },
+    "That's a Six Spray": {
+        "1": "413649fa-44fe-6b14-1d62-e1b7f714ec13",
     },
     "Magepunk, Ep 3 Spray": {
         "1": "ddb5c1ee-4d61-e9dd-83a5-62a25a3e2468",
@@ -1275,6 +1348,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Ion Spray": {
         "1": "23c475e1-4da7-d32e-bc69-41a4899f4326",
+    },
+    "Ion, Ep5 Spray": {
+        "1": "815f50f8-493e-4b59-f7ad-3e98bf08adbe",
     },
     "Oni Spray": {
         "1": "135164b6-4295-27b2-34d8-59a95c93e025",
