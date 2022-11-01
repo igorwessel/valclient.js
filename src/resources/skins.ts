@@ -144,6 +144,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Rush Phantom": "8db507b5-4d57-96e0-000e-2d8c8af79550",
         "Velocity Phantom": "a17d4eeb-46e5-a041-ae7b-a2841ac6b36e",
         "Team Ace Phantom": "f7a779db-4835-6561-ce1a-d1921a24de46",
+        "Soulstrife Phantom": "98c9bc4e-4fb3-206f-3f6b-06a17b53e95b",
         "Prime//2.0 Phantom": "44b7b110-46bf-ccbb-2613-29a5df296461",
         "Avalanche Phantom": "c38dced0-454d-d296-522e-6f8643decd3b",
         "Prism Phantom": "6586a7db-4041-6a29-f37c-d6817657caa5",
@@ -305,6 +306,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Spitfire Ghost": "d2ed8432-44a2-fb53-cd5f-089251862942",
         ".EXE Ghost": "67d3e2f7-4b73-7598-0027-63bd9e2e5fcc",
         "Hush Ghost": "a1d3a9e2-4f61-b1f7-3a01-cf867264d1cb",
+        "Soulstrife Ghost": "2fcdb6c8-4183-0079-13fe-2cb51da0b87c",
         "Infantry Ghost": "65ce6a98-4867-b695-279f-819c44ec6f95",
         "Goldwing Ghost": "44be88b3-4a0e-64c8-950d-66a969e71f7e",
         "Outpost Ghost": "377ea8ac-46bf-52da-3173-109c2950dc9d",
@@ -435,6 +437,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Songsteel Guardian": "2d5e6025-4166-730e-1024-abb766d19568",
         "Spitfire Guardian": "3ab36c94-4c91-d722-6f10-11bbbe382159",
         "Ruin Guardian": "453a734b-4f14-9183-2be8-97b01f603368",
+        "Soulstrife Guardian": "7422b876-443e-b975-faab-0ebf73dbc075",
         "Infantry Guardian": "acd76d4d-4d05-2597-d63b-12851b2b61ee",
         "Hydrodip Guardian": "06854a71-4eac-cb4c-cdbe-bbbdda492e9c",
         "Prime Guardian": "2a049f35-4bcd-af25-21fd-ec942e2d5007",
@@ -489,6 +492,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Hivemind Spectre": "d405272b-4388-578c-e33b-04842496b8c1",
         "Forsaken Spectre": "a786ea8f-42f2-ae5f-376f-2bb66df1a62f",
         "Velocity Spectre": "6196c91c-4f0a-2aa2-342a-6fbac6d4ec3c",
+        "Soulstrife Spectre": "95ca4d2b-4166-8e0e-8d79-d79957f58b81",
         "Infantry Spectre": "8d4d74c3-4771-52a3-b3eb-a38cc0222643",
         "Horizon Spectre": "eb9ec7c9-4c20-e702-81c7-63bbe165aa12",
         "Prime Spectre": "20807bd8-4259-35e5-e54e-c1b214f58cc8",
@@ -571,6 +575,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Velocity Karambit": "ccde2f25-4525-ef52-e1f0-bd88184bd4a4",
         "Ruin Dagger": "9c350ebe-458b-e6ed-ab77-2fb00cf249c1",
         ".SYS Melee": "c8b926df-4554-1b07-5a43-a9850bafca96",
+        "Soulstrife Scythe": "dfe96f5a-4be0-c3f4-8e31-7f962bca2ade",
         "Prime Axe": "e100dff1-4cf5-54ec-aa65-6fadbc22973b",
         "Prime//2.0 Karambit": "9237e734-4a2a-38ae-7438-6cbee901877d",
         "Outpost Melee": "908be835-43bc-b728-35a4-0fa91f612cc0",
@@ -1114,6 +1119,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Team Ace Phantom": {
         "Level 1": "fc4c3dcb-4f6d-5e8e-3dc3-1695f55d24c2",
+    },
+    "Soulstrife Phantom": {
+        "Level 1": "a165db9b-4692-ac34-d00b-d39c5fad6f31",
+        "Level 2": "bf4489ad-4739-555c-2511-7cbcc503566c",
     },
     "Prime//2.0 Phantom": {
         "Level 1": "9dc0bdd7-4d88-9360-38d6-3ea62b1daaca",
@@ -1667,6 +1676,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Hush Ghost": {
         "Level 1": "afcb2528-4415-0178-98b1-c0a751092762",
     },
+    "Soulstrife Ghost": {
+        "Level 1": "0296ff9b-4172-5a29-7d25-a7bf491b5bd4",
+        "Level 2": "0cb68ca8-4aff-9938-546c-1faed16b113f",
+    },
     "Infantry Ghost": {
         "Level 1": "a14fa0b5-4b03-2ad9-3b0e-a3ac6a0b033b",
     },
@@ -2124,6 +2137,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Ruin Guardian": {
         "Level 1": "c41a7b5d-4a04-a411-053d-818fe1d77ac6",
     },
+    "Soulstrife Guardian": {
+        "Level 1": "f4861ffb-480d-7ddc-f1a3-45a6dfaa4229",
+        "Level 2": "9a839248-4244-ab7f-b5ab-db90b18f9bc8",
+    },
     "Infantry Guardian": {
         "Level 1": "a2c59452-4420-130a-9aa1-cb8ea551a05d",
     },
@@ -2319,6 +2336,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Velocity Spectre": {
         "Level 1": "5172ea04-432f-2bfb-2163-808ccc2442c3",
+    },
+    "Soulstrife Spectre": {
+        "Level 1": "2e697099-42dd-4283-4249-fcbd685ecac7",
+        "Level 2": "3524b584-4f5a-6f04-4ca7-f8968eaf4851",
     },
     "Infantry Spectre": {
         "Level 1": "dd595229-4aac-73f1-5fad-86891b7d7ecb",
@@ -2612,6 +2633,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     ".SYS Melee": {
         "Level 1": "9d9ec56d-4973-3531-64f5-6d8eb2beb0a2",
+    },
+    "Soulstrife Scythe": {
+        "Level 1": "656c5de8-47ca-4eeb-6051-c9aabbf37baa",
+        "Level 2": "67761e2f-4ce9-edd9-683f-1fa1ab5d5761",
     },
     "Prime Axe": {
         "Level 1": "249b0e46-4a11-f045-51bb-649151cd802a",
@@ -3278,6 +3303,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Team Ace Phantom": {
         Default: "b0c00d90-4a09-5cdf-137c-67876b8f1671",
     },
+    "Soulstrife Phantom": {
+        Default: "bb276fa6-4eed-ea24-efca-c3984986cf2d",
+    },
     "Prime//2.0 Phantom": {
         Default: "264eaaeb-4038-4bf4-3760-eb9f9c21edcb",
         Gold: "171f9591-4efd-9fde-d555-d3b570f64d14",
@@ -3887,6 +3915,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Hush Ghost": {
         Default: "b412e61c-4001-8fab-c5e9-6eb7caa41e88",
     },
+    "Soulstrife Ghost": {
+        Default: "5cd91f20-4328-aee3-a360-e39e5096915d",
+    },
     "Infantry Ghost": {
         Default: "962aaf76-4edf-21dd-93f7-b6b3a0d46d28",
     },
@@ -4367,6 +4398,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Ruin Guardian": {
         Default: "5e4d839c-4f56-5173-088e-5cac4a2e5e67",
     },
+    "Soulstrife Guardian": {
+        Default: "e63d9171-42b5-908d-1ae6-17a02cd60e55",
+    },
     "Infantry Guardian": {
         Default: "3292c7e0-402f-70e2-f189-4ba34fcf7af4",
     },
@@ -4583,6 +4617,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Yellow: "6c333ebc-4f9e-2f43-72b9-799bf4eb0856",
         Purple: "c6338f8e-4c52-cfe4-e625-9c84772406f2",
         Aquamarine: "a018e4a4-4049-731a-ba49-74ac2b7f5626",
+    },
+    "Soulstrife Spectre": {
+        Default: "fc7005c4-4455-7298-b5fb-b182031d882b",
     },
     "Infantry Spectre": {
         Default: "ae7f22d9-43cb-dd44-4509-b19b3d98c381",
@@ -4891,6 +4928,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     ".SYS Melee": {
         Default: "7cf68fce-474d-cd59-5729-17a45fd83764",
+    },
+    "Soulstrife Scythe": {
+        Default: "252c202e-4f8f-c064-8059-0ea0c851cc3c",
     },
     "Prime Axe": {
         Default: "d2e296d9-448e-c58f-2229-14a481906686",

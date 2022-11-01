@@ -261,6 +261,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Cypher Spray": "e8754a6e-4ec5-3d1c-2ed9-e0a5ff9f1271",
     "The Seeker Spray": "26df3792-4540-ce9b-6048-11ab72bc4f94",
     "I See You Spray": "db1dcdc0-4473-5598-05e4-d4859fa9d340",
+    "Soulstrife Spray": "38a03ad2-4758-e57b-4a01-d78dc728bdbd",
     "Lethal Crosshair Spray": "706200b9-40bd-8d93-0442-ff94f6a0fd6e",
     "Calculated Spray": "8d8179b0-449a-6856-857e-dc97de7b2ace",
     "Sova Spray": "1d63d0b1-4946-a76f-c280-aa8ba3f94772",
@@ -300,6 +301,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Spotlight Spray": "1024275a-4673-8d84-e796-dbbabf611614",
     "Too Easy Spray": "476820f7-4c57-41ca-ebb8-54a2828b4371",
     "Protocol 781-A Spray": "e428e9d5-4912-ffac-031b-f293375cd14d",
+    "Clutch Spray": "890c4f6d-4794-3d88-617b-1b906c7a8ea6",
     "Astral Plane Spray": "3650047b-416a-589e-c28e-dea10e89ef59",
     "Astra Spray": "b58494ef-4b11-64e2-1d36-36853a74ad0c",
     "Galaxy Brain Spray": "15c876dd-4961-54ec-fbe0-d2b3a36f90e2",
@@ -1142,6 +1144,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "I See You Spray": {
         "1": "266d3c0a-47d8-3b9f-597f-6dafc7a02f97",
     },
+    "Soulstrife Spray": {
+        "1": "bc2c6453-4ff5-321f-b35f-07bae25aa8c0",
+    },
     "Lethal Crosshair Spray": {
         "1": "16caf7b5-4385-5e6b-35c6-d9b4e1275204",
     },
@@ -1258,6 +1263,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Protocol 781-A Spray": {
         "1": "519573ae-4af3-54f8-1563-2cb6035f2e01",
+    },
+    "Clutch Spray": {
+        "1": "a05915d8-48ad-4f13-166a-6c8a93d2a97b",
     },
     "Astral Plane Spray": {
         "1": "6bd59ec5-4082-de5b-9aee-96830d162d89",

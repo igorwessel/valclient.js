@@ -230,6 +230,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "EP4: Radiant Buddy": "9d803f91-483f-eefb-eddc-bbb0283a2b5e",
     "EP4: Silver Buddy": "85a9ad0f-4a3b-e748-d8d5-68b9c66f3d8d",
     "Gravitational Uranium Neuroblaster Buddy": "90356707-45e1-5d0b-2b34-2d9aadf78b4e",
+    "Slay Ride Buddy": "759b4a69-4742-cdf9-4211-4c867cdcabd7",
     "Stardust Buddy": "a1907073-46c5-6a62-17bb-a186d437a728",
     "Root Beer Buddy": "2128c60c-4bd0-a707-aa88-7da65c6b4f4e",
     "Immortal Rose Buddy": "1a838fd4-43c3-dad7-ad30-37b9240c1ce1",
@@ -967,6 +968,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Gravitational Uranium Neuroblaster Buddy": {
         "1": "2484e328-45e9-a5c0-960f-ad8b0f620d0e",
+    },
+    "Slay Ride Buddy": {
+        "1": "9062a791-4368-47bd-95ae-9382603c77b9",
     },
     "Stardust Buddy": {
         "1": "d1472303-4e9c-2c04-0ab6-95b7f787612a",
