@@ -117,6 +117,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Kiss the Frog Buddy": "8908dd49-4489-3bad-86c9-8e9d08613c0e",
     "Spectrum Buddy": "4bd1070f-44ea-cdf5-9738-51a0e4e1c64a",
     "Tactical Surprise Buddy": "ebd9f1fe-4219-1362-923f-c791a35258e1",
+    "2022 Game Changers Winner Buddy": "902bac6e-4674-cda0-cd3f-92b65d943fed",
     "Gelato Cutie Buddy": "108a36d5-44ef-9b4c-b783-b29a6a9ae340",
     "Gimbap Buddy": "bb6a39bd-4486-7fda-a2d5-48af18882f73",
     "Tall Tales Buddy": "c839377c-4c9a-9562-28be-91805c2d94f9",
@@ -139,6 +140,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Icy Crate Buddy": "90c69d6b-4cd2-9d0c-8c3f-ada26e881ea9",
     "Mi Goreng Buddy": "35083ec3-427e-d4f3-b7fc-1ca79fcb5703",
     "Jack O' Lantern Buddy": "e1f62dc9-4bd1-868e-3ca3-f7b51fd325fa",
+    "Give Back // 2022 Buddy": "17535eeb-4487-18fe-1e3a-49bc51a3e216",
     "Heavy Lifting Buddy": "e97d4c30-4ca4-d433-f24c-789abcfdf059",
     "The Key to Ancient Mysteries Buddy": "b39fbd41-4ec6-242d-02a6-dfbe7322c579",
     "Key of Life Buddy": "ee83292a-4698-354e-9d2d-a58a19a76d11",
@@ -182,6 +184,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Can't Break Me Buddy": "022534ce-41f1-c4f9-b953-2e9f19e82e24",
     "Hue Shift Buddy": "5fd3f15f-419b-0225-c0c8-b7bc555b447e",
     "Old Salt Buddy": "b5d5b1f3-40a2-07dc-f111-3aa87c596d7c",
+    "Pocket Sage Buddy": "86e61d30-4f29-ef14-e880-ef89f53eff09",
     "Pizza Buddy": "15bc068c-4b1e-dfbc-cfbb-9283a8d0e0ee",
     "Magepunk, Ep 3 Buddy": "1cfa4641-4c44-4067-236c-f7be07d6ded7",
     "POLYfox Buddy": "8bb77c22-4f90-ec3e-a2f7-16a2ddb064b2",
@@ -630,6 +633,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Tactical Surprise Buddy": {
         "1": "bf1a4a54-4ed4-79d3-885a-c689231db7c9",
     },
+    "2022 Game Changers Winner Buddy": {
+        "1": "a9558eeb-4a1d-19a1-c746-a1bad5991b17",
+    },
     "Gelato Cutie Buddy": {
         "1": "461ee5bc-4325-67f1-9e3f-42952fb8f898",
     },
@@ -695,6 +701,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Jack O' Lantern Buddy": {
         "1": "eaf6e89a-46b6-83e3-2efb-eda4b0f3dd86",
+    },
+    "Give Back // 2022 Buddy": {
+        "1": "2ddcfd08-4fbd-d895-8dbc-2e8f1606d957",
     },
     "Heavy Lifting Buddy": {
         "1": "6349701a-43f1-3623-847f-3c9c7e4b7281",
@@ -824,6 +833,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Old Salt Buddy": {
         "1": "e64b89a7-44ed-286e-08bf-0cb96fd2bfd2",
+    },
+    "Pocket Sage Buddy": {
+        "1": "41b46073-4677-797b-596a-12aa31d5bd81",
     },
     "Pizza Buddy": {
         "1": "aa3661f1-4eef-e8dd-047b-e5b9ed61403b",

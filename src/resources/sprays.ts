@@ -250,6 +250,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Team Ace // Reyna Spray": "87a73941-4739-acbf-5c94-63ab07cd68d6",
     "Team Ace // Yoru Spray": "db44205d-4b22-cf8a-cdee-a49fcf754ce3",
     "GG Shooter Spray": "b520005e-42cf-169c-ab30-a7a60d7f29f1",
+    "Give Back // 2022 Spray": "777dd75b-4de9-1c2f-a645-e2a6df175838",
     "GLHF Spray": "6983ae7c-4cb5-835c-8f62-b7affbaae20e",
     "Googly Moogly Spray": "85637987-4961-177a-28f0-f3acf8facb6a",
     "KAY/O Spray": "0abec7c8-4fc7-4fc2-af4c-22ad4802b937",
@@ -1110,6 +1111,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "GG Shooter Spray": {
         "1": "4471ce86-4fcc-e6ee-32ab-4ead1b475bda",
+    },
+    "Give Back // 2022 Spray": {
+        "1": "593e8a6e-4870-2c32-4475-aa9dcf255eee",
     },
     "GLHF Spray": {
         "1": "d774fc07-45e2-0f19-f475-c0b1b9661323",

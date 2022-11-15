@@ -138,6 +138,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Undercity Phantom": "ed3ac995-4fd1-3079-27aa-4aab84447833",
         "Glitchpop Phantom": "25a7f0f2-4bce-7e45-b4b0-ca9264f5dfcc",
         "ChronoVoid Phantom": "2aac8bb3-4cfa-b806-21e4-5a8e9904caa4",
+        "Abyssal Phantom": "2d1472fd-458c-515a-c4e4-ceaa50c84187",
         "Doodle Buds Phantom": "3a091315-4e87-31d5-7cdb-27804a177fd2",
         "Singularity Phantom": "5eec4ce6-443d-e9b5-4c5b-2b967d426bd3",
         "Sarmad Phantom": "cd07ba8f-4dae-0410-582e-71acdef102ce",
@@ -337,6 +338,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Aristocrat Sheriff": "840f12d8-467b-1a5e-f79c-b893b72b2fbc",
         "Nebula Sheriff": "55ef0ffa-44fe-03ac-dcf0-1982df0857aa",
         "ChronoVoid Sheriff": "e1fdd246-4a6c-af26-f0a0-65a48f2586da",
+        "Abyssal Sheriff": "79a78823-41dd-a2e8-7586-12bc8154d2d9",
         "Singularity Sheriff": "bfd9e773-4376-1f6a-98f2-dc93f0c0607c",
         "Surge Sheriff": "2674c385-4397-0383-04df-988d8d6fd2c8",
         ".SYS Sheriff": "3850ea5a-4e51-d913-7a44-48b2589e06b9",
@@ -433,6 +435,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Spectrum Guardian": "04ccfe05-497c-2d52-2bd0-64a68955175e",
         "Starlit Odyssey Guardian": "16dba725-4de2-8412-c07f-af95c65db9a2",
         "Nebula Guardian": "6141a40d-48cf-8466-6d46-558c0ff145ea",
+        "Abyssal Guardian": "97bc040f-44bb-cbb3-c9f4-3aa16d1c0655",
         "Nitro Guardian": "00e6b758-448e-af3b-7dee-879aa4a51324",
         "Songsteel Guardian": "2d5e6025-4166-730e-1024-abb766d19568",
         "Spitfire Guardian": "3ab36c94-4c91-d722-6f10-11bbbe382159",
@@ -487,6 +490,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Striker Spectre": "dbe2c9ea-41c4-522c-9204-dab09bac84d0",
         "Radiant Crisis 001 Spectre": "780a93e6-46aa-50c7-5e73-b885c5f6a141",
         "Starlit Odyssey Spectre": "1e473101-488a-e8ab-41cd-c6ad9d53443a",
+        "Abyssal Spectre": "3aebc432-4946-b9dc-ae50-59a6afa68c0d",
         "Singularity Spectre": "0eab3e5c-4de4-e221-34fb-2ab435c89eb6",
         "Sarmad Spectre": "5137dacb-4df6-b513-765b-96b9ecfc435c",
         "Hivemind Spectre": "d405272b-4388-578c-e33b-04842496b8c1",
@@ -565,6 +569,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Glitchpop Dagger": "ddc025b2-475f-889a-2800-80b4215582bc",
         "Glitchpop Axe": "f0c42e14-4a92-132d-dfd4-cbbef103340c",
         "Terminus A Quo": "1b8de6d7-4f37-7170-acd7-e78829f7959a",
+        Caeruleus: "cd6ce089-43fa-c4dc-3f8f-0391cb604b5d",
         "Blade of Chaos": "6e0496c1-4c98-7abe-16c4-7ca3653e5cd8",
         "Elderflame Dagger": "94b40026-4efb-39ea-69d7-fca60be39c56",
         "Singularity Knife": "151ee26c-4e82-e7ca-dad1-099e7fb34774",
@@ -1097,6 +1102,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "fb9ba36e-4901-e621-cc0b-dba82ba9eded",
         "Level 3": "78f1af5d-45f3-544f-3aec-0bb5f6b0efcf",
         "Level 4": "cf09f992-4a76-aeb4-7ca6-35b5d823ec81",
+    },
+    "Abyssal Phantom": {
+        "Level 1": "4163056e-40e8-b075-1b9e-2cbe1752c376",
     },
     "Doodle Buds Phantom": {
         "Level 1": "f9d54c11-4c6f-575b-5bed-3cb693f6f2ba",
@@ -1781,6 +1789,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "dc7fb3f6-476b-fac7-2e2d-f4b1d1ed062d",
         "Level 4": "1e60239c-4322-aec5-8e82-f39cfb196f88",
     },
+    "Abyssal Sheriff": {
+        "Level 1": "ae3986a0-4a43-7218-218f-63b8c5c7c63b",
+    },
     "Singularity Sheriff": {
         "Level 1": "4276d2b5-4b1c-b636-aff0-4ea579d875d7",
         "Level 2": "4a585df0-4bc4-17aa-1e5a-ccac42b07d12",
@@ -2125,6 +2136,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Nebula Guardian": {
         "Level 1": "bf6df430-4e46-5c51-df6f-c2bc3b1cb4fe",
     },
+    "Abyssal Guardian": {
+        "Level 1": "f1eaddc9-48fb-1d4e-e8c5-0c90feca333d",
+    },
     "Nitro Guardian": {
         "Level 1": "03d98493-4964-3f66-7e23-7581bbcfa501",
     },
@@ -2315,6 +2329,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Starlit Odyssey Spectre": {
         "Level 1": "a9e8ca5e-405e-db36-b240-bbb43dca41b1",
+    },
+    "Abyssal Spectre": {
+        "Level 1": "7dd3f419-4a8e-22e1-f546-b1b83ac20f47",
     },
     "Singularity Spectre": {
         "Level 1": "3b955119-421c-3319-50cc-1aaf06b42338",
@@ -2598,6 +2615,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Terminus A Quo": {
         "Level 1": "96fe45cd-448d-890f-f3f6-86b25516c1a0",
         "Level 2": "4840c1fc-4570-d487-1dff-68977a0d6e67",
+    },
+    Caeruleus: {
+        "Level 1": "901425cd-405a-d189-3516-ba954965e559",
     },
     "Blade of Chaos": {
         "Level 1": "d6b75f1b-409b-bae9-d378-d3adf04a3ca9",
@@ -3276,6 +3296,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Purple: "048ae1e3-48e5-c5dd-65ef-01b962267db2",
         Red: "765c1e64-4e53-f855-a0f9-c7bb0254d4e5",
         Black: "62228fbd-418d-a7d6-e44a-06885debdef5",
+    },
+    "Abyssal Phantom": {
+        Default: "8be317ca-466a-cd33-3e17-799b4be479fa",
     },
     "Doodle Buds Phantom": {
         Default: "04b49ef4-40a2-f6e9-c0ba-0995ca536f91",
@@ -4032,6 +4055,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Red: "f916f30e-45dd-7c0d-e218-faa924a41746",
         Black: "641c542b-40f5-70dc-677f-c8a0f3603d2f",
     },
+    "Abyssal Sheriff": {
+        Default: "87c3afad-40e7-c6bb-7124-6088f961ffc2",
+    },
     "Singularity Sheriff": {
         Default: "00831706-4e60-d5f9-b600-e38be89828d0",
         Blue: "78c77ae1-4987-223d-720e-c596cd1f3a6c",
@@ -4386,6 +4412,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Nebula Guardian": {
         Default: "e6f6e321-4de6-5d25-69ea-baa30d693373",
     },
+    "Abyssal Guardian": {
+        Default: "c2c15a3b-4883-362d-c155-d0a4b007804c",
+    },
     "Nitro Guardian": {
         Default: "c8721633-461a-a7be-8777-bd96c9332470",
     },
@@ -4595,6 +4624,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Twilight: "445f2cd5-4571-6ba2-0b55-c7873e2af197",
         Sunset: "c41c4849-41f6-1905-8a35-58a6e5f2404a",
         Midnight: "33b432fd-4766-e358-9b71-89bc6a98719c",
+    },
+    "Abyssal Spectre": {
+        Default: "45bfac23-4e59-1f99-2e4c-9fa9c9ead038",
     },
     "Singularity Spectre": {
         Default: "da0d77b2-49b4-148d-e32e-d79aef1b3829",
@@ -4892,6 +4924,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Purple: "e07b0750-4eb5-c92c-f863-838f159ac23e",
         Red: "8d257fcd-4fd0-a428-2566-a0b8b3332ac7",
         Black: "3c8953f2-4c99-0dbd-e06b-0abfadd5ec99",
+    },
+    Caeruleus: {
+        Default: "6593259b-43f1-ab4a-5cb9-a0977fb3750f",
     },
     "Blade of Chaos": {
         Default: "54417551-4a5d-9b90-35dc-a28b93feb50b",
