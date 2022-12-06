@@ -84,6 +84,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Silvanus Vandal": "d758abc0-4d99-62d3-b22b-0db0e57de881",
         "Crimsonbeast Vandal": "8b688de6-42d3-9430-8f38-32b0b3d1c2c6",
         "Ion Vandal": "596ce51d-40e3-dc21-b02d-b08d070a7883",
+        "Cryostasis Vandal": "f328add7-4710-ab8d-95bb-409bc8278a35",
         "Sensation Vandal": "72c1e90b-40ca-4304-02eb-28bb2aea4ed2",
         "Sakura Vandal": "f946ef5c-46ab-e146-a712-1d99a1651356",
         "Schema Vandal": "9a6c6db7-4f56-12d6-8339-6386f12090e8",
@@ -115,6 +116,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Couture Bulldog": "199b8536-488a-09e6-8592-ff9cf21b4ceb",
         "Nunca Olvidados Bulldog": "9c91e507-4241-33d1-c63a-aeb9ec3d9d03",
         "Genesis Bulldog": "90e750e8-4a42-f5fc-9160-3ea5e5522c6e",
+        "Cryostasis Bulldog": "d832f94c-4490-176e-c625-c3a1130cea19",
         "Hue Shift Bulldog": "c2f87e28-4c3b-5dc3-0109-ffa3a0e43f4c",
         "POLYfox Bulldog": "dbf7b813-4931-3b45-db2b-ea8d418b2b1d",
         "Protocol 781-A Bulldog": "1daefbff-4581-aef3-5ed6-da894d7e4cc7",
@@ -290,6 +292,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Smite Classic": "22fdc42d-4ad6-2bec-8033-8a8bdf178826",
         "Spline Classic": "750d4f04-4fea-391b-fa8b-539815a63164",
         "Galleria Classic": "2f9f4637-4377-b55f-97a1-1e8974e29b27",
+        "Cryostasis Classic": "edb386a1-4d02-4fd0-2f84-f8bf6434e5c4",
         "Premiere Collision Classic": "c4c0edc9-4ce3-3945-81f5-1bb80aeb22fe",
         "Gravitational Uranium Neuroblaster Classic": "81ddbfcd-4081-8341-ff76-ad8cdb26ce4c",
         "Sakura Classic": "6ba7a7a0-4057-4d5c-7c98-579f232db298",
@@ -416,6 +419,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Silvanus Operator": "83b49f36-4085-8179-6896-1a99f2d2d1d8",
         "Genesis Operator": "de8d2ff4-49e0-c0a9-d29b-2da688220a01",
         "Ion Operator": "bbf8ffb9-49c0-75c0-cc7d-8f8f03a4bd36",
+        "Cryostasis Operator": "b2783916-483a-9112-89c6-64b8d927b78c",
         "Gravitational Uranium Neuroblaster Operator": "c21e2f34-4b8c-4350-33c8-a8b626ecaadc",
         "Sentinels of Light Operator": "b05c4c98-4108-e442-add7-da99a95a37b6",
         "Reaver Operator": "aecab890-43b7-d719-06bc-9295e3d116dc",
@@ -603,6 +607,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Ion Energy Sword": "46664f5b-49ca-3e09-4fe5-56bdef536335",
         "Ion Karambit": "a590c03a-43b1-a408-4c6b-0bb9fdda1570",
         "Oni Claw": "206fc3fe-45a0-6c19-c367-229b98b6a2aa",
+        "Cryostasis Impact Drill": "feb4eb97-4ab3-793a-9a92-1b8af59dc023",
         "Artisan Foil": "c39f405f-42f1-acd1-a350-d3af39c32e33",
         "Personal Administrative Melee Unit": "239ed20b-479c-e08e-c4b5-6ba0394576d4",
         "Random Favorite Skin": "b5f42a00-425a-6fdf-61af-bb9a564c3d79",
@@ -918,6 +923,11 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "fefee60e-4270-0ea8-6187-3aaf57196b05",
         "Level 4": "cc63e209-471d-26e8-4b8c-b9aba3bb1b32",
     },
+    "Cryostasis Vandal": {
+        "Level 1": "690bcddd-4b2e-d856-7b4f-0e81f7c21133",
+        "Level 2": "d6f6111f-467a-addd-25fa-f9ac9d01d8f9",
+        "Level 3": "14f8c385-4ed1-e5a1-f129-6c8914bd16af",
+    },
     "Sensation Vandal": {
         "Level 1": "f4bfff96-487a-cf9e-08cc-d590d962c4e6",
     },
@@ -1016,6 +1026,11 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Genesis Bulldog": {
         "Level 1": "c5711665-4126-fa98-510f-5f8c82f52911",
+    },
+    "Cryostasis Bulldog": {
+        "Level 1": "40f6c0c2-4ad2-6864-a0e6-2e852615f991",
+        "Level 2": "ed3b769b-47af-7b34-7e16-5a9ff7c119cc",
+        "Level 3": "8946d843-447b-ad44-3cce-44bb3c88489c",
     },
     "Hue Shift Bulldog": {
         "Level 1": "9db51105-45a7-d05e-6d7d-08962c65c386",
@@ -1635,6 +1650,11 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Galleria Classic": {
         "Level 1": "b8bc5d1b-44aa-aa83-0246-b1a6bb496177",
     },
+    "Cryostasis Classic": {
+        "Level 1": "59e65120-4806-491a-9e88-13a26c80ee3f",
+        "Level 2": "5383be6c-4249-5789-0836-eb985e826954",
+        "Level 3": "258fab16-4723-56bb-2fac-06951346be1e",
+    },
     "Premiere Collision Classic": {
         "Level 1": "8bd8c44c-4c30-947a-5531-a0b823d574ea",
     },
@@ -2065,6 +2085,11 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "8a0328e1-4067-ddaa-fb06-e6ab0c0c9a54",
         "Level 3": "65888fca-4a1d-da64-8735-8495d86338ca",
         "Level 4": "4ffc2ae6-4501-2c43-a105-f4977a0a207e",
+    },
+    "Cryostasis Operator": {
+        "Level 1": "932f4704-44ec-b931-0141-a8b364c0f7b5",
+        "Level 2": "f3bf94f9-4b58-cbe1-8c61-66a593c08b50",
+        "Level 3": "2513e405-456e-cc67-7aee-fea2c6f16595",
     },
     "Gravitational Uranium Neuroblaster Operator": {
         "Level 1": "4aa31563-44e1-0d9f-f95a-a1b9965ad762",
@@ -2734,6 +2759,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "e34039b6-441d-3e17-2773-bdaf5c3d2faa",
         "Level 2": "444af7a1-46d4-6139-a4b4-66b3112bd37b",
     },
+    "Cryostasis Impact Drill": {
+        "Level 1": "5629ead8-442c-9a31-9622-cd9bf93aec4b",
+        "Level 2": "1ffe6891-4900-2431-ba2e-fd8460a86dd1",
+    },
     "Artisan Foil": {
         "Level 1": "704a71ab-4b0e-6e03-466e-5b9ca9d987fd",
     },
@@ -3103,6 +3132,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Yellow: "e58db59a-43ec-36dc-a646-98a932ed6094",
         Blue: "a7bd562d-4a2c-b272-f46b-f5892745a38f",
     },
+    "Cryostasis Vandal": {
+        Default: "886d24da-42ba-62cd-9d25-a7813ee686cc",
+    },
     "Sensation Vandal": {
         Default: "e5ca1ad8-4548-43f8-13b3-a89cc50aa319",
     },
@@ -3215,6 +3247,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Genesis Bulldog": {
         Default: "49c0b811-4c16-b68f-b074-4f81d8f0563c",
+    },
+    "Cryostasis Bulldog": {
+        Default: "b4b15d7b-42d2-c6f5-d52d-a794df03b882",
     },
     "Hue Shift Bulldog": {
         Default: "7a5c47c8-4e83-917d-b0bf-dda86932d6ea",
@@ -3881,6 +3916,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Galleria Classic": {
         Default: "ab72692d-4447-3cb0-e8a8-30ac11d82213",
     },
+    "Cryostasis Classic": {
+        Default: "ba903a6d-41ce-494a-38b6-7188c10f9231",
+    },
     "Premiere Collision Classic": {
         Default: "23da120e-408d-2234-4cac-58bcf1557752",
     },
@@ -4335,6 +4373,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Ion Operator": {
         Default: "54ea8ba8-4bcb-eb63-70d2-4da7520fade2",
+    },
+    "Cryostasis Operator": {
+        Default: "b62c9833-4172-0e82-7ed2-f2bed55343dd",
     },
     "Gravitational Uranium Neuroblaster Operator": {
         Default: "fc0a7435-4786-e732-9f08-a6a9e84f42ce",
@@ -5044,6 +5085,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Oni Claw": {
         Default: "94bf2d2a-4f1b-b68e-0de1-f2ac152d1127",
+    },
+    "Cryostasis Impact Drill": {
+        Default: "e69672d4-4e5f-4ff8-e7ca-ad97ed343241",
     },
     "Artisan Foil": {
         Default: "b5bdd4c9-4b22-a4d3-1ca4-4c8348f6a41d",

@@ -243,6 +243,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Unconditional Surrender Spray": "30b0ab90-4cba-6c69-c7d2-f68b14574aa2",
     "Champions 2022 Jett Diff Spray": "556008f0-41bb-d752-3747-1aabc73499c8",
     "VCT 2021 Spark Spray": "f9bcf120-42b6-6986-2acd-6aa87bab4089",
+    "Fakeout Spray": "076630c8-4bc9-d953-eb13-6e81e341840c",
     "Fist Bump Spray": "d8cfce74-4bb8-42b2-022e-9dbf9d648823",
     "Team Ace // Jett Spray": "5e5fd29a-4e83-40fa-0012-e08470dacdd7",
     "Team Ace // Phoenix Spray": "e3d197d4-458b-7e60-dbbf-378788cf4863",
@@ -1090,6 +1091,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "VCT 2021 Spark Spray": {
         "1": "9aea356b-41f7-b2eb-be07-138caa0a5dad",
+    },
+    "Fakeout Spray": {
+        "1": "6b42825b-4ecb-9f68-b5e8-e2b5019aa462",
     },
     "Fist Bump Spray": {
         "1": "65a0e616-4169-1187-8daa-d696777cba48",

@@ -283,6 +283,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Exquisitely Wrapped Buddy": "ada5f921-4d81-f439-0017-0e86877a02bd",
     "The Wheel of Steel Buddy": "86bbce95-4b76-c933-9939-9aa0f0f2c169",
     "Soul Capsule Buddy": "c4f69de5-4440-19b5-8953-36b12ba42bb0",
+    "Walis Tambo Buddy": "575ddf35-42a1-1de6-8599-d78dc7fb9a02",
     "White Snake Buddy": "7d2614f5-4811-a2b8-5e5a-4c8d8d1c558f",
     "Grim Delight Buddy": "7cf1fc2c-4456-fa8f-b9f6-c9be7092163f",
     "Pocket Knife Buddy": "a2e04067-4ea8-ff47-be4a-f780bdf5e1f7",
@@ -1130,6 +1131,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Soul Capsule Buddy": {
         "1": "9a53cf84-4303-c623-b733-5787f8661404",
+    },
+    "Walis Tambo Buddy": {
+        "1": "2e164663-438a-91a1-7533-34b1e7fa8cf0",
     },
     "White Snake Buddy": {
         "1": "0c163690-44c5-a5f1-3bdc-42acdc75df94",
