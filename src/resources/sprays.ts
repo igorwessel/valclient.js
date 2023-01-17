@@ -241,6 +241,21 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "See You Next Round Spray": "081262e8-42db-ac4a-c94b-a89b623525c0",
     "Surprise! It's a Tiger Spray": "1284b594-4bb8-7bce-8165-239757222cf8",
     "Unconditional Surrender Spray": "30b0ab90-4cba-6c69-c7d2-f68b14574aa2",
+    "Dream Team Spray": "891758c9-4723-b867-2f9c-60ae7859388d",
+    "Who's That Blind Spray": "20804618-4c6c-3592-0356-ce883c0b3ba9",
+    "Definitely Not It Spray": "7d295a08-4a23-e073-cf96-6993c89229fe",
+    "Last Person Standing Spray": "a44ca875-40c6-a0ee-7bb4-ca8d0fa0da2c",
+    "Perfectly Roasted Spray": "49aed04f-4253-3f4f-52b8-00bc6ee51ea1",
+    "Good Fortune Spray": "bef136fe-4494-5916-f93a-1db1af3ca10d",
+    "Oh No Spray": "7784e803-4fb8-830c-742d-b39e2a0f717a",
+    "No Bullets Spray": "cf146552-44bb-18ff-e68a-b584b6165379",
+    "Network Error Spray": "472693f9-4d87-416b-9def-3fbe2d310cc0",
+    "9 Lives Spray": "4692c883-4a7e-c8b9-9e4d-79a25ef14763",
+    "No Worries Neon Spray": "bf0a475d-4e34-8c67-8533-eea86f459a26",
+    "Shock Heart Spray": "6550c96f-491d-7e4c-e923-84bf433d0b3f",
+    "Drop Skin Please Spray": "c3bee812-4eca-11af-2295-feb833077703",
+    "Gridcrash Spray": "6a54a0b7-4392-537d-28b0-17876973171b",
+    "Oh Yes Spray": "de79e31c-4f93-35e4-795a-c798156106ae",
     "Champions 2022 Jett Diff Spray": "556008f0-41bb-d752-3747-1aabc73499c8",
     "VCT 2021 Spark Spray": "f9bcf120-42b6-6986-2acd-6aa87bab4089",
     "Fakeout Spray": "076630c8-4bc9-d953-eb13-6e81e341840c",
@@ -322,6 +337,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "VALORANT GO! Vol. 2 Sova Spray": "7b0e0c8d-4f91-2a76-19b9-079def2fa843",
     "VALORANT GO! Vol. 2 Viper Spray": "ea087a08-4b9f-bd0d-15a5-d3ba09c4c381",
     "VALORANT GO! Vol. 2 Yoru Spray": "40ff9251-4c11-b729-1f27-088ee032e7ce",
+    "Araxys Spray": "9f78cf1d-4c55-71a0-f920-d6b5c8a21db0",
     "Champions 2022 Spray": "cd785f82-41a2-f7b4-0f17-e69b0fe5beb3",
     "Origin Spray": "c495e583-42d5-e9fe-c460-9f946ff369f6",
     "Glitchpop Spray": "2e37f837-425d-45f2-22a2-71a9af5c118f",
@@ -1086,6 +1102,51 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Unconditional Surrender Spray": {
         "1": "c56d2279-4908-8f53-e3ae-589c4eafe1de",
     },
+    "Dream Team Spray": {
+        "1": "1e9caca6-4499-8abe-582c-0f8cc8de5834",
+    },
+    "Who's That Blind Spray": {
+        "1": "d4dbaf21-4a35-6898-e860-b89eab465116",
+    },
+    "Definitely Not It Spray": {
+        "1": "0e5049ad-49d1-3d85-3c25-0bbb30530d7a",
+    },
+    "Last Person Standing Spray": {
+        "1": "15c92b03-4c03-d177-f86e-1b81083e5f09",
+    },
+    "Perfectly Roasted Spray": {
+        "1": "479d65fe-4e21-ba8f-ac38-748a912b9141",
+    },
+    "Good Fortune Spray": {
+        "1": "3071af8e-4365-7793-4e9e-7e82774e0918",
+    },
+    "Oh No Spray": {
+        "1": "8d4a0e04-450b-9d61-dd45-48b533c7248d",
+    },
+    "No Bullets Spray": {
+        "1": "914291c6-4bb1-1624-f907-92a01bc0cfd9",
+    },
+    "Network Error Spray": {
+        "1": "3bcafa5b-4d01-235c-1c4f-bbb6ab2ba32a",
+    },
+    "9 Lives Spray": {
+        "1": "57626700-434d-4f53-837e-dcb894937a13",
+    },
+    "No Worries Neon Spray": {
+        "1": "a9c4b467-43f7-f754-7ac5-0ca600b35a9f",
+    },
+    "Shock Heart Spray": {
+        "1": "82a6c8b6-48b8-720c-ceae-538082dc9d50",
+    },
+    "Drop Skin Please Spray": {
+        "1": "45156b5d-4a68-9c9f-f402-7b89faa49b8c",
+    },
+    "Gridcrash Spray": {
+        "1": "a945d85b-4435-40f3-7c1d-e7a084d4b0eb",
+    },
+    "Oh Yes Spray": {
+        "1": "9949e09a-4561-f6cb-0557-18b1931c4e22",
+    },
     "Champions 2022 Jett Diff Spray": {
         "1": "39ee62f9-4aa1-6331-85d1-fe8c9116c960",
     },
@@ -1328,6 +1389,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "VALORANT GO! Vol. 2 Yoru Spray": {
         "1": "b107a08c-4fc6-df0a-1605-a9ba7f49170e",
+    },
+    "Araxys Spray": {
+        "1": "9bd7d9b4-4b42-1134-d4dd-108fb59a4e58",
     },
     "Champions 2022 Spray": {
         "1": "a5c5e4c9-486b-dae5-8051-8ca7c9222391",

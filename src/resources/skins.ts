@@ -41,6 +41,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Magepunk Ares": "0fac1dcf-48d0-c6c4-675e-2a8013bc879c",
         "Minima Ares": "cd8eb70d-443c-d9fd-48cd-98bace9d5132",
         "Ion Ares": "0f4b0478-4759-911d-c44b-2a907534789d",
+        "9 Lives Ares": "4e459b3b-4dab-934f-1d77-bdbe75b6fcca",
         "POLYfrog Ares": "ff555802-4633-0c8b-93f8-b8887666e3ad",
         "Divine Swine Ares": "398ef7c2-4055-980e-a8b4-669ca8bc5084",
         "Jigsaw Ares": "e4b7f196-4f05-825f-e795-a59fc829195d",
@@ -55,6 +56,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Immortalized Vandal": "d980c0c8-492b-b8df-2d91-af99a7707170",
         "RGX 11z Pro Vandal": "e5490f71-455b-74ad-f762-f5a876d4dff9",
         "VALORANT GO! Vol. 2 Vandal": "ba6f2526-4ed2-8e62-49aa-ebbb04290682",
+        "Araxys Vandal": "4c926aa9-4f26-bc80-c486-9b888333373f",
         "Neptune Vandal": "db91451c-4309-2c8c-eded-bf842d844e52",
         "Aristocrat Vandal": "6191bb0b-456f-1a3e-df13-cdb0c1b8b1e4",
         "Gaia's Vengeance Vandal": "000ad7b1-44b0-9345-ea47-9cbd7dcdbb38",
@@ -69,6 +71,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Sarmad Vandal": "5b6b1eee-4185-8f83-9374-3391d0f0f742",
         "Nitro Vandal": "9b62faf1-416c-b736-0edb-39b890f1f18d",
         "Hivemind Vandal": "f7f63b78-4b12-b21e-a0e7-6bafbad81509",
+        "Venturi Vandal": "5a658084-453f-e971-5def-2bb9cf6e5e90",
         "Forsaken Vandal": "437307c6-424c-6a48-9738-949b91166353",
         "Team Ace Vandal": "25980352-4407-60ff-eb27-058c1ea696cc",
         "Ruin Vandal": "948d31a0-4c2a-9c82-2b89-fe9f2ec65036",
@@ -101,6 +104,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Winterwunderland Vandal": "16716d68-4d36-320f-aafd-f6a6bfa5abe2",
     },
     Bulldog: {
+        "Araxys Bulldog": "26d0c312-46c2-1912-302a-b7b8f62640ca",
         "Aristocrat Bulldog": "c610dbc8-4a90-3c86-7f9e-bfa910f75bb9",
         "Endeavour Bulldog": "3f8be578-4e47-8afd-1e6c-cb9bb326e8b5",
         "Spectrum Bulldog": "fbe04552-445f-f202-923e-6fbd61b7e2aa",
@@ -123,6 +127,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Premiere Collision Bulldog": "fbf8ca06-41c9-6293-24cc-b6b292db5cf7",
         "Infinity Bulldog": "decd0962-453a-1551-47e1-1287aafb5a27",
         "Standard Bulldog": "724a7f42-4315-eccf-0e76-77bdd3ec2e09",
+        "Gridcrash Bulldog": "0c0cbd13-4601-e6c1-0180-2181e2461c36",
         "Convex Bulldog": "f580899d-49c4-8bf8-9718-c9a6a38dd503",
         "Depths Bulldog": "4e6341f9-4851-603d-daff-9185f007d3dc",
         "Varnish Bulldog": "9bba8d9a-461e-9783-fcb7-f1a92192fb3a",
@@ -163,6 +168,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Silvanus Phantom": "25824735-478d-30b7-8fc9-95b1999f9d3b",
         "Ion Phantom": "e86bf7e4-4dd3-fbee-533b-fa875344bbaf",
         "Oni Phantom": "36791b03-452d-8dad-0091-898cc28d2196",
+        "9 Lives Phantom": "762aca85-4bf4-73a5-932a-2aa8407c31b3",
         "Hue Shift Phantom": "3a204da4-4aa4-d02f-73a0-55867bc8d501",
         "Aero Phantom": "56f075b7-4171-a977-90ac-d5ad786f1478",
         "Artisan Phantom": "909daea4-49ab-7b99-46fb-aa8c9e6fd837",
@@ -205,6 +211,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Sensation Judge": "8e27a0b3-4dc9-e2a7-e33a-29a616efc244",
         "Snowfall Judge": "a07941d7-42dc-5083-97a1-af850ca6fa26",
         "Standard Judge": "acd26127-48ff-8b9e-7ba6-b989af8a4b24",
+        "Gridcrash Judge": "4b77be03-4410-1ac5-0b9e-82b326cd990f",
         "Convex Judge": "03751fa0-46db-0df3-b8cb-99adf373ecda",
         "Varnish Judge": "87591a69-47c1-a052-ba85-33a8097a0b07",
     },
@@ -246,6 +253,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Elderflame Frenzy": "4fb9ea7d-45a6-9154-7a46-648781b081c4",
         "Sarmad Frenzy": "3fd33106-4816-c257-d27f-2b86c5d76c66",
         "Rush Frenzy": "a010c5fc-4343-067d-4dfb-ee836ec0a45f",
+        "Venturi Frenzy": "5c0965bc-4860-94a3-a133-b29b08f75051",
         "Team Ace Frenzy": "5947209b-4864-fb3b-bc48-74a7924e4412",
         "Swooping Frenzy": "d6af3716-4ab5-8204-a2f4-1eb4ffc51088",
         "Horizon Frenzy": "17162b11-45fc-5b66-2e49-79ac9d60032c",
@@ -293,6 +301,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Spline Classic": "750d4f04-4fea-391b-fa8b-539815a63164",
         "Galleria Classic": "2f9f4637-4377-b55f-97a1-1e8974e29b27",
         "Cryostasis Classic": "edb386a1-4d02-4fd0-2f84-f8bf6434e5c4",
+        "9 Lives Classic": "f3f962bd-4a19-b363-e939-6a91b897a28c",
         "Premiere Collision Classic": "c4c0edc9-4ce3-3945-81f5-1bb80aeb22fe",
         "Gravitational Uranium Neuroblaster Classic": "81ddbfcd-4081-8341-ff76-ad8cdb26ce4c",
         "Sakura Classic": "6ba7a7a0-4057-4d5c-7c98-579f232db298",
@@ -329,6 +338,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Recon Ghost": "bb28991f-4ca9-ca54-962d-31b68c838625",
         "Cavalier Ghost": "153b2b33-4e6c-fb98-42dd-5a9819649dc7",
         "Standard Ghost": "1c63b43b-43c4-04e4-01c9-7aa1bffa5ac1",
+        "Gridcrash Ghost": "fbba3f7e-402a-92f3-b3d6-a69d653e5204",
         "Depths Ghost": "69addb00-4eb5-eebb-c4c5-2296549cba6f",
         "Ego Ghost": "b84df096-4096-e9c4-0869-8e83e7fc5476",
         "Vendetta Ghost": "0a6edcf0-4a64-0ed5-1b10-0e96c2eb4cb4",
@@ -372,6 +382,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Death Wish Sheriff": "bb0d20c6-415d-cf24-e738-0f99db6f9195",
     },
     Shorty: {
+        "Araxys Shorty": "4e98f273-472c-3376-7195-46a1f81402cc",
         "Neptune Shorty": "646e713f-4999-6c56-094c-dd9114bdb35a",
         "Karabasan Shorty": "0581fb92-4b2d-0ede-6bfc-8d93fde11f74",
         "Rune Stone Shorty": "acedb6db-407b-5d62-9c27-07bbb2313fe3",
@@ -396,6 +407,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
     Operator: {
         "RGX 11z Pro Operator": "2e1936ed-4582-628f-da9c-25a7f47323cc",
         "VALORANT GO! Vol. 2 Operator": "4a1e0934-46ae-fa2a-a009-05ade5d43402",
+        "Araxys Operator": "6db556e4-4255-6c2c-6a80-8a9dfac96aa9",
         "Endeavour Operator": "bdf1484c-44a7-2ef1-3d21-45b66ff8a89f",
         "Origin Operator": "17831113-4ff0-a6c9-0b20-6f9c077d74a2",
         "Striker Operator": "90ba4949-4a6a-cc54-efb2-3dbdbe1bf69c",
@@ -452,6 +464,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Magepunk Guardian": "80dbfa46-4a1f-c7a4-2e88-1499308c7b9a",
         "Galleria Guardian": "f097983d-4c5a-c7ed-c325-039c99bb824e",
         "Oni Guardian": "850fea42-419f-f284-84ae-40ae1eabbb5b",
+        "9 Lives Guardian": "1a38d03c-4114-6908-37dd-38a85d91cb2d",
         "Aero Guardian": "93309ef5-4f43-411a-5759-c794eb584c7c",
         "POLYfox Guardian": "96679876-4d41-683c-2e5c-2ea25ddd8fdf",
         "Jigsaw Guardian": "23a16911-4cb1-2794-2d4c-3f99f1e2516b",
@@ -469,6 +482,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Rune Stone Marshal": "db3bf2d9-449e-cd8a-950e-018ca893d404",
         "Doodle Buds Marshal": "6250b40a-43a4-55d8-79d4-f6838d58151d",
         "Songsteel Marshal": "51da27fe-4a3f-016a-d18d-b68a47545f6f",
+        "Venturi Marshal": "f037ea38-4be9-0f3d-003c-6f958a71e04b",
         "Ruin Marshal": "027a5d7f-4bfc-7c41-a012-24b8c6720fda",
         "Monarch Marshal": "028c7b80-46ea-8f1d-3f7a-4c9c13a79977",
         "Avalanche Marshal": "dd58ab43-4ff3-659e-8f30-b8bd26619d4d",
@@ -498,6 +512,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Singularity Spectre": "0eab3e5c-4de4-e221-34fb-2ab435c89eb6",
         "Sarmad Spectre": "5137dacb-4df6-b513-765b-96b9ecfc435c",
         "Hivemind Spectre": "d405272b-4388-578c-e33b-04842496b8c1",
+        "Venturi Spectre": "35469802-4ae2-f86a-dfaa-d484cc29481e",
         "Forsaken Spectre": "a786ea8f-42f2-ae5f-376f-2bb66df1a62f",
         "Velocity Spectre": "6196c91c-4f0a-2aa2-342a-6fbac6d4ec3c",
         "Soulstrife Spectre": "95ca4d2b-4166-8e0e-8d79-d79957f58b81",
@@ -548,6 +563,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Sovereign Stinger": "8fb27bb1-4080-581d-bcd3-53ae01861654",
         "Cavalier Stinger": "51e2b876-4339-521d-8d68-9aaec119bc1f",
         "Standard Stinger": "940fb417-4a9c-3004-41f5-3e8f1f4178b2",
+        "Gridcrash Stinger": "3760761d-4be6-bc25-d9a8-a0b9137651fd",
         "Depths Stinger": "e1297b8f-4374-3131-27a9-38bb0eda1c0d",
         "Ego Stinger": "8fe5ebbc-4ce7-a248-9766-288441706e0a",
         "Varnish Stinger": "26fbcf26-4135-b8e3-277e-8a9c27e3d34d",
@@ -559,6 +575,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Xenohunter Knife": "c5482640-4652-6948-29c6-769e8198db27",
         "VALORANT GO! Vol. 1 Knife": "9103fdf7-4361-5ac5-37ae-7cb51f13f45d",
         "Yoru's Stylish Butterfly Comb": "d034911c-45a6-1ce4-e6f5-4cbe57e9d4f1",
+        "Araxys Bio Harvester": "a486efac-4415-1bfa-68d1-19bca9968101",
         "Neptune Anchor": "c3f1c9d6-441b-7def-1bf2-2c82719a4de8",
         "Gaia's Wrath": "f91a1dd8-4f5f-bce4-f01d-4da95322c485",
         Waveform: "400bb847-4f4f-a39e-cd52-589f00b2204f",
@@ -580,6 +597,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Blade of Serket": "6417e12d-4f03-13d4-8704-20bf3a1bcb5b",
         Songsteel: "45129867-4977-e2a5-bead-cb828101b623",
         "Hivemind Sword": "24cf2882-48c7-f287-155a-a4b6b083baa4",
+        "Venturi Knife": "2640e9a6-415f-4c3e-cac0-16a24edb41c0",
         "Forsaken Ritual Blade": "ed792f00-43a7-cc88-b64b-b78c9de399a1",
         "Velocity Karambit": "ccde2f25-4525-ef52-e1f0-bd88184bd4a4",
         "Ruin Dagger": "9c350ebe-458b-e6ed-ab77-2fb00cf249c1",
@@ -760,6 +778,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "8710d3a0-4c50-9f52-5076-f78418701e57",
         "Level 4": "5d746e26-4d66-a65f-1364-0e8cd49eae72",
     },
+    "9 Lives Ares": {
+        "Level 1": "c7528a68-41cb-380b-4753-06b2e5f1e01c",
+    },
     "POLYfrog Ares": {
         "Level 1": "9b61f5ca-4aa2-8557-37b2-a1b05f30c678",
     },
@@ -802,6 +823,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "VALORANT GO! Vol. 2 Vandal": {
         "Level 1": "23de6607-4647-bccd-8863-3da2720e4152",
+    },
+    "Araxys Vandal": {
+        "Level 1": "a3dba920-44ee-d7c5-5227-99a80aee3bd9",
+        "Level 2": "6ecbed4a-4df2-cbac-ef9c-05b89e542224",
+        "Level 3": "09c0d1f4-4f53-71ea-29ef-6d91719f8ae0",
+        "Level 4": "cf641af3-477a-b7da-b996-089d6168f3d1",
     },
     "Neptune Vandal": {
         "Level 1": "49cea67c-4552-13c2-6b4b-8ba07761504e",
@@ -867,6 +894,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Hivemind Vandal": {
         "Level 1": "7383ca56-490a-f9f5-f126-5ea0dcd4a242",
+    },
+    "Venturi Vandal": {
+        "Level 1": "5e8a67a4-42d0-d91b-7ef4-168df818b6ac",
     },
     "Forsaken Vandal": {
         "Level 1": "851b390a-4852-66bd-8b72-4f96f0919710",
@@ -976,6 +1006,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Winterwunderland Vandal": {
         "Level 1": "496b0096-4000-c1fc-102d-70a8b769d0d1",
     },
+    "Araxys Bulldog": {
+        "Level 1": "45e51d17-480a-6e28-cdd2-459d7758bea8",
+        "Level 2": "5df3789a-47df-8dc2-91bb-41aa6335346d",
+        "Level 3": "e9e02c90-43c9-f33d-7f11-16a14f51149c",
+        "Level 4": "1dcac15f-4bc2-b6b8-bada-f4b0f2cd088c",
+    },
     "Aristocrat Bulldog": {
         "Level 1": "3bf9d39f-46b4-ba23-e079-488d799b9416",
     },
@@ -1053,6 +1089,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Standard Bulldog": {
         "Level 1": "c8e6ac70-48ef-9d96-d964-a88e8890b885",
+    },
+    "Gridcrash Bulldog": {
+        "Level 1": "06168395-458e-25f5-7866-80a6a19d1977",
     },
     "Convex Bulldog": {
         "Level 1": "84f8d0f4-4442-5892-6a20-8f83e65a5e96",
@@ -1204,6 +1243,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "bb07581b-4733-ce33-53d4-3dadc038ca4a",
         "Level 4": "1b24255d-4f50-9202-7b6f-f7873db580d1",
     },
+    "9 Lives Phantom": {
+        "Level 1": "441303a9-40c9-2836-be7b-948f81911b99",
+    },
     "Hue Shift Phantom": {
         "Level 1": "d17aa037-40df-ce4d-1009-59a02323f002",
     },
@@ -1346,6 +1388,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Standard Judge": {
         "Level 1": "6942d8d1-4370-a144-2140-22a6d2be2697",
+    },
+    "Gridcrash Judge": {
+        "Level 1": "5a93b96b-4b27-c478-0dae-c89077561adb",
     },
     "Convex Judge": {
         "Level 1": "73e91435-4a2a-2552-d541-eb961e168f2c",
@@ -1490,6 +1535,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Rush Frenzy": {
         "Level 1": "3e32c58e-4347-e4b1-4502-6dab0dc516a8",
+    },
+    "Venturi Frenzy": {
+        "Level 1": "01cba63e-457b-fab8-2252-96ae4344cbef",
     },
     "Team Ace Frenzy": {
         "Level 1": "8a3d3cb5-4c8f-0604-b931-9388de1eabad",
@@ -1655,6 +1703,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 2": "5383be6c-4249-5789-0836-eb985e826954",
         "Level 3": "258fab16-4723-56bb-2fac-06951346be1e",
     },
+    "9 Lives Classic": {
+        "Level 1": "b2ae014f-4c4e-1308-d1c7-e8bc70c46947",
+    },
     "Premiere Collision Classic": {
         "Level 1": "8bd8c44c-4c30-947a-5531-a0b823d574ea",
     },
@@ -1775,6 +1826,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Standard Ghost": {
         "Level 1": "0a7e786c-444e-6a80-8bda-e2b714d68332",
+    },
+    "Gridcrash Ghost": {
+        "Level 1": "232f93cb-4c6e-512c-9961-db9b90929400",
     },
     "Depths Ghost": {
         "Level 1": "bb0450c4-47db-4fc7-d0c3-a8a5320d673b",
@@ -1917,6 +1971,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Death Wish Sheriff": {
         "Level 1": "a07ff70b-4b4b-ee36-78f5-8ba771b278ac",
     },
+    "Araxys Shorty": {
+        "Level 1": "f41c7d7c-4701-1612-f375-7fbfa52b7ac7",
+        "Level 2": "ed37bd4b-48fa-3d51-49ae-19be0780a290",
+        "Level 3": "6089c5d0-4fb4-cf2d-3940-adb2a1d97b16",
+        "Level 4": "60ffb9eb-430e-5920-6418-aaaca3b566b4",
+    },
     "Neptune Shorty": {
         "Level 1": "93266c2b-400f-da62-24a0-739f51d33cc1",
         "Level 2": "e40ba2a2-4b91-8144-0b62-7c8ede15bced",
@@ -1995,6 +2055,12 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "VALORANT GO! Vol. 2 Operator": {
         "Level 1": "68811d2b-4a6d-cbdc-39d3-f580aa97a297",
+    },
+    "Araxys Operator": {
+        "Level 1": "bf2da3c9-43aa-5a37-9958-2a805298951f",
+        "Level 2": "0dca1fcb-4484-5e4d-f15c-a3985b2bec33",
+        "Level 3": "4e0b18ce-4658-bdfd-7097-17bffb168886",
+        "Level 4": "34ccb66a-489f-f120-b9ef-739f4af36549",
     },
     "Endeavour Operator": {
         "Level 1": "fd486ca0-4d52-4e9b-ec35-dc8cd450b679",
@@ -2213,6 +2279,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "fea4c5e9-4028-72b1-0dda-00b9d14026a2",
         "Level 4": "9318a2c8-4ccc-bfb4-e7d9-6289608a4ba5",
     },
+    "9 Lives Guardian": {
+        "Level 1": "ceb293ef-4b75-7924-f638-e098a14a2788",
+    },
     "Aero Guardian": {
         "Level 1": "d52eb83d-4bc0-085d-3ec7-24b2c92281bf",
     },
@@ -2270,6 +2339,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Songsteel Marshal": {
         "Level 1": "3e0a3431-4e78-89d1-ee57-d9837e324ee0",
+    },
+    "Venturi Marshal": {
+        "Level 1": "90ef24e4-4b7a-f6c6-ca55-abb5379fda34",
     },
     "Ruin Marshal": {
         "Level 1": "60dc909f-4c52-b96e-dd37-dfaa2392e373",
@@ -2369,6 +2441,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Hivemind Spectre": {
         "Level 1": "4d02d9fa-4cb4-4d87-bdf0-97bd5f960c12",
+    },
+    "Venturi Spectre": {
+        "Level 1": "fedae3b2-418e-cacf-2d4c-c6bb030d4561",
     },
     "Forsaken Spectre": {
         "Level 1": "daa73753-4b56-9d21-d73e-f3b3f4c9b1a6",
@@ -2555,6 +2630,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Standard Stinger": {
         "Level 1": "471fc2a5-47a7-5b12-2895-0899117d2f57",
     },
+    "Gridcrash Stinger": {
+        "Level 1": "0cb2b7e5-465e-7ba6-7329-03be6690a31e",
+    },
     "Depths Stinger": {
         "Level 1": "6a1cd98a-4248-4b67-8ced-ac9c56fb4630",
     },
@@ -2586,6 +2664,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Yoru's Stylish Butterfly Comb": {
         "Level 1": "ec70c8c8-48db-b2dc-ab7d-1d9410b0cfbf",
         "Level 2": "da00cdf4-474d-960b-a011-f29d27403ff0",
+    },
+    "Araxys Bio Harvester": {
+        "Level 1": "4351b2ed-42a1-4d84-804b-2f8d695e5069",
+        "Level 2": "0adbfaf4-4cd0-3688-9d37-ffad95bc36b7",
     },
     "Neptune Anchor": {
         "Level 1": "85db497e-4b7d-dd9d-bc09-6d926158ed74",
@@ -2665,6 +2747,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     },
     "Hivemind Sword": {
         "Level 1": "1dc43c70-4dec-a8e6-e9fa-cda0033cc041",
+    },
+    "Venturi Knife": {
+        "Level 1": "63991095-4963-33ba-339f-50b69eb88fe1",
     },
     "Forsaken Ritual Blade": {
         "Level 1": "5fecfd43-4bec-4e6a-842c-84860853df82",
@@ -2966,6 +3051,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Yellow: "5ec7b626-4789-f017-d7d7-dfb5980e0418",
         Blue: "267ac45e-471b-c985-47e3-2995fa1294bb",
     },
+    "9 Lives Ares": {
+        Default: "03658360-4ce5-a08c-50af-aebdfe0427b9",
+        Raze: "03e40507-4577-eeee-360b-709f53c46015",
+        Reyna: "83240b7d-4cdd-738f-4512-a4a3d42dfae7",
+        Viper: "1f85fd23-4a1f-71cb-a164-468d0eecd981",
+    },
     "POLYfrog Ares": {
         Default: "3c0d0c63-4c14-c181-f53c-b8b174b8c1ec",
     },
@@ -3013,6 +3104,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "VALORANT GO! Vol. 2 Vandal": {
         Default: "730adb1b-4e94-f597-9f21-60b758da1156",
+    },
+    "Araxys Vandal": {
+        Default: "a09f9850-4cb9-d0aa-63c7-6dbb5a64f27e",
+        Purple: "03d3ef6f-42b9-234d-d89e-fd938511ed31",
+        Black: "e3fca4fe-4617-8367-6738-9f92a89c3ba1",
+        Silver: "6610c5f5-490b-e3a6-dca3-a8b21dcb3196",
     },
     "Neptune Vandal": {
         Default: "9a2125b3-4e53-4757-fe1c-4e9b31ae0c28",
@@ -3077,6 +3174,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Hivemind Vandal": {
         Default: "10b9c4d7-448d-508d-25f6-a39edf95a79f",
+    },
+    "Venturi Vandal": {
+        Default: "c075fec1-4c07-06f3-9c4d-02be3375ac02",
     },
     "Forsaken Vandal": {
         Default: "6273d900-47de-65bb-29c9-ea934faadfef",
@@ -3186,6 +3286,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Winterwunderland Vandal": {
         Default: "2f27fbff-452f-49c7-5370-129fb5548e44",
     },
+    "Araxys Bulldog": {
+        Default: "ea8c7f51-4e3e-2593-2d37-eaa0119b9829",
+        Purple: "49451aa7-4a30-3d0e-2cf9-a19afc966041",
+        Black: "f11c775b-4ddf-1596-3cdb-4e826ec0e1f4",
+        Silver: "19d84374-4647-33ad-50f8-efb80f8eda7c",
+    },
     "Aristocrat Bulldog": {
         Default: "d2710367-42b2-cf4e-8b87-2f9d09a41261",
     },
@@ -3274,6 +3380,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Standard Bulldog": {
         Default: "bf35f404-4a14-6953-ced2-5bafd21639a0",
+    },
+    "Gridcrash Bulldog": {
+        Default: "6a8c8af7-4e22-0f4e-e78a-19b32dacc8da",
     },
     "Convex Bulldog": {
         Default: "1789be1e-42fb-a43a-2f40-eb9b793481b0",
@@ -3421,6 +3530,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Black: "b639a920-424b-b855-1e30-7f9b026889f1",
         Green: "6f9c7109-485a-f2a3-cb1d-9f9a31a995d7",
         White: "32dfe871-4906-d2ce-4835-2d99aaa52f84",
+    },
+    "9 Lives Phantom": {
+        Default: "fcd72b4e-4eb1-7752-bb28-a7b2a77294c7",
+        Raze: "4712da6a-4591-a4e8-c9a5-3c89ce573b73",
+        Reyna: "b6ac6e3a-4710-f2d6-98f7-71892096401a",
+        Viper: "01ee628c-411a-e345-e7a5-918e1dcf8d02",
     },
     "Hue Shift Phantom": {
         Default: "3948f41b-4239-40b6-5a04-6ba0202a0ce0",
@@ -3588,6 +3703,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Standard Judge": {
         Default: "b71ae8d6-44bb-aa4c-0d2a-dc9ed9e66410",
     },
+    "Gridcrash Judge": {
+        Default: "f9068f81-4666-1da5-3e92-6b9aeed95b93",
+    },
     "Convex Judge": {
         Default: "5f0e190d-4693-f36a-3f63-b9bd22b1b379",
     },
@@ -3734,6 +3852,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Rush Frenzy": {
         Default: "1ee55fe2-49b9-67d3-13c3-6cbf7b8a23ef",
+    },
+    "Venturi Frenzy": {
+        Default: "abd924d0-4303-0257-7429-bd82cb36647d",
     },
     "Team Ace Frenzy": {
         Default: "3ef600b1-4737-3bd4-2dc7-5495631fd613",
@@ -3919,6 +4040,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Cryostasis Classic": {
         Default: "ba903a6d-41ce-494a-38b6-7188c10f9231",
     },
+    "9 Lives Classic": {
+        Default: "e8c60959-49a8-6eff-7983-2ea1955940b8",
+        Raze: "ed5c95eb-4d38-cbf1-1db6-dcb8e0690f85",
+        Reyna: "54552a10-4b42-a1b4-8cc7-64b16aa82f1b",
+        Viper: "129d8607-4fa8-4df1-b21a-21a085522e4d",
+    },
     "Premiere Collision Classic": {
         Default: "23da120e-408d-2234-4cac-58bcf1557752",
     },
@@ -4053,6 +4180,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Standard Ghost": {
         Default: "947a28b6-4e0f-61fb-e795-bc9a5e7b7129",
+    },
+    "Gridcrash Ghost": {
+        Default: "914f4435-4abc-e89d-e698-369cae3a8a4c",
     },
     "Depths Ghost": {
         Default: "02cc5691-4a5f-76b2-a73c-7ca6a1f5efda",
@@ -4201,6 +4331,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Death Wish Sheriff": {
         Default: "3bc59f13-4259-9ba0-1b15-18bc8b61a642",
     },
+    "Araxys Shorty": {
+        Default: "6ffa2b8b-4f19-4352-50fc-1fae04534611",
+        Purple: "e77075fe-41f8-0d04-1f32-bfb695379dcf",
+        Black: "9fb8bacf-4465-7279-7ea8-eb905ddbe26f",
+        Silver: "27a666f2-46a5-506d-3539-8189ce6e0982",
+    },
     "Neptune Shorty": {
         Default: "90e6f275-4d58-7a80-cdaa-bdbeca6712a3",
         Black: "d7f15e4a-446f-88bd-9daa-49b26d121ab3",
@@ -4281,6 +4417,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "VALORANT GO! Vol. 2 Operator": {
         Default: "5220f477-4fbb-cfb6-60ce-ddb7bd215a66",
+    },
+    "Araxys Operator": {
+        Default: "9201a3fa-4954-46c0-a61a-ac845a6a34c4",
+        Purple: "bdbc039a-4891-cd91-6713-74abe8470cbe",
+        Black: "9686c85c-4b6c-3b72-6dc6-058fd39f0c89",
+        Silver: "58f56085-4f00-7b1d-aaa0-f49395c1254d",
     },
     "Endeavour Operator": {
         Default: "cbc11972-4bb3-3d06-48c6-4d9e5b58b06e",
@@ -4504,6 +4646,12 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Green: "a8a73b3a-4608-6bef-dd1b-0cbb8ab7d2e4",
         White: "2c754236-407d-5708-61da-ada2f7821fb4",
     },
+    "9 Lives Guardian": {
+        Default: "ad3f37b1-431d-ae7c-4de0-68b29236d729",
+        Raze: "bd0f6b8b-4d5c-05ab-04ad-e6b4eeb81295",
+        Reyna: "35189b6c-467a-0aee-0a85-ec8f39e5f81f",
+        Viper: "7f448cd6-487a-dd56-7443-4e965b053ab4",
+    },
     "Aero Guardian": {
         Default: "fe2861de-4738-79a8-7a45-6bb09bca2852",
         "Cream/Pink": "5dfc67e3-4584-e012-e47d-079edca1301f",
@@ -4574,6 +4722,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Songsteel Marshal": {
         Default: "4156c0b0-44b8-7ea9-6707-75aec36ec5fb",
+    },
+    "Venturi Marshal": {
+        Default: "711d9160-42bd-1de7-9b8c-d5bd485d6208",
     },
     "Ruin Marshal": {
         Default: "609f948b-4d2e-99ee-631e-b98a74468877",
@@ -4680,6 +4831,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Hivemind Spectre": {
         Default: "0bf12530-4abb-8851-0420-199af20c2a2a",
+    },
+    "Venturi Spectre": {
+        Default: "5fbd3df7-4169-0a46-c905-eb86fe84e35b",
     },
     "Forsaken Spectre": {
         Default: "b3e64067-4afc-05a6-85b7-b8a983ca6c29",
@@ -4885,6 +5039,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     "Standard Stinger": {
         Default: "31bb2115-4c62-d37c-43c4-11b8fee7f212",
     },
+    "Gridcrash Stinger": {
+        Default: "d792b8c0-4d63-9864-1cf6-af9c081ae00f",
+    },
     "Depths Stinger": {
         Default: "f130ea97-4a39-9a50-cb54-56993b7d4bbe",
     },
@@ -4914,6 +5071,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Yoru's Stylish Butterfly Comb": {
         Default: "d3f2119f-4853-e136-c807-e197b6a9c92e",
+    },
+    "Araxys Bio Harvester": {
+        Default: "ec12a28a-486d-f9e4-dfd5-1c8c7f208b39",
     },
     "Neptune Anchor": {
         Default: "e6d3f9c9-4b20-881d-c990-0b97b49a3fd8",
@@ -4989,6 +5149,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Hivemind Sword": {
         Default: "e276db7c-4cab-3215-2b83-c483b8b9139d",
+    },
+    "Venturi Knife": {
+        Default: "36aad8ff-46c3-db6e-0ed0-719cb97a22e8",
     },
     "Forsaken Ritual Blade": {
         Default: "30e034a5-41dc-f639-e513-ce95af4a0474",
