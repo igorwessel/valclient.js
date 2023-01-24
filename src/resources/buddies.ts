@@ -145,6 +145,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "Frozen Solid Buddy": "14b87153-4fc2-707f-46e5-15b5ffe2f529",
     "Icy Crate Buddy": "90c69d6b-4cd2-9d0c-8c3f-ada26e881ea9",
     "Mi Goreng Buddy": "35083ec3-427e-d4f3-b7fc-1ca79fcb5703",
+    "VCT LOCK//IN Dad Hat Buddy": "d2b317f7-4f19-7052-cd50-33a32f210da0",
     "Jack O' Lantern Buddy": "e1f62dc9-4bd1-868e-3ca3-f7b51fd325fa",
     "Give Back // 2022 Buddy": "17535eeb-4487-18fe-1e3a-49bc51a3e216",
     "Heavy Lifting Buddy": "e97d4c30-4ca4-d433-f24c-789abcfdf059",
@@ -304,6 +305,7 @@ export const buddyIdMappedByName: BuddyIdMappedByName = {
     "The Wheel of Steel Buddy": "86bbce95-4b76-c933-9939-9aa0f0f2c169",
     "Soul Capsule Buddy": "c4f69de5-4440-19b5-8953-36b12ba42bb0",
     "Walis Tambo Buddy": "575ddf35-42a1-1de6-8599-d78dc7fb9a02",
+    "Luna Buddy": "756be48e-4769-542d-45ad-53ac67c5b872",
     "White Snake Buddy": "7d2614f5-4811-a2b8-5e5a-4c8d8d1c558f",
     "Grim Delight Buddy": "7cf1fc2c-4456-fa8f-b9f6-c9be7092163f",
     "Pocket Knife Buddy": "a2e04067-4ea8-ff47-be4a-f780bdf5e1f7",
@@ -737,6 +739,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Mi Goreng Buddy": {
         "1": "5042a9cd-41a6-fb8c-33ae-aba44a7187b2",
+    },
+    "VCT LOCK//IN Dad Hat Buddy": {
+        "1": "e41c02fa-4eb0-503f-80d3-65bf2850f592",
     },
     "Jack O' Lantern Buddy": {
         "1": "eaf6e89a-46b6-83e3-2efb-eda4b0f3dd86",
@@ -1214,6 +1219,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Walis Tambo Buddy": {
         "1": "2e164663-438a-91a1-7533-34b1e7fa8cf0",
+    },
+    "Luna Buddy": {
+        "1": "76cdcb09-4ba0-d657-ed3d-4c8b7dbb21c5",
     },
     "White Snake Buddy": {
         "1": "0c163690-44c5-a5f1-3bdc-42acdc75df94",

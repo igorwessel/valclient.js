@@ -88,6 +88,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Crimsonbeast Vandal": "8b688de6-42d3-9430-8f38-32b0b3d1c2c6",
         "Ion Vandal": "596ce51d-40e3-dc21-b02d-b08d070a7883",
         "Cryostasis Vandal": "f328add7-4710-ab8d-95bb-409bc8278a35",
+        "Luna Vandal": "04d8cc84-468a-b696-85ae-a193077838ed",
         "Sensation Vandal": "72c1e90b-40ca-4304-02eb-28bb2aea4ed2",
         "Sakura Vandal": "f946ef5c-46ab-e146-a712-1d99a1651356",
         "Schema Vandal": "9a6c6db7-4f56-12d6-8339-6386f12090e8",
@@ -330,6 +331,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Magepunk Ghost": "33824a13-453b-0636-4ec4-e19708aa934e",
         "Artisan Ghost": "8dfec665-4836-d498-2896-08a16c092133",
         "Jigsaw Ghost": "f20bdd80-4cbf-67a8-106e-72bbf94336aa",
+        "Luna Ghost": "4ab1d112-4ae0-4841-11f8-b198cb847862",
         "Eclipse Ghost": "4725c2c4-45b7-d9ab-ff4f-a79c3b2dd9ec",
         "Lycan's Bane Ghost": "1a9afd32-46fc-43c1-ab92-0a95e912805b",
         "Reaver Ghost": "c7261be6-47d2-ef86-82f4-6a844e45d33c",
@@ -494,6 +496,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "POLYfrog Marshal": "6eea7984-4ca4-d547-4d50-b4a608072feb",
         "Divine Swine Marshal": "ad83a57d-414c-f714-a97f-99bad1128b2b",
         "Artisan Marshal": "4986a893-48a5-4c23-11f2-70bb9e9d284d",
+        "Luna Marshal": "48f218a6-42cf-4f63-0cda-39a5aef5d870",
         "Premiere Collision Marshal": "b273ade7-4971-c274-eb92-219ef6def086",
         "Sovereign Marshal": "5211efa8-4efd-09bb-6cee-72b86a8a5972",
         "Standard Marshal": "fd44b2d5-49ee-77ab-fa56-588f3ac0c268",
@@ -533,6 +536,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Aero Spectre": "fbaedf2b-4a8b-1949-ddaa-27ab3f6d8ae4",
         "POLYfrog Spectre": "9042279e-4491-1a01-a346-928f89f01ea7",
         "Protocol 781-A Spectre": "eaa73ab9-4688-0c40-09ad-85b535a50723",
+        "Luna Spectre": "f45824e7-4573-d473-0e70-959b76fc4dab",
         "Gravitational Uranium Neuroblaster Spectre": "4a8e8ff6-44f2-0ebf-6fa8-a5af76b628ee",
         "Reaver Spectre": "1cb1ab52-4c7d-0775-77f4-eaac99968261",
         "Recon Spectre": "26b1c794-4370-f354-ff4d-3a8b95edff79",
@@ -628,6 +632,7 @@ export const skinsIdMappedByGunName: SkinsIdMappedByGunName = {
         "Cryostasis Impact Drill": "feb4eb97-4ab3-793a-9a92-1b8af59dc023",
         "Artisan Foil": "c39f405f-42f1-acd1-a350-d3af39c32e33",
         "Personal Administrative Melee Unit": "239ed20b-479c-e08e-c4b5-6ba0394576d4",
+        "Luna's Descent": "07409307-46cc-98db-ec92-ceb04a865f73",
         "Random Favorite Skin": "b5f42a00-425a-6fdf-61af-bb9a564c3d79",
         "Gravitational Uranium Neuroblaster Baton": "0357caf1-41a9-cb1c-c080-38aab13d9a7e",
         "Snowfall Wand": "52a1647c-42d9-b40e-16cf-a7821566ad81",
@@ -957,6 +962,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "690bcddd-4b2e-d856-7b4f-0e81f7c21133",
         "Level 2": "d6f6111f-467a-addd-25fa-f9ac9d01d8f9",
         "Level 3": "14f8c385-4ed1-e5a1-f129-6c8914bd16af",
+    },
+    "Luna Vandal": {
+        "Level 1": "f77b8cbc-46ca-549b-b3a1-92884c2a2645",
     },
     "Sensation Vandal": {
         "Level 1": "f4bfff96-487a-cf9e-08cc-d590d962c4e6",
@@ -1795,6 +1803,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Jigsaw Ghost": {
         "Level 1": "d0793c86-471d-c60c-b0da-bcbadcd8bf12",
     },
+    "Luna Ghost": {
+        "Level 1": "091e534b-4ad9-599e-c8fe-f99a568c7503",
+    },
     "Eclipse Ghost": {
         "Level 1": "55aaa4ee-4d64-51c7-3c09-fd9bcbe1d122",
     },
@@ -2380,6 +2391,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
     "Artisan Marshal": {
         "Level 1": "c779f43f-47cc-fe29-63aa-bb8b91b36e42",
     },
+    "Luna Marshal": {
+        "Level 1": "5077391c-4106-6b3f-24c4-829be4cfbf38",
+    },
     "Premiere Collision Marshal": {
         "Level 1": "c7d5f553-4239-7124-3932-6a83a019d527",
     },
@@ -2524,6 +2538,9 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 3": "216d2295-4331-ed1e-7349-2499d84a6e83",
         "Level 4": "0b08de26-4b97-3540-54fd-3e8a91162cf8",
         "Level 5": "f2339f96-4693-b27d-6e3c-5ba10cf3f6bf",
+    },
+    "Luna Spectre": {
+        "Level 1": "83e4f68e-43eb-76f0-46f9-a8a5bd10382f",
     },
     "Gravitational Uranium Neuroblaster Spectre": {
         "Level 1": "8a1b2c5b-4692-78ae-9d5c-cdac6a61e4f4",
@@ -2855,6 +2872,10 @@ export const skinsLevelMappedByName: SkinsLevelsMapped = {
         "Level 1": "47897cd1-49e2-da3f-4a8f-b6a1e84b0dd0",
         "Level 2": "ba14e527-4dd2-6b91-69a7-03a3395665f8",
         "Level 3": "692e49fb-4a3e-6991-8e58-838498758939",
+    },
+    "Luna's Descent": {
+        "Level 1": "278e57d8-4abd-57b9-394b-abb8b48c1cd3",
+        "Level 2": "cbd9f020-4ee9-d9a5-d57a-9f9f9166717c",
     },
     "Gravitational Uranium Neuroblaster Baton": {
         "Level 1": "3710f62c-4e0c-65fd-848d-8da25d2fb833",
@@ -3234,6 +3255,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Cryostasis Vandal": {
         Default: "886d24da-42ba-62cd-9d25-a7813ee686cc",
+    },
+    "Luna Vandal": {
+        Default: "6b30f955-463f-e96c-57fc-ef92dbc92b4b",
     },
     "Sensation Vandal": {
         Default: "e5ca1ad8-4548-43f8-13b3-a89cc50aa319",
@@ -4148,6 +4172,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Killjoy: "4c087a53-44d1-a1ee-a8bb-2991eed7c249",
         Astra: "8c893a71-4ec0-ece4-8cdf-79b08e29f0b8",
     },
+    "Luna Ghost": {
+        Default: "f78f05bd-46cc-cadc-82d8-66b3c0e43eac",
+    },
     "Eclipse Ghost": {
         Default: "b6812d54-4e43-5daa-0b19-5884e5a3e9ca",
     },
@@ -4768,6 +4795,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         Green: "9de8140d-4f88-0f50-0689-2fbc6019003f",
         Blue: "acf1784e-4796-794d-97c3-0ba1fdc7f7c0",
     },
+    "Luna Marshal": {
+        Default: "8ddcf7eb-46ad-960f-1f18-17b181d7fdf4",
+    },
     "Premiere Collision Marshal": {
         Default: "229e680e-4b55-94b7-8a07-618468647fa3",
     },
@@ -4919,6 +4949,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
         "White/Pink": "5864760c-44be-6aa4-c5a5-2fb742f45474",
         "Red/Blue": "bcbdc71f-4fcb-5b64-16fb-82aa9618c3d9",
         Green: "3927b569-44ce-fa5c-74b9-4cb8b2da2572",
+    },
+    "Luna Spectre": {
+        Default: "d2ac3268-40b9-a72c-1e2c-4fa557dfd546",
     },
     "Gravitational Uranium Neuroblaster Spectre": {
         Default: "271728d3-47c2-cc82-f850-debaad2f84c8",
@@ -5260,6 +5293,9 @@ export const skinsChromasMappedByName: SkinsVariantsMapped = {
     },
     "Personal Administrative Melee Unit": {
         Default: "c1f3f20b-411f-8651-09d5-069069d92844",
+    },
+    "Luna's Descent": {
+        Default: "2de976d1-498c-eb19-9dc0-e6937915acea",
     },
     "Gravitational Uranium Neuroblaster Baton": {
         Default: "d5aa2665-4381-e982-4fd7-6ab0c2ce920b",

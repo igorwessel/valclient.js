@@ -285,6 +285,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Take Flight Spray": "f61f23ba-4f5a-0e31-e7eb-ccbc18700676",
     "On Target Spray": "60384125-47dd-134f-cd80-fe861830f63c",
     "Prime Brick Spray": "880d5de5-4268-769d-5407-55921ad2db12",
+    "Doomscrolling Spray": "f3c383f4-41c7-d0fb-190b-ed8b974e043e",
     "Killjoy Spray": "17678625-4f24-6bde-58fb-7198778e4fdb",
     "Variable Removed Spray": "b11b4890-4e7f-cf5f-be7c-9c85ecd50868",
     "Don't Cross Me Spray": "0a20236d-47d4-e9e6-adb1-a69ed3fdb1cd",
@@ -352,6 +353,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Ion Spray": "444464f1-445f-8f75-3c8d-a7bd8f24e654",
     "Ion, Ep5 Spray": "e269f912-4d39-e844-7b85-e495cca6b04a",
     "Oni Spray": "1091d2cc-430b-56ca-a82b-279b70026193",
+    "Luna Spray": "8b6bde33-47ed-1b5d-67ff-f68d7ba8daf9",
     "Gravitational Uranium Neuroblaster Spray": "735e6c3c-4899-532d-60cf-1ba0ce1a450d",
     "Sentinels of Light Spray": "829a47d5-4580-8428-2437-8daffdbc52ac",
     "Reaver Spray": "1658e811-4084-8775-28df-5a9feabc52d8",
@@ -1234,6 +1236,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Prime Brick Spray": {
         "1": "e6095080-447e-c3d8-da24-69b3f521b7e9",
     },
+    "Doomscrolling Spray": {
+        "1": "544b2d13-4bf5-137a-c4de-088ccbc64a6f",
+    },
     "Killjoy Spray": {
         "1": "7acfe83b-4c1f-3027-9b2f-4987dbf2ab53",
     },
@@ -1434,6 +1439,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Oni Spray": {
         "1": "135164b6-4295-27b2-34d8-59a95c93e025",
+    },
+    "Luna Spray": {
+        "1": "a42387d2-41d7-ebc4-9435-568c7de21664",
     },
     "Gravitational Uranium Neuroblaster Spray": {
         "1": "92d7a963-44ae-41c9-3d1b-b58c36eecd96",
