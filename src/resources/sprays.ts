@@ -1223,6 +1223,99 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Champions 2022 Jett Diff Spray": {
         "1": "39ee62f9-4aa1-6331-85d1-fe8c9116c960",
     },
+    "Immortalized Spray": {
+        "1": "085a9278-41bd-62ab-7b71-85a25bb2cd3c",
+    },
+    "Hide the Pain, Brimstone Spray": {
+        "1": "fa9a7a13-4824-9627-ff9d-48a78f71442c",
+    },
+    "Piedra del Sol Spray": {
+        "1": "fc04567e-4b4c-3b43-57fb-44a6cc7f0235",
+    },
+    "Unamused Chamber Spray": {
+        "1": "4004b3f1-4849-8c1a-aad4-918c92ac2570",
+    },
+    "Phoenix Rise Spray": {
+        "1": "f1aef89b-44ea-2cba-daf4-4b867c94942a",
+    },
+    "I've Been Hit Spray": {
+        "1": "8dd18a92-4347-7c74-895e-07b8ff0edf3d",
+    },
+    "Hehehehehe Spray": {
+        "1": "0cf17bc3-4f5f-d02d-12d1-59b9184cbfb0",
+    },
+    "Let Me In Spray": {
+        "1": "c6ac13bd-4a97-bc52-7734-0bbc3bc7e7d9",
+    },
+    "No Sentinels Spray": {
+        "1": "3fe8c17c-4e9d-70dd-9a24-ecbcaab38dff",
+    },
+    "Very Sneaky Spray": {
+        "1": "f4c5e6e2-46b9-6945-a2c6-cb900602ef35",
+    },
+    "Raze has Range Spray": {
+        "1": "92612cd8-49ca-7c07-8ee5-5eb32e2360c6",
+    },
+    "Guess That's It Spray": {
+        "1": "c9f5fdd0-4722-97f6-ae74-9e8406321fb8",
+    },
+    "Blasting Away Spray": {
+        "1": "f1a2b9bd-4793-00d1-14b3-ca84a6b5596d",
+    },
+    "Choose Your Match Spray": {
+        "1": "20851fba-483e-689e-9ced-c2a46f596eab",
+    },
+    "You Are Here Spray": {
+        "1": "1f8dc0c2-471b-e677-1957-4d99d4943506",
+    },
+    "Sketchy AFK Spray": {
+        "1": "62ab32c5-47d5-33a2-bd34-ef9c825589e6",
+    },
+    "Simple Instructions Spray": {
+        "1": "4af0f78e-4250-32c8-e462-1689d8cf4a2a",
+    },
+    "Hawk Out Spray": {
+        "1": "8753cd9b-4d33-3128-ec6b-4490ad931251",
+    },
+    "Always Watching Spray": {
+        "1": "a10a5079-4fac-aa6f-2aed-fe9e7620cc81",
+    },
+    "Fascinating Spray": {
+        "1": "0feb0cc7-45bc-117b-9c56-9cbf28787707",
+    },
+    "Breach's Approval Spray": {
+        "1": "8d6df619-45d3-cf2b-d6ff-2bb7806a9b3c",
+    },
+    "Mind Blown Spray": {
+        "1": "d7237195-48e6-c2a1-a2c6-069be3caaca5",
+    },
+    "No Vision Spray": {
+        "1": "ad4def94-46de-e690-b676-63a429a64f0e",
+    },
+    "Treat Those Burns Spray": {
+        "1": "b5dc84de-4e26-bbb1-1d2d-57916c56e9ee",
+    },
+    "Fill Your Card Spray": {
+        "1": "0ab65544-4234-6ad2-22bb-37aa6f56eabd",
+    },
+    "I Sleep Spray": {
+        "1": "1d1dc9d5-41bc-f7e1-a6e5-01a137c632f9",
+    },
+    "Written in the Stars Spray": {
+        "1": "10263937-4094-b80b-410d-24bb57240640",
+    },
+    "See You Next Round Spray": {
+        "1": "9c24cda0-4c3b-9c03-3654-4e915384ecf9",
+    },
+    "Surprise! It's a Tiger Spray": {
+        "1": "09d2a18a-492b-9fa3-58b7-2da6c6b40113",
+    },
+    "Unconditional Surrender Spray": {
+        "1": "c56d2279-4908-8f53-e3ae-589c4eafe1de",
+    },
+    "Champions 2022 Jett Diff Spray": {
+        "1": "39ee62f9-4aa1-6331-85d1-fe8c9116c960",
+    },
     "VCT 2021 Spark Spray": {
         "1": "9aea356b-41f7-b2eb-be07-138caa0a5dad",
     },
@@ -1246,6 +1339,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Team Ace // Yoru Spray": {
         "1": "b2406336-4ec4-44c4-4c74-a0b17dc5f7ea",
+    },
+    "Give Back // 2022 Spray": {
+        "1": "593e8a6e-4870-2c32-4475-aa9dcf255eee",
     },
     "Give Back // 2022 Spray": {
         "1": "593e8a6e-4870-2c32-4475-aa9dcf255eee",
@@ -1315,6 +1411,12 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Matsuba Spray": {
         "1": "d2e64030-440a-721a-21e3-39a724501b83",
+    },
+    "Matsuba Spray": {
+        "1": "d2e64030-440a-721a-21e3-39a724501b83",
+    },
+    "Kohaku Spray": {
+        "1": "7edd58a5-4c93-ba60-8863-938231ebb04b",
     },
     "Matsuba Spray": {
         "1": "d2e64030-440a-721a-21e3-39a724501b83",
@@ -1534,6 +1636,9 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "Nice to Zap You Spray": {
         "1": "5258e846-4fc9-9a56-ebb7-67879dcea66f",
+    },
+    "Ion, Ep5 Spray": {
+        "1": "815f50f8-493e-4b59-f7ad-3e98bf08adbe",
     },
     "Ion, Ep5 Spray": {
         "1": "815f50f8-493e-4b59-f7ad-3e98bf08adbe",
