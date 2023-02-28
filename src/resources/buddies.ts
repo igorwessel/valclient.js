@@ -473,6 +473,21 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Neptune Buddy": {
         "1": "387e205b-4752-df32-41d0-5a81f617db4f",
     },
+    "Big Announcement Buddy": {
+        "1": "ee11a149-4be0-089b-a4cf-da8795020c33",
+    },
+    "Anansi Buddy": {
+        "1": "f9e33f95-4d17-cd7e-3291-85b7f56bf183",
+    },
+    "Araxys Buddy": {
+        "1": "f3b997d0-439d-eaa2-5d82-0392e75e2fb1",
+    },
+    "Epilogue: Apple a Day Buddy": {
+        "1": "66cb449d-4603-8bcb-3107-99a54d4f4b5c",
+    },
+    "Neptune Buddy": {
+        "1": "387e205b-4752-df32-41d0-5a81f617db4f",
+    },
     "Gaia's Vengeance Buddy": {
         "1": "7c2881fb-4bd3-3d98-4e5b-72a939eb2cac",
     },
@@ -490,6 +505,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Immortal Rose Buddy": {
         "1": "9ea89ec3-4cb5-40f1-27af-f3983af8ab4d",
+    },
+    "Apple a Day Buddy": {
+        "1": "a31f3501-47bd-4b0e-f123-eeb4fe1f01b2",
     },
     "Apple a Day Buddy": {
         "1": "a31f3501-47bd-4b0e-f123-eeb4fe1f01b2",
@@ -521,6 +539,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Ornamental Commander Buddy": {
         "1": "1d0413e0-42db-a101-8804-829e76810f1b",
     },
+    "Ornamental Commander Buddy": {
+        "1": "1d0413e0-42db-a101-8804-829e76810f1b",
+    },
     "Bruno Coin Buddy": {
         "1": "6f6b58db-4a4d-0acc-1dec-c4ab7b297529",
     },
@@ -536,11 +557,17 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Crunch the Numbers Buddy": {
         "1": "3d8f4162-451b-bcaf-654e-a8882353221e",
     },
+    "Closed Beta Coin Buddy": {
+        "1": "cc4be40d-47e0-7f1e-2e30-9b90ce2607cd",
+    },
+    "Crunch the Numbers Buddy": {
+        "1": "3d8f4162-451b-bcaf-654e-a8882353221e",
+    },
     "Get The Picture Buddy": {
         "1": "46ff3a2d-46ca-3c0a-71ec-35813cac3955",
     },
-    "Ancient Mysteries Revealed Buddy": {
-        "1": "7484a99e-4f26-0b7d-d07d-75ab4fa1da7b",
+    "Edible Ornament Buddy": {
+        "1": "b65104fc-472d-ede7-1f1c-eda1c122e03f",
     },
     "VALORANT GO! Vol. 1 Cypher Buddy": {
         "1": "c8b53af9-4e6d-5599-f516-43a22c1048ab",
@@ -580,6 +607,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Closed Beta Coin Buddy": {
         "1": "cc4be40d-47e0-7f1e-2e30-9b90ce2607cd",
+    },
+    "Rune Stone Buddy": {
+        "1": "b6b43226-4c43-c5d4-d9fd-1b97d01f0e94",
     },
     "Rune Stone Buddy": {
         "1": "b6b43226-4c43-c5d4-d9fd-1b97d01f0e94",
@@ -767,8 +797,17 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Electric Love Buddy": {
         "1": "2c7679b7-45a8-15e6-2dab-e29e71ba8006",
     },
+    "Electric Love Buddy": {
+        "1": "2c7679b7-45a8-15e6-2dab-e29e71ba8006",
+    },
     "Divine Swine Buddy": {
         "1": "a29338b0-4882-6bc6-14a9-5eb7cc4778c2",
+    },
+    "Champions 2022 Dad Hat Buddy": {
+        "1": "68dab3e8-4bd0-f504-f1c6-a0a307634264",
+    },
+    "ChronoVoid Buddy": {
+        "1": "fdfc3887-4522-02d5-ae1e-be9170758667",
     },
     "Champions 2022 Dad Hat Buddy": {
         "1": "68dab3e8-4bd0-f504-f1c6-a0a307634264",
@@ -1022,6 +1061,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "VCT LOCK//IN Winner Buddy": {
         "1": "5ae9ea33-4c89-ce02-2962-63b92f59654d",
     },
+    "VCT LOCK//IN Winner Buddy": {
+        "1": "5ae9ea33-4c89-ce02-2962-63b92f59654d",
+    },
     "VCT Champions Winner Buddy": {
         "1": "02b22bd6-42fa-90f6-0574-2091794d3eb1",
     },
@@ -1033,6 +1075,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "EP5: Silver Buddy": {
         "1": "2c8af22d-484d-9303-14c4-30bffbbd4a7e",
+    },
+    "Venturi Buddy": {
+        "1": "74596a68-419b-ecd5-e49e-478972d61495",
     },
     "Venturi Buddy": {
         "1": "74596a68-419b-ecd5-e49e-478972d61495",
@@ -1076,11 +1121,20 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Kiss the Frog Buddy": {
         "1": "6e1f2e5d-481d-5d7e-82e1-9c91c2f0217d",
     },
+    "Kiss the Frog Buddy": {
+        "1": "6e1f2e5d-481d-5d7e-82e1-9c91c2f0217d",
+    },
     "Froggie Hat Buddy": {
         "1": "6b26e5ca-4187-cb98-b7b2-9280343e32e3",
     },
     "Riptide Buddy": {
         "1": "8648a41f-4ce8-92af-c6ce-3fbe4a93fba1",
+    },
+    "Tactical Surprise Buddy": {
+        "1": "bf1a4a54-4ed4-79d3-885a-c689231db7c9",
+    },
+    "2022 Game Changers Winner Buddy": {
+        "1": "a9558eeb-4a1d-19a1-c746-a1bad5991b17",
     },
     "Tactical Surprise Buddy": {
         "1": "bf1a4a54-4ed4-79d3-885a-c689231db7c9",
@@ -1105,6 +1159,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Sample 36-K Buddy": {
         "1": "2872825e-47da-98e7-556b-4caa214a8289",
+    },
+    "Shimmer Buddy": {
+        "1": "cb6f46bf-404f-3f04-1aa5-f18e5f2d25fc",
     },
     "Shimmer Buddy": {
         "1": "cb6f46bf-404f-3f04-1aa5-f18e5f2d25fc",
@@ -1142,6 +1199,12 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Ready to Roll Buddy": {
         "1": "699b5264-46c0-d474-3f44-7fa3e62bde94",
     },
+    "Halo Halo Buddy": {
+        "1": "a85b109c-4252-b779-cfdc-b28f9a774b89",
+    },
+    "Ready to Roll Buddy": {
+        "1": "699b5264-46c0-d474-3f44-7fa3e62bde94",
+    },
     "Safe Haven Buddy": {
         "1": "d606df6a-4f8a-1273-083a-5b925a178e36",
     },
@@ -1166,11 +1229,17 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Frozen Solid Buddy": {
         "1": "48aaf4dc-49b9-d8dc-c599-a4917019cc82",
     },
+    "Frozen Solid Buddy": {
+        "1": "48aaf4dc-49b9-d8dc-c599-a4917019cc82",
+    },
     "Icy Crate Buddy": {
         "1": "2497a841-4545-f706-f6a5-c086d0713a75",
     },
     "Pizza Buddy": {
         "1": "aa3661f1-4eef-e8dd-047b-e5b9ed61403b",
+    },
+    "VCT LOCK//IN Dad Hat Buddy": {
+        "1": "e41c02fa-4eb0-503f-80d3-65bf2850f592",
     },
     "VCT LOCK//IN Dad Hat Buddy": {
         "1": "e41c02fa-4eb0-503f-80d3-65bf2850f592",
@@ -1226,6 +1295,15 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Kohaku & Matsuba Buddy": {
         "1": "98442884-4d6e-65d8-3295-69bde3315d92",
     },
+    "Kitsune Mask Buddy": {
+        "1": "0eadfb30-4336-2680-55c0-f0b16b55fc19",
+    },
+    "Perfect Pattern Buddy": {
+        "1": "abd1acb2-45ca-67a2-328e-b9afc833240a",
+    },
+    "Kohaku & Matsuba Buddy": {
+        "1": "98442884-4d6e-65d8-3295-69bde3315d92",
+    },
     "Dance of Luck Buddy": {
         "1": "fdc908cf-493d-4b1d-bdbd-0da7e7525520",
     },
@@ -1246,6 +1324,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Safe Haven Buddy": {
         "1": "d606df6a-4f8a-1273-083a-5b925a178e36",
+    },
+    "Magic Hummingbird Buddy": {
+        "1": "6941800f-4055-394c-0bc0-1d9bbff03f8e",
     },
     "Magic Hummingbird Buddy": {
         "1": "6941800f-4055-394c-0bc0-1d9bbff03f8e",
@@ -1334,11 +1415,17 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Can't Break Me Buddy": {
         "1": "e6b2cd4c-4c42-7cae-cd93-86b5f181274d",
     },
+    "Can't Break Me Buddy": {
+        "1": "e6b2cd4c-4c42-7cae-cd93-86b5f181274d",
+    },
     "Hue Shift Buddy": {
         "1": "72a5a776-4763-0685-06c1-bbaa14d0f93d",
     },
     "Give Back Buddy": {
         "1": "bdd36e5e-4574-85e3-6f64-62ba3319a9d1",
+    },
+    "Pocket Sage Buddy": {
+        "1": "41b46073-4677-797b-596a-12aa31d5bd81",
     },
     "Pocket Sage Buddy": {
         "1": "41b46073-4677-797b-596a-12aa31d5bd81",
@@ -1562,6 +1649,12 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Epilogue: Pocket Sized Sheriff Buddy": {
         "1": "21e67b07-4d0a-e438-88ee-93a8af385b06",
     },
+    "Pocket Sized Sheriff Buddy": {
+        "1": "b2b1c9bb-42da-2edc-d7b3-56b47b4fd1d1",
+    },
+    "Epilogue: Pocket Sized Sheriff Buddy": {
+        "1": "21e67b07-4d0a-e438-88ee-93a8af385b06",
+    },
     "Lycan's Bane Buddy": {
         "1": "e45c6297-4388-8686-1834-949adf70eb38",
     },
@@ -1637,6 +1730,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Riptide Buddy": {
         "1": "8648a41f-4ce8-92af-c6ce-3fbe4a93fba1",
     },
+    "Riptide Buddy": {
+        "1": "8648a41f-4ce8-92af-c6ce-3fbe4a93fba1",
+    },
     "Cheesed Buddy": {
         "1": "e88f43b7-4b9a-1050-c1e7-d883a8f706f2",
     },
@@ -1648,6 +1744,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "VALORANT GO! Vol. 2 Raze Buddy": {
         "1": "f097211c-4aaf-42f6-04a7-80adb96b9092",
+    },
+    "Cat Tactics Buddy": {
+        "1": "0c7d07ca-47cd-4c68-d07d-7990e9718a83",
     },
     "Cat Tactics Buddy": {
         "1": "0c7d07ca-47cd-4c68-d07d-7990e9718a83",
@@ -1685,6 +1784,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Champions 2022 Buddy": {
         "1": "4d5b9a70-4d4b-1295-4195-dcab8cc1de81",
     },
+    "Champions 2022 Buddy": {
+        "1": "4d5b9a70-4d4b-1295-4195-dcab8cc1de81",
+    },
     "Turtle Ship Buddy": {
         "1": "46edf934-4c16-2aa5-23ca-82a8c1fc8791",
     },
@@ -1693,6 +1795,12 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "VCT 2021 Spark Buddy": {
         "1": "f470ff75-4f99-c13a-5819-0b8cc78ad839",
+    },
+    "Exquisitely Wrapped Buddy": {
+        "1": "7a098e59-49e4-55ed-7190-e68476edb927",
+    },
+    "Stringed Soprano Buddy": {
+        "1": "1af79e46-4a09-0b73-1030-7bbdbfd9b91c",
     },
     "Exquisitely Wrapped Buddy": {
         "1": "7a098e59-49e4-55ed-7190-e68476edb927",
@@ -1727,6 +1835,15 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "White Snake Buddy": {
         "1": "0c163690-44c5-a5f1-3bdc-42acdc75df94",
     },
+    "Walis Tambo Buddy": {
+        "1": "2e164663-438a-91a1-7533-34b1e7fa8cf0",
+    },
+    "Luna Buddy": {
+        "1": "76cdcb09-4ba0-d657-ed3d-4c8b7dbb21c5",
+    },
+    "White Snake Buddy": {
+        "1": "0c163690-44c5-a5f1-3bdc-42acdc75df94",
+    },
     "Grim Delight Buddy": {
         "1": "cf194771-4eb6-053e-6c0c-5a80dab14f39",
     },
@@ -1735,6 +1852,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Mango Tango Buddy": {
         "1": "55127784-49f1-afb7-a1ce-6699424088df",
+    },
+    "Dimensional Drip Buddy": {
+        "1": "8d3137bf-4477-c9c3-aa45-acbbd182717d",
     },
     "Dimensional Drip Buddy": {
         "1": "8d3137bf-4477-c9c3-aa45-acbbd182717d",
