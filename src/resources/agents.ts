@@ -3,6 +3,7 @@
 import { Agents } from "@type/agents";
 
 export const agentsMappedById: Record<Agents, string> = {
+    Gekko: "e370fa57-4757-3604-3648-499e1f642d3f",
     Fade: "dade69b4-4f5a-8528-247b-219e5a1facd6",
     Astra: "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
     Chamber: "22697a3d-45bf-8dd7-4fec-84a9e28c69d7",

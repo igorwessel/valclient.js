@@ -19,6 +19,9 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Stay Safe, Wash Your Hands Spray": "5d6cadda-42c3-1cac-94d3-458917f5cb2c",
     "RGX 11z Pro Spray": "8035dd5d-4ddd-5dbd-165c-9886574fdff5",
     "RGX 11z Pro, Ep 4 Spray": "3db4ad9c-4a92-d8b0-a5a1-008a7c67d699",
+    "Fierce Form Spray": "cd56a893-44f1-2b56-a477-08a9652c66f8",
+    "Gekko Spray": "eb91c1e4-4553-a885-e9cc-1a9db6a8b344",
+    "Creature Crew Spray": "93a69ca4-4422-1e2f-d7e0-3baa04b745fd",
     "Gaia's Vengeance Spray": "8b7154e2-4453-2515-0867-62a1075b03ad",
     "Spectrum Spray": "a5ecf58a-44ce-75f6-abf7-bfb616c12f59",
     "Boom! Spray": "35d8fb90-49a9-641e-ff08-b4bc20421908",
@@ -377,6 +380,21 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "See You Next Round Spray": "081262e8-42db-ac4a-c94b-a89b623525c0",
     "Surprise! It's a Tiger Spray": "1284b594-4bb8-7bce-8165-239757222cf8",
     "Unconditional Surrender Spray": "30b0ab90-4cba-6c69-c7d2-f68b14574aa2",
+    "Huh? Spray": "56edb899-4ae8-9f20-9412-21ae19ef368d",
+    "Dolla Dolla Bill Y'all Spray": "e1c3bb67-41a9-a17e-f358-81a444bd0b2a",
+    "Tug of War Spray": "7cc58801-49b1-0759-59ed-52ac089d042d",
+    "Wide Swing Spray": "bda40232-40e0-e770-7010-bda2aa8a278f",
+    "We Made it Spray": "48472eae-4a17-fd2a-fc59-58b97ef8184f",
+    "Well Played Spray": "640cf43e-40d7-2ddc-4d8c-909d9f0e1176",
+    "Omen Cat Dance Spray": "22ae8535-40b6-95a3-c5b1-98a184b8909f",
+    "Let's Go! Spray": "4c8c6524-4a90-213d-b020-659e46560657",
+    "Signature Spray": "c11f8e1e-4024-4678-594e-a7b8385de3fb",
+    "Charging Station Spray": "a34661ab-4b04-c293-b30c-268b847ff381",
+    "Scoop of Smoke Spray": "f0e899e2-4b87-ef18-f1cf-84a1405cfa96",
+    "Wanted Tactibear Spray": "f50e5939-47ea-8080-2bf4-98a50f744119",
+    "Bye Op Spray": "2bd71327-4ae5-c596-0e94-a9bb416f9828",
+    "Too Early for This Spray": "3cc13114-46d5-fa3d-f102-69b4e3698e6d",
+    "Whaaat? Spray": "cb73ea04-4647-1539-03fc-b9bb01c61de9",
     "Champions 2022 Jett Diff Spray": "556008f0-41bb-d752-3747-1aabc73499c8",
     "VCT 2021 Spark Spray": "f9bcf120-42b6-6986-2acd-6aa87bab4089",
     "Fakeout Spray": "076630c8-4bc9-d953-eb13-6e81e341840c",
@@ -479,6 +497,7 @@ export const sprayIdMappedByName: SprayIdMappedByName = {
     "Ion Spray": "444464f1-445f-8f75-3c8d-a7bd8f24e654",
     "Ion, Ep5 Spray": "e269f912-4d39-e844-7b85-e495cca6b04a",
     "Oni Spray": "1091d2cc-430b-56ca-a82b-279b70026193",
+    "Oni, Ep 6 Spray": "bc34230c-48be-a8da-16c0-63abe07d3887",
     "Luna Spray": "8b6bde33-47ed-1b5d-67ff-f68d7ba8daf9",
     "Gravitational Uranium Neuroblaster Spray": "735e6c3c-4899-532d-60cf-1ba0ce1a450d",
     "Sentinels of Light Spray": "829a47d5-4580-8428-2437-8daffdbc52ac",
@@ -544,6 +563,15 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     },
     "RGX 11z Pro, Ep 4 Spray": {
         "1": "2e9f43da-415a-5988-e1c6-4fbbd62c9681",
+    },
+    "Fierce Form Spray": {
+        "1": "8cc62448-432d-4a75-9afb-0cbc2c851cf0",
+    },
+    "Gekko Spray": {
+        "1": "9d05600f-424c-0323-8d0e-8e96e0cd78d8",
+    },
+    "Creature Crew Spray": {
+        "1": "1268eba0-4474-94ae-9505-91981ab0d927",
     },
     "Gaia's Vengeance Spray": {
         "1": "6ccd421a-4fc6-4be8-ae1d-799ca0c46d75",
@@ -1220,191 +1248,50 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Unconditional Surrender Spray": {
         "1": "c56d2279-4908-8f53-e3ae-589c4eafe1de",
     },
-    "Champions 2022 Jett Diff Spray": {
-        "1": "39ee62f9-4aa1-6331-85d1-fe8c9116c960",
+    "Huh? Spray": {
+        "1": "af489eb2-482c-f1b0-1af8-10905f64bd5c",
     },
-    "Immortalized Spray": {
-        "1": "085a9278-41bd-62ab-7b71-85a25bb2cd3c",
+    "Dolla Dolla Bill Y'all Spray": {
+        "1": "bf273e2d-4a8d-5175-90f9-5b86aa5dab19",
     },
-    "Hide the Pain, Brimstone Spray": {
-        "1": "fa9a7a13-4824-9627-ff9d-48a78f71442c",
+    "Tug of War Spray": {
+        "1": "ba661dd7-4aba-d29e-8bbc-bfb82f4ce351",
     },
-    "Piedra del Sol Spray": {
-        "1": "fc04567e-4b4c-3b43-57fb-44a6cc7f0235",
+    "Wide Swing Spray": {
+        "1": "af4f3422-483d-d999-e2ed-f8a2a31cd4c0",
     },
-    "Unamused Chamber Spray": {
-        "1": "4004b3f1-4849-8c1a-aad4-918c92ac2570",
+    "We Made it Spray": {
+        "1": "ebe48e2e-4725-7bae-0b92-14a38439939f",
     },
-    "Phoenix Rise Spray": {
-        "1": "f1aef89b-44ea-2cba-daf4-4b867c94942a",
+    "Well Played Spray": {
+        "1": "f8ea1e6a-493b-1eb1-8e46-a09bbedf4641",
     },
-    "I've Been Hit Spray": {
-        "1": "8dd18a92-4347-7c74-895e-07b8ff0edf3d",
+    "Omen Cat Dance Spray": {
+        "1": "8e03a687-4ee4-be6b-1338-cf9c91f5a5b2",
     },
-    "Hehehehehe Spray": {
-        "1": "0cf17bc3-4f5f-d02d-12d1-59b9184cbfb0",
+    "Let's Go! Spray": {
+        "1": "12cf2874-4c44-e94a-2849-d291378d0465",
     },
-    "Let Me In Spray": {
-        "1": "c6ac13bd-4a97-bc52-7734-0bbc3bc7e7d9",
+    "Signature Spray": {
+        "1": "159866c1-4c8c-c5b2-952d-098d3782627c",
     },
-    "No Sentinels Spray": {
-        "1": "3fe8c17c-4e9d-70dd-9a24-ecbcaab38dff",
+    "Charging Station Spray": {
+        "1": "8f78c925-47a7-d594-8c44-31a9d98d1981",
     },
-    "Very Sneaky Spray": {
-        "1": "f4c5e6e2-46b9-6945-a2c6-cb900602ef35",
+    "Scoop of Smoke Spray": {
+        "1": "5686fc79-4f63-cf41-7a05-268af639e94a",
     },
-    "Raze has Range Spray": {
-        "1": "92612cd8-49ca-7c07-8ee5-5eb32e2360c6",
+    "Wanted Tactibear Spray": {
+        "1": "cfde81a5-4854-d5d9-9f7d-e2945c2a40b1",
     },
-    "Guess That's It Spray": {
-        "1": "c9f5fdd0-4722-97f6-ae74-9e8406321fb8",
+    "Bye Op Spray": {
+        "1": "36e9f7f0-4fa0-61b8-eb2f-e6902f9f1499",
     },
-    "Blasting Away Spray": {
-        "1": "f1a2b9bd-4793-00d1-14b3-ca84a6b5596d",
+    "Too Early for This Spray": {
+        "1": "e6f3512c-451e-9fd0-8b9e-058e0cc100b6",
     },
-    "Choose Your Match Spray": {
-        "1": "20851fba-483e-689e-9ced-c2a46f596eab",
-    },
-    "You Are Here Spray": {
-        "1": "1f8dc0c2-471b-e677-1957-4d99d4943506",
-    },
-    "Sketchy AFK Spray": {
-        "1": "62ab32c5-47d5-33a2-bd34-ef9c825589e6",
-    },
-    "Simple Instructions Spray": {
-        "1": "4af0f78e-4250-32c8-e462-1689d8cf4a2a",
-    },
-    "Hawk Out Spray": {
-        "1": "8753cd9b-4d33-3128-ec6b-4490ad931251",
-    },
-    "Always Watching Spray": {
-        "1": "a10a5079-4fac-aa6f-2aed-fe9e7620cc81",
-    },
-    "Fascinating Spray": {
-        "1": "0feb0cc7-45bc-117b-9c56-9cbf28787707",
-    },
-    "Breach's Approval Spray": {
-        "1": "8d6df619-45d3-cf2b-d6ff-2bb7806a9b3c",
-    },
-    "Mind Blown Spray": {
-        "1": "d7237195-48e6-c2a1-a2c6-069be3caaca5",
-    },
-    "No Vision Spray": {
-        "1": "ad4def94-46de-e690-b676-63a429a64f0e",
-    },
-    "Treat Those Burns Spray": {
-        "1": "b5dc84de-4e26-bbb1-1d2d-57916c56e9ee",
-    },
-    "Fill Your Card Spray": {
-        "1": "0ab65544-4234-6ad2-22bb-37aa6f56eabd",
-    },
-    "I Sleep Spray": {
-        "1": "1d1dc9d5-41bc-f7e1-a6e5-01a137c632f9",
-    },
-    "Written in the Stars Spray": {
-        "1": "10263937-4094-b80b-410d-24bb57240640",
-    },
-    "See You Next Round Spray": {
-        "1": "9c24cda0-4c3b-9c03-3654-4e915384ecf9",
-    },
-    "Surprise! It's a Tiger Spray": {
-        "1": "09d2a18a-492b-9fa3-58b7-2da6c6b40113",
-    },
-    "Unconditional Surrender Spray": {
-        "1": "c56d2279-4908-8f53-e3ae-589c4eafe1de",
-    },
-    "Champions 2022 Jett Diff Spray": {
-        "1": "39ee62f9-4aa1-6331-85d1-fe8c9116c960",
-    },
-    "Immortalized Spray": {
-        "1": "085a9278-41bd-62ab-7b71-85a25bb2cd3c",
-    },
-    "Hide the Pain, Brimstone Spray": {
-        "1": "fa9a7a13-4824-9627-ff9d-48a78f71442c",
-    },
-    "Piedra del Sol Spray": {
-        "1": "fc04567e-4b4c-3b43-57fb-44a6cc7f0235",
-    },
-    "Unamused Chamber Spray": {
-        "1": "4004b3f1-4849-8c1a-aad4-918c92ac2570",
-    },
-    "Phoenix Rise Spray": {
-        "1": "f1aef89b-44ea-2cba-daf4-4b867c94942a",
-    },
-    "I've Been Hit Spray": {
-        "1": "8dd18a92-4347-7c74-895e-07b8ff0edf3d",
-    },
-    "Hehehehehe Spray": {
-        "1": "0cf17bc3-4f5f-d02d-12d1-59b9184cbfb0",
-    },
-    "Let Me In Spray": {
-        "1": "c6ac13bd-4a97-bc52-7734-0bbc3bc7e7d9",
-    },
-    "No Sentinels Spray": {
-        "1": "3fe8c17c-4e9d-70dd-9a24-ecbcaab38dff",
-    },
-    "Very Sneaky Spray": {
-        "1": "f4c5e6e2-46b9-6945-a2c6-cb900602ef35",
-    },
-    "Raze has Range Spray": {
-        "1": "92612cd8-49ca-7c07-8ee5-5eb32e2360c6",
-    },
-    "Guess That's It Spray": {
-        "1": "c9f5fdd0-4722-97f6-ae74-9e8406321fb8",
-    },
-    "Blasting Away Spray": {
-        "1": "f1a2b9bd-4793-00d1-14b3-ca84a6b5596d",
-    },
-    "Choose Your Match Spray": {
-        "1": "20851fba-483e-689e-9ced-c2a46f596eab",
-    },
-    "You Are Here Spray": {
-        "1": "1f8dc0c2-471b-e677-1957-4d99d4943506",
-    },
-    "Sketchy AFK Spray": {
-        "1": "62ab32c5-47d5-33a2-bd34-ef9c825589e6",
-    },
-    "Simple Instructions Spray": {
-        "1": "4af0f78e-4250-32c8-e462-1689d8cf4a2a",
-    },
-    "Hawk Out Spray": {
-        "1": "8753cd9b-4d33-3128-ec6b-4490ad931251",
-    },
-    "Always Watching Spray": {
-        "1": "a10a5079-4fac-aa6f-2aed-fe9e7620cc81",
-    },
-    "Fascinating Spray": {
-        "1": "0feb0cc7-45bc-117b-9c56-9cbf28787707",
-    },
-    "Breach's Approval Spray": {
-        "1": "8d6df619-45d3-cf2b-d6ff-2bb7806a9b3c",
-    },
-    "Mind Blown Spray": {
-        "1": "d7237195-48e6-c2a1-a2c6-069be3caaca5",
-    },
-    "No Vision Spray": {
-        "1": "ad4def94-46de-e690-b676-63a429a64f0e",
-    },
-    "Treat Those Burns Spray": {
-        "1": "b5dc84de-4e26-bbb1-1d2d-57916c56e9ee",
-    },
-    "Fill Your Card Spray": {
-        "1": "0ab65544-4234-6ad2-22bb-37aa6f56eabd",
-    },
-    "I Sleep Spray": {
-        "1": "1d1dc9d5-41bc-f7e1-a6e5-01a137c632f9",
-    },
-    "Written in the Stars Spray": {
-        "1": "10263937-4094-b80b-410d-24bb57240640",
-    },
-    "See You Next Round Spray": {
-        "1": "9c24cda0-4c3b-9c03-3654-4e915384ecf9",
-    },
-    "Surprise! It's a Tiger Spray": {
-        "1": "09d2a18a-492b-9fa3-58b7-2da6c6b40113",
-    },
-    "Unconditional Surrender Spray": {
-        "1": "c56d2279-4908-8f53-e3ae-589c4eafe1de",
+    "Whaaat? Spray": {
+        "1": "bb77564e-4055-08f8-9fc2-6685fee58443",
     },
     "Champions 2022 Jett Diff Spray": {
         "1": "39ee62f9-4aa1-6331-85d1-fe8c9116c960",
@@ -1418,29 +1305,26 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Fist Bump Spray": {
         "1": "65a0e616-4169-1187-8daa-d696777cba48",
     },
-    "Team Ace // Jett Spray": {
-        "1": "abe583ec-4500-c11b-24a9-63a459f31dbd",
+    "Piedra del Sol Spray": {
+        "1": "fc04567e-4b4c-3b43-57fb-44a6cc7f0235",
     },
-    "Team Ace // Phoenix Spray": {
-        "1": "7e13b68d-43a5-ff70-9978-6da8103b117e",
+    "Unamused Chamber Spray": {
+        "1": "4004b3f1-4849-8c1a-aad4-918c92ac2570",
     },
-    "Team Ace // Raze Spray": {
-        "1": "9614e744-4e06-2614-de41-eaba1b759a5b",
+    "Phoenix Rise Spray": {
+        "1": "f1aef89b-44ea-2cba-daf4-4b867c94942a",
     },
-    "Team Ace // Reyna Spray": {
-        "1": "7a628cc8-4883-beff-068a-55aacfb5e312",
+    "I've Been Hit Spray": {
+        "1": "8dd18a92-4347-7c74-895e-07b8ff0edf3d",
     },
-    "Team Ace // Yoru Spray": {
-        "1": "b2406336-4ec4-44c4-4c74-a0b17dc5f7ea",
+    "Hehehehehe Spray": {
+        "1": "0cf17bc3-4f5f-d02d-12d1-59b9184cbfb0",
     },
-    "Give Back // 2022 Spray": {
-        "1": "593e8a6e-4870-2c32-4475-aa9dcf255eee",
+    "Let Me In Spray": {
+        "1": "c6ac13bd-4a97-bc52-7734-0bbc3bc7e7d9",
     },
-    "Give Back // 2022 Spray": {
-        "1": "593e8a6e-4870-2c32-4475-aa9dcf255eee",
-    },
-    "Give Back // 2022 Spray": {
-        "1": "593e8a6e-4870-2c32-4475-aa9dcf255eee",
+    "No Sentinels Spray": {
+        "1": "3fe8c17c-4e9d-70dd-9a24-ecbcaab38dff",
     },
     "Give Back // 2022 Spray": {
         "1": "593e8a6e-4870-2c32-4475-aa9dcf255eee",
@@ -1448,32 +1332,32 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Googly Moogly Spray": {
         "1": "b7bb11d4-46af-31db-737e-308d128a14e4",
     },
-    "KAY/O Spray": {
-        "1": "9b0f68b2-4d77-4374-fc79-bca691f9b095",
+    "Raze has Range Spray": {
+        "1": "92612cd8-49ca-7c07-8ee5-5eb32e2360c6",
     },
-    "Drained Spray": {
-        "1": "6c8b9f98-43c9-3113-87b4-38a470bd88ff",
+    "Guess That's It Spray": {
+        "1": "c9f5fdd0-4722-97f6-ae74-9e8406321fb8",
     },
-    "Training Bot Spray": {
-        "1": "931ad804-4bc4-9240-08a2-04ae918aa36b",
+    "Blasting Away Spray": {
+        "1": "f1a2b9bd-4793-00d1-14b3-ca84a6b5596d",
     },
-    "Wild Life Spray": {
-        "1": "9bfaf6e9-4a54-5539-bf05-afabef676b15",
+    "Choose Your Match Spray": {
+        "1": "20851fba-483e-689e-9ced-c2a46f596eab",
     },
-    "On Your Trail Spray": {
-        "1": "7548c6df-476d-4807-d535-1e9ceac3c666",
+    "You Are Here Spray": {
+        "1": "1f8dc0c2-471b-e677-1957-4d99d4943506",
     },
-    "Skye Spray": {
-        "1": "811fd7ab-4a85-d68a-8c08-ffa228e5bd98",
+    "Sketchy AFK Spray": {
+        "1": "62ab32c5-47d5-33a2-bd34-ef9c825589e6",
     },
-    "Cypher Spray": {
-        "1": "067e3a7d-4bac-788e-6569-09ac8a7457fe",
+    "Simple Instructions Spray": {
+        "1": "4af0f78e-4250-32c8-e462-1689d8cf4a2a",
     },
-    "The Seeker Spray": {
-        "1": "1eda98d2-46d4-5d6a-eb88-e19db8e7815c",
+    "Hawk Out Spray": {
+        "1": "8753cd9b-4d33-3128-ec6b-4490ad931251",
     },
-    "I See You Spray": {
-        "1": "266d3c0a-47d8-3b9f-597f-6dafc7a02f97",
+    "Always Watching Spray": {
+        "1": "a10a5079-4fac-aa6f-2aed-fe9e7620cc81",
     },
     "Soulstrife Spray": {
         "1": "bc2c6453-4ff5-321f-b35f-07bae25aa8c0",
@@ -1481,20 +1365,20 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Lethal Crosshair Spray": {
         "1": "16caf7b5-4385-5e6b-35c6-d9b4e1275204",
     },
-    "Calculated Spray": {
-        "1": "b420d4d3-4b5c-c2bb-f372-bcbe2239cdc1",
+    "Breach's Approval Spray": {
+        "1": "8d6df619-45d3-cf2b-d6ff-2bb7806a9b3c",
     },
-    "Sova Spray": {
-        "1": "b16f37f3-4046-304e-2a53-50b404e60243",
+    "Mind Blown Spray": {
+        "1": "d7237195-48e6-c2a1-a2c6-069be3caaca5",
     },
-    "Take Flight Spray": {
-        "1": "535dda82-46a2-6056-5235-d7871e4bbff5",
+    "No Vision Spray": {
+        "1": "ad4def94-46de-e690-b676-63a429a64f0e",
     },
-    "On Target Spray": {
-        "1": "e094a970-4fa2-11fe-82a6-f5a1631c8ea2",
+    "Treat Those Burns Spray": {
+        "1": "b5dc84de-4e26-bbb1-1d2d-57916c56e9ee",
     },
-    "Prime Brick Spray": {
-        "1": "e6095080-447e-c3d8-da24-69b3f521b7e9",
+    "Fill Your Card Spray": {
+        "1": "0ab65544-4234-6ad2-22bb-37aa6f56eabd",
     },
     "Doomscrolling Spray": {
         "1": "544b2d13-4bf5-137a-c4de-088ccbc64a6f",
@@ -1502,23 +1386,11 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Killjoy Spray": {
         "1": "7acfe83b-4c1f-3027-9b2f-4987dbf2ab53",
     },
-    "Doomscrolling Spray": {
-        "1": "544b2d13-4bf5-137a-c4de-088ccbc64a6f",
+    "Written in the Stars Spray": {
+        "1": "10263937-4094-b80b-410d-24bb57240640",
     },
-    "Matsuba Spray": {
-        "1": "d2e64030-440a-721a-21e3-39a724501b83",
-    },
-    "Matsuba Spray": {
-        "1": "d2e64030-440a-721a-21e3-39a724501b83",
-    },
-    "Kohaku Spray": {
-        "1": "7edd58a5-4c93-ba60-8863-938231ebb04b",
-    },
-    "Matsuba Spray": {
-        "1": "d2e64030-440a-721a-21e3-39a724501b83",
-    },
-    "Kohaku Spray": {
-        "1": "7edd58a5-4c93-ba60-8863-938231ebb04b",
+    "See You Next Round Spray": {
+        "1": "9c24cda0-4c3b-9c03-3654-4e915384ecf9",
     },
     "Matsuba Spray": {
         "1": "d2e64030-440a-721a-21e3-39a724501b83",
@@ -1529,11 +1401,11 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Lights Out Spray": {
         "1": "5c618d37-4959-19b0-4493-f698d330e5ea",
     },
-    "Lucky Tiger Spray": {
-        "1": "702907a2-4980-4bcb-48bb-4586a7777ba1",
+    "Unconditional Surrender Spray": {
+        "1": "c56d2279-4908-8f53-e3ae-589c4eafe1de",
     },
-    "Celestial Spray": {
-        "1": "5f3a9e28-4c52-8ed4-944c-14b6e00af9a7",
+    "Champions 2022 Jett Diff Spray": {
+        "1": "39ee62f9-4aa1-6331-85d1-fe8c9116c960",
     },
     "Stay Hydrated Spray": {
         "1": "28398415-4e55-4db1-1e7e-dab9d4998afa",
@@ -1574,8 +1446,8 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Pity Party Spray": {
         "1": "9b07f17e-4de4-0d6c-d7d7-d7b7ce769d33",
     },
-    "Tag! You're Dead! Spray": {
-        "1": "3b28b078-4575-e117-9f2f-04bca5882b4f",
+    "I've Been Hit Spray": {
+        "1": "8dd18a92-4347-7c74-895e-07b8ff0edf3d",
     },
     "Crimsonbeast Spray": {
         "1": "4687d7dd-4cce-4ffd-37ae-a795d55214f0",
@@ -1583,32 +1455,32 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Nice One Spray": {
         "1": "8626c534-4d7b-c8f1-2ef2-629fc199ddbb",
     },
-    "Magepunk, Ep 3 Spray": {
-        "1": "ddb5c1ee-4d61-e9dd-83a5-62a25a3e2468",
+    "Let Me In Spray": {
+        "1": "c6ac13bd-4a97-bc52-7734-0bbc3bc7e7d9",
     },
-    "Champions 2022 Curse Spray": {
-        "1": "47cf9fac-4d86-93f8-3b11-3fbc1e3cdc71",
+    "No Sentinels Spray": {
+        "1": "3fe8c17c-4e9d-70dd-9a24-ecbcaab38dff",
     },
-    "Runnin' on Empty Spray": {
-        "1": "ac6aa349-44eb-316c-6fc0-85995f93ae21",
+    "Very Sneaky Spray": {
+        "1": "f4c5e6e2-46b9-6945-a2c6-cb900602ef35",
     },
-    "Sic' Em Spray": {
-        "1": "2048c47c-4dd1-9248-1d14-6c9e78286866",
+    "Raze has Range Spray": {
+        "1": "92612cd8-49ca-7c07-8ee5-5eb32e2360c6",
     },
-    "Ego or Eco Spray": {
-        "1": "72bf87ce-46b7-6666-5bcf-e1af202bba38",
+    "Guess That's It Spray": {
+        "1": "c9f5fdd0-4722-97f6-ae74-9e8406321fb8",
     },
-    "Shreddy Teddy Spray": {
-        "1": "b710df76-41ae-1fd5-8553-dfad259c1910",
+    "Blasting Away Spray": {
+        "1": "f1a2b9bd-4793-00d1-14b3-ca84a6b5596d",
     },
-    "Tag! You're Dead! Spray": {
-        "1": "3b28b078-4575-e117-9f2f-04bca5882b4f",
+    "Choose Your Match Spray": {
+        "1": "20851fba-483e-689e-9ced-c2a46f596eab",
     },
-    "Crimsonbeast Spray": {
-        "1": "4687d7dd-4cce-4ffd-37ae-a795d55214f0",
+    "You Are Here Spray": {
+        "1": "1f8dc0c2-471b-e677-1957-4d99d4943506",
     },
-    "Protocol 781-A Spray": {
-        "1": "519573ae-4af3-54f8-1563-2cb6035f2e01",
+    "Sketchy AFK Spray": {
+        "1": "62ab32c5-47d5-33a2-bd34-ef9c825589e6",
     },
     "Clutch Spray": {
         "1": "a05915d8-48ad-4f13-166a-6c8a93d2a97b",
@@ -1748,8 +1620,14 @@ export const sprayLevelIdMappedByName: SprayLevelIdMappedByName = {
     "Ion, Ep5 Spray": {
         "1": "815f50f8-493e-4b59-f7ad-3e98bf08adbe",
     },
+    "Ion, Ep5 Spray": {
+        "1": "815f50f8-493e-4b59-f7ad-3e98bf08adbe",
+    },
     "Oni Spray": {
         "1": "135164b6-4295-27b2-34d8-59a95c93e025",
+    },
+    "Oni, Ep 6 Spray": {
+        "1": "e852bdfa-4e8f-311e-cfe7-3f8bcf416d47",
     },
     "Luna Spray": {
         "1": "a42387d2-41d7-ebc4-9435-568c7de21664",
