@@ -497,48 +497,6 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Neptune Buddy": {
         "1": "387e205b-4752-df32-41d0-5a81f617db4f",
     },
-    "Cruiser Buddy": {
-        "1": "cdfc181f-4e27-3bb0-633c-4f8e52348cd0",
-    },
-    "Big Announcement Buddy": {
-        "1": "ee11a149-4be0-089b-a4cf-da8795020c33",
-    },
-    "Altitude Buddy": {
-        "1": "ff9b5900-4921-c747-bf40-bf9977fa66ae",
-    },
-    "Anansi Buddy": {
-        "1": "f9e33f95-4d17-cd7e-3291-85b7f56bf183",
-    },
-    "Araxys Buddy": {
-        "1": "f3b997d0-439d-eaa2-5d82-0392e75e2fb1",
-    },
-    "Epilogue: Apple a Day Buddy": {
-        "1": "66cb449d-4603-8bcb-3107-99a54d4f4b5c",
-    },
-    "Neptune Buddy": {
-        "1": "387e205b-4752-df32-41d0-5a81f617db4f",
-    },
-    "Cruiser Buddy": {
-        "1": "cdfc181f-4e27-3bb0-633c-4f8e52348cd0",
-    },
-    "Big Announcement Buddy": {
-        "1": "ee11a149-4be0-089b-a4cf-da8795020c33",
-    },
-    "Altitude Buddy": {
-        "1": "ff9b5900-4921-c747-bf40-bf9977fa66ae",
-    },
-    "Anansi Buddy": {
-        "1": "f9e33f95-4d17-cd7e-3291-85b7f56bf183",
-    },
-    "Araxys Buddy": {
-        "1": "f3b997d0-439d-eaa2-5d82-0392e75e2fb1",
-    },
-    "Epilogue: Apple a Day Buddy": {
-        "1": "66cb449d-4603-8bcb-3107-99a54d4f4b5c",
-    },
-    "Neptune Buddy": {
-        "1": "387e205b-4752-df32-41d0-5a81f617db4f",
-    },
     "Gaia's Vengeance Buddy": {
         "1": "7c2881fb-4bd3-3d98-4e5b-72a939eb2cac",
     },
@@ -554,18 +512,6 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Bazooka Badger Buddy": {
         "1": "460dd6e0-4a76-6755-525f-4ebb37fa13ba",
     },
-    "Night Guard Buddy": {
-        "1": "f3daa7ec-452d-7374-0bf3-a99dab2ef071",
-    },
-    "Bazooka Badger Buddy": {
-        "1": "460dd6e0-4a76-6755-525f-4ebb37fa13ba",
-    },
-    "Night Guard Buddy": {
-        "1": "f3daa7ec-452d-7374-0bf3-a99dab2ef071",
-    },
-    "Bazooka Badger Buddy": {
-        "1": "460dd6e0-4a76-6755-525f-4ebb37fa13ba",
-    },
     "Big Brain Buddy": {
         "1": "c0268d62-4165-d045-e893-768bde6e9e29",
     },
@@ -574,12 +520,6 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Epilogue: Apple a Day Buddy": {
         "1": "66cb449d-4603-8bcb-3107-99a54d4f4b5c",
-    },
-    "Apple a Day Buddy": {
-        "1": "a31f3501-47bd-4b0e-f123-eeb4fe1f01b2",
-    },
-    "Apple a Day Buddy": {
-        "1": "a31f3501-47bd-4b0e-f123-eeb4fe1f01b2",
     },
     "Apple a Day Buddy": {
         "1": "a31f3501-47bd-4b0e-f123-eeb4fe1f01b2",
@@ -604,12 +544,6 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Araxys Buddy": {
         "1": "f3b997d0-439d-eaa2-5d82-0392e75e2fb1",
-    },
-    "Ornamental Commander Buddy": {
-        "1": "1d0413e0-42db-a101-8804-829e76810f1b",
-    },
-    "Ornamental Commander Buddy": {
-        "1": "1d0413e0-42db-a101-8804-829e76810f1b",
     },
     "Ornamental Commander Buddy": {
         "1": "1d0413e0-42db-a101-8804-829e76810f1b",
@@ -644,24 +578,6 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Get The Picture Buddy": {
         "1": "46ff3a2d-46ca-3c0a-71ec-35813cac3955",
     },
-    "Desert Rose Buddy": {
-        "1": "2588637e-41e6-84a6-5e3e-d39c6decaf5e",
-    },
-    "Crunch the Numbers Buddy": {
-        "1": "3d8f4162-451b-bcaf-654e-a8882353221e",
-    },
-    "Cat-Eye Buddy": {
-        "1": "2cf55340-46ad-f79a-39b1-e4be6ad411ab",
-    },
-    "Desert Rose Buddy": {
-        "1": "2588637e-41e6-84a6-5e3e-d39c6decaf5e",
-    },
-    "Crunch the Numbers Buddy": {
-        "1": "3d8f4162-451b-bcaf-654e-a8882353221e",
-    },
-    "Get The Picture Buddy": {
-        "1": "46ff3a2d-46ca-3c0a-71ec-35813cac3955",
-    },
     "Epilogue: Apple a Day Buddy": {
         "1": "66cb449d-4603-8bcb-3107-99a54d4f4b5c",
     },
@@ -712,12 +628,6 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Apple a Day Buddy": {
         "1": "a31f3501-47bd-4b0e-f123-eeb4fe1f01b2",
-    },
-    "Rune Stone Buddy": {
-        "1": "b6b43226-4c43-c5d4-d9fd-1b97d01f0e94",
-    },
-    "Rune Stone Buddy": {
-        "1": "b6b43226-4c43-c5d4-d9fd-1b97d01f0e94",
     },
     "Rune Stone Buddy": {
         "1": "b6b43226-4c43-c5d4-d9fd-1b97d01f0e94",
@@ -776,42 +686,6 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Ep 6 // 3 Coin Buddy": {
         "1": "8b843e13-4b7a-71cf-b706-e99233c153a9",
     },
-    "Ep 5 // 1 Coin Buddy": {
-        "1": "e7e94a88-4e60-435c-7ca9-04b67082ab67",
-    },
-    "Ep 5 // 2 Coin Buddy": {
-        "1": "5e78becc-419a-0462-a892-3cab50897457",
-    },
-    "Ep 5 // 3 Coin Buddy": {
-        "1": "4183fe63-4311-0a84-334e-bd894eff9092",
-    },
-    "Ep 6 // 1 Coin Buddy": {
-        "1": "e0e58d6f-409f-6556-61c8-5594a8c1f523",
-    },
-    "Ep 6 // 2 Coin Buddy": {
-        "1": "f54dc8c8-4fa1-0a3f-8340-daad6a43cbac",
-    },
-    "Ep 6 // 3 Coin Buddy": {
-        "1": "8b843e13-4b7a-71cf-b706-e99233c153a9",
-    },
-    "Ep 5 // 1 Coin Buddy": {
-        "1": "e7e94a88-4e60-435c-7ca9-04b67082ab67",
-    },
-    "Ep 5 // 2 Coin Buddy": {
-        "1": "5e78becc-419a-0462-a892-3cab50897457",
-    },
-    "Ep 5 // 3 Coin Buddy": {
-        "1": "4183fe63-4311-0a84-334e-bd894eff9092",
-    },
-    "Ep 6 // 1 Coin Buddy": {
-        "1": "e0e58d6f-409f-6556-61c8-5594a8c1f523",
-    },
-    "Ep 6 // 2 Coin Buddy": {
-        "1": "f54dc8c8-4fa1-0a3f-8340-daad6a43cbac",
-    },
-    "Ep 6 // 3 Coin Buddy": {
-        "1": "8b843e13-4b7a-71cf-b706-e99233c153a9",
-    },
     "Follow Me Buddy": {
         "1": "c5f4c423-43de-9553-456d-fbb809cfb74c",
     },
@@ -838,6 +712,312 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Closed Beta Coin Buddy": {
         "1": "cc4be40d-47e0-7f1e-2e30-9b90ce2607cd",
+    },
+    "Desert Rose Buddy": {
+        "1": "2588637e-41e6-84a6-5e3e-d39c6decaf5e",
+    },
+    "Crunch the Numbers Buddy": {
+        "1": "3d8f4162-451b-bcaf-654e-a8882353221e",
+    },
+    "Get The Picture Buddy": {
+        "1": "46ff3a2d-46ca-3c0a-71ec-35813cac3955",
+    },
+    "Electric Love Buddy": {
+        "1": "2c7679b7-45a8-15e6-2dab-e29e71ba8006",
+    },
+    "Divine Swine Buddy": {
+        "1": "a29338b0-4882-6bc6-14a9-5eb7cc4778c2",
+    },
+    "Crunch the Numbers Buddy": {
+        "1": "3d8f4162-451b-bcaf-654e-a8882353221e",
+    },
+    "Cat-Eye Buddy": {
+        "1": "2cf55340-46ad-f79a-39b1-e4be6ad411ab",
+    },
+    "Champions 2022 Dad Hat Buddy": {
+        "1": "68dab3e8-4bd0-f504-f1c6-a0a307634264",
+    },
+    "ChronoVoid Buddy": {
+        "1": "fdfc3887-4522-02d5-ae1e-be9170758667",
+    },
+    "Dalgona Coffee Buddy": {
+        "1": "35608d62-4f08-dc80-7211-ce94ec8b7508",
+    },
+    "Dance Fever Buddy": {
+        "1": "95199f7a-4d45-8793-e320-0491dcf782d8",
+    },
+    "Danger Lizard Buddy": {
+        "1": "28227664-476a-72db-adaa-159084fbd149",
+    },
+    "Daruma Charm Buddy": {
+        "1": "23ac846f-4a76-b338-94e6-d9bed52f07ce",
+    },
+    "Prelude to Chaos Buddy": {
+        "1": "ced74427-4530-5a19-9c55-cbb81c150bcc",
+    },
+    "Lucky Dice Buddy": {
+        "1": "f7005d97-4328-d473-dbb5-068a192f4f3a",
+    },
+    "Epilogue: Apple a Day Buddy": {
+        "1": "66cb449d-4603-8bcb-3107-99a54d4f4b5c",
+    },
+    "Cat-Eye Buddy": {
+        "1": "2cf55340-46ad-f79a-39b1-e4be6ad411ab",
+    },
+    "Gaia's Vengeance Buddy": {
+        "1": "7c2881fb-4bd3-3d98-4e5b-72a939eb2cac",
+    },
+    "Big Announcement Buddy": {
+        "1": "ee11a149-4be0-089b-a4cf-da8795020c33",
+    },
+    "Ion, Ep5 Buddy": {
+        "1": "6840ccb4-4ccb-1765-f916-9bb1f2a7ff85",
+    },
+    "VLT/R Buddy": {
+        "1": "b3cee508-4897-6f83-4afe-1e81a78b432b",
+    },
+    "Night Guard Buddy": {
+        "1": "f3daa7ec-452d-7374-0bf3-a99dab2ef071",
+    },
+    "Bazooka Badger Buddy": {
+        "1": "460dd6e0-4a76-6755-525f-4ebb37fa13ba",
+    },
+    "Night Guard Buddy": {
+        "1": "f3daa7ec-452d-7374-0bf3-a99dab2ef071",
+    },
+    "Bazooka Badger Buddy": {
+        "1": "460dd6e0-4a76-6755-525f-4ebb37fa13ba",
+    },
+    "Egg in a Basket Buddy": {
+        "1": "dea60b28-4655-084d-c5c1-69b5bf25e3ff",
+    },
+    "Singularity Buddy": {
+        "1": "ed95e342-4116-f07c-88b9-368a5fadb224",
+    },
+    "Bazooka Badger Buddy": {
+        "1": "460dd6e0-4a76-6755-525f-4ebb37fa13ba",
+    },
+    "Big Brain Buddy": {
+        "1": "c0268d62-4165-d045-e893-768bde6e9e29",
+    },
+    "VCT LOCK//IN Winner Buddy": {
+        "1": "5ae9ea33-4c89-ce02-2962-63b92f59654d",
+    },
+    "VCT Champions Winner Buddy": {
+        "1": "02b22bd6-42fa-90f6-0574-2091794d3eb1",
+    },
+    "Epilogue: Apple a Day Buddy": {
+        "1": "66cb449d-4603-8bcb-3107-99a54d4f4b5c",
+    },
+    "Apple a Day Buddy": {
+        "1": "a31f3501-47bd-4b0e-f123-eeb4fe1f01b2",
+    },
+    "Apple a Day Buddy": {
+        "1": "a31f3501-47bd-4b0e-f123-eeb4fe1f01b2",
+    },
+    "Venturi Buddy": {
+        "1": "74596a68-419b-ecd5-e49e-478972d61495",
+    },
+    "Nice Smile Buddy": {
+        "1": "cdab1aec-4c06-21be-133d-1c84a9765875",
+    },
+    "Rune Stone Buddy": {
+        "1": "b6b43226-4c43-c5d4-d9fd-1b97d01f0e94",
+    },
+    "Rune Stone Buddy": {
+        "1": "b6b43226-4c43-c5d4-d9fd-1b97d01f0e94",
+    },
+    "Topotek Buddy": {
+        "1": "a2f5e382-45c9-927d-1b56-329c04bc56c1",
+    },
+    "K.nock O.ut!! Buddy": {
+        "1": "7429bb0a-4ace-a0ee-84f5-51804db2d2e5",
+    },
+    "Lunar Firework Buddy": {
+        "1": "ffa13bca-4bb7-5f3e-48a3-4e96c05a2df9",
+    },
+    "EP 1 // 1 Coin Buddy": {
+        "1": "96502717-41f7-5d24-89a1-66aff04bbbbb",
+    },
+    "Blueberry Buddy": {
+        "1": "772210d9-472d-424f-0f62-c881ed22b9c4",
+    },
+    "Boba Buddy": {
+        "1": "58584a97-4839-3cb0-6f21-02809648df92",
+    },
+    "Big Announcement Buddy": {
+        "1": "ee11a149-4be0-089b-a4cf-da8795020c33",
+    },
+    "Altitude Buddy": {
+        "1": "ff9b5900-4921-c747-bf40-bf9977fa66ae",
+    },
+    "Anansi Buddy": {
+        "1": "f9e33f95-4d17-cd7e-3291-85b7f56bf183",
+    },
+    "Kiss the Frog Buddy": {
+        "1": "6e1f2e5d-481d-5d7e-82e1-9c91c2f0217d",
+    },
+    "Froggie Hat Buddy": {
+        "1": "6b26e5ca-4187-cb98-b7b2-9280343e32e3",
+    },
+    "Ornamental Commander Buddy": {
+        "1": "1d0413e0-42db-a101-8804-829e76810f1b",
+    },
+    "Tactical Surprise Buddy": {
+        "1": "bf1a4a54-4ed4-79d3-885a-c689231db7c9",
+    },
+    "2022 Game Changers Winner Buddy": {
+        "1": "a9558eeb-4a1d-19a1-c746-a1bad5991b17",
+    },
+    "Gelato Cutie Buddy": {
+        "1": "461ee5bc-4325-67f1-9e3f-42952fb8f898",
+    },
+    "Gimbap Buddy": {
+        "1": "a0b9759f-4d8a-42de-21a2-b9a6c350a90d",
+    },
+    "Tall Tales Buddy": {
+        "1": "3b9e1d2c-4ba4-4fea-ceaa-dbb73a324a9a",
+    },
+    "Bruno Coin Buddy": {
+        "1": "6f6b58db-4a4d-0acc-1dec-c4ab7b297529",
+    },
+    "Shimmer Buddy": {
+        "1": "cb6f46bf-404f-3f04-1aa5-f18e5f2d25fc",
+    },
+    "Caught Buddy": {
+        "1": "7fd3b058-4718-681b-4632-4990c7ad7e68",
+    },
+    "Ep 5 // 1 Coin Buddy": {
+        "1": "e7e94a88-4e60-435c-7ca9-04b67082ab67",
+    },
+    "Ep 5 // 2 Coin Buddy": {
+        "1": "5e78becc-419a-0462-a892-3cab50897457",
+    },
+    "Ep 5 // 3 Coin Buddy": {
+        "1": "4183fe63-4311-0a84-334e-bd894eff9092",
+    },
+    "Ep 6 // 1 Coin Buddy": {
+        "1": "e0e58d6f-409f-6556-61c8-5594a8c1f523",
+    },
+    "Ep 6 // 2 Coin Buddy": {
+        "1": "f54dc8c8-4fa1-0a3f-8340-daad6a43cbac",
+    },
+    "Halo Halo Buddy": {
+        "1": "a85b109c-4252-b779-cfdc-b28f9a774b89",
+    },
+    "Ready to Roll Buddy": {
+        "1": "699b5264-46c0-d474-3f44-7fa3e62bde94",
+    },
+    "Safe Haven Buddy": {
+        "1": "d606df6a-4f8a-1273-083a-5b925a178e36",
+    },
+    "Ep 5 // 1 Coin Buddy": {
+        "1": "e7e94a88-4e60-435c-7ca9-04b67082ab67",
+    },
+    "Ep 5 // 2 Coin Buddy": {
+        "1": "5e78becc-419a-0462-a892-3cab50897457",
+    },
+    "Ep 5 // 3 Coin Buddy": {
+        "1": "4183fe63-4311-0a84-334e-bd894eff9092",
+    },
+    "Ep 6 // 1 Coin Buddy": {
+        "1": "e0e58d6f-409f-6556-61c8-5594a8c1f523",
+    },
+    "Ep 6 // 2 Coin Buddy": {
+        "1": "f54dc8c8-4fa1-0a3f-8340-daad6a43cbac",
+    },
+    "Frozen Solid Buddy": {
+        "1": "48aaf4dc-49b9-d8dc-c599-a4917019cc82",
+    },
+    "Icy Crate Buddy": {
+        "1": "2497a841-4545-f706-f6a5-c086d0713a75",
+    },
+    "Bound Buddy": {
+        "1": "daeacb38-4ef2-d597-77e2-3698043bbdf0",
+    },
+    "Mi Goreng Buddy": {
+        "1": "5042a9cd-41a6-fb8c-33ae-aba44a7187b2",
+    },
+    "VCT LOCK//IN Dad Hat Buddy": {
+        "1": "e41c02fa-4eb0-503f-80d3-65bf2850f592",
+    },
+    "Jack O' Lantern Buddy": {
+        "1": "eaf6e89a-46b6-83e3-2efb-eda4b0f3dd86",
+    },
+    "Give Back // 2022 Buddy": {
+        "1": "2ddcfd08-4fbd-d895-8dbc-2e8f1606d957",
+    },
+    "Extra Crispy Buddy": {
+        "1": "34bfbd23-4bcf-88bb-f749-589f447d1a47",
+    },
+    "Heavy Lifting Buddy": {
+        "1": "6349701a-43f1-3623-847f-3c9c7e4b7281",
+    },
+    "The Key to Ancient Mysteries Buddy": {
+        "1": "87ccb8fc-4bf5-c8d6-3b3d-18b6a9827768",
+    },
+    "Ep 6 // 1 Coin Buddy": {
+        "1": "e0e58d6f-409f-6556-61c8-5594a8c1f523",
+    },
+    "Ep 6 // 2 Coin Buddy": {
+        "1": "f54dc8c8-4fa1-0a3f-8340-daad6a43cbac",
+    },
+    "Ep 6 // 3 Coin Buddy": {
+        "1": "8b843e13-4b7a-71cf-b706-e99233c153a9",
+    },
+    "Follow Me Buddy": {
+        "1": "c5f4c423-43de-9553-456d-fbb809cfb74c",
+    },
+    "Shell Song Buddy": {
+        "1": "27667662-462c-5bf0-a442-63b939f633c7",
+    },
+    "Epilogue: Shell Song Buddy": {
+        "1": "9c104a59-4bed-43ee-7b4e-9886c8e7e2fc",
+    },
+    "Kitsune Mask Buddy": {
+        "1": "0eadfb30-4336-2680-55c0-f0b16b55fc19",
+    },
+    "Perfect Pattern Buddy": {
+        "1": "abd1acb2-45ca-67a2-328e-b9afc833240a",
+    },
+    "Kohaku & Matsuba Buddy": {
+        "1": "98442884-4d6e-65d8-3295-69bde3315d92",
+    },
+    "Dance of Luck Buddy": {
+        "1": "fdc908cf-493d-4b1d-bdbd-0da7e7525520",
+    },
+    "Iridian Thorn Buddy": {
+        "1": "9ae93ca9-41e8-10cd-8ba8-1eab23deec28",
+    },
+    "Star Lotus Buddy": {
+        "1": "b85314c3-47b8-b0fe-0470-8ebb777deadf",
+    },
+    "GL Have Cat Buddy": {
+        "1": "6f7b0b5b-470d-77b0-bd0d-7781ce5fdf07",
+    },
+    "New Year's Knot Buddy": {
+        "1": "c033f6c3-4bba-b190-45a1-e884959a1a7c",
+    },
+    "Celestial Buddy": {
+        "1": "e370d9f9-4deb-9ae4-a594-24947cb21b2d",
+    },
+    "Crate Buddy": {
+        "1": "0df7158a-46c6-eeb6-9561-e78165756b99",
+    },
+    "Magepunk, Ep 6 Buddy": {
+        "1": "9342e22f-4570-6449-3983-01b5023fc1a3",
+    },
+    "Magic Hummingbird Buddy": {
+        "1": "6941800f-4055-394c-0bc0-1d9bbff03f8e",
+    },
+    "Spline Buddy": {
+        "1": "ec3745c4-432a-8173-8150-cfbb4841c121",
+    },
+    "On The Case Buddy": {
+        "1": "373009dd-404c-27d2-3ed3-4889492c580d",
+    },
+    "Magic Mance Buddy": {
+        "1": "9a1f81d9-4fd2-35da-2cec-ba8b75ee6ef9",
     },
     "Desert Rose Buddy": {
         "1": "2588637e-41e6-84a6-5e3e-d39c6decaf5e",
@@ -2162,11 +2342,26 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Oni Buddy": {
         "1": "d59590fa-4389-125a-6c53-c7bd026acb01",
     },
-    "Oni, Ep 6 Buddy": {
-        "1": "0aea9d2b-44e4-4ec1-5ea5-9da2e11586c8",
+    "Bounce House Buddy": {
+        "1": "fe47daf6-4198-7542-645f-9f92b73a98a4",
     },
-    "Keep it Safe Buddy": {
-        "1": "73466a36-43e4-232f-63be-c390f8c5e139",
+    "Monkey Business Buddy": {
+        "1": "a0a1a09a-45df-0373-96a5-d08c6852f47f",
+    },
+    "Monster Cookie Buddy": {
+        "1": "57235ca8-47c1-9336-4201-35ae1f782e36",
+    },
+    "Hot and Spicy Buddy": {
+        "1": "2adf46ad-4328-ddb4-a78f-8f8877b8da8a",
+    },
+    "Drop the Hammer Buddy": {
+        "1": "b3eb3989-4b44-7bfc-9e5e-6eb1586f4a32",
+    },
+    "Epilogue: Drop the Hammer Buddy": {
+        "1": "11c2ead2-4f00-8ed2-32d1-4cadc9bd13c8",
+    },
+    "Matryoshka Buddy": {
+        "1": "a40f40e8-4c8a-633a-a786-7baa060bd970",
     },
     "Reaver, EP 5 Buddy": {
         "1": "20eea728-493e-6e47-8121-159c67f4ba52",
@@ -2174,11 +2369,29 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Sovereign Buddy": {
         "1": "547c3aa6-4e86-199c-b190-01b75287f30b",
     },
-    "Folded Wish Buddy": {
-        "1": "94058849-42b4-1b22-e8e7-b9abebdae014",
+    "Moondash Buddy": {
+        "1": "86957a8b-42e1-66c0-e4e2-c19112ba9dee",
+    },
+    "Deadly Precision Buddy": {
+        "1": "7d6fc129-4d33-11ae-3e1e-faba40f7b77f",
     },
     "Epilogue: Folded Wish Buddy": {
         "1": "f8ee875e-4522-9740-ca8a-a495a5186cf8",
+    },
+    "Peace and Love Buddy": {
+        "1": "8333376d-4fa4-88af-4431-5c8eeac9b626",
+    },
+    "Mother of Pearl Buddy": {
+        "1": "86916aa0-497a-4543-0ed8-d589b7aad85c",
+    },
+    "Folded Wish Buddy": {
+        "1": "94058849-42b4-1b22-e8e7-b9abebdae014",
+    },
+    "Oni, Ep 6 Buddy": {
+        "1": "0aea9d2b-44e4-4ec1-5ea5-9da2e11586c8",
+    },
+    "Keep it Safe Buddy": {
+        "1": "73466a36-43e4-232f-63be-c390f8c5e139",
     },
     "Peace and Love Buddy": {
         "1": "8333376d-4fa4-88af-4431-5c8eeac9b626",
@@ -2213,11 +2426,17 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Can't Break Me Buddy": {
         "1": "e6b2cd4c-4c42-7cae-cd93-86b5f181274d",
     },
+    "Can't Break Me Buddy": {
+        "1": "e6b2cd4c-4c42-7cae-cd93-86b5f181274d",
+    },
     "Hue Shift Buddy": {
         "1": "72a5a776-4763-0685-06c1-bbaa14d0f93d",
     },
     "Exquisitely Wrapped Buddy": {
         "1": "7a098e59-49e4-55ed-7190-e68476edb927",
+    },
+    "Pocket Sage Buddy": {
+        "1": "41b46073-4677-797b-596a-12aa31d5bd81",
     },
     "Pocket Sage Buddy": {
         "1": "41b46073-4677-797b-596a-12aa31d5bd81",
@@ -2248,6 +2467,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Epilogue: Lucky Star Buddy": {
         "1": "17fcd820-4eee-5694-0b6e-ed9064514b4e",
+    },
+    "Pride 2022 Buddy": {
+        "1": "1a3a11bc-4477-4724-b804-3b9cdbf234d2",
     },
     "Pride 2022 Buddy": {
         "1": "1a3a11bc-4477-4724-b804-3b9cdbf234d2",
@@ -2447,6 +2669,57 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "EP5: Silver Buddy": {
         "1": "2c8af22d-484d-9303-14c4-30bffbbd4a7e",
     },
+    "EP4: Bronze Buddy": {
+        "1": "19ee6b25-43ac-4f4d-010d-8787fd118912",
+    },
+    "EP4: Diamond Buddy": {
+        "1": "2f99a482-4794-c7f3-0726-788d9adf3e22",
+    },
+    "EP4: Gold Buddy": {
+        "1": "cf538765-42fa-278b-e94f-dfbad7d80af6",
+    },
+    "EP4: Immortal Buddy": {
+        "1": "b79a11a6-4c82-9078-0519-2eba4d2f794e",
+    },
+    "EP4: Iron Buddy": {
+        "1": "b793c096-4c6d-5e93-6140-97b2b4c84687",
+    },
+    "EP4: Platinum Buddy": {
+        "1": "23e2c3e0-424f-9859-b033-8b9ede8117c4",
+    },
+    "EP4: Radiant Buddy": {
+        "1": "1f5d7ec6-4bd7-2476-6a56-da9943497acc",
+    },
+    "EP4: Silver Buddy": {
+        "1": "cfbb6427-407f-33ad-afe1-e5853ceb7d96",
+    },
+    "EP5: Ascendant Buddy": {
+        "1": "87985c9b-4a61-8d70-20f0-bd938fb15a53",
+    },
+    "EP5: Bronze Buddy": {
+        "1": "54673cf8-4598-cca9-3d17-78af1b1cd5a5",
+    },
+    "EP5: Diamond Buddy": {
+        "1": "5d1048d4-4222-2ef8-aadc-74a18f9cc615",
+    },
+    "EP5: Gold Buddy": {
+        "1": "254a9d89-451e-b110-aeca-b7a5210c25b2",
+    },
+    "EP5: Immortal Buddy": {
+        "1": "642f6531-4fb5-bb3d-79f7-4db395625b51",
+    },
+    "EP5: Iron Buddy": {
+        "1": "b3581fa6-4deb-5dcf-84c9-8dad5303d973",
+    },
+    "EP5: Platinum Buddy": {
+        "1": "347221af-4c78-ffcd-4dfe-a3bb6b0bf08f",
+    },
+    "EP5: Radiant Buddy": {
+        "1": "c214dfe2-4cdf-bbd9-1490-d19249e5365b",
+    },
+    "EP5: Silver Buddy": {
+        "1": "2c8af22d-484d-9303-14c4-30bffbbd4a7e",
+    },
     "Gravitational Uranium Neuroblaster Buddy": {
         "1": "2484e328-45e9-a5c0-960f-ad8b0f620d0e",
     },
@@ -2489,6 +2762,12 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Epilogue: Pocket Sized Sheriff Buddy": {
         "1": "21e67b07-4d0a-e438-88ee-93a8af385b06",
     },
+    "Pocket Sized Sheriff Buddy": {
+        "1": "b2b1c9bb-42da-2edc-d7b3-56b47b4fd1d1",
+    },
+    "Epilogue: Pocket Sized Sheriff Buddy": {
+        "1": "21e67b07-4d0a-e438-88ee-93a8af385b06",
+    },
     "Lycan's Bane Buddy": {
         "1": "e45c6297-4388-8686-1834-949adf70eb38",
     },
@@ -2506,6 +2785,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "VALORANT GO! Vol. 2 Phoenix Buddy": {
         "1": "502d79b2-43c6-1245-29e2-9bbb37397e1c",
+    },
+    "Reaver, EP 5 Buddy": {
+        "1": "20eea728-493e-6e47-8121-159c67f4ba52",
     },
     "Reaver, EP 5 Buddy": {
         "1": "20eea728-493e-6e47-8121-159c67f4ba52",
@@ -2546,6 +2828,12 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Epilogue: Lucky Star Buddy": {
         "1": "17fcd820-4eee-5694-0b6e-ed9064514b4e",
     },
+    "Lucky Star Buddy": {
+        "1": "438908b8-4185-de18-6d1c-efa99b7376e3",
+    },
+    "Epilogue: Lucky Star Buddy": {
+        "1": "17fcd820-4eee-5694-0b6e-ed9064514b4e",
+    },
     "Dimensional Fragment Buddy": {
         "1": "92d1dddf-4250-d0c7-d270-25b84990211d",
     },
@@ -2564,8 +2852,17 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Riptide Buddy": {
         "1": "8648a41f-4ce8-92af-c6ce-3fbe4a93fba1",
     },
+    "Tilde Buddy": {
+        "1": "5a5008e9-4b60-e89d-2ba8-97a3f0c53b8d",
+    },
+    "Riptide Buddy": {
+        "1": "8648a41f-4ce8-92af-c6ce-3fbe4a93fba1",
+    },
     "Cheesed Buddy": {
         "1": "e88f43b7-4b9a-1050-c1e7-d883a8f706f2",
+    },
+    "Cat Tactics Buddy": {
+        "1": "0c7d07ca-47cd-4c68-d07d-7990e9718a83",
     },
     "Cat Tactics Buddy": {
         "1": "0c7d07ca-47cd-4c68-d07d-7990e9718a83",
@@ -2603,8 +2900,14 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "Singularity Buddy": {
         "1": "ed95e342-4116-f07c-88b9-368a5fadb224",
     },
-    "Memory Chip Buddy": {
-        "1": "473df037-45a2-43d6-4da1-8f99e220d0ad",
+    "NO LIMITS Buddy": {
+        "1": "ab0d9c89-4b57-b072-ed0c-cda7c040b5e7",
+    },
+    "Scuttle Trash Buddy": {
+        "1": "00f129a0-47f3-27a8-5d5b-9fb07ce39a05",
+    },
+    "Champions 2022 Buddy": {
+        "1": "4d5b9a70-4d4b-1295-4195-dcab8cc1de81",
     },
     "Champions 2022 Buddy": {
         "1": "4d5b9a70-4d4b-1295-4195-dcab8cc1de81",
@@ -2662,9 +2965,6 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "VCT 2021 Spark Buddy": {
         "1": "f470ff75-4f99-c13a-5819-0b8cc78ad839",
-    },
-    "Exquisitely Wrapped Buddy": {
-        "1": "7a098e59-49e4-55ed-7190-e68476edb927",
     },
     "Exquisitely Wrapped Buddy": {
         "1": "7a098e59-49e4-55ed-7190-e68476edb927",
@@ -2825,6 +3125,15 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     "White Snake Buddy": {
         "1": "0c163690-44c5-a5f1-3bdc-42acdc75df94",
     },
+    "Walis Tambo Buddy": {
+        "1": "2e164663-438a-91a1-7533-34b1e7fa8cf0",
+    },
+    "Luna Buddy": {
+        "1": "76cdcb09-4ba0-d657-ed3d-4c8b7dbb21c5",
+    },
+    "White Snake Buddy": {
+        "1": "0c163690-44c5-a5f1-3bdc-42acdc75df94",
+    },
     "Grim Delight Buddy": {
         "1": "cf194771-4eb6-053e-6c0c-5a80dab14f39",
     },
@@ -2833,6 +3142,9 @@ export const buddyLevelIdMappedByName: BuddyLevelIdMappedByName = {
     },
     "Mango Tango Buddy": {
         "1": "55127784-49f1-afb7-a1ce-6699424088df",
+    },
+    "Dimensional Drip Buddy": {
+        "1": "8d3137bf-4477-c9c3-aa45-acbbd182717d",
     },
     "Dimensional Drip Buddy": {
         "1": "8d3137bf-4477-c9c3-aa45-acbbd182717d",
