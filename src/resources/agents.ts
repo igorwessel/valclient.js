@@ -25,5 +25,9 @@ export const agentsMappedById: Record<Agents, string> = {
     Skye: "6f2a04ca-43e0-be17-7f36-b3908627744d",
     "KAY/O": "601dbbe7-43ce-be57-2a40-4abd24953621",
     Phoenix: "eb93336a-449b-9c1b-0a54-a891f7921d69",
+    Astra: "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+    Brimstone: "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+    Iso: "0e38b510-41a8-5780-5e8f-568b2a4f2d6c",
+    Neon: "bb2a4828-46eb-8cd1-e765-15848195d751",
     Yoru: "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
 };
